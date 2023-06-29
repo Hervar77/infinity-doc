@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\infinity\\bin\\documentation-example-test"
 		}
 	],
 	"settings": {

@@ -1,0 +1,21 @@
+<if:comment>Dieses ist ein Kommentar</if:comment>
+
+<if:define if:set-variables="a=1"/>
+
+<if:if if:condition="a==1">
+Hallo Welt1!
+<if:else-if if:condition="a==2">
+Hallo Welt2!
+<if:else>
+Hallo Welt3!
+</if:if>
+
+<if:expression if:code="a += 1" />
+
+<if:include if:file="addurl.html" if:set-variables="b=1" if:debug="false" />
+
+<if:loop if:items="variables['pageNav']" if:element="nav">
+  <a if:set-attributes="href=nav['url']" href=""><if:write if:set-content="nav['text']">1</if:write></a>
+</if:loop>
+
+<if:write if:set-content="variables['docCount']">0</if:write>

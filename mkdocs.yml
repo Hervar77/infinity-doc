@@ -1,0 +1,159 @@
+# Project information
+use_directory_urls: false
+docs_dir: mkdocs
+site_dir: ../dist/doc
+site_name: INFINITY.JS V3 Documentation
+site_url: https://infinity-js.de/
+site_author: Tobias Frie
+site_description: >-
+  INFINITY.JS V3 engine documentation. INFINITY.JS is a javascript server runtime
+  that supports multi-threading and native extensions.
+
+# Copyright
+copyright: Copyright &copy; 2018 - 2023 by Tobias Frie
+
+# Configuration
+theme:
+  name: material
+  language: en
+
+  #include_search_page: false
+  #search_index_only: true
+
+  features:
+    - navigation.expand
+    - navigation.tabs
+    - tabs
+    - search.highlight
+    #- instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: fontawesome/solid/infinity
+
+extra_css: [infinity.css]
+
+# Plugins
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.md_in_html
+  - markdown.extensions.toc:
+      permalink: true
+  #- pymdownx.arithmatex:
+      #generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  #- pymdownx.critic
+  - pymdownx.details
+  #- pymdownx.emoji:
+      #emoji_index: !!python/name:materialx.emoji.twemoji
+      #emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  #- pymdownx.magiclink:
+      #repo_url_shorthand: true
+      #user: squidfunk
+      #repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Getting Started:
+    - Introduction: getting-started/index.md
+    - Setup Development: getting-started/setup-development.md
+    - Setup Project: getting-started/setup-project.md
+    - Debugging: getting-started/debugging.md
+    - Package Project: getting-started/package-project.md
+  - Concepts:
+    - Introduction: concepts/index.md
+    - Runtime: concepts/runtime.md
+    - Includes: concepts/includes.md
+    - Modules: concepts/modules.md
+  - Example: example/index.md
+  - API Reference:
+    - Introduction: api/index.md
+    - console: api/console.md
+    - infinity: api/infinity.md
+    - infinity.aes256: api/infinity.aes256.md
+    - infinity.base64: api/infinity.base64.md
+    - infinity.bcrypt: api/infinity.bcrypt.md
+    - infinity.current: api/infinity.current.md
+    - infinity.database: api/infinity.database.md
+    - infinity.date: api/infinity.date.md
+    - infinity.directory: api/infinity.directory.md
+    - infinity.encoding: api/infinity.encoding.md
+    - infinity.event: api/infinity.event.md
+    - infinity.file: api/infinity.file.md
+    - infinity.fileMode: api/infinity.fileMode.md
+    - infinity.fileName: api/infinity.fileName.md
+    - infinity.fts: api/infinity.fts.md
+    - infinity.hex: api/infinity.hex.md
+    - infinity.html: api/infinity.html.md
+    - infinity.http: api/infinity.http.md
+    - infinity.http2: api/infinity.http2.md
+    - infinity.image: api/infinity.image.md
+    - infinity.iniFile: api/infinity.iniFile.md
+    - infinity.list: api/infinity.list.md
+    - infinity.lock: api/infinity.lock.md
+    - infinity.mail: api/infinity.mail.md
+    - infinity.md5: api/infinity.md5.md
+    - infinity.memory: api/infinity.memory.md
+    - infinity.mimeType: api/infinity.mimeType.md
+    - infinity.noSql: api/infinity.noSql.md
+    - infinity.os: api/infinity.os.md
+    - infinity.pdf: api/infinity.pdf.md
+    - infinity.pop3: api/infinity.pop3.md
+    - infinity.process: api/infinity.process.md
+    - infinity.quotedPrintable: api/infinity.quotedPrintable.md
+    - infinity.random: api/infinity.random.md
+    - infinity.regEx: api/infinity.regEx.md
+    - infinity.rsa: api/infinity.rsa.md
+    - infinity.scgi: api/infinity.scgi.md
+    - infinity.scheduler: api/infinity.scheduler.md
+    - infinity.service: api/infinity.service.md
+    - infinity.session: api/infinity.session.md
+    - infinity.sha256: api/infinity.sha256.md
+    - infinity.sha512: api/infinity.sha512.md
+    - infinity.smtp: api/infinity.smtp.md
+    - infinity.stream: api/infinity.stream.md
+    - infinity.template: api/infinity.template.md
+    - infinity.thread: api/infinity.thread.md
+    - infinity.url: api/infinity.url.md
+    - infinity.xml: api/infinity.xml.md
+    - infinity.zip: api/infinity.zip.md
+    - infinity.zlib: api/infinity.zlib.md
+
+
+# Google Analytics
+#google_analytics:
+#  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#  - auto

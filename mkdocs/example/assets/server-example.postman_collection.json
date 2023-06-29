@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "21ab5e3f-6aef-4527-82fa-1bca59ad3d92",
+		"name": "INFINITY.JS Server Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get API spec",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost/api/v1/spec",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"spec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user.login (REST)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost/api/v1/rest/user/login?username=admin&password=Infinity-1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rest",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "Infinity-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user.getUsername (REST)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost/api/v1/rest/user/getUsername/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rest",
+						"user",
+						"getUsername",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "system.shutdown (REST)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost/api/v1/rest/system/shutdown",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rest",
+						"system",
+						"shutdown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user.login (JSON-RPC)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"user.login\",\r\n\t\"params\": [\r\n\t\t\"admin\",\r\n\t\t\"Infinity-1\"\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/api/v1/json",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user.getUsername (JSON-RPC)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"user.getUsername\",\r\n\t\"params\": [ 1 ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/api/v1/json",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "system.shutdown (JSON-RPC)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"jsonrpc\": \"2.0\",\r\n\t\"method\": \"system.shutdown\",\r\n\t\"params\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/api/v1/json",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

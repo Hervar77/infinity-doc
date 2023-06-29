@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\infinity\\bin\\documentation-example-test"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"*.code-workspace": true
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "es5"
+        ],
+        "module": "none",
+        "types": [],
+        "removeComments": true,
+        "outDir": "js/",
+        "emitBOM": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "strict": false,
+        "strictPropertyInitialization": false,
+        "esModuleInterop": true,
+        "sourceMap": true
+    },
+    "include": [
+        "../../infinity/bin/resources/infinity.d.ts",
+        "**/*"
+    ]
+}

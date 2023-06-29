@@ -1,0 +1,76 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Launch (linux-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/linux-x64/infinity"
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Launch (osx-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/osx-x64/infinity"
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Launch (win-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/win-x64/infinity.exe"
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Launch (win-x86)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/win-x86/infinity.exe"
+        },
+        {
+            "type": "infinity",
+            "request": "attach",
+            "name": "INFINITY.JS: Attach",
+            "program": "${workspaceFolder}/js/main.js",
+            "host": "localhost",
+            "port": 9090
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Run (linux-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/linux-x64/infinity",
+            "noDebug": true
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Run (osx-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/osx-x64/infinity",
+            "noDebug": true
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Run (win-x64)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/win-x64/infinity.exe",
+            "noDebug": true
+        },
+        {
+            "type": "infinity",
+            "request": "launch",
+            "name": "INFINITY.JS: Run (win-x86)",
+            "program": "${workspaceFolder}/js/main.js",
+            "runtime": "${workspaceFolder}/../../infinity/bin/win-x86/infinity.exe",
+            "noDebug": true
+        }
+    ]
+}

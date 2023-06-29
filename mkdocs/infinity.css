@@ -1,0 +1,28 @@
+.md-typeset ul li,
+.md-typeset ol li {
+    margin-bottom: 0;
+}
+
+.md-typeset h5 {
+    text-transform: none;
+}
+
+.doc-toc p {
+    margin-bottom: 0;
+}
+
+.doc-toc ul {
+    column-count: 3;
+    margin-top: 0;
+}
+
+.doc-heading {
+    color: var(--md-default-fg-color--light);
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1.3;
+}
+
+code {
+    white-space : pre-wrap !important;
+  }

@@ -1,2 +1,1 @@
-# infinity-doc
-INFINITY.JS Documentation project
+# INFINITY.JS Documentation

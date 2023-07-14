@@ -1303,7 +1303,7 @@ Parameters:
 Example:
 
 ```typescript
-myServer.registerHandler(infinity.http.server.handler.status, '/status');
+myServer.registerHandler(infinity.http.server.handler.status, '/status', 1.0, 10.0, 3.0);
 http.registerHandler(infinity.http.server.handler.staticFile, '/', '../web/', 60.0, 256144, [{name: "Cache-Control", value: "must-revalidate"}]);
 ```
 

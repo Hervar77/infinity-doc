@@ -197,11 +197,23 @@ Parameters:
 - alias: `string`
   >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
 
-- expire: `number`
+- expire: `number`, optional
   >cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
 
-- maxCacheSize: `number`
+- maxCacheSize: `number`, optional
   >the cache threshold in bytes. Files with sizes exceeding the specified number will not be cached
+
+- headers: [`infinity.http.headerArray`](#infinity.http.headerArray_interface)
+  >the headers to be sent with the response
+
+- limit: `number`, optional
+  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+
+- period: `number`, optional
+  >the rate limit time period in seconds
+
+- delay: `number`, optional
+  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
 
 
 Example:
@@ -418,6 +430,9 @@ Values:
 - calDav: `7`
   >a handler for requests according to the CalDAV protocol
 
+- calDav: `8`
+  >a handler for status requests
+
 Example:
 
 ```typescript
@@ -432,6 +447,14 @@ let handler = infinity.scgi.server.handler.custom;
 ---
 
 <div class="doc-heading">Interfaces</div>
+
+---
+
+## headerArray {: #infinity.http.headerArray_interface .doc-interface}
+
+Extends: ` Array<{name: string, value: string}>{}`
+
+An array of objects containing name-value string pairs.
 
 ---
 

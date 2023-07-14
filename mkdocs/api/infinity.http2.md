@@ -328,7 +328,7 @@ Parameters:
 - path: `string`
   >the request path for the client
 
-- alias: `string`, optional
+- alias: `string`
   >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
 
 - expire: `number`, optional
@@ -339,6 +339,15 @@ Parameters:
 
 - headers: [`infinity.http2.headerArray`](#infinity.http2.headerArray_interface), optional
   >the headers to be sent with the response
+
+- limit: `number`, optional
+  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+
+- period: `number`, optional
+  >the rate limit time period in seconds
+
+- delay: `number`, optional
+  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
 
 
 Example:

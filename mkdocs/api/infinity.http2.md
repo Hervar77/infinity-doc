@@ -101,7 +101,7 @@ namespace system {
     export function shutdown(): void {
       infinity.terminate();
     }
-  
+
     export function getVersion(): string {
       return '1.0.0 build 1234';
     }
@@ -161,7 +161,7 @@ Lets you create an INFINITY.JS HTTP/2 server object instance. Takes the most imp
 
 Signature:
 ```typescript
-constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, iocp?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number, protocol?: infinity.http2.server.protocol )
+constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, iocp?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number, protocol?: infinity.http2.server.protocol, maxRateCounter?: number )
 ```
 
 Parameters:
@@ -201,6 +201,9 @@ Parameters:
 
 - protocol: [`infinity.http2.server.protocol`](#infinity.http2.server.protocol_enum), optional
   >specifies the encryption protocol to be used
+
+- maxRateCounter: `number`, optional
+  >the maximum number of requests that a client can make in a specific time frame for rate limiting
 
 
 Example:
@@ -623,7 +626,7 @@ myServer.writeString(id, message);
 
 ## infinity.http2.request {: #infinity.http2.request_namespace .doc-namespace}
 
-Read-only properties containing information from the incoming HTTP/2 request. 
+Read-only properties containing information from the incoming HTTP/2 request.
 
 <div class="doc-toc" markdown="1">
 
@@ -1672,7 +1675,7 @@ Extends: `Array<{name: string, value: string, expires: number, path: string, dom
 An array containing objects with cookie data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The name of a cookie field
 - #### value
   >Type: `string`. The value of a cookie field
@@ -1692,7 +1695,7 @@ Extends: `Array<{controlName: string, fileName: string, tempFilename: string, si
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### controlName 
+- #### controlName
   >Type: `string`. The name of the used HTML form control
 - #### fileName
   >Type: `string`. The name of the file
@@ -1712,7 +1715,7 @@ Extends: `Array<{name: string, value: string}>`
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The field name
 - #### value
   >Type: `string`. The field value
@@ -1726,7 +1729,7 @@ Extends: `Array<{name: string, params?: Array<string>, result?: any, rest?: stri
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The name of the function
 - #### params
   >Type: `Array<string>`, optional. The function parameters
@@ -1746,7 +1749,7 @@ Extends: `Array<{firstOffset: number, lastOffset: number}>`
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### firstOffset 
+- #### firstOffset
   >Type: `number`. The start offset
 - #### lastOffset
   >Type: `number`, optional. The end offset
@@ -1768,7 +1771,7 @@ Extends: `Array<{name: string, value: string}>`
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The field name
 - #### value
   >Type: `string`. The field value

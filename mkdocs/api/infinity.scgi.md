@@ -77,7 +77,7 @@ namespace system {
     export function shutdown(): void {
       infinity.terminate();
     }
-  
+
     export function getVersion(): string {
       return '1.0.0 build 1234';
     }
@@ -106,7 +106,7 @@ Lets you create an INFINITY.JS SCGI server object instance.
 
 Signature:
 ```typescript
-constructor( allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number )
+constructor( allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number, maxRateCounter?: number )
 ```
 
 Parameters:
@@ -133,7 +133,10 @@ Parameters:
   >specifies the maximum number of bytes (content-length header) that the server accepts in http requests
 
 - slowRequestTime: `number`, optional
->specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+  >specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+
+- maxRateCounter: `number`, optional
+  >the maximum number of requests that a client can make in a specific time frame for rate limiting
 
 
 Example:
@@ -275,7 +278,7 @@ namespace system {
     export function shutdown(): void {
       infinity.terminate();
     }
-  
+
     export function getVersion(): string {
       return '1.0.0 build 1234';
     }
@@ -439,7 +442,7 @@ Extends: `Array<{name: string, params?: Array<string>, result?: any, rest?: stri
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The name of the function
 - #### params
   >Type: `Array<string>`, optional. The function parameters

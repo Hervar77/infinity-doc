@@ -651,7 +651,7 @@ Parameters:
   >the URL to send the request to
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded 
+  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
 
 
 Return type: `string`
@@ -772,7 +772,7 @@ Parameters:
   >the URL to send the request to
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded 
+  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
 
 
 Return type: `string`
@@ -860,7 +860,7 @@ Parameters:
   >the URL to send the request to
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded 
+  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
 
 
 Return type: `string`
@@ -1094,7 +1094,7 @@ namespace system {
     export function shutdown(): void {
       infinity.terminate();
     }
-  
+
     export function getVersion(): string {
       return '1.0.0 build 1234';
     }
@@ -1189,10 +1189,10 @@ Folder structure:
     - main.ts
     - users.ts
 ```
-Can be used by REST requests like `http://localhost/v1/rest/users/1` or JSON-RPC POST-requests like 
+Can be used by REST requests like `http://localhost/v1/rest/users/1` or JSON-RPC POST-requests like
 ```json
 {"jsonrpc": "2.0", "method": "users.get", "params": [1], "id": 1}
-``` 
+```
 against, for example `http://localhost/v1/jsonrpc`.
 
 ---
@@ -1207,7 +1207,7 @@ Lets you create an INFINITY.JS HTTP server object instance. Takes the most impor
 
 Signature:
 ```typescript
-constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number, minProtocol?: infinity.http.server.protocol, maxProtocol?: infinity.http.server.protocol )
+constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean, port?: number, maxConnections?: number, poolSize?: number, maxContentLength?: number, slowRequestTime?: number, minProtocol?: infinity.http.server.protocol, maxProtocol?: infinity.http.server.protocol, maxRateCounter?: number )
 ```
 
 Parameters:
@@ -1248,12 +1248,15 @@ Parameters:
 - maxProtocol: [`infinity.http.server.protocol`](#infinity.http.server.protocol_enum), optional
   >the maximum SSL/TLS version to support
 
+- maxRateCounter: `number`, optional
+  >the maximum number of requests that a client can make in a specific time frame for rate limiting
+
 
 Example:
 
 ```typescript
 infinity.loadModule('infinity.http');
-let myServer = new infinity.http.server(false, false, false, false, false, 80, 1024, 64, 104857600, 5.0);
+let myServer = new infinity.http.server(false, false, false, false, true, 80, 1024, 64, 1024 * 1024, 5.0);
 ```
 
 ---
@@ -1264,7 +1267,7 @@ Registers a handler for client requests, invoking additional resources, includin
 
 Signature:
 ```typescript
-registerHandler( handler: infinity.http.server.handler, path: string, alias?: string, expire?: number, maxCacheSize?: number ): void
+registerHandler( handler: infinity.http.server.handler, path: string, alias: string, expire?: number, maxCacheSize?: number, headers?: infinity.http.headerArray, limit?: number, period?: number, delay?: number ): void
 ```
 
 Parameters:
@@ -1278,19 +1281,30 @@ Parameters:
 - alias: `string`
   >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
 
-- expire: `number`
+- expire: `number`, optional
   >the cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
 
-- maxCacheSize: `number`
+- maxCacheSize: `number`, optional
   >the cache threshold in bytes. Files with sizes exceeding the specified number will not be cached
+
+- headers: [`infinity.http.headerArray`](#infinity.http.headerArray_interface)
+  >the headers to be sent with the response
+
+- limit: `number`, optional
+  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+
+- period: `number`, optional
+  >the rate limit time period in seconds
+
+- delay: `number`, optional
+  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
 
 
 Example:
 
 ```typescript
 myServer.registerHandler(infinity.http.server.handler.status, '/status');
-myServer.registerHandler(infinity.http.server.handler.staticFile, '/', '../web/');
-myServer.registerHandler(infinity.http.server.handler.staticFile, '/', '../web/', 60.0, 256144);
+http.registerHandler(infinity.http.server.handler.staticFile, '/', '../web/', 60.0, 256144, [{name: "Cache-Control", value: "must-revalidate"}]);
 ```
 
 Folder structure:
@@ -1559,7 +1573,7 @@ let version = infinity.http.client.version.jsonRpc1_1;
 
 ## infinity.http.request {: #infinity.http.request_namespace .doc-namespace}
 
-Read-only properties containing information from the incoming HTTP request. 
+Read-only properties containing information from the incoming HTTP request.
 
 <div class="doc-toc" markdown="1">
 
@@ -2033,7 +2047,7 @@ The properties of the outgoing response from the INFINITY.JS server. Can be read
 - [transferEncoding](#infinity.http.response.transferEncoding_property)
 - [wwwAuthenticate](#infinity.http.response.wwwAuthenticate_property)
 
-</div> 
+</div>
 
 ---
 
@@ -2343,7 +2357,7 @@ Extends: `Array<{name: string, value: string, expires: number, path: string, dom
 An array containing objects with cookie data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The name of a cookie field
 - #### value
   >Type: `string`. The value of a cookie field
@@ -2363,7 +2377,7 @@ Extends: `Array<{controlName: string, fileName: string, tempFilename: string, si
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### controlName 
+- #### controlName
   >Type: `string`. The name of the used HTML form control
 - #### fileName
   >Type: `string`. The name of the file
@@ -2383,7 +2397,7 @@ Extends: `Array<{fieldName: string, fileName: string, fieldValue: string, charse
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### fieldName 
+- #### fieldName
   >Type: `string`. The name of a form field
 - #### fileName
   >Type: `string`. The name of a file attachment transmitted with the form data
@@ -2396,6 +2410,14 @@ An array containing objects with data inside its properties.
 
 ---
 
+## headerArray {: #infinity.http.headerArray_interface .doc-interface}
+
+Extends: ` Array<{name: string, value: string}>{}`
+
+An array of objects containing name-value string pairs.
+
+---
+
 ## methodArray {: #infinity.http.methodArray_interface .doc-interface}
 
 Extends: `Array<{name: string, params?: Array<string>, result?: any, rest?: string, httpEnvironment?: boolean}>`
@@ -2403,7 +2425,7 @@ Extends: `Array<{name: string, params?: Array<string>, result?: any, rest?: stri
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The name of the function
 - #### params
   >Type: `Array<string>`, optional. The function parameters
@@ -2431,7 +2453,7 @@ Extends: `Array<{firstOffset: number, lastOffset: number}>`
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### firstOffset 
+- #### firstOffset
   >Type: `number`. The start offset
 - #### lastOffset
   >Type: `number`, optional. The end offset
@@ -2453,7 +2475,7 @@ Extends: `Array<{name: string, value: string}>`
 An array containing objects with data inside its properties.
 
 ### Properties:
-- #### name 
+- #### name
   >Type: `string`. The field name
 - #### value
   >Type: `string`. The field value

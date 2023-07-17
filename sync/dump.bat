@@ -1,2 +1,3 @@
 @echo off
-..\..\infinity\bin\win-x64\infinity.exe -console ../../../infinity-documentation/sync/js/dump.js
+..\..\infinity\bin\win-x64\infinity.exe -console ../../../infinity-doc/sync/js/dump.js
+pause

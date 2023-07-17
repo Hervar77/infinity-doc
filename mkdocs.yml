@@ -147,6 +147,7 @@ nav:
     - infinity.stream: api/infinity.stream.md
     - infinity.template: api/infinity.template.md
     - infinity.thread: api/infinity.thread.md
+    - infinity.ui: api/infinity.ui.md
     - infinity.url: api/infinity.url.md
     - infinity.xml: api/infinity.xml.md
     - infinity.zip: api/infinity.zip.md

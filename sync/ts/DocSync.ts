@@ -39,6 +39,7 @@ class DocSync {
         'infinity.smtp.client': 'infinity.smtp',
         'infinity.smtp.session': 'infinity.smtp',
         'infinity.url': 'infinity.encoding',
+        'infinity.ui': 'infinity.ui',
         'infinity.webSocket.session': 'infinity.webSocket'
     };
 
@@ -97,13 +98,13 @@ class DocSync {
                 let file: string;
 
                 file = this.mkdocsFolder + item.path + '.md';
-        
+
                 if ( infinity.file.exists( file ) || this.createDocumentation || this.overwriteDocumentation ) {
                     this.checkNamespace( item, file, depth );
                 } else {
                     console.warn( 'namespace ' + item.path + ' file missing.' );
                 }
-        
+
                 this.checkItems( item.namespaces, depth + 1 );
             }
         }
@@ -126,7 +127,7 @@ class DocSync {
 
             content = '# ' + dts.path + '\r\n\r\n' +
                 'Module: ' + ( module ? '`' + module + '`' : 'none (built-in)') + '\r\n\r\n';
-            
+
             // Table of contents:
             let toc: string = '';
 
@@ -416,7 +417,7 @@ class DocSync {
                 }
 
                 exampleConstructor += 'let my' + item.name[0].toUpperCase() + item.name.substring( 1 ) + ' = new ' + item.path + '(' + names.join( ', ' ) + ');\r\n';
-                
+
                 content += exampleConstructor + '```\r\n\r\n';
 
                 // Properties:
@@ -742,7 +743,7 @@ class DocSync {
         for ( let value of item.values ) {
             content += '- ' + value.name + ': `' + value.value + '`\r\n' +
                 '  >' + this.todo + '\r\n\r\n';
-            
+
             if ( isBitmask && bitmasks.indexOf( value.value ) == -1 ) {
                 isBitmask = false;
             }

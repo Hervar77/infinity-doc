@@ -349,8 +349,6 @@ Module: `infinity.ui`
 
 </div>
 
-//TODO
-
 ---
 
 <div class="doc-heading">Classes</div>
@@ -358,6 +356,8 @@ Module: `infinity.ui`
 ---
 
 ## color {: #infinity.ui.color_class .doc-class}
+
+This class represents a color, expressed in RGBA format.
 
 <div class="doc-toc" markdown="1">
 
@@ -374,8 +374,6 @@ Module: `infinity.ui`
 - [constructor()](#infinity.ui.color.constructor_function)
 
 </div>
-
-//TODO
 
 Example:
 
@@ -394,7 +392,7 @@ let myColor = new infinity.ui.color(r, g, b, a);
 
 Type: `number`
 
-//TODO
+A number representing the alpha (opacity) component.
 
 ---
 
@@ -402,7 +400,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the green component.
 
 ---
 
@@ -410,7 +408,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the blue component.
 
 ---
 
@@ -418,7 +416,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the red component.
 
 ---
 
@@ -428,7 +426,7 @@ Type: `number`
 
 ### constructor() {: #infinity.ui.color.constructor_function .doc-function}
 
-//TODO
+Creates a new color object with the specified r, g, b, and a values.
 
 Signature:
 ```typescript
@@ -438,16 +436,16 @@ constructor( r: number, g: number, b: number, a: number )
 Parameters:
 
 - r: `number`
-  >//TODO
+  >A number representing the red component.
 
 - g: `number`
-  >//TODO
+  >A number representing the green component.
 
 - b: `number`
-  >//TODO
+  >A number representing the blue component.
 
 - a: `number`
-  >//TODO
+  >A number representing the alpha (opacity) component.
 
 
 Example:
@@ -461,7 +459,7 @@ let myColor = new infinity.ui.color(r, g, b, a);
 
 ### constructor() {: #infinity.ui.color.constructor_function .doc-function}
 
-//TODO
+Creates a new color object with r, g, b, and a set to 0.
 
 Signature:
 ```typescript
@@ -475,11 +473,11 @@ infinity.loadModule('infinity.ui');
 let myColor = new infinity.ui.color(r, g, b, a);
 ```
 
-
-
 ---
 
 ## vec2 {: #infinity.ui.vec2_class .doc-class}
+
+This class represents a 2D vector.
 
 <div class="doc-toc" markdown="1">
 
@@ -494,8 +492,6 @@ let myColor = new infinity.ui.color(r, g, b, a);
 - [constructor()](#infinity.ui.vec2.constructor_function)
 
 </div>
-
-//TODO
 
 Example:
 
@@ -514,7 +510,7 @@ let myVec2 = new infinity.ui.vec2(x, y);
 
 Type: `number`
 
-//TODO
+A number representing the x-coordinate.
 
 ---
 
@@ -522,7 +518,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the y-coordinate.
 
 ---
 
@@ -532,7 +528,7 @@ Type: `number`
 
 ### constructor() {: #infinity.ui.vec2.constructor_function .doc-function}
 
-//TODO
+Creates a new vec2 object with the specified x and y values.
 
 Signature:
 ```typescript
@@ -542,10 +538,10 @@ constructor( x: number, y: number )
 Parameters:
 
 - x: `number`
-  >//TODO
+  >A number representing the x-coordinate.
 
 - y: `number`
-  >//TODO
+  >A number representing the y-coordinate.
 
 
 Example:
@@ -559,7 +555,7 @@ let myVec2 = new infinity.ui.vec2(x, y);
 
 ### constructor() {: #infinity.ui.vec2.constructor_function .doc-function}
 
-//TODO
+Creates a new vec2 object with x and y set to 0.
 
 Signature:
 ```typescript
@@ -579,6 +575,8 @@ let myVec2 = new infinity.ui.vec2(x, y);
 
 ## vec3 {: #infinity.ui.vec3_class .doc-class}
 
+This class represents a 3D vector.
+
 <div class="doc-toc" markdown="1">
 
 **Properties:**
@@ -593,8 +591,6 @@ let myVec2 = new infinity.ui.vec2(x, y);
 - [constructor()](#infinity.ui.vec3.constructor_function)
 
 </div>
-
-//TODO
 
 Example:
 
@@ -613,7 +609,7 @@ let myVec3 = new infinity.ui.vec3(x, y, z);
 
 Type: `number`
 
-//TODO
+A number representing the x-coordinate.
 
 ---
 
@@ -621,7 +617,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the y-coordinate.
 
 ---
 
@@ -629,7 +625,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the z-coordinate.
 
 ---
 
@@ -639,7 +635,7 @@ Type: `number`
 
 ### constructor() {: #infinity.ui.vec3.constructor_function .doc-function}
 
-//TODO
+Creates a new vec3 object with the specified x, y, and z values.
 
 Signature:
 ```typescript
@@ -649,13 +645,13 @@ constructor( x: number, y: number, z: number )
 Parameters:
 
 - x: `number`
-  >//TODO
+  >A number representing the x-coordinate.
 
 - y: `number`
-  >//TODO
+  >A number representing the y-coordinate.
 
 - z: `number`
-  >//TODO
+  >A number representing the z-coordinate.
 
 
 Example:
@@ -669,7 +665,7 @@ let myVec3 = new infinity.ui.vec3(x, y, z);
 
 ### constructor() {: #infinity.ui.vec3.constructor_function .doc-function}
 
-//TODO
+Creates a new vec3 object with x, y, and z set to 0.
 
 Signature:
 ```typescript

@@ -371,7 +371,6 @@ This class represents a color, expressed in RGBA format.
 **Methods:**
 
 - [constructor()](#infinity.ui.color.constructor_function)
-- [constructor()](#infinity.ui.color.constructor_function)
 
 </div>
 
@@ -426,7 +425,7 @@ A number representing the red component.
 
 ### constructor() {: #infinity.ui.color.constructor_function .doc-function}
 
-Creates a new color object with the specified r, g, b, and a values.
+Creates a new color object with the specified `r`, `g`, `b`, and `a` values. The parameters can be omitted altogether to create the object with `r`, `g`, `b`, and `a` set to 0.
 
 Signature:
 ```typescript
@@ -436,35 +435,17 @@ constructor( r: number, g: number, b: number, a: number )
 Parameters:
 
 - r: `number`
-  >A number representing the red component.
+  >a number representing the red component
 
 - g: `number`
-  >A number representing the green component.
+  >a number representing the green component
 
 - b: `number`
-  >A number representing the blue component.
+  >a number representing the blue component
 
 - a: `number`
-  >A number representing the alpha (opacity) component.
+  >a number representing the alpha (opacity) component
 
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-let myColor = new infinity.ui.color(r, g, b, a);
-```
-
----
-
-### constructor() {: #infinity.ui.color.constructor_function .doc-function}
-
-Creates a new color object with r, g, b, and a set to 0.
-
-Signature:
-```typescript
-constructor()
-```
 
 Example:
 
@@ -488,7 +469,6 @@ This class represents a 2D vector.
 
 **Methods:**
 
-- [constructor()](#infinity.ui.vec2.constructor_function)
 - [constructor()](#infinity.ui.vec2.constructor_function)
 
 </div>
@@ -528,7 +508,7 @@ A number representing the y-coordinate.
 
 ### constructor() {: #infinity.ui.vec2.constructor_function .doc-function}
 
-Creates a new vec2 object with the specified x and y values.
+Creates a new vec2 object with the specified `x` and `y` values. The parameters can be omitted altogether to create the object with `x` and `y` set to 0.
 
 Signature:
 ```typescript
@@ -538,10 +518,10 @@ constructor( x: number, y: number )
 Parameters:
 
 - x: `number`
-  >A number representing the x-coordinate.
+  >a number representing the x-coordinate
 
 - y: `number`
-  >A number representing the y-coordinate.
+  >a number representing the y-coordinate
 
 
 Example:
@@ -551,23 +531,6 @@ infinity.loadModule('infinity.ui');
 let myVec2 = new infinity.ui.vec2(x, y);
 ```
 
----
-
-### constructor() {: #infinity.ui.vec2.constructor_function .doc-function}
-
-Creates a new vec2 object with x and y set to 0.
-
-Signature:
-```typescript
-constructor()
-```
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-let myVec2 = new infinity.ui.vec2(x, y);
-```
 
 
 
@@ -587,7 +550,6 @@ This class represents a 3D vector.
 
 **Methods:**
 
-- [constructor()](#infinity.ui.vec3.constructor_function)
 - [constructor()](#infinity.ui.vec3.constructor_function)
 
 </div>
@@ -635,7 +597,7 @@ A number representing the z-coordinate.
 
 ### constructor() {: #infinity.ui.vec3.constructor_function .doc-function}
 
-Creates a new vec3 object with the specified x, y, and z values.
+Creates a new vec3 object with the specified `x`, `y`, and `z` values. The parameters can be omitted altogether to create the object with `x`, `y`, and `z` set to 0.
 
 Signature:
 ```typescript
@@ -645,13 +607,13 @@ constructor( x: number, y: number, z: number )
 Parameters:
 
 - x: `number`
-  >A number representing the x-coordinate.
+  >a number representing the x-coordinate
 
 - y: `number`
-  >A number representing the y-coordinate.
+  >a number representing the y-coordinate
 
 - z: `number`
-  >A number representing the z-coordinate.
+  >a number representing the z-coordinate
 
 
 Example:
@@ -660,25 +622,6 @@ Example:
 infinity.loadModule('infinity.ui');
 let myVec3 = new infinity.ui.vec3(x, y, z);
 ```
-
----
-
-### constructor() {: #infinity.ui.vec3.constructor_function .doc-function}
-
-Creates a new vec3 object with x, y, and z set to 0.
-
-Signature:
-```typescript
-constructor()
-```
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-let myVec3 = new infinity.ui.vec3(x, y, z);
-```
-
 
 
 ---
@@ -697,11 +640,9 @@ let myVec3 = new infinity.ui.vec3(x, y, z);
 **Methods:**
 
 - [constructor()](#infinity.ui.vec4.constructor_function)
-- [constructor()](#infinity.ui.vec4.constructor_function)
 
 </div>
 
-//TODO
 
 Example:
 
@@ -720,7 +661,7 @@ let myVec4 = new infinity.ui.vec4(x, y, z, w);
 
 Type: `number`
 
-//TODO
+A number representing the w-coordinate.
 
 ---
 
@@ -728,7 +669,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the x-coordinate.
 
 ---
 
@@ -736,7 +677,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the y-coordinate.
 
 ---
 
@@ -744,7 +685,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+A number representing the z-coordinate.
 
 ---
 
@@ -754,7 +695,7 @@ Type: `number`
 
 ### constructor() {: #infinity.ui.vec4.constructor_function .doc-function}
 
-//TODO
+Creates a new vec4 object with the specified x, y, z, and w values. The parameters can be omitted altogether to create the object with x, y, z, and w set to 0.
 
 Signature:
 ```typescript
@@ -764,35 +705,17 @@ constructor( x: number, y: number, z: number, w: number )
 Parameters:
 
 - x: `number`
-  >//TODO
+  >a number representing the x-coordinate
 
 - y: `number`
-  >//TODO
+  >a number representing the y-coordinate
 
 - z: `number`
-  >//TODO
+  >a number representing the z-coordinate
 
 - w: `number`
-  >//TODO
+  >a number representing the w-coordinate
 
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-let myVec4 = new infinity.ui.vec4(x, y, z, w);
-```
-
----
-
-### constructor() {: #infinity.ui.vec4.constructor_function .doc-function}
-
-//TODO
-
-Signature:
-```typescript
-constructor()
-```
 
 Example:
 
@@ -813,7 +736,7 @@ let myVec4 = new infinity.ui.vec4(x, y, z, w);
 
 Extends: `Array<number>`
 
-//TODO
+An array containing number elements.
 
 ---
 
@@ -821,7 +744,7 @@ Extends: `Array<number>`
 
 Extends: `Array<string>`
 
-//TODO
+An array containing string elements.
 
 ---
 
@@ -829,7 +752,7 @@ Extends: `Array<string>`
 
 Extends: `Array<infinity.ui.vec2>`
 
-//TODO
+An array containing elements of the vec2 class.
 
 
 
@@ -841,7 +764,7 @@ Extends: `Array<infinity.ui.vec2>`
 
 ## addBezierCubic() {: #infinity.ui.addBezierCubic_function .doc-function}
 
-//TODO
+This function draws a cubic Bezier curve on the UI using specified control points and styling.
 
 Signature:
 ```
@@ -850,26 +773,26 @@ addBezierCubic( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
-  >//TODO
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the first control point of the Bezier curve, of type infinity.ui.vec2
 
-- p2: `infinity.ui.vec2`
-  >//TODO
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the second control point of the Bezier curve, of type infinity.ui.vec2
 
-- p3: `infinity.ui.vec2`
-  >//TODO
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the third control point of the Bezier curve, of type infinity.ui.vec2
 
-- p4: `infinity.ui.vec2`
-  >//TODO
+- p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the fourth control point of the Bezier curve, of type infinity.ui.vec2
 
 - col: `number`
-  >//TODO
+  >a number representing the color of the curve
 
 - thickness: `number`, optional
-  >//TODO
+  >a number specifying the thickness of the curve. If not provided, a default value will be used.
 
 - segments: `number`, optional
-  >//TODO
+  >a number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
 
 
 Example:
@@ -883,7 +806,7 @@ infinity.ui.addBezierCubic(p1, p2, p3, p4, col);
 
 ## addBezierQuadratic() {: #infinity.ui.addBezierQuadratic_function .doc-function}
 
-//TODO
+This function draws a quadratic Bezier curve on the UI using specified control points and styling.
 
 Signature:
 ```
@@ -892,23 +815,23 @@ addBezierQuadratic( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
-  >//TODO
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the first control point of the Bezier curve, of type infinity.ui.vec2
 
-- p2: `infinity.ui.vec2`
-  >//TODO
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the second control point of the Bezier curve, of type infinity.ui.vec2
 
-- p3: `infinity.ui.vec2`
-  >//TODO
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the third control point of the Bezier curve, of type infinity.ui.vec2
 
 - col: `number`
-  >//TODO
+  >a number representing the color of the curve
 
 - thickness: `number`, optional
-  >//TODO
+  >a number specifying the thickness of the curve. If not provided, a default value will be used.
 
 - segments: `number`, optional
-  >//TODO
+  >a number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
 
 
 Example:
@@ -922,7 +845,7 @@ infinity.ui.addBezierQuadratic(p1, p2, p3, col);
 
 ## addCircle() {: #infinity.ui.addCircle_function .doc-function}
 
-//TODO
+This function draws a circle on the UI using the specified center point, radius, and styling.
 
 Signature:
 ```
@@ -931,20 +854,20 @@ addCircle( center: infinity.ui.vec2, radius: number, col: number, segments?: num
 
 Parameters:
 
-- center: `infinity.ui.vec2`
-  >//TODO
+- center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >the center point of the circle, of type infinity.ui.vec2
 
 - radius: `number`
-  >//TODO
+  >a number representing the radius of the circle
 
 - col: `number`
-  >//TODO
+  >a number representing the color of the circle
 
 - segments: `number`, optional
-  >//TODO
+  >a number specifying the number of segments to divide the circle into. More segments results in a smoother circle. If not provided, a default value will be used.
 
 - thickness: `number`, optional
-  >//TODO
+  >a number specifying the thickness of the circle. If not provided, a default value will be used.
 
 
 Example:
@@ -967,7 +890,7 @@ addCircleFilled( center: infinity.ui.vec2, radius: number, col: number, segments
 
 Parameters:
 
-- center: `infinity.ui.vec2`
+- center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - radius: `number`
@@ -1059,16 +982,16 @@ Parameters:
 - texture: `number`
   >//TODO
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- uv1: `infinity.ui.vec2`, optional
+- uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv2: `infinity.ui.vec2`, optional
+- uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - col: `number`, optional
@@ -1098,28 +1021,28 @@ Parameters:
 - texture: `number`
   >//TODO
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p3: `infinity.ui.vec2`
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p4: `infinity.ui.vec2`
+- p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- uv1: `infinity.ui.vec2`, optional
+- uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv2: `infinity.ui.vec2`, optional
+- uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv3: `infinity.ui.vec2`, optional
+- uv3: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv4: `infinity.ui.vec2`, optional
+- uv4: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - col: `number`, optional
@@ -1149,16 +1072,16 @@ Parameters:
 - texture: `number`
   >//TODO
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- uv1: `infinity.ui.vec2`, optional
+- uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv2: `infinity.ui.vec2`, optional
+- uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - col: `number`, optional
@@ -1191,10 +1114,10 @@ addLine( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, thickness?: nu
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1224,7 +1147,7 @@ addNgon( center: infinity.ui.vec2, radius: number, col: number, segments: number
 
 Parameters:
 
-- center: `infinity.ui.vec2`
+- center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - radius: `number`
@@ -1260,7 +1183,7 @@ addNgonFilled( center: infinity.ui.vec2, radius: number, col: number, segments: 
 
 Parameters:
 
-- center: `infinity.ui.vec2`
+- center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - radius: `number`
@@ -1326,16 +1249,16 @@ addQuad( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2, p4: i
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p3: `infinity.ui.vec2`
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p4: `infinity.ui.vec2`
+- p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1365,16 +1288,16 @@ addQuadFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2,
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p3: `infinity.ui.vec2`
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p4: `infinity.ui.vec2`
+- p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1401,10 +1324,10 @@ addRect( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, rounding?: num
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1440,10 +1363,10 @@ addRectFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, rounding
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1476,10 +1399,10 @@ addRectFilledMultiColor( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col1: numbe
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col1: `number`
@@ -1521,7 +1444,7 @@ Parameters:
 - size: `number`
   >//TODO
 
-- pos: `infinity.ui.vec2`
+- pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1554,7 +1477,7 @@ addText( pos: infinity.ui.vec2, col: number, text: string ): void
 
 Parameters:
 
-- pos: `infinity.ui.vec2`
+- pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1584,13 +1507,13 @@ addTriangle( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2, c
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p3: `infinity.ui.vec2`
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1620,13 +1543,13 @@ addTriangleFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.v
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p3: `infinity.ui.vec2`
+- p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - col: `number`
@@ -1735,7 +1658,7 @@ Parameters:
 - id: `string`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - border: `boolean`, optional
@@ -1770,7 +1693,7 @@ Parameters:
 - id: `number`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - border: `boolean`, optional
@@ -1805,7 +1728,7 @@ Parameters:
 - id: `number`
   >//TODO
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - flags: `infinity.ui.windowFlags`, optional
@@ -1911,7 +1834,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -2224,7 +2147,7 @@ Parameters:
 - flags: `infinity.ui.tableFlags`, optional
   >//TODO
 
-- outerSize: `infinity.ui.vec2`, optional
+- outerSize: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - innerWidth: `number`, optional
@@ -2316,7 +2239,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -2369,7 +2292,7 @@ Parameters:
   >//TODO
 
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -2508,7 +2431,7 @@ Parameters:
 - flags: `infinity.ui.colorEditFlags`, optional
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -2773,7 +2696,7 @@ dummy( size: infinity.ui.vec2 ): void
 
 Parameters:
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -3192,7 +3115,7 @@ Signature:
 getContentRegionAvail(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3212,7 +3135,7 @@ Signature:
 getContentRegionMax(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3232,7 +3155,7 @@ Signature:
 getCursorPos(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3292,7 +3215,7 @@ Signature:
 getCursorScreenPos(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3312,7 +3235,7 @@ Signature:
 getCursorStartPos(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3372,7 +3295,7 @@ Signature:
 getFontTexUvWhitePixel(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3507,7 +3430,7 @@ Signature:
 getItemRectMax(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3527,7 +3450,7 @@ Signature:
 getItemRectMin(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3547,7 +3470,7 @@ Signature:
 getItemRectSize(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3680,7 +3603,7 @@ Parameters:
   >//TODO
 
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3700,7 +3623,7 @@ Signature:
 getMousePos(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3720,7 +3643,7 @@ Signature:
 getMousePosOnOpeningCurrentPopup(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3872,7 +3795,7 @@ Signature:
 getWindowContentRegionMax(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3892,7 +3815,7 @@ Signature:
 getWindowContentRegionMin(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3932,7 +3855,7 @@ Signature:
 getWindowPos(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3952,7 +3875,7 @@ Signature:
 getWindowSize(): infinity.ui.vec2
 ```
 
-Return type: `infinity.ui.vec2`
+Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Example:
 
@@ -3997,13 +3920,13 @@ Parameters:
 - texture: `number`
   >//TODO
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- uv1: `infinity.ui.vec2`, optional
+- uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv2: `infinity.ui.vec2`, optional
+- uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - tintCol: `infinity.ui.color`, optional
@@ -4036,13 +3959,13 @@ Parameters:
 - texture: `number`
   >//TODO
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- uv1: `infinity.ui.vec2`, optional
+- uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- uv2: `infinity.ui.vec2`, optional
+- uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - padding: `number`, optional
@@ -4259,7 +4182,7 @@ Parameters:
 - text: `string`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - flags: `infinity.ui.inputTextFlags`, optional
@@ -4326,7 +4249,7 @@ Parameters:
 - id: `string`
   >//TODO
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - flags: `infinity.ui.buttonFlags`, optional
@@ -4838,10 +4761,10 @@ isMouseHoveringRect( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2, c
 
 Parameters:
 
-- topLeft: `infinity.ui.vec2`
+- topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- bottomRight: `infinity.ui.vec2`
+- bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - clip: `boolean`, optional
@@ -4870,7 +4793,7 @@ isMousePosValid( position?: infinity.ui.vec2 ): boolean
 
 Parameters:
 
-- position: `infinity.ui.vec2`, optional
+- position: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -4951,10 +4874,10 @@ isRectVisible( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2 ): boole
 
 Parameters:
 
-- topLeft: `infinity.ui.vec2`
+- topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- bottomRight: `infinity.ui.vec2`
+- bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -5448,7 +5371,7 @@ Parameters:
 - scaleMax: `number`, optional
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -5490,7 +5413,7 @@ Parameters:
 - scaleMax: `number`, optional
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -5747,7 +5670,7 @@ Parameters:
 - fraction: `number`
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 - overlay: `string`, optional
@@ -5822,10 +5745,10 @@ pushClipRect( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2, intersec
 
 Parameters:
 
-- topLeft: `infinity.ui.vec2`
+- topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- bottomRight: `infinity.ui.vec2`
+- bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - intersectWithCurrentClipRect: `boolean`
@@ -5870,10 +5793,10 @@ pushClipRectRender( p1: infinity.ui.vec2, p2: infinity.ui.vec2, intersectWithCur
 
 Parameters:
 
-- p1: `infinity.ui.vec2`
+- p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- p2: `infinity.ui.vec2`
+- p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - intersectWithCurrentClipRect: `boolean`
@@ -6107,7 +6030,7 @@ Parameters:
 - idx: `infinity.ui.styleVars`
   >//TODO
 
-- val: `infinity.ui.vec2`
+- val: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -6350,7 +6273,7 @@ Parameters:
 - flags: `infinity.ui.selectableFlags`, optional
   >//TODO
 
-- size: `infinity.ui.vec2`, optional
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -6442,7 +6365,7 @@ setCursorPos( position: infinity.ui.vec2 ): void
 
 Parameters:
 
-- position: `infinity.ui.vec2`
+- position: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -6514,7 +6437,7 @@ setCursorScreenPos( position: infinity.ui.vec2 ): void
 
 Parameters:
 
-- position: `infinity.ui.vec2`
+- position: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -6796,7 +6719,7 @@ setNextWindowContentSize( size: infinity.ui.vec2 ): void
 
 Parameters:
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -6838,13 +6761,13 @@ setNextWindowPos( pos: infinity.ui.vec2, condition?: infinity.ui.conditions, piv
 
 Parameters:
 
-- pos: `infinity.ui.vec2`
+- pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - condition: `infinity.ui.conditions`, optional
   >//TODO
 
-- pivot: `infinity.ui.vec2`, optional
+- pivot: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
 
@@ -6868,7 +6791,7 @@ setNextWindowScroll( scroll: infinity.ui.vec2 ): void
 
 Parameters:
 
-- scroll: `infinity.ui.vec2`
+- scroll: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -6892,7 +6815,7 @@ setNextWindowSize( size: infinity.ui.vec2, condition?: infinity.ui.conditions ):
 
 Parameters:
 
-- size: `infinity.ui.vec2`
+- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 - condition: `infinity.ui.conditions`, optional
@@ -6919,10 +6842,10 @@ setNextWindowSizeConstraints( size_min: infinity.ui.vec2, size_max: infinity.ui.
 
 Parameters:
 
-- size_min: `infinity.ui.vec2`
+- size_min: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
-- size_max: `infinity.ui.vec2`
+- size_max: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
   >//TODO
 
 
@@ -8047,7 +7970,7 @@ Type: `infinity.ui.color`
 
 ## framePos {: #infinity.ui.framePos_property .doc-property}
 
-Type: `infinity.ui.vec2`
+Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 //TODO
 
@@ -8055,7 +7978,7 @@ Type: `infinity.ui.vec2`
 
 ## frameSize {: #infinity.ui.frameSize_property .doc-property}
 
-Type: `infinity.ui.vec2`
+Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 //TODO
 
@@ -8103,7 +8026,7 @@ Type: `string`
 
 ## displaySize {: #infinity.ui.displaySize_property .doc-property}
 
-Type: `infinity.ui.vec2`
+Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 //TODO
 

@@ -42,7 +42,7 @@ hash( value: string ): string
 Parameters:
 
 - value: `string`
-  >the string to be hashed
+  >The string to be hashed.
 
 
 Return type: `string`
@@ -68,7 +68,7 @@ hashFile( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be hashed
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be hashed.
 
 
 Return type: `string`
@@ -94,7 +94,7 @@ hashStream( stream: infinity.stream ): string
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream object for building the hash. See [infinity.stream](infinity.stream.md)
+  >The stream object for building the hash. See [infinity.stream](infinity.stream.md).
 
 Return type: `string`
 
@@ -120,10 +120,10 @@ hash( value: string, key: string ): string
 Parameters:
 
 - value: `string`
-  >message to be hashed
+  >Message to be hashed.
 
 - key: `string`
-  >shared secret key used for generating the HMAC variant of the message digest
+  >Shared secret key used for generating the HMAC variant of the message digest.
 
 
 Return type: `string`

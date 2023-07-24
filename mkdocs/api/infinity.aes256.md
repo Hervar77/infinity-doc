@@ -49,10 +49,10 @@ decrypt( value: string, password: string ): string
 Parameters:
 
 - value: `string`
-  >the string to decrypt
+  >The string to decrypt.
 
 - password: `string`
-  >the password used previously during encryption
+  >The password used previously during encryption.
 
 
 Return type: `string`
@@ -78,13 +78,13 @@ decryptFile( inFileName: string, outFileName: string, password: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encrypted file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encrypted file.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decrypted output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decrypted output.
 
 - password: `string`
-  >the password used previously during encryption
+  >The password used previously during encryption.
 
 
 Example:
@@ -108,13 +108,13 @@ decryptStream( inStream: infinity.stream, outStream: infinity.stream, password: 
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to decrypt data from. See [infinity.stream](infinity.stream.md)
+  >The stream object to decrypt data from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 - password: `string`
-  >the password used previously during encryption
+  >The password used previously during encryption.
 
 
 Example:
@@ -138,10 +138,10 @@ encrypt( value: string, password: string ): string
 Parameters:
 
 - value: `string`
-  >the string to encrypt
+  >The string to encrypt.
 
 - password: `string`
-  >the password to be used later for decryption
+  >The password to be used later for decryption.
 
 
 Return type: `string`
@@ -167,13 +167,13 @@ encryptFile( inFileName: string, outFileName: string, password: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encrypted 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encrypted.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encrypted output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encrypted output.
 
 - password: `string`
-  >the password to be used later for decryption
+  >The password to be used later for decryption.
 
 
 Example:
@@ -197,13 +197,13 @@ encryptStream( inStream: infinity.stream, outStream: infinity.stream, password: 
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to encrypt. See [infinity.stream](infinity.stream.md)
+  >The stream object to encrypt. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 - password: `string`
-  >the password to be used later for decryption
+  >The password to be used later for decryption.
 
 
 Example:

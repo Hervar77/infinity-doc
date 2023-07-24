@@ -105,7 +105,7 @@ correctCmdLineParam( param: string ): string
 Parameters:
 
 - param: `string`
-  >the string to be corrected
+  >The string to be corrected.
 
 
 Return type: `string`
@@ -131,7 +131,7 @@ exists( processName: string ): boolean
 Parameters:
 
 - processName: `string`
-  >the process name to check for
+  >The process name to check for.
 
 
 Return type: `boolean`
@@ -159,7 +159,7 @@ kill( processName: string ): boolean
 Parameters:
 
 - processName: `string`
-  >the name of the process to kill
+  >The name of the process to kill.
 
 
 Return type: `boolean`
@@ -187,16 +187,16 @@ start( fileName: string, params?: string, waitfor?: boolean, timeout?: number ):
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the executable file which should be launched
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the executable file which should be launched.
 
 - params: `string`, optional
-  >command line-like parameters which should be provided to the started process
+  >Command line-like parameters which should be provided to the started process.
 
 - waitfor: `boolean`, optional
-  >specifies whether the function should wait for the launched process to complete or be killed, before returning its results
+  >Specifies whether the function should wait for the launched process to complete or be killed, before returning its results.
 
 - timeout: `number`, optional
-  >specifies how long the waiting for the process to complete should last
+  >Specifies how long the waiting for the process to complete should last.
 
 
 Return type: [`infinity.process.result`](#infinity.process.result_interface)
@@ -222,10 +222,10 @@ waitFor( processName: string, waitFor: number ): boolean
 Parameters:
 
 - processName: `string`
-  >the name of the process to wait for
+  >The name of the process to wait for.
 
 - waitFor: `number`
-  >number of seconds to wait for the process to finish or terminate (attention: this parameter is a number of seconds, not milliseconds)
+  >Number of seconds to wait for the process to finish or terminate (attention: this parameter is a number of seconds, not milliseconds).
 
 
 Return type: `boolean`

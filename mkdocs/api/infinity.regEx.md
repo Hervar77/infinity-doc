@@ -94,16 +94,16 @@ extractList( regEx: string, subject: string, replacement: string, options?: infi
 Parameters:
 
 - regEx: `string`
-  >the regular expression for the searched data
+  >The regular expression for the searched data.
 
 - subject: `string`
-  >the string inside of which the search should be performed
+  >The string inside of which the search should be performed.
 
 - replacement: `string`
-  >the replacement to be applied to each match
+  >The replacement to be applied to each match.
 
 - options: `infinity.regEx.optionArray`, optional
-  >an array of additional options according to [`option`](#infinity.regEx.option_enum) enums
+  >An array of additional options according to [`option`](#infinity.regEx.option_enum) enums.
 
 
 
@@ -130,13 +130,13 @@ match( regEx: string, subject: string, options?: infinity.regEx.optionArray ): b
 Parameters:
 
 - regEx: `string`
-  >the regular expression for the searched data
+  >The regular expression for the searched data.
 
 - subject: `string`
-  >the string inside of which the search should be performed
+  >The string inside of which the search should be performed.
 
 - options: `infinity.regEx.optionArray`, optional
-  >an array of additional options according to [`option`](#infinity.regEx.option_enum) enums
+  >An array of additional options according to [`option`](#infinity.regEx.option_enum) enums.
 
 
 Return type: `boolean`
@@ -164,13 +164,13 @@ matchList( regEx: string, subject: string, options?: infinity.regEx.optionArray 
 Parameters:
 
 - regEx: `string`
-  >the regular expression for the searched data
+  >The regular expression for the searched data.
 
 - subject: `string`
-  >the string inside of which the search should be performed
+  >The string inside of which the search should be performed.
 
 - options: `infinity.regEx.optionArray`, optional
-  >an array of additional options according to [`option`](#infinity.regEx.option_enum) enums
+  >An array of additional options according to [`option`](#infinity.regEx.option_enum) enums.
 
 
 Return type: `matchArray`
@@ -197,16 +197,16 @@ replace( regEx: string, subject: string, replacement: string, options?: infinity
 Parameters:
 
 - regEx: `string`
-  >the regular expression for the searched data
+  >The regular expression for the searched data.
 
 - subject: `string`
-  >the string inside of which the search should be performed
+  >The string inside of which the search should be performed.
 
 - replacement: `string`
-  >the replacement data to put instead of the found data
+  >The replacement data to put instead of the found data.
 
 - options: `infinity.regEx.optionArray`, optional
-  >an array of additional options according to [`option`](#infinity.regEx.option_enum) enums
+  >An array of additional options according to [`option`](#infinity.regEx.option_enum) enums.
 
 
 
@@ -237,25 +237,25 @@ console.debug(matches);
 Values:
 
 - caseLess: `0`
-  >stands for a case insensitive search
+  >Stands for a case insensitive search.
 
 - multiLine: `1`
-  >stands for a search over multiple lines
+  >Stands for a search over multiple lines.
 
 - singleLine: `2`
-  >causes the regular expression to treat the input string as if it consists of a single line
+  >Causes the regular expression to treat the input string as if it consists of a single line.
 
 - extended: `3`
-  >specifies, whether the extended regular expression syntax should be recognized
+  >Specifies, whether the extended regular expression syntax should be recognized.
 
 - anchored: `4`
-  >for a search that considers whether the first searched character is located at the start of the search subject and the last search character is located at the end of the search subject
+  >For a search that considers whether the first searched character is located at the start of the search subject and the last search character is located at the end of the search subject.
 
 - unGreedy: `5`
-  >stands for a lazy search that returns with as few contents as needed to be a match, as opposed to a greedy search which tries to capture as much content as possible
+  >Stands for a lazy search that returns with as few contents as needed to be a match, as opposed to a greedy search which tries to capture as much content as possible.
 
 - noAutoCapture: `6`
-  >to suppress automatic captures (groups in parentheses will not be mapped to `$1, $2, ...`)
+  >To suppress automatic captures (groups in parentheses will not be mapped to `$1, $2, ...`).
 
 Example:
 

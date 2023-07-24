@@ -44,7 +44,7 @@ getExtension( mimeType: string ): string
 Parameters:
 
 - mimeType: `string`
-  >the MIME-Type to be matched to a file extension
+  >The MIME-Type to be matched to a file extension.
 
 
 Return type: `string`
@@ -73,7 +73,7 @@ getMimeType( extension: string ): string
 Parameters:
 
 - extension: `string`
-  >the file extension to be matched to a MIME-Type
+  >The file extension to be matched to a MIME-Type.
 
 
 Return type: `string`

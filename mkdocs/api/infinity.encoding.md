@@ -34,7 +34,7 @@ toString( encoding: infinity.encoding ): string
 Parameters:
 
 - encoding: `infinity.encoding`
-  >[infinity.encoding](infinity.encoding.md#enums) enum
+  >[infinity.encoding](infinity.encoding.md#enums) enum.
 
 
 Return type: `string`
@@ -61,23 +61,24 @@ Values:
 - systemDefault: `0`
   >Default encoding, determined by the operating system.
 
+
 - ansi: `1`
-  >ANSI encoding (windows codepage 1252)
+  >ANSI encoding (windows codepage 1252).
 
 - ascii: `2`
-  >ASCII encoding
+  >ASCII encoding.
 
 - bigEndianUnicode: `3`
-  >Unicode (big endian) encoding
+  >Unicode (big endian) encoding.
 
 - unicode: `4`
-  >Unicode encoding
+  >Unicode encoding.
 
 - utf7: `5`
-  >UTF-7 encoding
+  >UTF-7 encoding.
 
 - utf8: `6`
-  >UTF-8 encoding
+  >UTF-8 encoding.
 
 Example:
 

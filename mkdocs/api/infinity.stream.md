@@ -140,13 +140,13 @@ constructor( fileName: string, fileMode: infinity.fileMode, autoDelete?: boolean
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be used
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be used.
 
 - fileMode: `infinity.fileMode`
-  >the mode for opening or creating the file according to [infinity.fileMode](infinity.fileMode.md)
+  >The mode for opening or creating the file according to [infinity.fileMode](infinity.fileMode.md).
 
 - autoDelete: `boolean`, optional
-  >specifies whether the file should be deleted automatically after object destruction
+  >Specifies whether the file should be deleted automatically after object destruction.
 
 
 Example:
@@ -188,10 +188,10 @@ copyFrom( stream: infinity.stream, count?: number ): number
 Parameters:
 
 - stream: `infinity.stream`
-  >the stream object to copy from
+  >The stream object to copy from.
 
 - count: `number`, optional
-  >the number of bytes to copy
+  >The number of bytes to copy.
 
 
 Return type: `number`
@@ -292,13 +292,13 @@ readString( encoding?: infinity.encoding, fromBeginning?: boolean, count?: numbe
 Parameters:
 
 - encoding: `infinity.encoding`, optional
-  >the encoding of the string
+  >The encoding of the string.
 
 - fromBeginning: `boolean`, optional
-  >whether to start reading from the beginning of the stream
+  >Whether to start reading from the beginning of the stream.
 
 - count: `number`, optional
-  >the number of bytes to read
+  >The number of bytes to read.
 
 
 Return type: `string`
@@ -323,7 +323,7 @@ write( value: any ): void;
 Parameters:
 
 - value: `any`
-  >the data to be written
+  >The data to be written.
 
 
 Example:
@@ -346,7 +346,7 @@ writeBoolean( value: boolean ): void
 Parameters:
 
 - value: `boolean`
-  >the boolean value to be written
+  >The boolean value to be written.
 
 
 Example:
@@ -369,7 +369,7 @@ writeNumber( value: number ): void
 Parameters:
 
 - value: `number`
-  >the number to be written
+  >The number to be written.
 
 
 Example:
@@ -392,13 +392,13 @@ writeString( value: string, encoding?: infinity.encoding, append?: boolean ): vo
 Parameters:
 
 - value: `string`
-  >the string to be written
+  >The string to be written.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md), optional
-  >an [infinity.encoding](infinity.encoding.md) enum for the string
+  >An [infinity.encoding](infinity.encoding.md) enum for the string.
 
 - append: `boolean`, optional
-  >whether to append the string to previously written data or to overwrite it
+  >Whether to append the string to previously written data or to overwrite it.
 
 
 Example:

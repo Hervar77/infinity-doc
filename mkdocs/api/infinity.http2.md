@@ -167,43 +167,44 @@ constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: bool
 Parameters:
 
 - ssl: `boolean`, optional
-  >for using SSL connections
+  >For using SSL connections.
 
 - verifyCertificate: `boolean`, optional
-  >whether to verify the SSL-Certificate
+  >Whether to verify the SSL-Certificate.
 
 - allowCrossOrigin: `boolean`, optional
-  >for allowing cross-origin-requests
+  >For allowing cross-origin-requests.
 
 - compress: `boolean`, optional
-  >for turning compression on or off
+  >For turning compression on or off.
 
 - accessLog: `boolean`, optional
-  >for turning on or off the logging of all access events
+  >For turning on or off the logging of all access events.
 
 - iocp: `boolean`, optional
-  >specifies the usage of the input/output completion port
+  >Specifies the usage of the input/output completion port.
 
 - port: `number`, optional
-  >specifies the port to listen on
+  >Specifies the port to listen on.
 
 - maxConnections: `number`, optional
-  >specifies the number of simultaneous connections
+  >Specifies the number of simultaneous connections.
 
 - poolSize: `number`, optional
-  >specifies the number of worker threads to be held ready
+  >Specifies the number of worker threads to be held ready.
 
 - maxContentLength: `number`, optional
-  >specifies the maximum number of bytes (content-length header) that the server accepts in http requests
+  >Specifies the maximum number of bytes (content-length header) that the server accepts in http requests.
 
 - slowRequestTime: `number`, optional
-  >specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+  >Specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+
 
 - protocol: [`infinity.http2.server.protocol`](#infinity.http2.server.protocol_enum), optional
-  >specifies the encryption protocol to be used
+  >Specifies the encryption protocol to be used.
 
 - maxRateCounter: `number`, optional
-  >the maximum number of requests that a client can make in a specific time frame for rate limiting
+  >The maximum number of requests that a client can make in a specific time frame for rate limiting.
 
 
 Example:
@@ -227,16 +228,17 @@ broadcast( data: any, channel?: string, exclude?: string, include?: string ): vo
 Parameters:
 
 - data: `any`
-  >data to be sent (can be any object, number, string, etc.).
+  >Data to be sent (can be any object, number, string, etc.).
+
 
 - channel: `string`, optional
-  >channel name
+  >Channel name.
 
 - exclude: `string`, optional
-  >comma-separated list of client ids to exclude from the broadcast
+  >Comma-separated list of client ids to exclude from the broadcast.
 
 - include: `string`, optional
-  >comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel)
+  >Comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel).
 
 
 Example:
@@ -259,16 +261,17 @@ broadcast( stream: infinity.stream, channel?: string, exclude?: string, include?
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >a stream from which to read data and send it to the clients.
+  >A stream from which to read data and send it to the clients.
+
 
 - channel: `string`, optional
-  >channel name
+  >Channel name.
 
 - exclude: `string`, optional
-  >comma-separated list of client ids to exclude from the broadcast
+  >Comma-separated list of client ids to exclude from the broadcast.
 
 - include: `string`, optional
-  >comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel)
+  >Comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel).
 
 
 Example:
@@ -291,16 +294,17 @@ broadcast( message: string, channel?: string, exclude?: string, include?: string
 Parameters:
 
 - message: `string`
-  >message to send to the clients.
+  >Message to send to the clients.
+
 
 - channel: `string`, optional
-  >channel name
+  >Channel name.
 
 - exclude: `string`, optional
-  >comma-separated list of client ids to exclude from the broadcast
+  >Comma-separated list of client ids to exclude from the broadcast.
 
 - include: `string`, optional
-  >comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel)
+  >Comma-separated list of client ids to include from the broadcast (in addition to those subscribed to the given channel).
 
 
 Example:
@@ -323,31 +327,33 @@ registerHandler( handler: infinity.http2.server.handler, path: string, alias?: s
 Parameters:
 
 - handler: [`infinity.http2.server.handler`](#infinity.http2.server.handler_enum)
-  >the type of handler to register
+  >The type of handler to register.
 
 - path: `string`
-  >the request path for the client
+  >The request path for the client.
 
 - alias: `string`
-  >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
+  >The path to a local folder or file with contents or defined routines to be served corresponding to the client request.
 
 - expire: `number`, optional
-  >the cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+  >The cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+
 
 - maxCacheSize: `number`, optional
-  >the cache threshold in bytes. Files with sizes exceeding the specified number will not be cached
+  >The cache threshold in bytes. Files with sizes exceeding the specified number will not be cached.
 
 - headers: [`infinity.http2.headerArray`](#infinity.http2.headerArray_interface), optional
-  >the headers to be sent with the response
+  >The headers to be sent with the response.
 
 - limit: `number`, optional
-  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+  >The maximum number of requests that can be made in the defined period. Used for rate limiting.
+
 
 - period: `number`, optional
-  >the rate limit time period in seconds
+  >The rate limit time period in seconds.
 
 - delay: `number`, optional
-  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
+  >The "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests.
 
 
 Example:
@@ -372,16 +378,16 @@ registerService( name: string, namespace: string, path: string, methods: infinit
 Parameters:
 
 - name: `string`
-  >the name of the service
+  >The name of the service.
 
 - namespace: `string`
-  >the namespace for the service
+  >The namespace for the service.
 
 - path: `string`
-  >the path to the file with the custom defined methods
+  >The path to the file with the custom defined methods.
 
 - methods: [`infinity.http2.methodArray`](#infinity.http2.methodArray_interface)
-  >an array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified
+  >An array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified.
 
 
 Example:
@@ -443,16 +449,16 @@ setCertificate(certFile: string, keyFile: string, rootCertFile?: string, verify?
 Parameters:
 
 - certFile: `string`
-  >the path to the certificate file to be used
+  >The path to the certificate file to be used.
 
 - keyFile: `string`
-  >the path to the the key file to be used
+  >The path to the the key file to be used.
 
 - rootCertFile: `string`, optional
-  >the path to the the root certificate file to be used
+  >The path to the the root certificate file to be used.
 
 - verify: `boolean`, optional
-  >whether to verify the validity of the certificate
+  >Whether to verify the validity of the certificate.
 
 
 Example:
@@ -509,7 +515,7 @@ unregisterHandler( path: string ): void
 Parameters:
 
 - path: `string`
-  >the request path for the client, which the handler has previously been registered for
+  >The request path for the client, which the handler has previously been registered for.
 
 
 Example:
@@ -532,7 +538,7 @@ unregisterService( name: string ): void
 Parameters:
 
 - name: `string`
-  >the name of the previously registered service
+  >The name of the previously registered service.
 
 
 Example:
@@ -555,10 +561,12 @@ write( id: string, data: any ): boolean
 Parameters:
 
 - id: `string`
-  >session id of the client connection.
+  >Session id of the client connection.
+
 
 - data: `any`
-  >data to be sent (can be any object, number, string, etc.).
+  >Data to be sent (can be any object, number, string, etc.).
+
 
 
 Return type: `boolean`
@@ -583,10 +591,12 @@ writeStream( id: string, stream: infinity.stream ): boolean
 Parameters:
 
 - id: `string`
-  >session id of the client connection.
+  >Session id of the client connection.
+
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >a stream from which to read data and send it to the client.
+  >A stream from which to read data and send it to the client.
+
 
 
 Return type: `boolean`
@@ -611,10 +621,12 @@ writeString( id: string, message: string ): boolean
 Parameters:
 
 - id: `string`
-  >session id of the client connection.
+  >Session id of the client connection.
+
 
 - message: `string`
-  >message to send to the client.
+  >Message to send to the client.
+
 
 
 Return type: `boolean`
@@ -1343,31 +1355,32 @@ Gets or sets the `WWW-Authenticate` HTTP-header value.
 Values:
 
 - custom: `0`
-  >a custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.http2.server.registerHandler_function)
+  >A custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.http2.server.registerHandler_function).
 
 - staticFile: `1`
-  >a handler for serving static file content. Prefers showing the index.html file.
+  >A handler for serving static file content. Prefers showing the index.html file.
+
 
 - jsonRpc: `2`
-  >a handler for requests according to the JSON-RPC protocol
+  >A handler for requests according to the JSON-RPC protocol.
 
 - rest: `3`
-  >a handler for REST-requests
+  >A handler for REST-requests.
 
 - api: `4`
-  >a handler for requests to an API
+  >A handler for requests to an API.
 
 - webDav: `5`
-  >a handler for requests according to the WebDAV protocol (not implemented yet)
+  >A handler for requests according to the WebDAV protocol (not implemented yet).
 
 - cardDav: `6`
-  >a handler for requests according to the CardDAV protocol (not implemented yet)
+  >A handler for requests according to the CardDAV protocol (not implemented yet).
 
 - calDav: `7`
-  >a handler for requests according to the CalDAV protocol (not implemented yet)
+  >A handler for requests according to the CalDAV protocol (not implemented yet).
 
 - status: `8`
-  >a handler for server-status requests, showing server and resource usage information
+  >A handler for server-status requests, showing server and resource usage information.
 
 Example:
 
@@ -1385,19 +1398,19 @@ let handler = infinity.http2.server.handler.custom;
 Values:
 
 - all: `0`
-  >allows the usage of all available protocols
+  >Allows the usage of all available protocols.
 
 - tls1_0: `1`
-  >specifies the usage of TLS 1.0
+  >Specifies the usage of TLS 1.0.
 
 - tls1_1: `2`
-  >specifies the usage of TLS 1.1
+  >Specifies the usage of TLS 1.1.
 
 - tls1_2: `3`
-  >specifies the usage of TLS 1.2
+  >Specifies the usage of TLS 1.2.
 
 - tls1_3: `4`
-  >specifies the usage of TLS 1.3
+  >Specifies the usage of TLS 1.3.
 
 Example:
 
@@ -1473,7 +1486,7 @@ subscribe( channel: string ): void
 Parameters:
 
 - channel: `string`
-  >channel name
+  >Channel name.
 
 
 Example:
@@ -1497,7 +1510,7 @@ subscribed( channel: string ): boolean
 Parameters:
 
 - channel: `string`
-  >channel name
+  >Channel name.
 
 
 Return type: `boolean`
@@ -1523,7 +1536,7 @@ unsubscribe( channel: string ): void
 Parameters:
 
 - channel: `string`
-  >channel name
+  >Channel name.
 
 
 Example:
@@ -1547,7 +1560,7 @@ write( data: any ): boolean
 Parameters:
 
 - data: `any`
-  >data to be sent (can be any object, number, string, etc.)
+  >Data to be sent (can be any object, number, string, etc.).
 
 
 Return type: `boolean`
@@ -1575,7 +1588,7 @@ writeStream( stream: infinity.stream ): boolean
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >a stream from which to read and send data
+  >A stream from which to read and send data.
 
 
 Return type: `boolean`
@@ -1603,7 +1616,7 @@ writeString( message: string ): boolean
 Parameters:
 
 - message: `string`
-  >message to send
+  >Message to send.
 
 
 Return type: `boolean`
@@ -1685,15 +1698,15 @@ An array containing objects with cookie data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The name of a cookie field
+  >Type: `string`. The name of a cookie field.
 - #### value
-  >Type: `string`. The value of a cookie field
+  >Type: `string`. The value of a cookie field.
 - #### expires
-  >Type: `number`. The expiration date for the cookie
+  >Type: `number`. The expiration date for the cookie.
 - #### path
-  >Type: `string`. The storage path for the cookie
+  >Type: `string`. The storage path for the cookie.
 - #### domain
-  >Type: `string`. The domain the cookie is set from
+  >Type: `string`. The domain the cookie is set from.
 
 ---
 
@@ -1705,15 +1718,15 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### controlName
-  >Type: `string`. The name of the used HTML form control
+  >Type: `string`. The name of the used HTML form control.
 - #### fileName
-  >Type: `string`. The name of the file
+  >Type: `string`. The name of the file.
 - #### tempFilename
-  >Type: `string`. The temporary filename, the file is available under. Is only set during the actual request
+  >Type: `string`. The temporary filename, the file is available under. Is only set during the actual request.
 - #### size
-  >Type: `number`. The size of the file
+  >Type: `number`. The size of the file.
 - #### contentType
-  >Type: `string`. The MIME-Type of the file
+  >Type: `string`. The MIME-Type of the file.
 
 ---
 
@@ -1725,9 +1738,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The field name
+  >Type: `string`. The field name.
 - #### value
-  >Type: `string`. The field value
+  >Type: `string`. The field value.
 
 ---
 
@@ -1739,15 +1752,16 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The name of the function
+  >Type: `string`. The name of the function.
 - #### params
-  >Type: `Array<string>`, optional. The function parameters
+  >Type: `Array<string>`, optional. The function parameters.
 - #### result
-  >Type: `any`, optional. The return type of the function result
+  >Type: `any`, optional. The return type of the function result.
 - #### rest
-  >Type: `string`, optional. The implied REST method for the function call
+  >Type: `string`, optional. The implied REST method for the function call.
 - #### httpEnvironment
   >Type: `boolean`, optional.  If set to true, the [`infinity.http2.request`](#infinity.http2.request_namespace) values will be provided.
+
 
 ---
 
@@ -1759,9 +1773,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### firstOffset
-  >Type: `number`. The start offset
+  >Type: `number`. The start offset.
 - #### lastOffset
-  >Type: `number`, optional. The end offset
+  >Type: `number`, optional. The end offset.
 
 ---
 
@@ -1781,9 +1795,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The field name
+  >Type: `string`. The field name.
 - #### value
-  >Type: `string`. The field value
+  >Type: `string`. The field value.
 
 
 

@@ -49,7 +49,7 @@ compress( value: string ): string
 Parameters:
 
 - value: `string`
-  >the string to compress
+  >The string to compress.
 
 
 Return type: `string`
@@ -75,10 +75,10 @@ compressFile( inFileName: string, outFileName: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be compressed 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be compressed.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output.
 
 
 Example:
@@ -102,10 +102,10 @@ compressStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to compress from. See [infinity.stream](infinity.stream.md)
+  >The stream object to compress from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -129,7 +129,7 @@ extract( value: string ): string
 Parameters:
 
 - value: `string`
-  >the gzip-compressed contents to decompress
+  >The gzip-compressed contents to decompress.
 
 
 Return type: `string`
@@ -155,10 +155,10 @@ extractFile( inFileName: string, outFileName: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to compressed file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to compressed file.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output.
 
 
 Example:
@@ -182,10 +182,10 @@ extractStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to compress from. See [infinity.stream](infinity.stream.md)
+  >The stream object to compress from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:

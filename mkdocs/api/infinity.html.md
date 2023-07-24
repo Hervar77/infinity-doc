@@ -46,7 +46,7 @@ decode( html: string ): string
 Parameters:
 
 - html: `string`
-  >string containing HTML-entities
+  >String containing HTML-entities.
 
 
 Return type: `string`
@@ -72,7 +72,8 @@ encode( html: string ): string
 Parameters:
 
 - html: `string`
-  >string with HTML-entities.
+  >String with HTML-entities.
+
 
 
 Return type: `string`
@@ -98,7 +99,7 @@ toText( html: string ): string
 Parameters:
 
 - html: `string`
-  >string with HTML tags to remove
+  >String with HTML tags to remove.
 
 
 Return type: `string`

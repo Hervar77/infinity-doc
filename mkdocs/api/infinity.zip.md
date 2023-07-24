@@ -146,10 +146,11 @@ add( fileName: string, archiveFileName?: string ): void
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened.
 
 - archiveFileName: `string`, optional
-  >the name of the file inside the archive. Can differ from the original file name.
+  >The name of the file inside the archive. Can differ from the original file name.
+
 
 
 Example:
@@ -189,13 +190,14 @@ extract( index: number, path?: string, createSubDirs?: boolean ): void
 Parameters:
 
 - index: `number`
-  >the zero-based index of the file contained in the archive
+  >The zero-based index of the file contained in the archive.
 
 - path: `string`, optional
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output.
 
 - createSubDirs: `boolean`, optional
-  >indicates, whether to create subdirectories according to the directory structure inside the ZIP-archive.
+  >Indicates, whether to create subdirectories according to the directory structure inside the ZIP-archive.
+
 
 Example:
 
@@ -217,13 +219,14 @@ extract( fileName: string, path?: string, createSubDirs?: boolean ): void
 Parameters:
 
 - fileName: `string`
-  >the name of the file contained in the archive
+  >The name of the file contained in the archive.
 
 - path: `string`, optional
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decompressed output.
 
 - createSubDirs: `boolean`, optional
-  >indicates, whether to create subdirectories according to the directory structure inside the ZIP-archive.
+  >Indicates, whether to create subdirectories according to the directory structure inside the ZIP-archive.
+
 
 
 Example:
@@ -263,10 +266,10 @@ open( fileName: string, mode: infinity.zip.file.mode ): void
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to zip-archive
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to zip-archive.
 
 - mode: [`infinity.zip.file.mode`](#infinity.zip.file.mode_enum)
-  >specifies the type of access to the zip-archive according to [infinity.zip.file.mode](#infinity.zip.file.mode_enum). For archive creation the `write`-access is required
+  >Specifies the type of access to the zip-archive according to [infinity.zip.file.mode](#infinity.zip.file.mode_enum). For archive creation the `write`-access is required.
 
 
 Example:
@@ -392,22 +395,23 @@ add( localFileName: string, archiveFileName?: string, created?: number, modified
 Parameters:
 
 - localFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened.
 
 - archiveFileName: `string`, optional
-  >the name of the file inside the archive
+  >The name of the file inside the archive.
 
 - created: `number`, optional
-  >sets the file creation timestamp
+  >Sets the file creation timestamp.
 
 - modified: `number`, optional
-  >sets the timestamp of the last file modification
+  >Sets the timestamp of the last file modification.
 
 - lastAccess: `number`, optional
-  >sets the timestamp of the last access to the file
+  >Sets the timestamp of the last access to the file.
 
 - comment: `string`, optional
-  >can contain a comment about the file inside the ZIP-archive.
+  >Can contain a comment about the file inside the ZIP-archive.
+
 
 
 Example:
@@ -430,10 +434,10 @@ copyFrom( stream: infinity.zip.stream, count?: number ): number
 Parameters:
 
 - stream: [`infinity.zip.stream`](infinity.stream.md)
-  >INFINITY.JS ZIP stream object to copy from
+  >INFINITY.JS ZIP stream object to copy from.
 
 - count: `number`, optional
-  >the number of files to copy
+  >The number of files to copy.
 
 
 Return type: `number`
@@ -494,7 +498,7 @@ myStream.free();
 
 Extends: `Array<string>`
 
-  >an array of strings
+  >An array of strings.
 
 ---
 
@@ -509,13 +513,13 @@ The mode enums specify the mode in which a ZIP-archive is being opened.
 Values:
 
 - read: `1`
-  >specifies read only acces
+  >Specifies read only acces.
 
 - readWrite: `2`
-  >specifies read and write access
+  >Specifies read and write access.
 
 - write: `3`
-  >specifies write only acces
+  >Specifies write only acces.
 
 Example:
 
@@ -554,19 +558,20 @@ An array containing information about the files inside the archive as file objec
 
 ### Properties:
 - #### localFileName 
-  >Type: `string`. filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened
+  >Type: `string`. filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be opened.
 - #### archiveFileName
-  >Type: `string`. The name of the file inside the archive
+  >Type: `string`. The name of the file inside the archive.
 - #### created
-  >Type: `number`. The file creation timestamp
+  >Type: `number`. The file creation timestamp.
 - #### modified
-  >Type: `number`. The timestamp of the last file modification
+  >Type: `number`. The timestamp of the last file modification.
 - #### lastAccess
-  >Type: `number`. The timestamp of the last access to the file
+  >Type: `number`. The timestamp of the last access to the file.
 - #### comment
   >Type: `string`. A comment about the file inside the ZIP-archive.
+
 - #### crc32
-  >Type: `number`. The crc32 hash s for the file
+  >Type: `number`. The crc32 hash s for the file.
 - #### size
-  >Type: `number`. The file size
+  >Type: `number`. The file size.
 

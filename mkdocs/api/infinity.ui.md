@@ -435,16 +435,16 @@ constructor( r: number, g: number, b: number, a: number )
 Parameters:
 
 - r: `number`
-  >a number representing the red component
+  >A number representing the red component.
 
 - g: `number`
-  >a number representing the green component
+  >A number representing the green component.
 
 - b: `number`
-  >a number representing the blue component
+  >A number representing the blue component.
 
 - a: `number`
-  >a number representing the alpha (opacity) component
+  >A number representing the alpha (opacity) component.
 
 
 Example:
@@ -518,10 +518,10 @@ constructor( x: number, y: number )
 Parameters:
 
 - x: `number`
-  >a number representing the x-coordinate
+  >A number representing the x-coordinate.
 
 - y: `number`
-  >a number representing the y-coordinate
+  >A number representing the y-coordinate.
 
 
 Example:
@@ -607,13 +607,13 @@ constructor( x: number, y: number, z: number )
 Parameters:
 
 - x: `number`
-  >a number representing the x-coordinate
+  >A number representing the x-coordinate.
 
 - y: `number`
-  >a number representing the y-coordinate
+  >A number representing the y-coordinate.
 
 - z: `number`
-  >a number representing the z-coordinate
+  >A number representing the z-coordinate.
 
 
 Example:
@@ -705,16 +705,16 @@ constructor( x: number, y: number, z: number, w: number )
 Parameters:
 
 - x: `number`
-  >a number representing the x-coordinate
+  >A number representing the x-coordinate.
 
 - y: `number`
-  >a number representing the y-coordinate
+  >A number representing the y-coordinate.
 
 - z: `number`
-  >a number representing the z-coordinate
+  >A number representing the z-coordinate.
 
 - w: `number`
-  >a number representing the w-coordinate
+  >A number representing the w-coordinate.
 
 
 Example:
@@ -764,7 +764,7 @@ An array containing elements of the vec2 class.
 
 ## addBezierCubic() {: #infinity.ui.addBezierCubic_function .doc-function}
 
-This function draws a cubic Bezier curve on the UI using specified control points and styling.
+Draws a cubic Bezier curve on the UI using specified control points and styling.
 
 Signature:
 ```
@@ -774,25 +774,27 @@ addBezierCubic( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the first control point of the Bezier curve, of type infinity.ui.vec2
+  >The first control point of the Bezier curve, of type infinity.ui.vec2.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the second control point of the Bezier curve, of type infinity.ui.vec2
+  >The second control point of the Bezier curve, of type infinity.ui.vec2.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the third control point of the Bezier curve, of type infinity.ui.vec2
+  >The third control point of the Bezier curve, of type infinity.ui.vec2.
 
 - p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the fourth control point of the Bezier curve, of type infinity.ui.vec2
+  >The fourth control point of the Bezier curve, of type infinity.ui.vec2.
 
 - col: `number`
-  >a number representing the color of the curve
+  >A number representing the color of the curve.
 
 - thickness: `number`, optional
-  >a number specifying the thickness of the curve. If not provided, a default value will be used.
+  >A number specifying the thickness of the curve. If not provided, a default value will be used.
+
 
 - segments: `number`, optional
-  >a number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
+  >A number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
+
 
 
 Example:
@@ -806,7 +808,7 @@ infinity.ui.addBezierCubic(p1, p2, p3, p4, col);
 
 ## addBezierQuadratic() {: #infinity.ui.addBezierQuadratic_function .doc-function}
 
-This function draws a quadratic Bezier curve on the UI using specified control points and styling.
+Draws a quadratic Bezier curve on the UI using specified control points and styling.
 
 Signature:
 ```
@@ -816,22 +818,24 @@ addBezierQuadratic( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the first control point of the Bezier curve, of type infinity.ui.vec2
+  >The first control point of the Bezier curve, of type infinity.ui.vec2.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the second control point of the Bezier curve, of type infinity.ui.vec2
+  >The second control point of the Bezier curve, of type infinity.ui.vec2.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the third control point of the Bezier curve, of type infinity.ui.vec2
+  >The third control point of the Bezier curve, of type infinity.ui.vec2.
 
 - col: `number`
-  >a number representing the color of the curve
+  >A number representing the color of the curve.
 
 - thickness: `number`, optional
-  >a number specifying the thickness of the curve. If not provided, a default value will be used.
+  >A number specifying the thickness of the curve. If not provided, a default value will be used.
+
 
 - segments: `number`, optional
-  >a number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
+  >A number specifying the number of segments to divide the curve into. More segments results in a smoother curve. If not provided, a default value will be used.
+
 
 
 Example:
@@ -845,7 +849,7 @@ infinity.ui.addBezierQuadratic(p1, p2, p3, col);
 
 ## addCircle() {: #infinity.ui.addCircle_function .doc-function}
 
-This function draws a circle on the UI using the specified center point, radius, and styling.
+Draws a circle on the UI using the specified center point, radius, and styling.
 
 Signature:
 ```
@@ -855,19 +859,20 @@ addCircle( center: infinity.ui.vec2, radius: number, col: number, segments?: num
 Parameters:
 
 - center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >the center point of the circle, of type infinity.ui.vec2
+  >The center point of the circle, of type infinity.ui.vec2.
 
 - radius: `number`
-  >a number representing the radius of the circle
+  >A number representing the radius of the circle.
 
 - col: `number`
-  >a number representing the color of the circle
+  >A number representing the color of the circle.
 
 - segments: `number`, optional
-  >a number specifying the number of segments to divide the circle into. More segments results in a smoother circle. If not provided, a default value will be used.
+  >A number specifying the number of segments to divide the circle into. More segments results in a smoother circle. If not provided, a default value will be used.
+
 
 - thickness: `number`, optional
-  >a number specifying the thickness of the circle. If not provided, a default value will be used.
+  >A number specifying the thickness of the circle. If not provided, a default value will be used.
 
 
 Example:
@@ -881,7 +886,7 @@ infinity.ui.addCircle(center, radius, col);
 
 ## addCircleFilled() {: #infinity.ui.addCircleFilled_function .doc-function}
 
-//TODO
+Draws a filled circle on the UI using the specified center point, radius, and styling.
 
 Signature:
 ```
@@ -891,16 +896,16 @@ addCircleFilled( center: infinity.ui.vec2, radius: number, col: number, segments
 Parameters:
 
 - center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The center point of the circle, of type infinity.ui.vec2.
 
 - radius: `number`
-  >//TODO
+  >A number representing the radius of the circle.
 
 - col: `number`
-  >//TODO
+  >A number representing the color of the circle.
 
 - segments: `number`, optional
-  >//TODO
+  >A number specifying the number of segments to divide the circle into. More segments results in a smoother circle. If not provided, a default value will be used.
 
 
 Example:
@@ -914,7 +919,7 @@ infinity.ui.addCircleFilled(center, radius, col);
 
 ## addConvexPolyFilled() {: #infinity.ui.addConvexPolyFilled_function .doc-function}
 
-//TODO
+Draws a filled convex polygon on the UI, using the specified points and color.
 
 Signature:
 ```
@@ -924,10 +929,10 @@ addConvexPolyFilled( points: infinity.ui.vec2Array, col: number ): void
 Parameters:
 
 - points: `infinity.ui.vec2Array`
-  >//TODO
+  >An array of infinity.ui.vec2 objects, representing the vertices of the convex polygon in order. The order should form a convex shape.
 
 - col: `number`
-  >//TODO
+  >A number representing the color of the polygon.
 
 
 Example:
@@ -941,7 +946,7 @@ infinity.ui.addConvexPolyFilled(points, col);
 
 ## addFontFromFile() {: #infinity.ui.addFontFromFile_function .doc-function}
 
-//TODO
+Adds a new font from a file to the UI and returns a unique ID associated with the loaded font.
 
 Signature:
 ```
@@ -951,10 +956,11 @@ addFontFromFile( fileName: string, size: number ): number
 Parameters:
 
 - fileName: `string`
-  >//TODO
+  >The name of the file that contains the font. This should include the file's path if it's not located in the program's default directory.
 
 - size: `number`
-  >//TODO
+  >The desired size of the font.
+
 
 
 Return type: `number`
@@ -970,7 +976,7 @@ let n = infinity.ui.addFontFromFile(fileName, size);
 
 ## addImage() {: #infinity.ui.addImage_function .doc-function}
 
-//TODO
+Adds an image to the UI, using the specified texture, position points, optional UV coordinates, and color.
 
 Signature:
 ```
@@ -980,22 +986,22 @@ addImage( texture: number, p1: infinity.ui.vec2, p2: infinity.ui.vec2, uv1?: inf
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >The identifier for the texture to be used.
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The bottom-left position point of the image in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The top-right position point of the image in 2D space.
 
 - uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The bottom-left UV coordinate for the image. Determines the part of the texture to be used. Defaults to (0,0) if not provided.
 
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The top-right UV coordinate for the image. Determines the part of the texture to be used. Defaults to (1,1) if not provided.
 
 - col: `number`, optional
-  >//TODO
+  >The color modifier for the image. Defaults to white (no color modification) if not provided.
 
 
 Example:
@@ -1090,7 +1096,7 @@ Parameters:
 - rounding: `number`, optional
   >//TODO
 
-- flags: `infinity.ui.drawFlags`, optional
+- flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
   >//TODO
 
 
@@ -1216,13 +1222,13 @@ addPolyline( points: infinity.ui.vec2Array, col: number, flags?: infinity.ui.dra
 
 Parameters:
 
-- points: `infinity.ui.vec2Array`
+- points: [`infinity.ui.vec2Array`](#infinity.ui.vec2Array_interface)
   >//TODO
 
 - col: `number`
   >//TODO
 
-- flags: `infinity.ui.drawFlags`, optional
+- flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
   >//TODO
 
 - thickness: `number`, optional
@@ -1336,7 +1342,7 @@ Parameters:
 - rounding: `number`, optional
   >//TODO
 
-- flags: `infinity.ui.drawFlags`, optional
+- flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
   >//TODO
 
 - thickness: `number`, optional
@@ -1375,7 +1381,7 @@ Parameters:
 - rounding: `number`, optional
   >//TODO
 
-- flags: `infinity.ui.drawFlags`, optional
+- flags: [[`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum)](#infinity.ui.drawFlags_enum), optional
   >//TODO
 
 

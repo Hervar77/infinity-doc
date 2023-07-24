@@ -105,16 +105,16 @@ Gets the general platform identifier of the current operating system, according 
 Values:
 
 - intelX86: `0`
-  >stands for the x86 processor architecture family
+  >Stands for the x86 processor architecture family.
 
 - intelX64: `1`
-  >stands for the x64 processor architecture family
+  >Stands for the x64 processor architecture family.
 
 - arm32: `2`
-  >stands for the 32-bit ARM processor architecture family
+  >Stands for the 32-bit ARM processor architecture family.
 
 - arm64: `3`
-  >stands for the 64-bit ARM processor architecture family
+  >Stands for the 64-bit ARM processor architecture family.
 
 Example:
 
@@ -132,22 +132,22 @@ let architectures = infinity.os.architectures.intelX86;
 Values:
 
 - windows: `0`
-  >stands for the Microsoft Windows operating systems platform
+  >Stands for the Microsoft Windows operating systems platform.
 
 - macOS: `1`
-  >stands for the Apple macOS operating systems platform
+  >Stands for the Apple macOS operating systems platform.
 
 - iOS: `2`
-  >stands for the Apple iOS operating systems platform
+  >Stands for the Apple iOS operating systems platform.
 
 - android: `3`
-  >stands for the Google Android operating systems platform
+  >Stands for the Google Android operating systems platform.
 
 - winRt: `4`
-  >stands for the Microsoft Windows Runtime operating systems platform
+  >Stands for the Microsoft Windows Runtime operating systems platform.
 
 - linux: `5`
-  >stands for the Linux operating systems platform
+  >Stands for the Linux operating systems platform.
 
 Example:
 

@@ -293,7 +293,8 @@ send( fileName: string ): void
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file. The file needs to contain an email in RFC822 format. You can use [`infinity.mail`](infinity.mail.md) to create an RFC822 string.
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file. The file needs to contain an email in RFC822 format. You can use [`infinity.mail`](infinity.mail.md) to create an RFC822 string.
+
 
 
 Example:
@@ -316,7 +317,8 @@ sendStream( stream: infinity.stream ): void
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >stream from which to read the email data. The data needs to be in RFC822 format. You can use [`infinity.mail`](infinity.mail.md) to create an RFC822 string.
+  >Stream from which to read the email data. The data needs to be in RFC822 format. You can use [`infinity.mail`](infinity.mail.md) to create an RFC822 string.
+
 
 
 Example:
@@ -339,7 +341,8 @@ sendMail( mail: infinity.mail ): void
 Parameters:
 
 - mail: [`infinity.mail`](infinity.mail.md)
-  >mail object from which to read the RFC822 data.
+  >Mail object from which to read the RFC822 data.
+
 
 
 Example:
@@ -362,7 +365,8 @@ verify( username: string ): string
 Parameters:
 
 - username: `string`
-  >username or encoded address (an address in angle brackets `<...>`).
+  >Username or encoded address (an address in angle brackets `<...>`).
+
 
 
 Return type: `string`
@@ -514,25 +518,30 @@ constructor( ssl?: boolean, verifyCertificate?: boolean, port?: number, maxConne
 Parameters:
 
 - ssl: `boolean`, optional
-  >`true` to accept encrypted connections (using TLS/SSL), `false` to only accept unencrypted connections (not recommended)
+  >`true` to accept encrypted connections (using TLS/SSL), `false` to only accept unencrypted connections (not recommended).
 
 - verifyCertificate: `boolean`, optional
-  >`true` to validate the SSL certificate, `false` to ignore certificate problems (e.g. when using self-signed certificates)
+  >`true` to validate the SSL certificate, `false` to ignore certificate problems (e.g. when using self-signed certificates).
 
 - port: `number`, optional
   >The port on which to listen for SMTP client connections. If this is set to `465`, then the server will use implicit SSL, otherwise it will accept unencrypted connections and handle STARTTLS requests by the client to switch to an encrypted connection automatically.
 
+
 - maxConnections: `number`, optional
   >Maximum number of simultaneous connections.
+
 
 - poolSize: `number`, optional
   >Pool size. The server will maintain a pool of connections that will be reused for better performance.
 
+
 - minProtocol: `infinity.smtp.server.protocol`, optional
   >Minimal encryption protocol accepted. You can use this to refuse client connections that are using old (possibly obsolete) encryption protocols.
 
+
 - maxProtocol: `infinity.smtp.server.protocol`, optional
   >Maximum encryption protocl accepted.
+
 
 
 Example:
@@ -556,16 +565,16 @@ setCertificate(certFile: string, keyFile: string, rootCertFile?: string, verify?
 Parameters:
 
 - certFile: `string`
-  >the path to the certificate file to be used
+  >The path to the certificate file to be used.
 
 - keyFile: `string`
-  >the path to the the key file to be used
+  >The path to the the key file to be used.
 
 - rootCertFile: `string`, optional
-  >the path to the the root certificate file to be used
+  >The path to the the root certificate file to be used.
 
 - verify: `boolean`, optional
-  >whether to verify the validity of the certificate
+  >Whether to verify the validity of the certificate.
 
 
 Example:
@@ -640,11 +649,13 @@ Values:
 - none: `0`
   >No authentication (allow sending messages without authentication).
 
+
 - default: `1`
   >Authenticate using the default username and password method.
 
+
 - sasl: `2`
-  >Authenticate using SASL (Simple Authentication and Security Layer)
+  >Authenticate using SASL (Simple Authentication and Security Layer).
 
 Example:
 
@@ -664,8 +675,10 @@ Values:
 - none: `0`
   >Unencrypted connection.
 
+
 - sslTls: `1`
   >SSL/TLS encrypted connection.
+
 
 Example:
 
@@ -701,16 +714,16 @@ let encryptMode = infinity.smtp.client.encryptMode.sslTls;
 Values:
 
 - tls1_0: `2`
-  >TLS 1 encrypted connection
+  >TLS 1 encrypted connection.
 
 - tls1_1: `3`
-  >TLS 1.1 encrypted connection
+  >TLS 1.1 encrypted connection.
 
 - tls1_2: `4`
-  >TLS 1.2 encrypted connection
+  >TLS 1.2 encrypted connection.
 
 - tls1_3: `5`
-  >TLS 1.3 encrypted connection
+  >TLS 1.3 encrypted connection.
 
 Example:
 

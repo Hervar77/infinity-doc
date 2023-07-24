@@ -43,10 +43,10 @@ hash( password: string, cost?: number ): string
 Parameters:
 
 - password: `string`
-  >the string to serve as a password
+  >The string to serve as a password.
 
 - cost: `number`, optional
-  >the number of rounds to run
+  >The number of rounds to run.
 
 
 Return type: `string`
@@ -72,10 +72,10 @@ verify( password: string, hash: string ): boolean
 Parameters:
 
 - password: `string`
-  >the original string used for the creation of the hash for the function to return true
+  >The original string used for the creation of the hash for the function to return true.
 
 - hash: `string`
-  >the hash to be checked
+  >The hash to be checked.
 
 
 Return type: `boolean`

@@ -143,7 +143,7 @@ exists( id: string ): boolean
 Parameters:
 
 - id: `string`
-  >the session ID
+  >The session ID.
 
 
 Return type: `boolean`
@@ -191,10 +191,12 @@ get( algorithm?: infinity.session.algorithm, checkIfSessionExists?: boolean ): o
 Parameters:
 
 - algorithm: [`infinity.session.algorithm`](#infinity.session.algorithm_enum), optional
-  >if this is set to one of the JWT algorithms, then the session ID will contain actual session data, so that sessions can be shared across servers in a distributed server environment.
+  >If this is set to one of the JWT algorithms, then the session ID will contain actual session data, so that sessions can be shared across servers in a distributed server environment.
+
 
 - checkIfSessionExists: `boolean`, optional, default: `true`
-  >when using JWT sessions (by specifying a JWT algorithm as the first parameter), then this parameter controls whether session data is returned on all servers or only on the server that actually started the session. Setting the parameter to `true` (the default value) will not return session data unless the script is running on the server that actually started the session, thus mimicking non-distributed sessions. It set to `false`, then the session data from the JWT session ID will be returned on all servers, thus acting as a distributed session. Note that in both cases the session's last access timestamp will only be updated when this function is called on the server that started the session, as other servers don't actually contain the session, but take the session data from the session ID.
+  >When using JWT sessions (by specifying a JWT algorithm as the first parameter), then this parameter controls whether session data is returned on all servers or only on the server that actually started the session. Setting the parameter to `true` (the default value) will not return session data unless the script is running on the server that actually started the session, thus mimicking non-distributed sessions. It set to `false`, then the session data from the JWT session ID will be returned on all servers, thus acting as a distributed session. Note that in both cases the session's last access timestamp will only be updated when this function is called on the server that started the session, as other servers don't actually contain the session, but take the session data from the session ID.
+
 
 Return type: `object`
 
@@ -259,7 +261,7 @@ put( sessionData: object ): void
 Parameters:
 
 - sessionData: `object`
-  >data to serve as the replacement
+  >Data to serve as the replacement.
 
 
 Example:
@@ -284,10 +286,10 @@ remove( id?: string, algorithm?: infinity.session.algorithm ): void
 Parameters:
 
 - id: `string`, optional
-  >removes the session with the specified ID
+  >Removes the session with the specified ID.
 
 - algorithm: [`infinity.session.algorithm`](#infinity.session.algorithm_enum), optional
-  >the algorithm for signing the JSON Web Token 
+  >The algorithm for signing the JSON Web Token.
 
 
 Example:
@@ -313,10 +315,10 @@ start( data: object, algorithm?: infinity.session.algorithm ): string
 Parameters:
 
 - data: `object`
-  >an object containing session data
+  >An object containing session data.
 
 - algorithm: [`infinity.session.algorithm`](#infinity.session.algorithm_enum), optional
-  >the algorithm for signing the JSON Web Token 
+  >The algorithm for signing the JSON Web Token.
 
 
 Return type: `string`
@@ -363,13 +365,16 @@ Used during hash creation.
 Values:
 
 - none: `0`
-  >regular, non-distributed session (without storing session data inside the session token).
+  >Regular, non-distributed session (without storing session data inside the session token).
+
 
 - hs256: `1`
   >JWT session, using the HMAC algorithm with SHA-256. In this case, every server will share the same key.
 
+
 - rs256: `2`
   >JWT session, using an RSA Signature with SHA-256. In this case, every server will have its own key.
+
 
 Example:
 

@@ -51,7 +51,7 @@ exists( serviceName: string ): boolean
 Parameters:
 
 - serviceName: `string`
-  >the name of the service to be checked
+  >The name of the service to be checked.
 
 
 Return type: `boolean`
@@ -79,7 +79,7 @@ getStatus( serviceName: string ): infinity.service.status
 Parameters:
 
 - serviceName: `string`
-  >the name of the service to be checked
+  >The name of the service to be checked.
 
 
 Return type: [`status`](#infinity.service.status_enum)
@@ -105,10 +105,10 @@ setStartupType( serviceName: string, startupType: infinity.service.startupType )
 Parameters:
 
 - serviceName: `string`
-  >the name of the service to be altered
+  >The name of the service to be altered.
 
 - startupType: [`startupType`](#infinity.service.startupType_enum)
-  >the startup type to be set according to [`startupType`](#infinity.service.startupType_enum)
+  >The startup type to be set according to [`startupType`](#infinity.service.startupType_enum).
 
 
 Return type: `boolean`
@@ -136,10 +136,10 @@ start( serviceName: string, waitFor?: boolean ): boolean
 Parameters:
 
 - serviceName: `string`
-  >the name of the service to be started
+  >The name of the service to be started.
 
 - waitFor: `boolean`, optional
-  >whether to wait for the operation to complete
+  >Whether to wait for the operation to complete.
 
 
 Return type: `boolean`
@@ -167,13 +167,13 @@ stop( serviceName: string, waitFor?: boolean, force?: boolean ): boolean
 Parameters:
 
 - serviceName: `string`
-  >the name of the service to be stopped
+  >The name of the service to be stopped.
 
 - waitFor: `boolean`, optional
-  >whether to wait for the operation to complete
+  >Whether to wait for the operation to complete.
 
 - force: `boolean`, optional
-  >whether to attempt a forceful shutdown of the service
+  >Whether to attempt a forceful shutdown of the service.
 
 
 Return type: `boolean`
@@ -200,13 +200,13 @@ if ( infinity.service.stop('MariaDB') ) {
 Values:
 
 - autoStart: `2`
-  >stands for the service starting with the operating system
+  >Stands for the service starting with the operating system.
 
 - demandStart: `3`
-  >stands for the service starting on manual demand
+  >Stands for the service starting on manual demand.
 
 - disabled: `4`
-  >stands for a disabled service
+  >Stands for a disabled service.
 
 Example:
 
@@ -224,28 +224,28 @@ let startupType = infinity.service.startupType.autoStart;
 Values:
 
 - unknown: `0`
-  >stands for a status that can't be determined
+  >Stands for a status that can't be determined.
 
 - stopped: `1`
-  >stands for a stopped service
+  >Stands for a stopped service.
 
 - startPending: `2`
-  >stands for a service pending to be started
+  >Stands for a service pending to be started.
 
 - stopPending: `3`
-  >stands for a service pending to be shut down
+  >Stands for a service pending to be shut down.
 
 - running: `4`
-  >stands for a running service
+  >Stands for a running service.
 
 - continuePending: `5`
-  >stands for a service pending to be continued
+  >Stands for a service pending to be continued.
 
 - pausePending: `6`
-  >stands for a service pending to be paused
+  >Stands for a service pending to be paused.
 
 - paused: `7`
-  >stands for a paused service
+  >Stands for a paused service.
 
 Example:
 

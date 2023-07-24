@@ -44,7 +44,7 @@ assert( condition: boolean ): void
 Parameters:
 
 - condition: `boolean`
-  >variable or an expression resulting in a boolean value
+  >Variable or an expression resulting in a boolean value.
 
 
 Example:
@@ -73,10 +73,10 @@ count( name?: string, disableOutput?: boolean ): number
 Parameters:
 
 - name: `string`, optional
-  >can serve as an identifier for differentiating between multiple counters
+  >Can serve as an identifier for differentiating between multiple counters.
 
 - disableOutput: `boolean`, optional
-  >disables the console output
+  >Disables the console output.
 
 Return type: `number`
 
@@ -106,7 +106,7 @@ countReset( name?: string ): void
 Parameters:
 
 - name: `string`, optional
-  >can serve as an identifier for differentiating between multiple counters
+  >Can serve as an identifier for differentiating between multiple counters.
 
 
 Example:
@@ -138,7 +138,7 @@ debug( msg: any ): void
 Parameters:
 
 - msg: `any`
-  >data to print out
+  >Data to print out.
 
 
 Example:
@@ -161,7 +161,7 @@ error( msg: any ): void
 Parameters:
 
 - msg: `any`
-  >data to print out
+  >Data to print out.
 
 
 Example:
@@ -184,7 +184,7 @@ info( msg: any ): void
 Parameters:
 
 - msg: `any`
-  >data to print out
+  >Data to print out.
 
 
 Example:
@@ -207,7 +207,7 @@ log( msg: any ): void
 Parameters:
 
 - msg: `any`
-  >data to print out
+  >Data to print out.
 
 
 Example:
@@ -249,7 +249,8 @@ table( data: Array<any> ): void
 Parameters:
 
 - data: `Array<any>`
-  >data to format. Every 1st-level array value adds a line. Values in multidimensional arrays add corresponding columns.
+  >Data to format. Every 1st-level array value adds a line. Values in multidimensional arrays add corresponding columns.
+
 
 
 Example:
@@ -278,7 +279,7 @@ time( name?: string ): void
 Parameters:
 
 - name: `string`, optional
-  >can serve as an identifier for differentiating between multiple timers
+  >Can serve as an identifier for differentiating between multiple timers.
 
 Example:
 
@@ -303,10 +304,10 @@ timeSince( name?: string, disableOutput?: boolean ): number
 Parameters:
 
 - name: `string`, optional
-  >can serve as an identifier for differentiating between multiple timers
+  >Can serve as an identifier for differentiating between multiple timers.
 
 - disableOutput: `boolean`, optional
-  >disables the console output
+  >Disables the console output.
 
 Return type: `number`
 
@@ -333,10 +334,10 @@ timeEnd( name?: string, disableOutput?: boolean ): number
 Parameters:
 
 - name: `string`, optional
-  >can serve as an identifier for differentiating between multiple timers
+  >Can serve as an identifier for differentiating between multiple timers.
 
 - disableOutput: `boolean`, optional
-  >disables the console output
+  >Disables the console output.
 
 Return type: `number`
 
@@ -363,7 +364,7 @@ warn( msg: any ): void
 Parameters:
 
 - msg: `any`
-  >data to print out
+  >Data to print out.
 
 
 Example:
@@ -387,7 +388,7 @@ write(output: string): void;
 Parameters:
 
 - output: `string`
-  >the string to be written to the console
+  >The string to be written to the console.
 
 Example:
 
@@ -411,7 +412,7 @@ writeLn(output: string): void;
 Parameters:
 
 - output: `string`
-  >the string to be written to the console
+  >The string to be written to the console.
 
 Example:
 

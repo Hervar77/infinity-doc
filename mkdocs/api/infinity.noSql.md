@@ -78,7 +78,7 @@ console.debug(infinity.noSql.has('testCollection', 2));
 
 Extends: `Array<object|number>`
 
-  >an array of objects or numbers
+  >An array of objects or numbers.
 
 ---
 
@@ -86,7 +86,7 @@ Extends: `Array<object|number>`
 
 Extends: `Array<object>`
 
-  >an array of objects
+  >An array of objects.
 
 ---
 
@@ -94,7 +94,7 @@ Extends: `Array<object>`
 
 Extends: `Array<number>`
 
-  >an array of numbers
+  >An array of numbers.
 
 ---
 
@@ -102,7 +102,7 @@ Extends: `Array<number>`
 
 Extends: `Array<string|Array<string|number|boolean>>`
 
-  >an array of strings or of arrays containing strings, numbers or boolean values
+  >An array of strings or of arrays containing strings, numbers or boolean values.
 
 
 
@@ -124,7 +124,8 @@ clear( collection: string ): void
 Parameters:
 
 - collection: `string`
-  >the collection to clear data from.
+  >The collection to clear data from.
+
 
 
 Example:
@@ -148,7 +149,7 @@ count( collection: string ): number
 Parameters:
 
 - collection: `string`
-  >the collection to examine
+  >The collection to examine.
 
 
 Return type: `number`
@@ -174,13 +175,13 @@ create( collection: string, capped?: boolean, maxCount?: number ): void
 Parameters:
 
 - collection: `string`
-  >the name of the collection to create
+  >The name of the collection to create.
 
 - capped: `boolean`, optional
-  >whether the row count of the collection should be limited
+  >Whether the row count of the collection should be limited.
 
 - maxCount: `number`, optional
-  >the maximum amount of rows the collection should contain
+  >The maximum amount of rows the collection should contain.
 
 
 Example:
@@ -204,7 +205,7 @@ drop( collection: string ): void
 Parameters:
 
 - collection: `string`
-  >the name of the collection to delete 
+  >The name of the collection to delete.
 
 
 Example:
@@ -228,7 +229,7 @@ exists( collection: string ): boolean
 Parameters:
 
 - collection: `string`
-  >the collection name to check for
+  >The collection name to check for.
 
 
 Return type: `boolean`
@@ -256,25 +257,25 @@ find( collection: string, query: infinity.noSql.queryArray, orderBy?: string, or
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be queried
+  >The name of the collection to be queried.
 
 - query: [`infinity.noSql.queryArray`](#infinity.noSql.queryArray_interface)
-  >an array of options for the query, usable with the following operators: =, <>, !=, >, <, >=, <=, beginswith, endswith, contains
+  >An array of options for the query, usable with the following operators: =, <>, !=, >, <, >=, <=, beginswith, endswith, contains.
 
 - orderBy: `string`, optional
-  >specifies by which column the result has to be ordered
+  >Specifies by which column the result has to be ordered.
 
 - orderDirection: [`infinity.noSql.orderDirection`](#infinity.noSql.orderDirection_enum), optional
-  >specifies the order direction
+  >Specifies the order direction.
 
 - offset: `number`, optional
-  >specifies, how many records have to be skipped
+  >Specifies, how many records have to be skipped.
 
 - limit: `number`, optional
-  >constrains the number of rows to return
+  >Constrains the number of rows to return.
 
 - outputMode: [`infinity.noSql.outputMode`](#infinity.noSql.outputMode_enum), optional
-  >specifies how the data is returned
+  >Specifies how the data is returned.
 
 
 Return type: `infinity.noSql.findResultArray`
@@ -300,10 +301,10 @@ get( collection: string, id: number ): object
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be queried
+  >The name of the collection to be queried.
 
 - id: `number`
-  >the ID of the row to be returned
+  >The ID of the row to be returned.
 
 
 Return type: `object`
@@ -329,10 +330,10 @@ get( collection: string, ids: infinity.noSql.idArray ): infinity.noSql.getResult
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be queried
+  >The name of the collection to be queried.
 
 - ids: [`infinity.noSql.idsArray`](#infinity.noSql.idsArray_interface)
-  >an array containing the IDs of the rows to be returned
+  >An array containing the IDs of the rows to be returned.
 
 
 Return type: `infinity.noSql.getResultArray`
@@ -358,10 +359,10 @@ has( collection: string, id: number ): boolean
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be checked
+  >The name of the collection to be checked.
 
 - id: `number`
-  >the row to be checked
+  >The row to be checked.
 
 
 Return type: `boolean`
@@ -389,13 +390,13 @@ index( collection: string, key: string, unique?: boolean ): void
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be altered
+  >The name of the collection to be altered.
 
 - key: `string`
-  >the column to act as an index
+  >The column to act as an index.
 
 - unique: `boolean`, optional
-  >specifies whether the index has to be unique
+  >Specifies whether the index has to be unique.
 
 
 Example:
@@ -419,10 +420,10 @@ insert( collection: string, document: object ): number
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be altered
+  >The name of the collection to be altered.
 
 - document: `object`
-  >an object containing the data to be inserted
+  >An object containing the data to be inserted.
 
 
 Return type: `number`
@@ -448,10 +449,10 @@ lock( collection: string, readOnly?: boolean ): boolean
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be locked
+  >The name of the collection to be locked.
 
 - readOnly: `boolean`, optional
-  >specifies whether only reading access is required
+  >Specifies whether only reading access is required.
 
 
 Return type: `boolean`
@@ -479,10 +480,10 @@ remove( collection: string, query: infinity.noSql.queryArray ): number
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be altered
+  >The name of the collection to be altered.
 
 - query: [`infinity.noSql.queryArray`](#infinity.noSql.queryArray_interface)
-  >an array containing the query parameters
+  >An array containing the query parameters.
 
 
 Return type: `number`
@@ -508,7 +509,7 @@ unlock( collection: string ): void
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be unlocked
+  >The name of the collection to be unlocked.
 
 
 Example:
@@ -532,13 +533,13 @@ update( collection: string, query: infinity.noSql.queryArray, update: object ): 
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be updated
+  >The name of the collection to be updated.
 
 - query: [`infinity.noSql.queryArray`](#infinity.noSql.queryArray_interface)
-  >an array containing the query parameters
+  >An array containing the query parameters.
 
 - update: `object`
-  >an object containing the data to be written
+  >An object containing the data to be written.
 
 
 Return type: `number`
@@ -565,10 +566,10 @@ update( collection: string, document: object ): number
 Parameters:
 
 - collection: `string`
-  >the name of the collection to be updated
+  >The name of the collection to be updated.
 
 - document: `object`
-  >an object containing the data to be written
+  >An object containing the data to be written.
 
 
 Return type: `number`
@@ -618,13 +619,13 @@ Specifies how the result data has to be returned.
 Values:
 
 - objects: `0`
-  >as objects
+  >As objects.
 
 - ids: `1`
-  >as row IDs in a comma-separated string
+  >As row IDs in a comma-separated string.
 
 - count: `2`
-  >as a total count number
+  >As a total count number.
 
 Example:
 

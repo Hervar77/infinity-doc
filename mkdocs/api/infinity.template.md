@@ -202,7 +202,7 @@ constructor( documentRoot: string )
 Parameters:
 
 - documentRoot: `string`
-  >the path to the root folder for the template files
+  >The path to the root folder for the template files.
 
 
 Example:
@@ -260,7 +260,8 @@ invalidate( templateName: string ): void
 Parameters:
 
 - templateName: `string`
-  >the templateName which should be invalidated inside the cache.
+  >The templateName which should be invalidated inside the cache.
+
 
 
 Example:
@@ -283,7 +284,7 @@ isCached( templateName: string ): boolean
 Parameters:
 
 - templateName: `string`
-  >the script for which the template cache should be checked
+  >The script for which the template cache should be checked.
 
 
 Return type: `boolean`
@@ -308,7 +309,7 @@ loadFromFile( templateName: string ): boolean
 Parameters:
 
 - templateName: `string`
-  >the templateName to be loaded
+  >The templateName to be loaded.
 
 
 Return type: `boolean`
@@ -333,10 +334,10 @@ loadFromStream( stream: infinity.stream, scriptName: string ): boolean
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to load from
+  >The stream object to load from.
 
 - scriptName: `string`
-  >the scriptName to be loaded
+  >The scriptName to be loaded.
 
 
 Return type: `boolean`

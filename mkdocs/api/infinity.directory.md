@@ -77,7 +77,7 @@ create( directory: string ): boolean
 Parameters:
 
 - directory: `string`
-  >the name of the directory to be created
+  >The name of the directory to be created.
 
 
 Return type: `boolean`
@@ -105,7 +105,7 @@ exists( directory: string ): boolean
 Parameters:
 
 - directory: `string`
-  >the name of the directory to be checked for
+  >The name of the directory to be checked for.
 
 
 Return type: `boolean`
@@ -133,13 +133,13 @@ list( directory: string, mask?: string, filter?: infinity.directory.filter ): in
 Parameters:
 
 - directory: `string`
-  >the directory to look in
+  >The directory to look in.
 
 - mask: `string`, optional
-  >a search mask
+  >A search mask.
 
 - filter: [infinity.directory.filter](#infinity.directory.filter_enum), optional
-  >a filter, allowing to specify the type of elements to search for, according to [infinity.directory.filter](#infinity.directory.filter_enum), 
+  >A filter, allowing to specify the type of elements to search for, according to [infinity.directory.filter](#infinity.directory.filter_enum),.
 
 
 Return type: [infinity.directory.stringArray](#infinity.directory.stringArray_interface)
@@ -166,10 +166,10 @@ move( srcDirectory: string, dstDirectory: string ): boolean
 Parameters:
 
 - srcDirectory: `string`
-  >the path to the source directory
+  >The path to the source directory.
 
 - dstDirectory: `string`
-  >the path to the target directory. Will receive the contents of the source directory, unless the name of the source directory is as well specified inside this path
+  >The path to the target directory. Will receive the contents of the source directory, unless the name of the source directory is as well specified inside this path.
 
 
 Return type: `boolean`
@@ -197,10 +197,10 @@ remove( directory: string, recursive?: boolean ): boolean
 Parameters:
 
 - directory: `string`
-  >the path of the directory to remove. If the directory has contents, it will not be deleted and the function will return `false`, unless the parameter `recursive` is set to `true`
+  >The path of the directory to remove. If the directory has contents, it will not be deleted and the function will return `false`, unless the parameter `recursive` is set to `true`.
 
 - recursive: `boolean`, optional
-  >whether to remove the directory and all its contents, including any subdirectories and files
+  >Whether to remove the directory and all its contents, including any subdirectories and files.
 
 
 Return type: `boolean`
@@ -227,25 +227,25 @@ if ( infinity.directory.remove('c:/tmp/toBeDeleted/') ) {
 Values:
 
 - none: `0`
-  >no filter (show all)
+  >No filter (show all).
 
 - files: `1`
-  >to show only files
+  >To show only files.
 
 - directories: `2`
-  >to show only directories
+  >To show only directories.
 
 - hidden: `4`
-  >to show only hidden elements
+  >To show only hidden elements.
 
 - system: `8`
-  >to show only system elements
+  >To show only system elements.
 
 - readOnly: `16`
-  >to show only read-only elements
+  >To show only read-only elements.
 
 - symLink: `32`
-  >to show only symbolic links
+  >To show only symbolic links.
 
 Example:
 

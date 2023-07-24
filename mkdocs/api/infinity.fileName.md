@@ -36,7 +36,7 @@ correct( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >the filename to be corrected
+  >The filename to be corrected.
 
 
 Return type: `string`
@@ -62,7 +62,7 @@ extension( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >the filename to examine
+  >The filename to examine.
 
 
 Return type: `string`
@@ -90,7 +90,7 @@ expand( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >a relative file path
+  >A relative file path.
 
 
 Return type: `string`
@@ -118,10 +118,10 @@ extract( fileName: string, stripExtension?: boolean ): string
 Parameters:
 
 - fileName: `string`
-  >the data to examine
+  >The data to examine.
 
 - stripExtension: `boolean`, optional
-  >whether to strip the extension too
+  >Whether to strip the extension too.
 
 
 Return type: `string`
@@ -149,7 +149,7 @@ extractDirectory( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >the file path
+  >The file path.
 
 
 Return type: `string`
@@ -177,7 +177,7 @@ isValid( fileName: string ): boolean
 Parameters:
 
 - fileName: `string`
-  >the filename to be checked
+  >The filename to be checked.
 
 
 Return type: `boolean`
@@ -205,7 +205,7 @@ quote( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >the filename to be checked
+  >The filename to be checked.
 
 
 Return type: `string`

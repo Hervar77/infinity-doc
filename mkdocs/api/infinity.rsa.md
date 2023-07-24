@@ -92,10 +92,10 @@ decrypt( value: string, privateKey: string ): string
 Parameters:
 
 - value: `string`
-  >the string to decrypt
+  >The string to decrypt.
 
 - privateKey: `string`
-  >the private rsa key
+  >The private rsa key.
 
 
 Return type: `string`
@@ -121,10 +121,10 @@ encrypt( value: string, publicKey: string ): string
 Parameters:
 
 - value: `string`
-  >the data to encrypt
+  >The data to encrypt.
 
 - publicKey: `string`
-  >the password to be used later for decryption
+  >The password to be used later for decryption.
 
 
 Return type: `string`
@@ -150,7 +150,7 @@ generateKeys( bits: number ): infinity.rsa.keys
 Parameters:
 
 - bits: `number`
-  >the number of bits in the modulus
+  >The number of bits in the modulus.
 
 
 Return type: `infinity.rsa.keys`
@@ -178,10 +178,10 @@ sign( value: string, privateKey: string ): string
 Parameters:
 
 - value: `string`
-  >the string to create the signature for
+  >The string to create the signature for.
 
 - privateKey: `string`
-  >the private rsa key
+  >The private rsa key.
 
 
 Return type: `string`
@@ -207,13 +207,13 @@ verify( value: string, publicKey: string, signature: string ): boolean
 Parameters:
 
 - value: `string`
-  >the data to verify
+  >The data to verify.
 
 - publicKey: `string`
-  >the public rsa key
+  >The public rsa key.
 
 - signature: `string`
-  >the provided signature
+  >The provided signature.
 
 
 Return type: `boolean`

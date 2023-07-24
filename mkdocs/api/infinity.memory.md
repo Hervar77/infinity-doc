@@ -188,7 +188,7 @@ constructor( namespace: string )
 Parameters:
 
 - namespace: `string`
-  >the namespace to be read
+  >The namespace to be read.
 
 
 Example:
@@ -212,7 +212,7 @@ findFirst( key: string ): boolean
 Parameters:
 
 - key: `string`
-  >the key to be examined
+  >The key to be examined.
 
 
 Return type: `boolean`
@@ -237,7 +237,7 @@ findLast( key: string ): boolean
 Parameters:
 
 - key: `string`
-  >the key to be examined
+  >The key to be examined.
 
 
 Return type: `boolean`
@@ -449,16 +449,16 @@ add( namespace: string, key: string, value: any, expire?: number ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write at
+  >The key to write at.
 
 - value: `any`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Return type: `boolean`
@@ -486,16 +486,16 @@ addBoolean( namespace: string, key: string, value: boolean, expire?: number ): b
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write at
+  >The key to write at.
 
 - value: `boolean`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Return type: `boolean`
@@ -523,16 +523,16 @@ addList( namespace: string, key: string, value: any, expire?: number ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write at
+  >The key to write at.
 
 - value: `any`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -556,16 +556,16 @@ addNumber( namespace: string, key: string, value: number, expire?: number ): boo
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write at
+  >The key to write at.
 
 - value: `number`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Return type: `boolean`
@@ -593,16 +593,16 @@ addString( namespace: string, key: string, value: string, expire?: number ): boo
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write at
+  >The key to write at.
 
 - value: `string`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Return type: `boolean`
@@ -630,7 +630,7 @@ clear( namespace: string ): void
 Parameters:
 
 - namespace: `string`, optional
-  >the namespace to be cleared
+  >The namespace to be cleared.
 
 
 Example:
@@ -654,13 +654,13 @@ decrement( namespace: string, key: string, value?: number ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key which should contain the counter
+  >The key which should contain the counter.
 
 - value: `number`, optional
-  >specifies the value to be substracted from the existing counter
+  >Specifies the value to be substracted from the existing counter.
 
 
 Return type: `number`
@@ -686,16 +686,16 @@ delList( namespace: string, key: string, value: any, expire?: number ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key containing the list to be altered
+  >The key containing the list to be altered.
 
 - value: `any`
-  >the value to be deleted
+  >The value to be deleted.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Return type: `boolean`
@@ -728,7 +728,7 @@ dump( namespace: string ): object
 Parameters:
 
 - namespace: `string`
-  >the namespace to be dumped
+  >The namespace to be dumped.
 
 
 Return type: `object`
@@ -754,13 +754,13 @@ exists( namespace: string, key: string, keyStart?: boolean ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to be examined
+  >The namespace to be examined.
 
 - key: `string`
-  >the key being searched for
+  >The key being searched for.
 
 - keyStart: `boolean`, optional
-  >whether to search for any key that starts with the characters specified in "key"
+  >Whether to search for any key that starts with the characters specified in "key".
 
 
 Return type: `boolean`
@@ -788,7 +788,7 @@ flushExpired( namespace: string ): void
 Parameters:
 
 - namespace: `string`, optional
-  >the namespace to be flushed
+  >The namespace to be flushed.
 
 
 Example:
@@ -812,10 +812,10 @@ get( namespace: string, key: string ): any
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to read from
+  >The key to read from.
 
 
 Return type: `any`
@@ -841,10 +841,10 @@ getBoolean( namespace: string, key: string ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to read from
+  >The key to read from.
 
 
 Return type: `boolean`
@@ -870,7 +870,7 @@ getCount( namespace: string ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to be examined
+  >The namespace to be examined.
 
 
 Return type: `number`
@@ -896,10 +896,10 @@ getList( namespace: string, key: string ): infinity.memory.listArray
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to read from
+  >The key to read from.
 
 
 Return type: [`infinity.memory.listArray`](#infinity.memory.listArray_interface)
@@ -925,7 +925,7 @@ getMaxSize( namespace: string ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to specify the limit for
+  >The namespace to specify the limit for.
 
 
 Return type: `number`
@@ -951,10 +951,10 @@ getNumber( namespace: string, key: string ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to read from
+  >The key to read from.
 
 
 Return type: `number`
@@ -980,7 +980,7 @@ getSize( namespace: string ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to be examined
+  >The namespace to be examined.
 
 
 Return type: `number`
@@ -1006,10 +1006,10 @@ getString( namespace: string, key: string ): string
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to read from
+  >The key to read from.
 
 
 Return type: `string`
@@ -1035,7 +1035,7 @@ getUpdateExpireOnAccess( namespace: string ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to be examined
+  >The namespace to be examined.
 
 
 Return type: `boolean`
@@ -1063,13 +1063,13 @@ increment( namespace: string, key: string, value?: number ): number
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key which should contain the counter
+  >The key which should contain the counter.
 
 - value: `number`, optional
-  >specifies the value to be added to the existing value
+  >Specifies the value to be added to the existing value.
 
 
 Return type: `number`
@@ -1101,10 +1101,10 @@ lock( namespace: string, readOnly?: boolean ): boolean
 Parameters:
 
 - namespace: `string`
-  >the namespace to be locked
+  >The namespace to be locked.
 
 - readOnly: `boolean`, optional
-  >whether to lock the namespace for reading only
+  >Whether to lock the namespace for reading only.
 
 
 Return type: `boolean`
@@ -1136,16 +1136,16 @@ put( namespace: string, key: string, value: any, expire?: number ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `any`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -1169,16 +1169,16 @@ putBoolean( namespace: string, key: string, value: boolean, expire?: number ): v
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `boolean`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -1202,16 +1202,16 @@ putList( namespace: string, key: string, value: infinity.memory.listArray, expir
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: [`infinity.memory.listArray`](#infinity.memory.listArray_interface)
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -1235,16 +1235,16 @@ putNumber( namespace: string, key: string, value: number, expire?: number ): voi
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `number`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -1268,16 +1268,16 @@ putString( namespace: string, key: string, value: string, expire?: number ): voi
 Parameters:
 
 - namespace: `string`
-  >the namespace to operate in
+  >The namespace to operate in.
 
 - key: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `string`
-  >the value to write
+  >The value to write.
 
 - expire: `number`, optional
-  >the amount of seconds for the entry to be valid
+  >The amount of seconds for the entry to be valid.
 
 
 Example:
@@ -1301,13 +1301,13 @@ remove( namespace: string, key: string, keyStart?: boolean ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace to remove the key from
+  >The namespace to remove the key from.
 
 - key: `string`
-  >the key to remove
+  >The key to remove.
 
 - keyStart: `boolean`, optional
-  >whether to remove any key that starts with the characters specified in "key"
+  >Whether to remove any key that starts with the characters specified in "key".
 
 
 Example:
@@ -1331,10 +1331,10 @@ setMaxSize( namespace: string, value: number ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace to be limited
+  >The namespace to be limited.
 
 - value: `number`
-  >the amount of the entries not to be exceeded
+  >The amount of the entries not to be exceeded.
 
 
 Example:
@@ -1358,10 +1358,10 @@ setUpdateExpireOnAccess( namespace: string, value: boolean ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace for the setting to take effect
+  >The namespace for the setting to take effect.
 
 - value: `boolean`
-  >`true` for resetting the expiration settings on access, `false` for keeping them in effect 
+  >`true` for resetting the expiration settings on access, `false` for keeping them in effect.
 
 
 Example:
@@ -1385,7 +1385,7 @@ unlock( namespace: string ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace to be unlocked
+  >The namespace to be unlocked.
 
 
 Example:

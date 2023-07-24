@@ -51,10 +51,10 @@ decode( value: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - value: `string`
-  >the string to decode
+  >The string to decode.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#enums) enums), optional
-  >the target encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums)
+  >The target encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums).
 
 
 Return type: `string`
@@ -80,7 +80,7 @@ decodeFile( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encoded file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encoded file.
 
 
 Return type: `string`
@@ -106,10 +106,10 @@ decodeFile( inFileName: string, outFileName: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encoded file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the encoded file.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decoded output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decoded output.
 
 
 Example:
@@ -133,10 +133,10 @@ decodeStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to decode from. See [infinity.stream](infinity.stream.md)
+  >The stream object to decode from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -160,10 +160,10 @@ encode( value: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - value: `string`
-  >the string to encode
+  >The string to encode.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#enums), optional
-  >the source encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums)
+  >The source encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums).
 
 
 Return type: `string`
@@ -188,10 +188,10 @@ encodeFile( inFileName: string, outFileName: string ): void
 
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output.
 
 
 Example:
@@ -215,7 +215,7 @@ encodeFile( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded.
 
 
 Return type: `string`
@@ -241,10 +241,10 @@ encodeStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to encode data from. See [infinity.stream](infinity.stream.md)
+  >The stream object to encode data from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:

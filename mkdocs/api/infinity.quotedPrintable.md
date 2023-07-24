@@ -55,10 +55,10 @@ decode( value: string, headerField?: boolean ): string
 Parameters:
 
 - value: `string`
-  >the string to decode
+  >The string to decode.
 
 - headerField: `boolean`, optional
-  >true for decoding non-printing characters like spaces as well
+  >True for decoding non-printing characters like spaces as well.
 
 
 Return type: `string`
@@ -84,7 +84,7 @@ decodeFile( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to encoded file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to encoded file.
 
 
 Return type: `string`
@@ -110,10 +110,10 @@ decodeFile( inFileName: string, outFileName: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to encoded file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to encoded file.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decoded output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the decoded output.
 
 
 Example:
@@ -137,10 +137,10 @@ decodeStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to decode from. See [infinity.stream](infinity.stream.md)
+  >The stream object to decode from. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -164,10 +164,10 @@ encode( value: string, headerField?: boolean ): string
 Parameters:
 
 - value: `string`
-  >the string to encode
+  >The string to encode.
 
 - headerField: `boolean`, optional
-  >true for encoding non-printing characters like spaces as well
+  >True for encoding non-printing characters like spaces as well.
 
 
 Return type: `string`
@@ -193,10 +193,10 @@ encodeFile( inFileName: string, outFileName: string ): void
 Parameters:
 
 - inFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded.
 
 - outFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the encoded output.
 
 
 Example:
@@ -220,7 +220,7 @@ encodeFile( fileName: string ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded 
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be encoded.
 
 
 Return type: `string`
@@ -246,10 +246,10 @@ encodeStream( inStream: infinity.stream, outStream: infinity.stream ): void
 Parameters:
 
 - inStream: [`infinity.stream`](#infinity.zip.file.mode_enum)
-  >the stream object to encode. See [infinity.stream](infinity.stream.md)
+  >The stream object to encode. See [infinity.stream](infinity.stream.md).
 
 - outStream: [`infinity.stream`](#infinity.zip.file.mode_enum)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:

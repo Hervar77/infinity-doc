@@ -102,16 +102,16 @@ add( namespace: string, docId: number, group: number, document: object ): void
 Parameters:
 
 - namespace: `string`
-  >specifies the namespace for the dataset to be stored under
+  >Specifies the namespace for the dataset to be stored under.
 
 - docId: `number`
-  >the unique document identification number
+  >The unique document identification number.
 
 - group: `number`
-  >an additional property for the document. Can be used to group documents (e.g. for separating documents by different tenants)
+  >An additional property for the document. Can be used to group documents (e.g. for separating documents by different tenants).
 
 - document: `object`
-  >the data to be stored
+  >The data to be stored.
 
 
 Example:
@@ -136,7 +136,7 @@ clear( namespace: string ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace under which the data has to be cleared
+  >The namespace under which the data has to be cleared.
 
 
 Example:
@@ -159,7 +159,7 @@ close( namespace: string ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace of the library to be closed
+  >The namespace of the library to be closed.
 
 
 Example:
@@ -182,19 +182,20 @@ find( namespace: string, query: string, group?: number, maxResults?: number, att
 Parameters:
 
 - namespace: `string`
-  >the namespace for the search
+  >The namespace for the search.
 
 - query: `string`
-  >the search term. Simple term searches, "and" searches, "or" searches, searches with term exclusion and wildcard searches are supported.
+  >The search term. Simple term searches, "and" searches, "or" searches, searches with term exclusion and wildcard searches are supported.
+
 
 - group: `number`
-  >an additional property for the document. Can be used to find only documents by the given group
+  >An additional property for the document. Can be used to find only documents by the given group.
 
 - maxResults: `number`, optional
-  >the maximum limit of results to be returned
+  >The maximum limit of results to be returned.
 
 - attributes: [`infinity.fts.stringArray`](#infinity.fts.stringArray_interface), optional
-  >attributes (e.g. data field names) of the dataset to be considered
+  >Attributes (e.g. data field names) of the dataset to be considered.
 
 
 Return type: [`infinity.fts.resultArray`](#infinity.fts.resultArray_interface)
@@ -219,7 +220,7 @@ open( namespace: string ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace under which the fulltext search library should be initialized
+  >The namespace under which the fulltext search library should be initialized.
 
 
 Example:
@@ -242,10 +243,10 @@ remove( namespace: string, docId: number ): void
 Parameters:
 
 - namespace: `string`
-  >the namespace under which the dataset should be removed
+  >The namespace under which the dataset should be removed.
 
 - docId: `number`
-  >the document identification number of the dataset to be removed
+  >The document identification number of the dataset to be removed.
 
 
 Example:

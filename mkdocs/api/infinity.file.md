@@ -59,7 +59,7 @@ age( fileName: string ): number
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to examine
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to examine.
 
 
 Return type: `number`
@@ -85,10 +85,10 @@ copy( srcFileName: string, dstFileName: string ): boolean
 Parameters:
 
 - srcFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be copied
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be copied.
 
 - dstFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the copied contents
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the copied contents.
 
 
 Return type: `boolean`
@@ -116,7 +116,7 @@ exists( fileName: string ): boolean
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file being checked for
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file being checked for.
 
 
 Return type: `boolean`
@@ -144,10 +144,10 @@ move( srcFileName: string, dstFileName: string ): boolean
 Parameters:
 
 - srcFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be moved
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should be moved.
 
 - dstFileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the the new location of the file
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the the new location of the file.
 
 
 Return type: `boolean`
@@ -175,10 +175,10 @@ read( fileName: string, encoding?: infinity.encoding, len?: number ): any
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be read
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be read.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding of the file contents
+  >The encoding of the file contents.
 
 
 Return type: `any`
@@ -203,10 +203,10 @@ readString( fileName: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be read
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be read.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding of the file contents
+  >The encoding of the file contents.
 
 
 Return type: `string`
@@ -232,7 +232,7 @@ remove( fileName: string ): boolean
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be deleted
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be deleted.
 
 
 Return type: `boolean`
@@ -260,7 +260,7 @@ size( fileName: string ): number
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be examined
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be examined.
 
 
 Return type: `number`
@@ -286,16 +286,16 @@ write( fileName: string, value: any, encoding?: infinity.encoding, append?: bool
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file, to which the string should be written
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file, to which the string should be written.
 
 - value: `any`
-  >the string to be written
+  >The string to be written.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the target encoding of the string
+  >The target encoding of the string.
 
 - append: `boolean`, optional
-  >whether to append the string to the end of the file
+  >Whether to append the string to the end of the file.
 
 
 Example:
@@ -319,16 +319,16 @@ writeString( fileName: string, value: string, encoding?: infinity.encoding, appe
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file, to which the string should be written
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file, to which the string should be written.
 
 - value: `string`
-  >the string to be written
+  >The string to be written.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the target encoding of the string
+  >The target encoding of the string.
 
 - append: `boolean`, optional
-  >whether to append the string to the end of the file
+  >Whether to append the string to the end of the file.
 
 
 Example:

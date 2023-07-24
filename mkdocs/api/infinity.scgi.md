@@ -112,31 +112,32 @@ constructor( allowCrossOrigin?: boolean, compress?: boolean, accessLog?: boolean
 Parameters:
 
 - allowCrossOrigin: `boolean`, optional
-  >for allowing cross-origin-requests
+  >For allowing cross-origin-requests.
 
 - compress: `boolean`, optional
-  >for turning compression on or off
+  >For turning compression on or off.
 
 - accessLog: `boolean`, optional
-  >for turning on or off the logging of all access events
+  >For turning on or off the logging of all access events.
 
 - port: `number`, optional
-  >specifies the port to listen on
+  >Specifies the port to listen on.
 
 - maxConnections: `number`, optional
-  >specifies the number of simultaneous connections
+  >Specifies the number of simultaneous connections.
 
 - poolSize: `number`, optional
-  >specifies the number of worker threads to be held ready
+  >Specifies the number of worker threads to be held ready.
 
 - maxContentLength: `number`, optional
-  >specifies the maximum number of bytes (content-length header) that the server accepts in http requests
+  >Specifies the maximum number of bytes (content-length header) that the server accepts in http requests.
 
 - slowRequestTime: `number`, optional
-  >specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+  >Specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+
 
 - maxRateCounter: `number`, optional
-  >the maximum number of requests that a client can make in a specific time frame for rate limiting
+  >The maximum number of requests that a client can make in a specific time frame for rate limiting.
 
 
 Example:
@@ -160,13 +161,13 @@ registerHandler( handler: infinity.scgi.server.handler, path: string, alias: str
 Parameters:
 
 - handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
-  >the type of handler to register
+  >The type of handler to register.
 
 - path: `string`
-  >the request path for the client
+  >The request path for the client.
 
 - alias: `string`
-  >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
+  >The path to a local folder or file with contents or defined routines to be served corresponding to the client request.
 
 
 Example:
@@ -189,31 +190,33 @@ registerHandler( handler: infinity.scgi.server.handler, path: string, alias: str
 Parameters:
 
 - handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
-  >the type of handler to register
+  >The type of handler to register.
 
 - path: `string`
-  >the request path for the client
+  >The request path for the client.
 
 - alias: `string`
-  >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
+  >The path to a local folder or file with contents or defined routines to be served corresponding to the client request.
 
 - expire: `number`, optional
-  >cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+  >Cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+
 
 - maxCacheSize: `number`, optional
-  >the cache threshold in bytes. Files with sizes exceeding the specified number will not be cached
+  >The cache threshold in bytes. Files with sizes exceeding the specified number will not be cached.
 
 - headers: [`infinity.http.headerArray`](#infinity.http.headerArray_interface)
-  >the headers to be sent with the response
+  >The headers to be sent with the response.
 
 - limit: `number`, optional
-  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+  >The maximum number of requests that can be made in the defined period. Used for rate limiting.
+
 
 - period: `number`, optional
-  >the rate limit time period in seconds
+  >The rate limit time period in seconds.
 
 - delay: `number`, optional
-  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
+  >The "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests.
 
 
 Example:
@@ -236,10 +239,10 @@ registerHandler( handler: infinity.scgi.server.handler, path: string ): void
 Parameters:
 
 - handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
-  >the type of handler to register
+  >The type of handler to register.
 
 - path: `string`
-  >the request path for the client
+  >The request path for the client.
 
 
 Example:
@@ -262,16 +265,16 @@ registerService( name: string, namespace: string, path: string, methods: infinit
 Parameters:
 
 - name: `string`
-  >the name of the service
+  >The name of the service.
 
 - namespace: `string`
-  >the namespace for the service
+  >The namespace for the service.
 
 - path: `string`
-  >the path to the file with the custom defined methods
+  >The path to the file with the custom defined methods.
 
 - methods: [`infinity.scgi.methodArray`](#infinity.scgi.methodArray_interface)
-  >an array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified
+  >An array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified.
 
 
 Example:
@@ -345,7 +348,7 @@ unregisterHandler( path: string ): void
 Parameters:
 
 - path: `string`
-  >the request path for the client, which the handler has previously been registered for
+  >The request path for the client, which the handler has previously been registered for.
 
 
 Example:
@@ -368,7 +371,7 @@ unregisterService( name: string ): void
 Parameters:
 
 - name: `string`
-  >the name of the previously registered service
+  >The name of the previously registered service.
 
 
 Example:
@@ -407,31 +410,32 @@ myScgi.unregisterService('system');
 Values:
 
 - custom: `0`
-  >a custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.scgi.server.registerHandler_function)
+  >A custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.scgi.server.registerHandler_function).
 
 - staticFile: `1`
-  >a handler for serving static file content. Prefers showing the index.html file.
+  >A handler for serving static file content. Prefers showing the index.html file.
+
 
 - jsonRpc: `2`
-  >a handler for requests according to the JSON-RPC protocol
+  >A handler for requests according to the JSON-RPC protocol.
 
 - rest: `3`
-  >a handler for REST-requests
+  >A handler for REST-requests.
 
 - api: `4`
-  >a handler for requests to an API
+  >A handler for requests to an API.
 
 - webDav: `5`
-  >a handler for requests according to the WebDAV protocol
+  >A handler for requests according to the WebDAV protocol.
 
 - cardDav: `6`
-  >a handler for requests according to the CardDAV protocol
+  >A handler for requests according to the CardDAV protocol.
 
 - calDav: `7`
-  >a handler for requests according to the CalDAV protocol
+  >A handler for requests according to the CalDAV protocol.
 
 - calDav: `8`
-  >a handler for status requests
+  >A handler for status requests.
 
 Example:
 
@@ -466,15 +470,16 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The name of the function
+  >Type: `string`. The name of the function.
 - #### params
-  >Type: `Array<string>`, optional. The function parameters
+  >Type: `Array<string>`, optional. The function parameters.
 - #### result
-  >Type: `any`, optional. The return type of the function result
+  >Type: `any`, optional. The return type of the function result.
 - #### rest
-  >Type: `string`, optional. The implied REST method for the function call
+  >Type: `string`, optional. The implied REST method for the function call.
 - #### httpEnvironment
   >Type: `boolean`, optional.  If set to true, the [`infinity.http.request`](#infinity.http.request_namespace) values will be provided.
+
 
 
 

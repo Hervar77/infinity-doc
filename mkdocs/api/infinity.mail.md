@@ -444,7 +444,7 @@ constructor( parseAttachment?: boolean)
 Parameters:
 
 - parseAttachment: `boolean`, optional
-  >whether to include attachments when loading mail from a file
+  >Whether to include attachments when loading mail from a file.
 
 
 Example:
@@ -502,7 +502,7 @@ getBestContent( replaceCID: boolean ): string
 Parameters:
 
 - replaceCID: `boolean`
-  >specifies whether image data should be put inline in place of the previous `cid:` entries
+  >Specifies whether image data should be put inline in place of the previous `cid:` entries.
 
 
 Return type: `string`
@@ -527,7 +527,7 @@ getHtmlContent( replaceCID: boolean ): string
 Parameters:
 
 - replaceCID: `boolean`
-  >specifies whether imaga data should be put inline in place of the previous `cid:` entries
+  >Specifies whether imaga data should be put inline in place of the previous `cid:` entries.
 
 
 Return type: `string`
@@ -571,7 +571,7 @@ loadFromFile( fileName: string ): void
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be loaded
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be loaded.
 
 
 Example:
@@ -594,7 +594,7 @@ loadFromStream( stream: infinity.stream ): void
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >stream object to receive email data from. See [infinity.stream](infinity.stream.md)
+  >Stream object to receive email data from. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -617,7 +617,7 @@ saveToFile( fileName: string ): void
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to save the data to
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to save the data to.
 
 
 Example:
@@ -640,7 +640,7 @@ saveToStream( stream: infinity.stream ): void
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >stream object to write email data to. See [infinity.stream](infinity.stream.md)
+  >Stream object to write email data to. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -665,17 +665,17 @@ An array containing objects with attachment data inside its properties.
 
 ### Properties:
 - #### name 
-  >Type: `string`. The name of the attachment for the corresponding parameter of the `Content-Type` attachment header
+  >Type: `string`. The name of the attachment for the corresponding parameter of the `Content-Type` attachment header.
 - #### size
-  >Type: `number`. The size of the attachment in bytes
+  >Type: `number`. The size of the attachment in bytes.
 - #### contentTransferEncoding
-  >Type: `infinity.mail.transferEncoding`. The transfer encoding for the attachment
+  >Type: `infinity.mail.transferEncoding`. The transfer encoding for the attachment.
 - #### contentId
-  >Type: `string`. The content id ("cid") for e.g. inline insertion of the attachment into the email content
+  >Type: `string`. The content id ("cid") for e.g. inline insertion of the attachment into the email content.
 - #### contentDisposition
-  >Type: `string`. The entry for the `Content-Disposition` header
+  >Type: `string`. The entry for the `Content-Disposition` header.
 - #### storedFilePath
-  >Type: `string`. The filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the attachment file
+  >Type: `string`. The filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the attachment file.
 
 ---
 
@@ -686,15 +686,16 @@ Extends: `Array<{contentType: string, contentTransferEncoding: infinity.mail.tra
 
 ### Properties:
 - #### contentType 
-  >Type: `string`. The MIME content type for the corresponding email header
+  >Type: `string`. The MIME content type for the corresponding email header.
 - #### contentTransferEncoding
-  >Type: `infinity.mail.transferEncoding`. The transfer encoding for the email body content
+  >Type: `infinity.mail.transferEncoding`. The transfer encoding for the email body content.
 - #### charset
-  >Type: `string`. The character encoding identifier for the email body content
+  >Type: `string`. The character encoding identifier for the email body content.
 - #### text
-  >Type: `string`. The email body content
+  >Type: `string`. The email body content.
 - #### items
   >Type: `infinity.mail.contentArray`.
+
 
 ---
 
@@ -706,9 +707,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name 
-  >Type: `string`. The field name
+  >Type: `string`. The field name.
 - #### value
-  >Type: `string`. The field value
+  >Type: `string`. The field value.
 
 ---
 
@@ -731,13 +732,13 @@ An array of strings.
 Values:
 
 - none: `0`
-  >stands for
+  >Stands for.
 
 - alternative: `1`
-  >stands for the `multipart/related` `Content-Type` header declaration
+  >Stands for the `multipart/related` `Content-Type` header declaration.
 
 - other: `2`
-  >stands for the `multipart/other` `Content-Type` header declaration
+  >Stands for the `multipart/other` `Content-Type` header declaration.
 
 Example:
 
@@ -755,19 +756,19 @@ let multipartType = infinity.mail.multipartType.none;
 Values:
 
 - lowest: `0`
-  >stands for the `5 (Lowest)` `X-Priority` email header declaration
+  >Stands for the `5 (Lowest)` `X-Priority` email header declaration.
 
 - lower: `1`
-  >stands for the `4 (Lower)` `X-Priority` email header declaration
+  >Stands for the `4 (Lower)` `X-Priority` email header declaration.
 
 - normal: `2`
-  >stands for the `3 (Normal)` `X-Priority` email header declaration
+  >Stands for the `3 (Normal)` `X-Priority` email header declaration.
 
 - higher: `3`
-  >stands for the `2 (Higher)` `X-Priority` email header declaration
+  >Stands for the `2 (Higher)` `X-Priority` email header declaration.
 
 - highest: `4`
-  >stands for the `1 (Highest)` `X-Priority` email header declaration
+  >Stands for the `1 (Highest)` `X-Priority` email header declaration.
 
 Example:
 
@@ -785,19 +786,19 @@ let priority = infinity.mail.priority.lowest;
 Values:
 
 - bit7: `0`
-  >stands for the `7bit` `Content-Transfer-Encoding` email header declaration
+  >Stands for the `7bit` `Content-Transfer-Encoding` email header declaration.
 
 - bit8: `1`
-  >stands for the `8bit` `Content-Transfer-Encoding` email header declaration
+  >Stands for the `8bit` `Content-Transfer-Encoding` email header declaration.
 
 - binary: `2`
-  >stands for the `binary` `Content-Transfer-Encoding` email header declaration
+  >Stands for the `binary` `Content-Transfer-Encoding` email header declaration.
 
 - quotedPrintable: `3`
-  >stands for the `quoted-printable` `Content-Transfer-Encoding` email header declaration
+  >Stands for the `quoted-printable` `Content-Transfer-Encoding` email header declaration.
 
 - base64: `4`
-  >stands for the `base64` `Content-Transfer-Encoding` email header declaration
+  >Stands for the `base64` `Content-Transfer-Encoding` email header declaration.
 
 Example:
 

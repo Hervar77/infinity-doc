@@ -231,7 +231,7 @@ Specifies the number of rows which were inserted, updated, or deleted during the
 
 ### specificOptions {: #infinity.database.specificOptions_property .doc-property}
 
-Provides extended settings for each database provider. See 
+Provides extended settings for each database provider. See
 
 
 
@@ -338,7 +338,8 @@ clear( table: string ): void
 Parameters:
 
 - table: `string`
-  >the table to clear data from.
+  >The table to clear data from.
+
 
 
 Example:
@@ -387,22 +388,23 @@ connect( provider: infinity.database.provider, server: string, port: number, dat
 Parameters:
 
 - provider: [`infinity.database.provider`](#infinity.database.provider_enum)
-  >the database provider to be used according to the [`infinity.database.provider`](#infinity.database.provider_enum) enums.
+  >The database provider to be used according to the [`infinity.database.provider`](#infinity.database.provider_enum) enums.
+
 
 - server: `string`
-  >server address
+  >Server address.
 
 - port: `number`
-  >connection port
+  >Connection port.
 
 - database: `string`
-  >the name of the database
+  >The name of the database.
 
 - username: `string`, optional
-  >the username for logging in
+  >The username for logging in.
 
 - password: `string`, optional
-  >the password for logging in
+  >The password for logging in.
 
 
 Example:
@@ -427,7 +429,7 @@ count( table: string ): number
 Parameters:
 
 - table: `string`
-  >the table to examine
+  >The table to examine.
 
 
 Return type: `number`
@@ -452,7 +454,7 @@ create( table: string ): void
 Parameters:
 
 - table: `string`
-  >the name of the table to create
+  >The name of the table to create.
 
 
 Example:
@@ -493,7 +495,7 @@ drop( table: string ): void
 Parameters:
 
 - table: `string`
-  >the name of the table to delete 
+  >The name of the table to delete.
 
 
 Example:
@@ -538,11 +540,11 @@ escape( value: any, asLikeString?: boolean ): string
 Parameters:
 
 - value: `any`
-  >the parameters to escape
+  >The parameters to escape.
 
 - asLikeString: `boolean`, optional
-  >whether to use special escaping for statements with the LIKE operator
-  
+  >Whether to use special escaping for statements with the LIKE operator.
+
 
 Return type: `string`
 
@@ -570,7 +572,7 @@ execute( sql?: string ): boolean
 Parameters:
 
 - sql: `string`, optional
-  >the database query to execute
+  >The database query to execute.
 
 
 Return type: `boolean`
@@ -606,7 +608,7 @@ exists( table: string ): boolean
 Parameters:
 
 - table: `string`
-  >the table name to check for
+  >The table name to check for.
 
 
 Return type: `boolean`
@@ -633,25 +635,25 @@ find( table: string, query: infinity.database.queryArray, orderBy?: string, orde
 Parameters:
 
 - table: `string`
-  >the name of the table to be queried
+  >The name of the table to be queried.
 
 - query: [`infinity.database.queryArray`](#infinity.database.queryArray_interface)
-  >an array of options for the query, usable with the following operators: =, <>, !=, >, <, >=, <=, beginswith, endswith, contains
+  >An array of options for the query, usable with the following operators: =, <>, !=, >, <, >=, <=, beginswith, endswith, contains.
 
 - orderBy: `string`, optional
-  >specifies by which column the result has to be ordered
+  >Specifies by which column the result has to be ordered.
 
 - orderDirection: [`infinity.database.orderDirection`](#infinity.database.orderDirection_enum), optional
-  >specifies the order direction
+  >Specifies the order direction.
 
 - offset: `number`, optional
-  >specifies, how many row have to be skipped
+  >Specifies, how many row have to be skipped.
 
 - limit: `number`, optional
-  >constrains the number of rows to return
+  >Constrains the number of rows to return.
 
 - outputMode: [`infinity.database.outputMode`](#infinity.database.outputMode_enum), optional
-  >specifies how the data is returned
+  >Specifies how the data is returned.
 
 
 Return type: [`infinity.database.findResultArray`](#infinity.database.findResultArray_interface)
@@ -718,10 +720,10 @@ get( table: string, id: number ): object
 Parameters:
 
 - table: `string`
-  >the name of the table to be queried
+  >The name of the table to be queried.
 
 - id: `number`
-  >the ID of the row to be returned
+  >The ID of the row to be returned.
 
 
 Return type: `object`
@@ -746,10 +748,10 @@ get( table: string, ids: infinity.database.idsArray ): infinity.database.getResu
 Parameters:
 
 - table: `string`
-  >the name of the table to be queried
+  >The name of the table to be queried.
 
 - ids: [`infinity.database.idsArray`](#infinity.database.idsArray_interface)
-  >an array containing the IDs of the rows to be returned
+  >An array containing the IDs of the rows to be returned.
 
 
 Return type: [`infinity.database.getResultArray`](#infinity.database.getResultArray_interface)
@@ -793,7 +795,7 @@ getFieldNames( table: string ): infinity.database.stringArray
 Parameters:
 
 - table: `string`
-  >the table to be queried
+  >The table to be queried.
 
 
 Return type: [`infinity.database.stringArray`](#infinity.database.stringArray_interface)
@@ -856,10 +858,10 @@ has( table: string, id: number ): boolean
 Parameters:
 
 - table: `string`
-  >the name of the table to be checked
+  >The name of the table to be checked.
 
 - id: `number`
-  >the row to be checked
+  >The row to be checked.
 
 
 Return type: `boolean`
@@ -886,16 +888,16 @@ index( table: string, key: string, type: infinity.database.indexType, unique?: b
 Parameters:
 
 - table: `string`
-  >the name of the table to be altered
+  >The name of the table to be altered.
 
 - key: `string`
-  >the column to act as an index
+  >The column to act as an index.
 
 - type: [`infinity.database.indexType`](#infinity.database.indexType_enum)
-  >the index type to be used according to [infinity.database.indexType](#infinity.database.indexType_enum)
+  >The index type to be used according to [infinity.database.indexType](#infinity.database.indexType_enum).
 
 - unique: `boolean`, optional
-  >specifies whether the index has to be unique
+  >Specifies whether the index has to be unique.
 
 
 Example:
@@ -918,10 +920,10 @@ insert( table: string, document: object ): number
 Parameters:
 
 - table: `string`
-  >the name of the table to be altered
+  >The name of the table to be altered.
 
 - document: `object`
-  >an object containing the data to be inserted
+  >An object containing the data to be inserted.
 
 
 Return type: `number`
@@ -1011,10 +1013,10 @@ remove( table: string, query: infinity.database.queryArray ): number
 Parameters:
 
 - table: `string`
-  >the name of the table to be altered
+  >The name of the table to be altered.
 
 - query: [`infinity.database.queryArray`](#infinity.database.queryArray_interface)
-  >an array containing the query parameters
+  >An array containing the query parameters.
 
 
 Return type: `number`
@@ -1039,7 +1041,8 @@ result( field: number|string ): any
 Parameters:
 
 - field: `number|string`
-  >the column of which the field has to be returned. Can be the column name or a numeric index.
+  >The column of which the field has to be returned. Can be the column name or a numeric index.
+
 
 
 Return type: `any`
@@ -1152,10 +1155,10 @@ setParamValue( name: string, value: any ): void
 Parameters:
 
 - name: `string`
-  >the name of the parameter
+  >The name of the parameter.
 
 - value: `any`
-  >the value of the parameter
+  >The value of the parameter.
 
 
 Example:
@@ -1180,10 +1183,10 @@ startTransaction( isolationLevel?: infinity.database.isolationLevel, readOnly?: 
 Parameters:
 
 - isolationLevel: [`infinity.database.isolationLevel`](#infinity.database.isolationLevel_enum), optional
-  >specifies the transaction locking behavior
+  >Specifies the transaction locking behavior.
 
 - readOnly: `boolean`, optional
-  >sets the transaction to read only
+  >Sets the transaction to read only.
 
 
 Example:
@@ -1213,10 +1216,10 @@ update( table: string, document: object ): number
 Parameters:
 
 - table: `string`
-  >the name of the table to be updated
+  >The name of the table to be updated.
 
 - document: `object`
-  >an object containing the data to be written
+  >An object containing the data to be written.
 
 
 Return type: `number`
@@ -1241,13 +1244,13 @@ update( table: string, query: infinity.database.queryArray, update: object ): nu
 Parameters:
 
 - table: `string`
-  >the name of the table to be updated
+  >The name of the table to be updated.
 
 - query: [`infinity.database.queryArray`](#infinity.database.queryArray_interface)
-  >an array containing the query parameters
+  >An array containing the query parameters.
 
 - update: `object`
-  >an object containing the data to be written
+  >An object containing the data to be written.
 
 
 Return type: `number`
@@ -1270,7 +1273,7 @@ myDB.update('testTable', [['username', '=', 'TheUserName1']], { id: 2, username:
 
 Extends: `Array<object|number>`
 
-  >an array of objects or numbers
+  >An array of objects or numbers.
 
 ---
 
@@ -1278,7 +1281,7 @@ Extends: `Array<object|number>`
 
 Extends: `Array<object>`
 
-  >an array of objects
+  >An array of objects.
 
 ---
 
@@ -1286,7 +1289,7 @@ Extends: `Array<object>`
 
 Extends: `Array<number>`
 
-  >an array of numbers
+  >An array of numbers.
 
 ---
 
@@ -1294,7 +1297,7 @@ Extends: `Array<number>`
 
 Extends: `Array<string|Array<string|number|boolean>>`
 
-  >an array of strings or of arrays containing strings, numbers or boolean values
+  >An array of strings or of arrays containing strings, numbers or boolean values.
 
 ---
 
@@ -1302,7 +1305,7 @@ Extends: `Array<string|Array<string|number|boolean>>`
 
 Extends: `Array<Array<any>>`
 
-  >an array of arrays, containing any datatype
+  >An array of arrays, containing any datatype.
 
 ---
 
@@ -1310,7 +1313,7 @@ Extends: `Array<Array<any>>`
 
 Extends: `Array<any>`
 
-  >an array of any datatypes
+  >An array of any datatypes.
 
 ---
 
@@ -1318,7 +1321,7 @@ Extends: `Array<any>`
 
 Extends: `Array<string>`
 
-  >an array of strings
+  >An array of strings.
 
 ---
 
@@ -1365,17 +1368,22 @@ Values:
 - readCommitted: `0`
   >Shared locks are held while the data is being read to avoid dirty reads, but the data can be changed before the end of the transaction, resulting in non-repeatable reads or phantom data.
 
+
 - readUncommitted: `1`
   >A dirty read is possible, meaning that no shared locks are issued and no exclusive locks are honored.
+
 
 - repeatableRead: `2`
   >Locks are placed on all data that is used in a query, preventing other users from updating the data. Prevents non-repeatable reads but phantom rows are still possible.
 
+
 - isolated: `3`
   >A range lock is placed on the dataset, preventing other users from updating or inserting rows into the dataset until the transaction is complete.
 
+
 - snapshot: `4`
   >Reduces blocking by storing a version of data that one application can read while another is modifying the same data. Indicates that from one transaction you cannot see changes made in other transactions, even if you requery.
+
 
 Example:
 
@@ -1418,13 +1426,13 @@ Specifies how the result data has to be returned.
 Values:
 
 - objects: `0`
-  >as objects
+  >As objects.
 
 - ids: `1`
-  >as row IDs in a comma-separated string
+  >As row IDs in a comma-separated string.
 
 - count: `2`
-  >as a total count number
+  >As a total count number.
 
 Example:
 
@@ -1478,6 +1486,7 @@ Values:
 
 - sqlite: `SQLite`
   >SQLite
+
 
 Example:
 

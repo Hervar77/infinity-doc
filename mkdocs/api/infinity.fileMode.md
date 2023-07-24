@@ -26,25 +26,26 @@ Values:
   >
 
 - read: `0`
-  >opens the file for reading only
+  >Opens the file for reading only.
 
 - write: `1`
-  >opens the file for writing only.
+  >Opens the file for writing only.
+
 
 - readWrite: `2`
-  >opens the file for reading and writing
+  >Opens the file for reading and writing.
 
 - exclusive: `4`
-  >locks the file exclusively (no other processes may open the file for reading or writing)
+  >Locks the file exclusively (no other processes may open the file for reading or writing).
 
 - shareExclusive: `16`
-  >denies read and write access to all others
+  >Denies read and write access to all others.
 
 - shareDenyWrite: `32`
-  >denies write access to all others
+  >Denies write access to all others.
 
 - shareDenyNone: `64`
-  >no sharing restrictions
+  >No sharing restrictions.
 
 Example:
 

@@ -120,16 +120,16 @@ add( name: string, plan: string, scriptName: string, priority?: infinity.schedul
 Parameters:
 
 - name: `string`
-  >the internal name for the task
+  >The internal name for the task.
 
 - plan: `string`
-  >the time schedule for the task (see below)
+  >The time schedule for the task (see below).
 
 - scriptName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the script to be executed
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the script to be executed.
 
 - priority: [`infinity.scheduler.priority`](#infinity.scheduler.priority_enum), optional
-  >the process priority for the script according to [`infinity.scheduler.priority`](#infinity.scheduler.priority_enum)
+  >The process priority for the script according to [`infinity.scheduler.priority`](#infinity.scheduler.priority_enum).
 
 The `plan` parameter follows the format used by unix/linux cronjobs. It consists of several fields separated by a space:
 
@@ -239,7 +239,7 @@ remove( name: string ): boolean
 Parameters:
 
 - name: `string`
-  >the internal name of the task to be removed
+  >The internal name of the task to be removed.
 
 
 Return type: `boolean`
@@ -263,25 +263,26 @@ myScheduler.remove('testTask');
 Values:
 
 - idle: `0`
-  >stands for the task running only when the system is idle
+  >Stands for the task running only when the system is idle.
 
 - lowest: `1`
-  >stands for the task having priority above `idle` but below `lower`
+  >Stands for the task having priority above `idle` but below `lower`.
 
 - lower: `2`
-  >stands for the task having priority above `lowest` but below `normal`
+  >Stands for the task having priority above `lowest` but below `normal`.
 
 - normal: `3`
-  >stands for the task having no special prioritizing needs
+  >Stands for the task having no special prioritizing needs.
 
 - higher: `4`
-  >stands for the task having priority above `normal` but below `highest`
+  >Stands for the task having priority above `normal` but below `highest`.
 
 - highest: `5`
-  >stands for the task having priority above `higher` but below `timeCritical`
+  >Stands for the task having priority above `higher` but below `timeCritical`.
 
 - timeCritical: `6`
-  >stands for the task having the highest possible priority.
+  >Stands for the task having the highest possible priority.
+
 
 Example:
 

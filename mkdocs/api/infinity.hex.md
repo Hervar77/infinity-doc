@@ -44,10 +44,10 @@ decode( value: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - value: `string`
-  >the string to decode
+  >The string to decode.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#enums) enums), optional
-  >the target encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums)
+  >The target encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums).
 
 
 Return type: `string`
@@ -73,10 +73,10 @@ encode( value: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - value: `string`
-  >the string to encode
+  >The string to encode.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#enums) enums), optional
-  >source encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums)
+  >Source encoding (one of the [infinity.encoding](infinity.encoding.md#enums) enums).
 
 
 Return type: `string`

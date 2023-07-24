@@ -83,7 +83,7 @@ abbreviation( timeZone: string ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the abbreviation should be returned
+  >The name of the time zone for which the abbreviation should be returned.
 
 
 Return type: `string`
@@ -111,7 +111,7 @@ displayName( timeZone: string ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the display name should be returned
+  >The name of the time zone for which the display name should be returned.
 
 
 Return type: `string`
@@ -139,10 +139,10 @@ formatLocal( format: string, value: number ): string
 Parameters:
 
 - format: `string`
-  >the date format according to [Date and time formats](#infinity.date.dateTimeFormats)
+  >The date format according to [Date and time formats](#infinity.date.dateTimeFormats).
 
 - value: `number`
-  >the timestamp which should be returned as a formatted date string
+  >The timestamp which should be returned as a formatted date string.
 
 
 Return type: `string`
@@ -171,13 +171,13 @@ formatUniversal( timeZone: string, format: string, value: number ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the timezone for which the time should be returned
+  >The name of the timezone for which the time should be returned.
 
 - format: `string`
-  >the date format according to [Date and time formats](#infinity.date.dateTimeFormats)
+  >The date format according to [Date and time formats](#infinity.date.dateTimeFormats).
 
 - value: `number`
-  >the timestamp which should be returned as a formatted date string
+  >The timestamp which should be returned as a formatted date string.
 
 
 Return type: `string`
@@ -205,7 +205,7 @@ getTimeZoneFromAlias( alias: string ): string
 Parameters:
 
 - alias: `string`
-  >the alias of the timezone that is being searched for
+  >The alias of the timezone that is being searched for.
 
 
 Return type: `string`
@@ -231,7 +231,7 @@ id( timeZone: string ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the identifier should be returned
+  >The name of the time zone for which the identifier should be returned.
 
 
 Return type: `string`
@@ -260,13 +260,13 @@ isStandardTime( timeZone: string, local: number, forceDaylight?: boolean ): bool
 Parameters:
 
 - timeZone: `string`
-  >specifies the timezone to be checked in
+  >Specifies the timezone to be checked in.
 
 - local: `number`
-  >the time stamp to be checked as a Unix Epoch timestamp in milliseconds
+  >The time stamp to be checked as a Unix Epoch timestamp in milliseconds.
 
 - forceDaylight: `boolean`, optional
-  >specifes how ambiguous time is treated
+  >Specifes how ambiguous time is treated.
 
 
 Return type: `boolean`
@@ -334,10 +334,10 @@ now( timeZone: string, asUtc?: boolean ): number
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the timestamp should be returned
+  >The name of the time zone for which the timestamp should be returned.
 
 - asUtc: `boolean`, optional
-  >whether to return the timestamp according to Coordinated Universal Time
+  >Whether to return the timestamp according to Coordinated Universal Time.
 
 
 Return type: `number`
@@ -363,10 +363,10 @@ toISO8601Format( timeZone: string, local: number ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the formatted time string should be returned
+  >The name of the time zone for which the formatted time string should be returned.
 
 - local: `number`
-  >the time stamp as a Unix Epoch timestamp in milliseconds to be returned as an ISO 8601 formatted string
+  >The time stamp as a Unix Epoch timestamp in milliseconds to be returned as an ISO 8601 formatted string.
 
 Return type: `string`
 
@@ -393,10 +393,10 @@ toLocalTime( timeZone: string, utc: number ): number
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the timestamp should be returned
+  >The name of the time zone for which the timestamp should be returned.
 
 - utc: `number`
-  >a timestamp in milliseconds that corresponds to Coordinated Universal Time starting at the Unix Epoch
+  >A timestamp in milliseconds that corresponds to Coordinated Universal Time starting at the Unix Epoch.
 
 
 Return type: `number`
@@ -422,13 +422,13 @@ toUniversalTime( timeZone: string, local: number, forceDaylight?: boolean ): num
 Parameters:
 
 - timeZone: `string`
-  >the name of the local time zone
+  >The name of the local time zone.
 
 - local: `number`
-  >the local time as a Unix Epoch timestamp in milliseconds
+  >The local time as a Unix Epoch timestamp in milliseconds.
 
 - forceDaylight: `boolean`, optional
-  >specifes how ambiguous time is treated
+  >Specifes how ambiguous time is treated.
 
 
 Return type: `number`
@@ -456,7 +456,7 @@ utcOffset( timeZone: string ): string
 Parameters:
 
 - timeZone: `string`
-  >the name of the time zone for which the offset should be retrieved
+  >The name of the time zone for which the offset should be retrieved.
 
 
 Return type: `string`

@@ -125,7 +125,7 @@ beginRead( nameSpace: string ): void
 Parameters:
 
 - nameSpace: `string`
-  >the namespace to be locked
+  >The namespace to be locked.
 
 
 Example:
@@ -148,7 +148,7 @@ beginWrite( nameSpace: string ): boolean
 Parameters:
 
 - nameSpace: `string`
-  >the namespace to be locked
+  >The namespace to be locked.
 
 
 Return type: `boolean`
@@ -173,7 +173,7 @@ endRead( nameSpace: string ): void
 Parameters:
 
 - nameSpace: `string`
-  >the namespace to be unlocked
+  >The namespace to be unlocked.
 
 
 Example:
@@ -196,7 +196,7 @@ endWrite( nameSpace: string ): void
 Parameters:
 
 - nameSpace: `string`
-  >the namespace to be unlocked
+  >The namespace to be unlocked.
 
 
 Example:

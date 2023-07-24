@@ -254,7 +254,7 @@ constructor( type?: infinity.list.type )
 Parameters:
 
 - type: [`infinity.list.type`](#infinity.list.type_enum), optional
-  >the type of list to create
+  >The type of list to create.
 
 
 Example:
@@ -278,7 +278,7 @@ add( value: any ): number
 Parameters:
 
 - value: `any`
-  >the data to add
+  >The data to add.
 
 
 Return type: `number`
@@ -309,10 +309,10 @@ assign( src: infinity.list, mode?: infinity.list.operator ): void
 Parameters:
 
 - src: `infinity.list`
-  >the list to assign data from
+  >The list to assign data from.
 
 - mode: `infinity.list.operator`, optional
-  >the assignment mode
+  >The assignment mode.
 
 
 Example:
@@ -359,7 +359,7 @@ contains( value: any ): boolean
 Parameters:
 
 - value: `any`
-  >the data to check for
+  >The data to check for.
 
 
 Return type: `boolean`
@@ -386,10 +386,10 @@ exchange( index1: number, index2: number ): void
 Parameters:
 
 - index1: `number`
-  >the first element to exchange
+  >The first element to exchange.
 
 - index2: `number`
-  >the second element to exchange
+  >The second element to exchange.
 
 
 Example:
@@ -448,7 +448,7 @@ fromArray( a: Array<any> ): void
 Parameters:
 
 - a: `Array<any>`
-  >the array to build the list of
+  >The array to build the list of.
 
 
 Example:
@@ -474,7 +474,7 @@ get( index: number ): any
 Parameters:
 
 - index: `number`
-  >the position of the element to retrieve
+  >The position of the element to retrieve.
 
 
 Return type: `any`
@@ -499,7 +499,7 @@ indexOf( value: any ): number
 Parameters:
 
 - value: `any`
-  >the data to examine the list for
+  >The data to examine the list for.
 
 
 Return type: `number`
@@ -524,10 +524,10 @@ insert( index: number, value: any ): void
 Parameters:
 
 - index: `number`
-  >the position at which the data should be inserted
+  >The position at which the data should be inserted.
 
 - value: `any`
-  >the data to insert
+  >The data to insert.
 
 
 Example:
@@ -569,10 +569,10 @@ move( index1: number, index2: number ): void
 Parameters:
 
 - index1: `number`
-  >the element to be moved
+  >The element to be moved.
 
 - index2: `number`
-  >the new position to move the element to
+  >The new position to move the element to.
 
 
 Example:
@@ -595,10 +595,10 @@ put( index: number, value: any ): void
 Parameters:
 
 - index: `number`
-  >the position inside the list to put data at
+  >The position inside the list to put data at.
 
 - value: `any`
-  >the data to put at the specified position
+  >The data to put at the specified position.
 
 
 Example:
@@ -621,7 +621,7 @@ remove( index: number ): void
 Parameters:
 
 - index: `number`
-  >the position to remove an element from
+  >The position to remove an element from.
 
 
 Example:
@@ -665,10 +665,10 @@ toArray( index?: number, count?: number ): Array<any>
 Parameters:
 
 - index: `number`, optional
-  >the position inside the list to start at
+  >The position inside the list to start at.
 
 - count: `number`, optional
-  >the amount of elements to built from
+  >The amount of elements to built from.
 
 
 Return type: `Array<any>`
@@ -715,16 +715,16 @@ console.debug(myList.capacity)
 Values:
 
 - copy: `0`
-  >the receiving list will be completely overwritten by the assigned list
+  >The receiving list will be completely overwritten by the assigned list.
 
 - and: `1`
-  >only elements with identical data between the lists will be kept inside the receiving list
+  >Only elements with identical data between the lists will be kept inside the receiving list.
 
 - or: `2`
-  >the receiving list will be combined with the assigned list
+  >The receiving list will be combined with the assigned list.
 
 - not: `3`
-  >the receiving list receives only elements containing data that isn't present in it yet
+  >The receiving list receives only elements containing data that isn't present in it yet.
 
 Example:
 
@@ -741,13 +741,13 @@ myList.assign(myList2, infinity.list.operator.not)
 Values:
 
 - generic: `0`
-  >for a list that accepts any data
+  >For a list that accepts any data.
 
 - number: `1`
-  >for a list that accepts only numbers
+  >For a list that accepts only numbers.
 
 - string: `2`
-  >for a list that accepts only strings
+  >For a list that accepts only strings.
 
 Example:
 

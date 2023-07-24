@@ -93,10 +93,10 @@ register( name: string, callback: (params: any)=>void ): void
 Parameters:
 
 - name: `string`
-  >the name for the event handler to register
+  >The name for the event handler to register.
 
 - callback: `(params: any)=>void`
-  >the callback function that will be executed in case of the event getting triggered
+  >The callback function that will be executed in case of the event getting triggered.
 
 
 Example:
@@ -125,10 +125,10 @@ send( name: string, params?: any ): void
 Parameters:
 
 - name: `string`
-  >the event to be triggered
+  >The event to be triggered.
 
 - params: `any`, optional
-  >the function parameters to be passed to the callback function specified inside the event handler
+  >The function parameters to be passed to the callback function specified inside the event handler.
 
 
 Example:
@@ -151,7 +151,7 @@ unregister( name: string ): void
 Parameters:
 
 - name: `string`
-  >the name of the event handler to unregister
+  >The name of the event handler to unregister.
 
 
 Example:

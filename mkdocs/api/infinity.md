@@ -115,7 +115,7 @@ getGlobal( name: string ): any
 Parameters:
 
 - name: `string`
-  >the name of the global variable
+  >The name of the global variable.
 
 
 Return type: `any`
@@ -140,7 +140,8 @@ include( fileName: string ): void
 Parameters:
 
 - fileName: `string`
-  >the name of the file to be included. The position is automatically assumed at the `js` - output folder inside the project folder. Keep in mind that output - files with the ending `.js` should be referenced. 
+  >The name of the file to be included. The position is automatically assumed at the `js` - output folder inside the project folder. Keep in mind that output - files with the ending `.js` should be referenced. 
+
 
 
 Example:
@@ -163,7 +164,7 @@ loadModule( moduleName: string ): void
 Parameters:
 
 - moduleName: `string`
-  >the identifier of the module to be loaded
+  >The identifier of the module to be loaded.
 
 
 Example:
@@ -186,13 +187,13 @@ sendSentryEvent( message: string, level?: string, processInfo?: boolean ): void
 Parameters:
 
 - message: `string`
-  >the error message to be sent to `sentry.io`
+  >The error message to be sent to `sentry.io`.
 
 - level: `string`, optional
-  >the error level on the occurance of which the message should be sent
+  >The error level on the occurance of which the message should be sent.
 
 - processInfo: `boolean`, optional
-  >specifies whether additional technical debug data should be sent with the message
+  >Specifies whether additional technical debug data should be sent with the message.
 
 
 Example:
@@ -225,7 +226,7 @@ sleep( milliSeconds: number ): void
 Parameters:
 
 - milliSeconds: `number`
-  >the amount of milliseconds for the delay
+  >The amount of milliseconds for the delay.
 
 
 Example:

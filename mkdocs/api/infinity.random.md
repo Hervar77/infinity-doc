@@ -68,7 +68,7 @@ characters( length: number ): string
 Parameters:
 
 - length: `number`
-  >the number of characters to return
+  >The number of characters to return.
 
 
 Return type: `string`

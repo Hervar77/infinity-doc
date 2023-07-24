@@ -64,9 +64,11 @@ while (!infinity.threadTerminated) {
 
 Of course, your thread may also terminate on its own when it finishes execution (e.g. some expensive calculation). Calling the `stop()` method on a thread that has already terminated won't cause any negative side effects, since it only sets the `infinity.threadTerminated` variable in the thread's runtime.
 
-> Note: The path to the script that you want to run in a thread has to be relative to the main program folder (and not to the file that creates the thread).
+>Note: The path to the script that you want to run in a thread has to be relative to the main program folder (and not to the file that creates the thread).
 
-> Note: You do not have to load the `infinity.thread` module inside your thread script. That module is only required to start threads, not within the thread itself.
+
+>Note: You do not have to load the `infinity.thread` module inside your thread script. That module is only required to start threads, not within the thread itself.
+
 
 You can change the thread's priority through the constructor's second argument:
 

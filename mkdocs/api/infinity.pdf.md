@@ -352,19 +352,19 @@ addImage( stream: infinity.stream, x: number, y: number, width?: number, height?
 Parameters:
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >stream object to receive image data from. See [infinity.stream](infinity.stream.md)
+  >Stream object to receive image data from. See [infinity.stream](infinity.stream.md).
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 - width: `number`, optional
-  >the width for the embedded image
+  >The width for the embedded image.
 
 - height: `number`, optional
-  >the height for the embedded image
+  >The height for the embedded image.
 
 
 Example:
@@ -387,19 +387,19 @@ addImage( fileName: string, x: number, y: number, width?: number, height?: numbe
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be loaded
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be loaded.
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 - width: `number`, optional
-  >the width for the embedded image
+  >The width for the embedded image.
 
 - height: `number`, optional
-  >the height for the embedded image
+  >The height for the embedded image.
 
 
 Example:
@@ -422,13 +422,13 @@ addPage( pageNumber: number, width: number, height: number ): void
 Parameters:
 
 - pageNumber: `number`
-  >the number for the new page. The sequence can be determined freely
+  >The number for the new page. The sequence can be determined freely.
 
 - width: `number`
-  >the width for the new page in pixels
+  >The width for the new page in pixels.
 
 - height: `number`
-  >the height for the new page in pixels
+  >The height for the new page in pixels.
 
 
 Example:
@@ -472,13 +472,13 @@ addText( text: string, x: number, y: number ): void
 Parameters:
 
 - text: `string`
-  >the text to add
+  >The text to add.
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 
 Example:
@@ -504,22 +504,22 @@ bezierTo( x1: number, y1: number, x2: number, y2: number, x3: number, y3: number
 Parameters:
 
 - x1: `number`
-  >the horizontal coordinate in pixels of the first control point used to specify the shape of the curve
+  >The horizontal coordinate in pixels of the first control point used to specify the shape of the curve.
 
 - y1: `number`
-  >the vertical coordinate in pixels of the first control point used to specify the shape of the curve of the first control point used to specify the shape of the curve
+  >The vertical coordinate in pixels of the first control point used to specify the shape of the curve of the first control point used to specify the shape of the curve.
 
 - x2: `number`
-  >the horizontal coordinate in pixels of the second control point used to specify the shape of the curve
+  >The horizontal coordinate in pixels of the second control point used to specify the shape of the curve.
 
 - y2: `number`
-  >the vertical coordinate in pixels of the first control point used to specify the shape of the curve of the second control point used to specify the shape of the curve
+  >The vertical coordinate in pixels of the first control point used to specify the shape of the curve of the second control point used to specify the shape of the curve.
 
 - x3: `number`
-  >the horizontal coordinate in pixels of the destination point for the end of the curve
+  >The horizontal coordinate in pixels of the destination point for the end of the curve.
 
 - y3: `number`
-  >the vertical coordinate in pixels of the destination point for the end of the curve
+  >The vertical coordinate in pixels of the destination point for the end of the curve.
 
 
 Example:
@@ -568,10 +568,10 @@ createPath( x: number, y: number ): void
 Parameters:
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 
 Example:
@@ -594,7 +594,7 @@ deletePage( pageNumber: number ): void
 Parameters:
 
 - pageNumber: `number`
-  >the number of the page to delete
+  >The number of the page to delete.
 
 
 Example:
@@ -634,10 +634,10 @@ lineTo( x: number, y: number ): void
 Parameters:
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 
 Example:
@@ -661,7 +661,7 @@ loadFromFile( fileName: string ): boolean
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be loaded from
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be loaded from.
 
 
 Return type: `boolean`
@@ -686,10 +686,10 @@ moveTo( x: number, y: number ): void
 Parameters:
 
 - x: `number`
-  >the horizontal coordinate in pixels
+  >The horizontal coordinate in pixels.
 
 - y: `number`
-  >the vertical coordinate in pixels
+  >The vertical coordinate in pixels.
 
 
 Example:
@@ -729,19 +729,19 @@ renderPage( fileName: string, left: number, top: number, width: number, height: 
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be saved
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which has to be saved.
 
 - left: `number`
-  >the offset in pixels to the left image corner
+  >The offset in pixels to the left image corner.
 
 - top: `number`
-  >the offset in pixels to the top image corner
+  >The offset in pixels to the top image corner.
 
 - width: `number`
-  >the width of the final image
+  >The width of the final image.
 
 - height: `number`
-  >the height of the final image
+  >The height of the final image.
 
 
 Example:
@@ -764,7 +764,7 @@ saveToFile( fileName: string ): boolean
 Parameters:
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to save the data to
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to save the data to.
 
 
 Return type: `boolean`
@@ -805,13 +805,13 @@ myPdf.updatePage();
 Values:
 
 - left: `0`
-  >align text to the left side of the document
+  >Align text to the left side of the document.
 
 - center: `1`
-  >align text to the center of the document
+  >Align text to the center of the document.
 
 - right: `2`
-  >align text to the right side of the document
+  >Align text to the right side of the document.
 
 Example:
 

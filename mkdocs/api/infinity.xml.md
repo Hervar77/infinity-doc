@@ -48,10 +48,10 @@ parse( value: string, normalize?: boolean ): any
 Parameters:
 
 - value: `string`
-  >the string to parse
+  >The string to parse.
 
 - normalize: `boolean`, optional
-  >whether to apply normalization
+  >Whether to apply normalization.
 
 
 Return type: `any`
@@ -77,10 +77,11 @@ stringify( value: any, omitHeader?: boolean ): string
 Parameters:
 
 - value: `any`
-  >the data to process
+  >The data to process.
 
 - omitHeader: `boolean`
-  >if set true, then the xml header is omitted in the returned result.
+  >If set true, then the xml header is omitted in the returned result.
+
 
 Return type: `string`
 

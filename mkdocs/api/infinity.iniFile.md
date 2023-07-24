@@ -128,9 +128,9 @@ constructor( fileName: string, encoding?: infinity.encoding )
 Parameters:
 
 - fileName: `string`
-  >the name of the ini-file
+  >The name of the ini-file.
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding of the file contents
+  >The encoding of the file contents.
 
 
 Example:
@@ -154,10 +154,10 @@ deleteKey( section: string, ident: string ): void
 Parameters:
 
 - section: `string`
-  >the ini-file section to delete an entry from
+  >The ini-file section to delete an entry from.
 
 - ident: `string`
-  >the key of the entry to be deleted
+  >The key of the entry to be deleted.
 
 
 Example:
@@ -180,7 +180,7 @@ eraseSection( section: string ): void
 Parameters:
 
 - section: `string`
-  >the section to be erased
+  >The section to be erased.
 
 
 Example:
@@ -220,13 +220,13 @@ readBoolean( section: string, ident: string, defaultValue: boolean ): boolean
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 - defaultValue: `boolean`
-  >the default value to return in case of the read value being blank or of another type
+  >The default value to return in case of the read value being blank or of another type.
 
 
 Return type: `boolean`
@@ -252,13 +252,13 @@ readFloat( section: string, ident: string, defaultValue: number ): number
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 - defaultValue: `number`
-  >the default value to return in case of the read value being blank or of another type
+  >The default value to return in case of the read value being blank or of another type.
 
 
 Return type: `number`
@@ -284,13 +284,13 @@ readInteger( section: string, ident: string, defaultValue: number ): number
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 - defaultValue: `number`
-  >the default value to return in case of the read value being blank or of another type
+  >The default value to return in case of the read value being blank or of another type.
 
 
 Return type: `number`
@@ -316,13 +316,13 @@ readInt64( section: string, ident: string, defaultValue: number ): number
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 - defaultValue: `number`
-  >the default value to return in case of the read value being blank or of another type
+  >The default value to return in case of the read value being blank or of another type.
 
 
 Return type: `number`
@@ -347,7 +347,7 @@ readSection( section: string ): infinity.iniFile.stringArray
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 
 Return type: [`infinity.iniFile.stringArray`](#infinity.iniFile.stringArray_interface)
@@ -372,7 +372,7 @@ readSectionValues( section: string ): infinity.iniFile.valueArray
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 
 Return type: [`infinity.iniFile.valueArray`](#infinity.iniFile.valueArray_interface)
@@ -416,13 +416,13 @@ readString( section: string, ident: string, defaultValue: string ): string
 Parameters:
 
 - section: `string`
-  >the section to read from
+  >The section to read from.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 - defaultValue: `string`
-  >the default value to return in case of the read value being blank or of another type
+  >The default value to return in case of the read value being blank or of another type.
 
 
 Return type: `string`
@@ -447,7 +447,8 @@ sectionExists( section: string ): boolean
 Parameters:
 
 - section: `string`
-  >the section to check for.
+  >The section to check for.
+
 
 
 Return type: `boolean`
@@ -491,10 +492,10 @@ valueExists( section: string, ident: string ): boolean
 Parameters:
 
 - section: `string`
-  >the section to check in
+  >The section to check in.
 
 - ident: `string`
-  >the key to be read from
+  >The key to be read from.
 
 
 Return type: `boolean`
@@ -519,13 +520,13 @@ writeBoolean( section: string, ident: string, value: boolean ): void
 Parameters:
 
 - section: `string`
-  >the section to write to
+  >The section to write to.
 
 - ident: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `boolean`
-  >the value to write
+  >The value to write.
 
 
 Example:
@@ -548,13 +549,13 @@ writeFloat( section: string, ident: string, value: number ): void
 Parameters:
 
 - section: `string`
-  >the section to write to
+  >The section to write to.
 
 - ident: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `number`
-  >the value to write
+  >The value to write.
 
 
 Example:
@@ -577,13 +578,13 @@ writeInteger( section: string, ident: string, value: number ): void
 Parameters:
 
 - section: `string`
-  >the section to write to
+  >The section to write to.
 
 - ident: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `number`
-  >the value to write
+  >The value to write.
 
 
 Example:
@@ -606,13 +607,13 @@ writeInt64( section: string, ident: string, value: number ): void
 Parameters:
 
 - section: `string`
-  >the section to write to
+  >The section to write to.
 
 - ident: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `number`
-  >the value to write
+  >The value to write.
 
 
 Example:
@@ -635,13 +636,13 @@ writeString( section: string, ident: string, value: string ): void
 Parameters:
 
 - section: `string`
-  >the section to write to
+  >The section to write to.
 
 - ident: `string`
-  >the key to write to
+  >The key to write to.
 
 - value: `string`
-  >the value to write
+  >The value to write.
 
 
 Example:

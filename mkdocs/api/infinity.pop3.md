@@ -259,7 +259,7 @@ delete( msgNum: number ): boolean
 Parameters:
 
 - msgNum: ``
-  >the number of the message to delete
+  >The number of the message to delete.
 
 
 Return type: `boolean`
@@ -318,7 +318,8 @@ list( msgNum?: number ): infinity.pop3.listArray
 Parameters:
 
 - msgNum: `number`, optional
-  >the number of the message for which to return list info. If unspecified, a list of all messages will be returned.
+  >The number of the message for which to return list info. If unspecified, a list of all messages will be returned.
+
 
 
 Return type: [`infinity.pop3.listArray`](#infinity.pop3.listArray_interface)
@@ -344,10 +345,11 @@ retrieve( msgNum: number, fileName?: string ): string
 Parameters:
 
 - msgNum: `number`
-  >the number of the message to retrieve
+  >The number of the message to retrieve.
 
 - fileName: `string`, optional
-  >if a filename is specified, then the message will be saved to that file. The filename can be relative (location relative to the folder with the used INFINITY.JS executable file) or an absolute path.
+  >If a filename is specified, then the message will be saved to that file. The filename can be relative (location relative to the folder with the used INFINITY.JS executable file) or an absolute path.
+
 
 Return type: `string`
 
@@ -372,7 +374,7 @@ size( msgNum?: number ): number
 Parameters:
 
 - msgNum: `number`, optional
-  >the number of the message to examine
+  >The number of the message to examine.
 
 
 Return type: `number`
@@ -397,13 +399,14 @@ top( msgNum: number, maxLines?: number, fileName?: string ): string
 Parameters:
 
 - msgNum: `number`
-  >the number of the message to retrieve
+  >The number of the message to retrieve.
 
 - maxLines: `number`
-  >the number of content lines of the message to retrieve (in addition to the message headers)
+  >The number of content lines of the message to retrieve (in addition to the message headers).
 
 - fileName: `string`, optional
-  >if a filename is specified, then the message headers will be saved to that file. The filename can be relative (location relative to the folder with the used INFINITY.JS executable file) or an absolute path.
+  >If a filename is specified, then the message headers will be saved to that file. The filename can be relative (location relative to the folder with the used INFINITY.JS executable file) or an absolute path.
+
 
 Return type: `string`
 
@@ -428,7 +431,7 @@ uidl( msgNum?: number ): infinity.pop3.uidlArray
 Parameters:
 
 - msgNum: `number`, optional
-  >the number of the message
+  >The number of the message.
 
 
 Return type: [`infinity.pop3.uidlArray`](#infinity.pop3.uidlArray_interface)
@@ -635,25 +638,30 @@ constructor( ssl?: boolean, verifyCertificate?: boolean, port?: number, maxConne
 Parameters:
 
 - ssl: `boolean`, optional
-  >`true` to accept encrypted connections (using TLS/SSL), `false` to only accept unencrypted connections (not recommended)
+  >`true` to accept encrypted connections (using TLS/SSL), `false` to only accept unencrypted connections (not recommended).
 
 - verifyCertificate: `boolean`, optional
-  >`true` to validate the SSL certificate, `false` to ignore certificate problems (e.g. when using self-signed certificates)
+  >`true` to validate the SSL certificate, `false` to ignore certificate problems (e.g. when using self-signed certificates).
 
 - port: `number`, optional
   >The port on which to listen for POP3 client connections. If this is set to `995`, then the server will use implicit SSL, otherwise it will accept unencrypted connections and handle STARTTLS requests by the client to switch to an encrypted connection automatically.
 
+
 - maxConnections: `number`, optional
   >Maximum number of simultaneous connections.
+
 
 - poolSize: `number`, optional
   >Pool size. The server will maintain a pool of connections that will be reused for better performance.
 
+
 - minProtocol: `infinity.pop3.server.protocol`, optional
   >Minimal encryption protocol accepted. You can use this to refuse client connections that are using old (possibly obsolete) encryption protocols.
 
+
 - maxProtocol: `infinity.pop3.server.protocol`, optional
   >Maximum encryption protocl accepted.
+
 
 
 Example:
@@ -677,16 +685,16 @@ setCertificate(certFile: string, keyFile: string, rootCertFile?: string, verify?
 Parameters:
 
 - certFile: `string`
-  >the path to the certificate file to be used
+  >The path to the certificate file to be used.
 
 - keyFile: `string`
-  >the path to the the key file to be used
+  >The path to the the key file to be used.
 
 - rootCertFile: `string`, optional
-  >the path to the the root certificate file to be used
+  >The path to the the root certificate file to be used.
 
 - verify: `boolean`, optional
-  >whether to verify the validity of the certificate
+  >Whether to verify the validity of the certificate.
 
 
 Example:
@@ -760,13 +768,14 @@ myServer.stop();
 Values:
 
 - userPass: `0`
-  >Authenticate using username and password
+  >Authenticate using username and password.
 
 - apop: `1`
   >Authenticate using APOP (Authenticated Post Office Protocol).
 
+
 - sasl: `2`
-  >Authenticate using SASL (Simple Authentication and Security Layer)
+  >Authenticate using SASL (Simple Authentication and Security Layer).
 
 Example:
 
@@ -786,8 +795,10 @@ Values:
 - none: `0`
   >Unencrypted connection.
 
+
 - sslTls: `1`
   >SSL/TLS encrypted connection.
+
 
 Example:
 
@@ -823,16 +834,16 @@ let encryptMode = infinity.pop3.client.encryptMode.sslTls;
 Values:
 
 - tls1_0: `2`
-  >TLS 1 encrypted connection
+  >TLS 1 encrypted connection.
 
 - tls1_1: `3`
-  >TLS 1.1 encrypted connection
+  >TLS 1.1 encrypted connection.
 
 - tls1_2: `4`
-  >TLS 1.2 encrypted connection
+  >TLS 1.2 encrypted connection.
 
 - tls1_3: `5`
-  >TLS 1.3 encrypted connection
+  >TLS 1.3 encrypted connection.
 
 Example:
 

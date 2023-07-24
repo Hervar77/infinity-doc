@@ -357,7 +357,7 @@ get( url: string ): string
 Parameters:
 
 - url: `string`
-  >the URL to send the request for
+  >The URL to send the request for.
 
 
 Return type: `string`
@@ -425,10 +425,10 @@ getFile( url: string, fileName: string ): void
 Parameters:
 
 - url: `string`
-  >the URL from which the contents have to be saved
+  >The URL from which the contents have to be saved.
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the retrieved contents
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the retrieved contents.
 
 
 Example:
@@ -451,7 +451,7 @@ getRequestHeader( name: string ): string
 Parameters:
 
 - name: `string`
-  >the name of the request header to be examined
+  >The name of the request header to be examined.
 
 
 Return type: `string`
@@ -477,7 +477,7 @@ getResponseHeader( name: string ): string
 Parameters:
 
 - name: `string`
-  >the name of the response header to be examined
+  >The name of the response header to be examined.
 
 
 Return type: `string`
@@ -503,10 +503,10 @@ getStream( url: string, stream: infinity.stream ): void
 Parameters:
 
 - url: `string`
-  >the url to save from
+  >The url to save from.
 
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream object to write to. See [infinity.stream](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
 
 Example:
@@ -530,7 +530,7 @@ head( url: string ): infinity.http.stringArray
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 
 Return type: [`infinity.http.stringArray`](#infinity.http.stringArray_interface)
@@ -556,16 +556,16 @@ jsonRpc( url: string, method: string, params?: infinity.http.paramArray, version
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - method: `string`
-  >the remote procedure to be executed on the other endpoint
+  >The remote procedure to be executed on the other endpoint.
 
 - params: [`infinity.http.paramArray`](#infinity.http.paramArray_interface), optional
-  >the parameters to be passed to the remote procedure
+  >The parameters to be passed to the remote procedure.
 
 - version: [`infinity.http.client.version`](#infinity.http.client.version_enum), optional
-  >specifies the version of JSON-RPC to use
+  >Specifies the version of JSON-RPC to use.
 
 
 Return type: `object`
@@ -591,7 +591,7 @@ options( url: string ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 
 Return type: `string`
@@ -616,13 +616,13 @@ post( url: string, value: string, encoding?: infinity.encoding ): string
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - value: `string`
-  >the POST request parameters
+  >The POST request parameters.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding for the request
+  >The encoding for the request.
 
 
 Return type: `string`
@@ -648,10 +648,10 @@ postFile( url: string, fileName: string ): string
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
 
 
 Return type: `string`
@@ -677,10 +677,10 @@ postMultipartFormData( url: string, data: infinity.http.formDataArray ): string
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - data: [`infinity.http.formDataArray`](#infinity.http.formDataArray_interface)
-  >an array containing the data to be uploaded
+  >An array containing the data to be uploaded.
 
 
 Return type: `string`
@@ -708,9 +708,9 @@ postStream( url: string, stream: infinity.stream ): string
 Parameters:
 
 - url: `string`
-  >the url to save from
+  >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream to be uploaded. See [infinity.stream](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
 
 
 Return type: `string`
@@ -737,13 +737,13 @@ patch( url: string, value: string, encoding?: infinity.encoding ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - value: `string`
-  >the PATCH request parameters
+  >The PATCH request parameters.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding for the request
+  >The encoding for the request.
 
 
 Return type: `string`
@@ -769,10 +769,10 @@ patchFile( url: string, fileName: string ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
 
 
 Return type: `string`
@@ -798,9 +798,9 @@ patchStream( url: string, stream: infinity.stream ): string;
 Parameters:
 
 - url: `string`
-  >the url to save from
+  >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream to be uploaded. See [infinity.stream](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
 
 
 Return type: `string`
@@ -825,13 +825,13 @@ put( url: string, value: string, encoding?: infinity.encoding ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - value: `string`
-  >the PUT request parameters
+  >The PUT request parameters.
 
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
-  >the encoding for the request
+  >The encoding for the request.
 
 
 Return type: `string`
@@ -857,10 +857,10 @@ putFile( url: string, fileName: string ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 - fileName: `string`
-  >filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
 
 
 Return type: `string`
@@ -886,9 +886,9 @@ putStream( url: string, stream: infinity.stream ): string;
 Parameters:
 
 - url: `string`
-  >the url to save from
+  >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
-  >the stream to be uploaded. See [infinity.stream](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
 
 
 Return type: `string`
@@ -913,7 +913,7 @@ remove( url: string ): string;
 Parameters:
 
 - url: `string`
-  >the URL to send the request to
+  >The URL to send the request to.
 
 
 Return type: `string`
@@ -955,10 +955,10 @@ setRequestHeader( name: string, value: string ): void
 Parameters:
 
 - name: `string`
-  >the name of the header to be set
+  >The name of the header to be set.
 
 - value: `string`
-  >the value of the header to be set
+  >The value of the header to be set.
 
 
 Example:
@@ -1213,43 +1213,44 @@ constructor( ssl?: boolean, verifyCertificate?: boolean, allowCrossOrigin?: bool
 Parameters:
 
 - ssl: `boolean`, optional
-  >for using SSL connections
+  >For using SSL connections.
 
 - verifyCertificate: `boolean`, optional
-  >whether to verify the SSL-Certificate
+  >Whether to verify the SSL-Certificate.
 
 - allowCrossOrigin: `boolean`, optional
-  >for allowing cross-origin-requests
+  >For allowing cross-origin-requests.
 
 - compress: `boolean`, optional
-  >for turning compression on or off
+  >For turning compression on or off.
 
 - accessLog: `boolean`, optional
-  >for turning on or off the logging of all access events
+  >For turning on or off the logging of all access events.
 
 - port: `number`, optional
-  >specifies the port to listen on
+  >Specifies the port to listen on.
 
 - maxConnections: `number`, optional
-  >specifies the number of simultaneous connections
+  >Specifies the number of simultaneous connections.
 
 - poolSize: `number`, optional
-  >specifies the number of worker threads to be held ready
+  >Specifies the number of worker threads to be held ready.
 
 - maxContentLength: `number`, optional
-  >specifies the maximum number of bytes (content-length header) that the server accepts in http requests
+  >Specifies the maximum number of bytes (content-length header) that the server accepts in http requests.
 
 - slowRequestTime: `number`, optional
-  >specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+  >Specifies how many seconds the processing of a request is allowed to take without being logged as "slow". Accepts decimals with `.` as well.
+
 
 - minProtocol: [`infinity.http.server.protocol`](#infinity.http.server.protocol_enum), optional
-  >the minimum SSL/TLS version to support
+  >The minimum SSL/TLS version to support.
 
 - maxProtocol: [`infinity.http.server.protocol`](#infinity.http.server.protocol_enum), optional
-  >the maximum SSL/TLS version to support
+  >The maximum SSL/TLS version to support.
 
 - maxRateCounter: `number`, optional
-  >the maximum number of requests that a client can make in a specific time frame for rate limiting
+  >The maximum number of requests that a client can make in a specific time frame for rate limiting.
 
 
 Example:
@@ -1273,31 +1274,33 @@ registerHandler( handler: infinity.http.server.handler, path: string, alias: str
 Parameters:
 
 - handler: [`infinity.http.server.handler`](#infinity.http.server.handler_enum)
-  >the type of handler to register
+  >The type of handler to register.
 
 - path: `string`
-  >the request path for the client
+  >The request path for the client.
 
 - alias: `string`
-  >the path to a local folder or file with contents or defined routines to be served corresponding to the client request
+  >The path to a local folder or file with contents or defined routines to be served corresponding to the client request.
 
 - expire: `number`, optional
-  >the cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+  >The cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
+
 
 - maxCacheSize: `number`, optional
-  >the cache threshold in bytes. Files with sizes exceeding the specified number will not be cached
+  >The cache threshold in bytes. Files with sizes exceeding the specified number will not be cached.
 
 - headers: [`infinity.http.headerArray`](#infinity.http.headerArray_interface)
-  >the headers to be sent with the response
+  >The headers to be sent with the response.
 
 - limit: `number`, optional
-  >the maximum number of requests that can be made in the defined period. Used for rate limiting.
+  >The maximum number of requests that can be made in the defined period. Used for rate limiting.
+
 
 - period: `number`, optional
-  >the rate limit time period in seconds
+  >The rate limit time period in seconds.
 
 - delay: `number`, optional
-  >the "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests
+  >The "cool down" period in seconds that a client must wait after hitting the rate limit before making new requests.
 
 
 Example:
@@ -1330,16 +1333,16 @@ registerService( name: string, namespace: string, path: string, methods: infinit
 Parameters:
 
 - name: `string`
-  >the name of the service
+  >The name of the service.
 
 - namespace: `string`
-  >the namespace for the service
+  >The namespace for the service.
 
 - path: `string`
-  >the path to the file with the custom defined methods
+  >The path to the file with the custom defined methods.
 
 - methods: [`infinity.http.methodArray`](#infinity.http.methodArray_interface)
-  >an array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified
+  >An array of the method names for the service. Parameters for return types, REST methods and HTTP environment can also be specified.
 
 
 Example:
@@ -1402,16 +1405,16 @@ setCertificate(certFile: string, keyFile: string, rootCertFile?: string, verify?
 Parameters:
 
 - certFile: `string`
-  >the path to the certificate file to be used
+  >The path to the certificate file to be used.
 
 - keyFile: `string`
-  >the path to the the key file to be used
+  >The path to the the key file to be used.
 
 - rootCertFile: `string`, optional
-  >the path to the the root certificate file to be used
+  >The path to the the root certificate file to be used.
 
 - verify: `boolean`, optional
-  >whether to verify the validity of the certificate
+  >Whether to verify the validity of the certificate.
 
 
 Example:
@@ -1469,7 +1472,7 @@ unregisterHandler( path: string ): void
 Parameters:
 
 - path: `string`
-  >the request path for the client, which the handler has previously been registered for
+  >The request path for the client, which the handler has previously been registered for.
 
 
 Example:
@@ -1492,7 +1495,7 @@ unregisterService( name: string ): void
 Parameters:
 
 - name: `string`
-  >the name of the previously registered service
+  >The name of the previously registered service.
 
 
 Example:
@@ -1531,13 +1534,13 @@ myServer.unregisterService('system');
 Values:
 
 - none: `0`
-  >none of the below
+  >None of the below.
 
 - basic: `1`
-  >basic access authentication
+  >Basic access authentication.
 
 - digest: `2`
-  >digest access authentication
+  >Digest access authentication.
 
 Example:
 
@@ -1553,10 +1556,10 @@ let authMode = infinity.http.client.authMode.none;
 Values:
 
 - jsonRpc1_1: `0`
-  >JSON-RPC version 1.1
+  >JSON-RPC version 1.1.
 
 - jsonRpc2_0: `1`
-  >JSON-RPC version 2.0
+  >JSON-RPC version 2.0.
 
 Example:
 
@@ -2280,31 +2283,32 @@ Gets or sets the `WWW-Authenticate` HTTP-header value.
 Values:
 
 - custom: `0`
-  >a custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.http.server.registerHandler_function)
+  >A custom handler to be defined in a file, specified in the third function parameter of [registerHandler()](#infinity.http.server.registerHandler_function).
 
 - staticFile: `1`
-  >a handler for serving static file content. Prefers showing the index.html file.
+  >A handler for serving static file content. Prefers showing the index.html file.
+
 
 - jsonRpc: `2`
-  >a handler for requests according to the JSON-RPC protocol
+  >A handler for requests according to the JSON-RPC protocol.
 
 - rest: `3`
-  >a handler for REST-requests
+  >A handler for REST-requests.
 
 - api: `4`
-  >a handler for requests to an API
+  >A handler for requests to an API.
 
 - webDav: `5`
-  >a handler for requests according to the WebDAV protocol (not implemented yet)
+  >A handler for requests according to the WebDAV protocol (not implemented yet).
 
 - cardDav: `6`
-  >a handler for requests according to the CardDAV protocol (not implemented yet)
+  >A handler for requests according to the CardDAV protocol (not implemented yet).
 
 - calDav: `7`
-  >a handler for requests according to the CalDAV protocol (not implemented yet)
+  >A handler for requests according to the CalDAV protocol (not implemented yet).
 
 - status: `8`
-  >a handler for server-status requests, showing server and resource usage information
+  >A handler for server-status requests, showing server and resource usage information.
 
 Example:
 
@@ -2322,16 +2326,16 @@ let handler = infinity.http.server.handler.custom;
 Values:
 
 - tls1_0: `2`
-  >specifies the usage of TLS 1.0
+  >Specifies the usage of TLS 1.0.
 
 - tls1_1: `3`
-  >specifies the usage of TLS 1.1
+  >Specifies the usage of TLS 1.1.
 
 - tls1_2: `4`
-  >specifies the usage of TLS 1.2
+  >Specifies the usage of TLS 1.2.
 
 - tls1_3: `5`
-  >specifies the usage of TLS 1.3
+  >Specifies the usage of TLS 1.3.
 
 Example:
 
@@ -2358,15 +2362,15 @@ An array containing objects with cookie data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The name of a cookie field
+  >Type: `string`. The name of a cookie field.
 - #### value
-  >Type: `string`. The value of a cookie field
+  >Type: `string`. The value of a cookie field.
 - #### expires
-  >Type: `number`. The expiration date for the cookie
+  >Type: `number`. The expiration date for the cookie.
 - #### path
-  >Type: `string`. The storage path for the cookie
+  >Type: `string`. The storage path for the cookie.
 - #### domain
-  >Type: `string`. The domain the cookie is set from
+  >Type: `string`. The domain the cookie is set from.
 
 ---
 
@@ -2378,15 +2382,15 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### controlName
-  >Type: `string`. The name of the used HTML form control
+  >Type: `string`. The name of the used HTML form control.
 - #### fileName
-  >Type: `string`. The name of the file
+  >Type: `string`. The name of the file.
 - #### tempFilename
-  >Type: `string`. The temporary filename, the file is available under. Is only set during the actual request
+  >Type: `string`. The temporary filename, the file is available under. Is only set during the actual request.
 - #### size
-  >Type: `number`. The size of the file
+  >Type: `number`. The size of the file.
 - #### contentType
-  >Type: `string`. The MIME-Type of the file
+  >Type: `string`. The MIME-Type of the file.
 
 ---
 
@@ -2398,15 +2402,15 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### fieldName
-  >Type: `string`. The name of a form field
+  >Type: `string`. The name of a form field.
 - #### fileName
-  >Type: `string`. The name of a file attachment transmitted with the form data
+  >Type: `string`. The name of a file attachment transmitted with the form data.
 - #### fieldValue
-  >Type: `string`. The value of a form field
+  >Type: `string`. The value of a form field.
 - #### charset
-  >Type: `string`. The character encoding of the transmission
+  >Type: `string`. The character encoding of the transmission.
 - #### contentType
-  >Type: `string`. The MIME-Type of the transmission
+  >Type: `string`. The MIME-Type of the transmission.
 
 ---
 
@@ -2426,15 +2430,16 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The name of the function
+  >Type: `string`. The name of the function.
 - #### params
-  >Type: `Array<string>`, optional. The function parameters
+  >Type: `Array<string>`, optional. The function parameters.
 - #### result
-  >Type: `any`, optional. The return type of the function result
+  >Type: `any`, optional. The return type of the function result.
 - #### rest
-  >Type: `string`, optional. The implied REST method for the function call
+  >Type: `string`, optional. The implied REST method for the function call.
 - #### httpEnvironment
   >Type: `boolean`, optional.  If set to true, the [`infinity.http.request`](#infinity.http.request_namespace) values will be provided.
+
 
 ---
 
@@ -2454,9 +2459,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### firstOffset
-  >Type: `number`. The start offset
+  >Type: `number`. The start offset.
 - #### lastOffset
-  >Type: `number`, optional. The end offset
+  >Type: `number`, optional. The end offset.
 
 ---
 
@@ -2476,9 +2481,9 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### name
-  >Type: `string`. The field name
+  >Type: `string`. The field name.
 - #### value
-  >Type: `string`. The field value
+  >Type: `string`. The field value.
 
 
 

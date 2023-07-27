@@ -1015,7 +1015,7 @@ infinity.ui.addImage(texture, p1, p2);
 
 ## addImageQuad() {: #infinity.ui.addImageQuad_function .doc-function}
 
-//TODO
+Adds an image to the UI as a quadrilateral, using the specified texture, position points, optional UV coordinates, and color.
 
 Signature:
 ```
@@ -1025,34 +1025,34 @@ addImageQuad( texture: number, p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: i
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >This is the identifier for the texture to be used.
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The first position point of the image quadrilateral in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The second position point of the image quadrilateral in 2D space.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The third position point of the image quadrilateral in 2D space.
 
 - p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The fourth position point of the image quadrilateral in 2D space.
 
 - uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The first UV coordinate for the image. It determines the part of the texture to be used for the first position point.
 
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The second UV coordinate for the image. It determines the part of the texture to be used for the second position point.
 
 - uv3: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The third UV coordinate for the image. It determines the part of the texture to be used for the third position point.
 
 - uv4: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The fourth UV coordinate for the image. It determines the part of the texture to be used for the fourth position point.
 
 - col: `number`, optional
-  >//TODO
+  >The color modifier for the image.
 
 
 Example:
@@ -1066,7 +1066,7 @@ infinity.ui.addImageQuad(texture, p1, p2, p3, p4);
 
 ## addImageRounded() {: #infinity.ui.addImageRounded_function .doc-function}
 
-//TODO
+Adds an image with rounded corners to the UI, using the specified texture, position points, optional UV coordinates, color, rounding radius, and drawing flags.
 
 Signature:
 ```
@@ -1076,28 +1076,28 @@ addImageRounded( texture: number, p1: infinity.ui.vec2, p2: infinity.ui.vec2, uv
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >The identifier for the texture to be used.
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The bottom-left position point of the image in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The top-right position point of the image in 2D space.
 
 - uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The bottom-left UV coordinate for the image. It determines the part of the texture to be used.
 
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The top-right UV coordinate for the image. It determines the part of the texture to be used.
 
 - col: `number`, optional
-  >//TODO
+  >The color modifier for the image.
 
 - rounding: `number`, optional
-  >//TODO
+  >The radius of the rounding for the corners of the image.
 
 - flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
-  >//TODO
+  >These are flags to customize the image drawing behavior.
 
 
 Example:
@@ -1111,7 +1111,7 @@ infinity.ui.addImageRounded(texture, p1, p2);
 
 ## addLine() {: #infinity.ui.addLine_function .doc-function}
 
-//TODO
+Adds a line to the UI, using the specified start and end points, color, and optional thickness.
 
 Signature:
 ```
@@ -1121,16 +1121,16 @@ addLine( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, thickness?: nu
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The start position point of the line in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The end position point of the line in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the line.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the line.
 
 
 Example:
@@ -1144,7 +1144,7 @@ infinity.ui.addLine(p1, p2, col);
 
 ## addNgon() {: #infinity.ui.addNgon_function .doc-function}
 
-//TODO
+Adds an n-gon (a polygon with "n" sides) to the UI, using the specified center point, radius, color, number of segments, and optional thickness.
 
 Signature:
 ```
@@ -1154,19 +1154,19 @@ addNgon( center: infinity.ui.vec2, radius: number, col: number, segments: number
 Parameters:
 
 - center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The center point of the n-gon in 2D space.
 
 - radius: `number`
-  >//TODO
+  >The radius of the n-gon.
 
 - col: `number`
-  >//TODO
+  >The color of the n-gon.
 
 - segments: `number`
-  >//TODO
+  >The number of sides or segments of the n-gon.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the n-gon.
 
 
 Example:
@@ -1180,7 +1180,7 @@ infinity.ui.addNgon(center, radius, col, segments);
 
 ## addNgonFilled() {: #infinity.ui.addNgonFilled_function .doc-function}
 
-//TODO
+Adds a filled n-gon (a polygon with "n" sides) to the UI, using the specified center point, radius, color, and number of segments.
 
 Signature:
 ```
@@ -1190,16 +1190,16 @@ addNgonFilled( center: infinity.ui.vec2, radius: number, col: number, segments: 
 Parameters:
 
 - center: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The center point of the n-gon in 2D space.
 
 - radius: `number`
-  >//TODO
+  >The radius of the n-gon.
 
 - col: `number`
-  >//TODO
+  >The color of the n-gon.
 
 - segments: `number`
-  >//TODO
+  >The number of sides or segments of the n-gon.
 
 
 Example:

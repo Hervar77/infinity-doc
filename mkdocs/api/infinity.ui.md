@@ -1213,7 +1213,7 @@ infinity.ui.addNgonFilled(center, radius, col, segments);
 
 ## addPolyline() {: #infinity.ui.addPolyline_function .doc-function}
 
-//TODO
+Adds a polyline (a line made up of several segments) to the UI, using the specified points array, color, optional drawing flags, and optional thickness.
 
 Signature:
 ```
@@ -1223,16 +1223,16 @@ addPolyline( points: infinity.ui.vec2Array, col: number, flags?: infinity.ui.dra
 Parameters:
 
 - points: [`infinity.ui.vec2Array`](#infinity.ui.vec2Array_interface)
-  >//TODO
+  >The array of points defining the segments of the polyline in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the polyline.
 
 - flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
-  >//TODO
+  >Flags to customize the polyline drawing behavior.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the polyline.
 
 
 Example:
@@ -1246,7 +1246,7 @@ infinity.ui.addPolyline(points, col);
 
 ## addQuad() {: #infinity.ui.addQuad_function .doc-function}
 
-//TODO
+Adds a quadrilateral (a polygon with four sides) to the UI, using the specified four points, color, and optional thickness.
 
 Signature:
 ```
@@ -1256,22 +1256,22 @@ addQuad( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2, p4: i
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The first point of the quadrilateral in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The second point of the quadrilateral in 2D space.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The third point of the quadrilateral in 2D space.
 
 - p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The fourth point of the quadrilateral in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the quadrilateral.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the quadrilateral.
 
 
 Example:
@@ -1285,7 +1285,7 @@ infinity.ui.addQuad(p1, p2, p3, p4, col);
 
 ## addQuadFilled() {: #infinity.ui.addQuadFilled_function .doc-function}
 
-//TODO
+Adds a filled quadrilateral (a polygon with four sides) to the UI, using the specified four points and color.
 
 Signature:
 ```
@@ -1295,19 +1295,19 @@ addQuadFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2,
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The first point of the quadrilateral in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The second point of the quadrilateral in 2D space.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The third point of the quadrilateral in 2D space.
 
 - p4: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The fourth point of the quadrilateral in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the quadrilateral.
 
 
 Example:
@@ -1321,7 +1321,7 @@ infinity.ui.addQuadFilled(p1, p2, p3, p4, col);
 
 ## addRect() {: #infinity.ui.addRect_function .doc-function}
 
-//TODO
+Adds a rectangle to the UI, using the specified two points (representing opposite corners), color, optional rounding for the corners, optional drawing flags, and optional thickness.
 
 Signature:
 ```
@@ -1331,22 +1331,22 @@ addRect( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, rounding?: num
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >One corner point of the rectangle in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The diagonally opposite corner point of the rectangle in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the rectangle.
 
 - rounding: `number`, optional
-  >//TODO
+  >The radius of rounding for the corners of the rectangle.
 
 - flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
-  >//TODO
+  >Flags to customize the rectangle drawing behavior.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the rectangle's outline.
 
 
 Example:
@@ -1360,7 +1360,7 @@ infinity.ui.addRect(p1, p2, col);
 
 ## addRectFilled() {: #infinity.ui.addRectFilled_function .doc-function}
 
-//TODO
+Adds a filled rectangle to the UI, using the specified two points (representing opposite corners), color, and optional rounding for the corners, and optional drawing flags.
 
 Signature:
 ```
@@ -1370,19 +1370,19 @@ addRectFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col: number, rounding
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >One corner point of the rectangle in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The diagonally opposite corner point of the rectangle in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the rectangle.
 
 - rounding: `number`, optional
-  >//TODO
+  >The radius of rounding for the corners of the rectangle.
 
 - flags: [[`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum)](#infinity.ui.drawFlags_enum), optional
-  >//TODO
+  >/Flags to customize the rectangle drawing behavior.
 
 
 Example:
@@ -1396,7 +1396,7 @@ infinity.ui.addRectFilled(p1, p2, col);
 
 ## addRectFilledMultiColor() {: #infinity.ui.addRectFilledMultiColor_function .doc-function}
 
-//TODO
+Adds a filled rectangle with multiple colors to the UI. The rectangle is defined by the specified two points (representing opposite corners). Each corner has its own color, allowing for a gradient effect.
 
 Signature:
 ```
@@ -1406,22 +1406,22 @@ addRectFilledMultiColor( p1: infinity.ui.vec2, p2: infinity.ui.vec2, col1: numbe
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >One corner point of the rectangle in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The diagonally opposite corner point of the rectangle in 2D space.
 
 - col1: `number`
-  >//TODO
+  >The color of the first corner of the rectangle.
 
 - col2: `number`
-  >//TODO
+  >The color of the second corner of the rectangle.
 
 - col3: `number`
-  >//TODO
+  >The color of the third corner of the rectangle.
 
 - col4: `number`
-  >//TODO
+  >The color of the fourth corner of the rectangle.
 
 
 Example:

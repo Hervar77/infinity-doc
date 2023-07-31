@@ -1381,7 +1381,7 @@ Parameters:
 - rounding: `number`, optional
   >The radius of rounding for the corners of the rectangle.
 
-- flags: [[`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum)](#infinity.ui.drawFlags_enum), optional
+- flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
   >/Flags to customize the rectangle drawing behavior.
 
 
@@ -1430,51 +1430,11 @@ Example:
 infinity.loadModule('infinity.ui');
 infinity.ui.addRectFilledMultiColor(p1, p2, col1, col2, col3, col4);
 ```
-
 ---
 
 ## addText() {: #infinity.ui.addText_function .doc-function}
 
-//TODO
-
-Signature:
-```
-addText( font: number, size: number, pos: infinity.ui.vec2, col: number, text: string, wrapWidth?: number ): void
-```
-
-Parameters:
-
-- font: `number`
-  >//TODO
-
-- size: `number`
-  >//TODO
-
-- pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
-
-- col: `number`
-  >//TODO
-
-- text: `string`
-  >//TODO
-
-- wrapWidth: `number`, optional
-  >//TODO
-
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-infinity.ui.addText(font, size, pos, col, text);
-```
-
----
-
-## addText() {: #infinity.ui.addText_function .doc-function}
-
-//TODO
+Adds a piece of text to the UI at the specified position and with the given color.
 
 Signature:
 ```
@@ -1484,13 +1444,13 @@ addText( pos: infinity.ui.vec2, col: number, text: string ): void
 Parameters:
 
 - pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The position on the UI where the text should be placed.
 
 - col: `number`
-  >//TODO
+  >The color to be used for the text.
 
 - text: `string`
-  >//TODO
+  >The string of text to be added to the UI.
 
 
 Example:
@@ -1502,9 +1462,48 @@ infinity.ui.addText(pos, col, text);
 
 ---
 
+## addText() {: #infinity.ui.addText_function .doc-function}
+
+Adds a piece of text to the UI at the specified position and with the given style.
+
+Signature:
+```
+addText( font: number, size: number, pos: infinity.ui.vec2, col: number, text: string, wrapWidth?: number ): void
+```
+
+Parameters:
+
+- font: `number`
+  >The font to be used for the text.
+
+- size: `number`
+  >The size of the font to be used.
+
+- pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >The position on the UI where the text should be placed.
+
+- col: `number`
+  >The color to be used for the text.
+
+- text: `string`
+  >The string of text to be added to the UI.
+
+- wrapWidth: `number`, optional
+  >The width at which the text should wrap onto a new line.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.ui');
+infinity.ui.addText(font, size, pos, col, text);
+```
+
+---
+
 ## addTriangle() {: #infinity.ui.addTriangle_function .doc-function}
 
-//TODO
+Draws a triangle to the UI using the specified points and color.
 
 Signature:
 ```
@@ -1514,19 +1513,19 @@ addTriangle( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.vec2, c
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The first point of the triangle in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The second point of the triangle in 2D space.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The third point of the triangle in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the triangle.
 
 - thickness: `number`, optional
-  >//TODO
+  >The thickness of the triangle's outline.
 
 
 Example:
@@ -1540,7 +1539,7 @@ infinity.ui.addTriangle(p1, p2, p3, col);
 
 ## addTriangleFilled() {: #infinity.ui.addTriangleFilled_function .doc-function}
 
-//TODO
+Draws a filled triangle on the UI using the specified points and color.
 
 Signature:
 ```
@@ -1550,16 +1549,16 @@ addTriangleFilled( p1: infinity.ui.vec2, p2: infinity.ui.vec2, p3: infinity.ui.v
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The first point of the triangle in 2D space.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The second point of the triangle in 2D space.
 
 - p3: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The third point of the triangle in 2D space.
 
 - col: `number`
-  >//TODO
+  >The color of the triangle.
 
 
 Example:
@@ -1573,7 +1572,7 @@ infinity.ui.addTriangleFilled(p1, p2, p3, col);
 
 ## alignTextToFramePadding() {: #infinity.ui.alignTextToFramePadding_function .doc-function}
 
-//TODO
+Aligns the text within the UI's frame padding.
 
 Signature:
 ```
@@ -1591,7 +1590,7 @@ infinity.ui.alignTextToFramePadding();
 
 ## arrowButton() {: #infinity.ui.arrowButton_function .doc-function}
 
-//TODO
+Creates an arrow button on the UI with the specified id and direction.
 
 Signature:
 ```
@@ -1601,10 +1600,10 @@ arrowButton( id: string, direction: infinity.ui.directions ): boolean
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The unique identifier for the arrow button.
 
-- direction: `infinity.ui.directions`
-  >//TODO
+- direction: [`infinity.ui.directions`](#infinity.ui.directions_enum)
+  >The direction the arrow on the button is pointing.
 
 
 Return type: `boolean`
@@ -1620,7 +1619,7 @@ if ( infinity.ui.arrowButton(id, direction) ) {}
 
 ## begin() {: #infinity.ui.begin_function .doc-function}
 
-//TODO
+Begins a new window with the specified name and optional show close button flag and window flags.
 
 Signature:
 ```
@@ -1630,13 +1629,13 @@ begin( name: string, showCloseButton?: boolean, flags?: infinity.ui.windowFlags 
 Parameters:
 
 - name: `string`
-  >//TODO
+  >The name for the new window.
 
 - showCloseButton: `boolean`, optional
-  >//TODO
+  >A boolean value indicating whether to display a close button in the new window.
 
-- flags: `infinity.ui.windowFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
+  >Optional flags that control the behavior of the new window.
 
 
 Return type: `infinity.ui.windowStates`
@@ -1652,61 +1651,26 @@ let x = infinity.ui.begin(name);
 
 ## beginChild() {: #infinity.ui.beginChild_function .doc-function}
 
-//TODO
+Begins a new child window with the specified id, size, border, and window flags.
 
 Signature:
 ```
-beginChild( id: string, size?: infinity.ui.vec2, border?: boolean, flags?: infinity.ui.windowFlags ): boolean
+beginChild( id: string | number, size?: infinity.ui.vec2, border?: boolean, flags?: infinity.ui.windowFlags ): boolean
 ```
 
 Parameters:
 
-- id: `string`
-  >//TODO
+- id: `string | number`
+  >The unique identifier for the child window.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The size of the child window in 2D space.
 
 - border: `boolean`, optional
-  >//TODO
+  >A boolean value indicating whether to display a border around the child window.
 
-- flags: `infinity.ui.windowFlags`, optional
-  >//TODO
-
-
-Return type: `boolean`
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-if ( infinity.ui.beginChild(id) ) {}
-```
-
----
-
-## beginChild() {: #infinity.ui.beginChild_function .doc-function}
-
-//TODO
-
-Signature:
-```
-beginChild( id: number, size?: infinity.ui.vec2, border?: boolean, flags?: infinity.ui.windowFlags ): boolean
-```
-
-Parameters:
-
-- id: `number`
-  >//TODO
-
-- size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
-
-- border: `boolean`, optional
-  >//TODO
-
-- flags: `infinity.ui.windowFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
+  >Optional flags that control the behavior of the child window.
 
 
 Return type: `boolean`
@@ -1722,7 +1686,7 @@ if ( infinity.ui.beginChild(id) ) {}
 
 ## beginChildFrame() {: #infinity.ui.beginChildFrame_function .doc-function}
 
-//TODO
+Begins a new child frame with the specified id, size, and window flags.
 
 Signature:
 ```
@@ -1732,13 +1696,13 @@ beginChildFrame( id: number, size: infinity.ui.vec2, flags?: infinity.ui.windowF
 Parameters:
 
 - id: `number`
-  >//TODO
+  >The unique identifier for the child frame.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The size of the child frame in 2D space.
 
-- flags: `infinity.ui.windowFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
+  >Optional flags that control the behavior of the child frame.
 
 
 Return type: `boolean`
@@ -1754,7 +1718,7 @@ if ( infinity.ui.beginChildFrame(id, size) ) {}
 
 ## beginCombo() {: #infinity.ui.beginCombo_function .doc-function}
 
-//TODO
+Begins a new combo box with the specified label, preview value, and combo flags.
 
 Signature:
 ```
@@ -1764,13 +1728,13 @@ beginCombo( label: string, previewValue: string, flags?: infinity.ui.comboFlags 
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the combo box label.
 
 - previewValue: `string`
-  >//TODO
+  >The text displayed as the preview value in the combo box.
 
-- flags: `infinity.ui.comboFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.comboFlags`](#infinity.ui.comboFlags_enum), optional
+  >Optional flags that control the behavior of the combo box.
 
 
 Return type: `boolean`
@@ -1938,7 +1902,7 @@ Parameters:
 - id: `string`
   >//TODO
 
-- flags: `infinity.ui.windowFlags`, optional
+- flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
   >//TODO
 
 
@@ -2057,7 +2021,7 @@ Parameters:
 - open: `boolean`, optional
   >//TODO
 
-- flags: `infinity.ui.windowFlags`, optional
+- flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
   >//TODO
 
 

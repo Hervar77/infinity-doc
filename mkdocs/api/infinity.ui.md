@@ -946,7 +946,7 @@ infinity.ui.addConvexPolyFilled(points, col);
 
 ## addFontFromFile() {: #infinity.ui.addFontFromFile_function .doc-function}
 
-Adds a new font from a file to the UI and returns a unique ID associated with the loaded font.
+Adds a new font from a file to the UI and returns a unique ID associated with the loaded font. Returns an identifier that can be used to reference the added font
 
 Signature:
 ```
@@ -1619,7 +1619,7 @@ if ( infinity.ui.arrowButton(id, direction) ) {}
 
 ## begin() {: #infinity.ui.begin_function .doc-function}
 
-Begins a new window with the specified name and optional show close button flag and window flags.
+Begins a new window with the specified name and optional show close button flag and window flags. The window state, represented by `infinity.ui.windowStates`, is returned after the function call.
 
 Signature:
 ```
@@ -1651,7 +1651,7 @@ let x = infinity.ui.begin(name);
 
 ## beginChild() {: #infinity.ui.beginChild_function .doc-function}
 
-Begins a new child window with the specified id, size, border, and window flags.
+Begins a new child window with the specified id, size, border, and window flags. Returns a boolean indicating whether the child window was successfully created.
 
 Signature:
 ```
@@ -1686,7 +1686,7 @@ if ( infinity.ui.beginChild(id) ) {}
 
 ## beginChildFrame() {: #infinity.ui.beginChildFrame_function .doc-function}
 
-Begins a new child frame with the specified id, size, and window flags.
+Begins a new child frame with the specified id, size, and window flags. Returns a boolean indicating whether the child frame was successfully created.
 
 Signature:
 ```
@@ -1718,7 +1718,12 @@ if ( infinity.ui.beginChildFrame(id, size) ) {}
 
 ## beginCombo() {: #infinity.ui.beginCombo_function .doc-function}
 
-Begins a new combo box with the specified label, preview value, and combo flags.
+Begins a new combo box with the specified label, preview value, and combo flags. Returns a boolean indicating whether the combo box was successfully created.
+
+
+
+
+
 
 Signature:
 ```
@@ -1750,7 +1755,7 @@ if ( infinity.ui.beginCombo(label, previewValue) ) {}
 
 ## beginDisabled() {: #infinity.ui.beginDisabled_function .doc-function}
 
-//TODO
+Starts a new disabled block in the UI, based on the specified disabled state.
 
 Signature:
 ```
@@ -1760,7 +1765,7 @@ beginDisabled( disabled: boolean ): void
 Parameters:
 
 - disabled: `boolean`
-  >//TODO
+  >A boolean indicating whether the block should be disabled.
 
 
 Example:
@@ -1774,7 +1779,7 @@ infinity.ui.beginDisabled(disabled);
 
 ## beginGroup() {: #infinity.ui.beginGroup_function .doc-function}
 
-//TODO
+Initiates a new group in the UI.
 
 Signature:
 ```
@@ -1792,7 +1797,7 @@ infinity.ui.beginGroup();
 
 ## beginListBox() {: #infinity.ui.beginListBox_function .doc-function}
 
-//TODO
+Initiates a new list box with a specific label and optional size. Returns a boolean indicating whether the main menu bar was successfully created.
 
 Signature:
 ```
@@ -1802,10 +1807,10 @@ beginListBox( label: string, size?: infinity.ui.vec2 ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the list box label.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The 2D dimensions of the list box, if specified.
 
 
 Return type: `boolean`
@@ -1821,7 +1826,7 @@ if ( infinity.ui.beginListBox(label) ) {}
 
 ## beginMainMenuBar() {: #infinity.ui.beginMainMenuBar_function .doc-function}
 
-//TODO
+Initiates a new main menu bar in the UI. Returns a boolean indicating whether the main menu bar was successfully created.
 
 Signature:
 ```
@@ -1841,7 +1846,7 @@ if ( infinity.ui.beginMainMenuBar() ) {}
 
 ## beginMenu() {: #infinity.ui.beginMenu_function .doc-function}
 
-//TODO
+Initiates a new menu in the UI with the provided label. Returns a boolean indicating whether the menu was successfully created.
 
 Signature:
 ```
@@ -1851,10 +1856,10 @@ beginMenu( label: string, enabled?: boolean ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the menu label.
 
 - enabled: `boolean`, optional
-  >//TODO
+  >Indicates whether the menu is enabled or disabled.
 
 
 Return type: `boolean`
@@ -1870,7 +1875,7 @@ if ( infinity.ui.beginMenu(label) ) {}
 
 ## beginMenuBar() {: #infinity.ui.beginMenuBar_function .doc-function}
 
-//TODO
+Initiates a new menu bar in the UI. Returns a boolean indicating whether the menu bar was successfully created.
 
 Signature:
 ```
@@ -1890,7 +1895,7 @@ if ( infinity.ui.beginMenuBar() ) {}
 
 ## beginPopup() {: #infinity.ui.beginPopup_function .doc-function}
 
-//TODO
+Initiates a new popup in the UI with the provided identifier. Returns a boolean indicating whether the popup was successfully created.
 
 Signature:
 ```
@@ -1900,10 +1905,10 @@ beginPopup( id: string, flags?: infinity.ui.windowFlags ): boolean
 Parameters:
 
 - id: `string`
-  >//TODO
+  >A unique identifier for the popup.
 
 - flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
-  >//TODO
+  >Specifies optional flags for the popup window.
 
 
 Return type: `boolean`
@@ -1919,7 +1924,7 @@ if ( infinity.ui.beginPopup(id) ) {}
 
 ## beginPopupContextItem() {: #infinity.ui.beginPopupContextItem_function .doc-function}
 
-//TODO
+Initiates a new context-specific popup in the UI. Returns a boolean indicating whether the popup was successfully created.
 
 Signature:
 ```
@@ -1929,10 +1934,10 @@ beginPopupContextItem( id?: string, flags?: infinity.ui.popupFlags ): boolean
 Parameters:
 
 - id: `string`, optional
-  >//TODO
+  >A unique identifier for the context-specific popup.
 
-- flags: `infinity.ui.popupFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
+  >Specifies optional flags for the popup.
 
 
 Return type: `boolean`
@@ -1948,7 +1953,7 @@ if ( infinity.ui.beginPopupContextItem() ) {}
 
 ## beginPopupContextVoid() {: #infinity.ui.beginPopupContextVoid_function .doc-function}
 
-//TODO
+Initiates a new context-agnostic popup in the UI. Returns a boolean indicating whether the popup was successfully created.
 
 Signature:
 ```
@@ -1958,10 +1963,10 @@ beginPopupContextVoid( id?: string, flags?: infinity.ui.popupFlags ): boolean
 Parameters:
 
 - id: `string`, optional
-  >//TODO
+  >A unique identifier for the context-agnostic popup.
 
-- flags: `infinity.ui.popupFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
+  >Specifies optional flags for the popup.
 
 
 Return type: `boolean`
@@ -1977,7 +1982,7 @@ if ( infinity.ui.beginPopupContextVoid() ) {}
 
 ## beginPopupContextWindow() {: #infinity.ui.beginPopupContextWindow_function .doc-function}
 
-//TODO
+Initiates a new window-specific popup in the UI. Returns a boolean indicating whether the popup was successfully created.
 
 Signature:
 ```
@@ -1987,10 +1992,10 @@ beginPopupContextWindow( id?: string, flags?: infinity.ui.popupFlags ): boolean
 Parameters:
 
 - id: `string`, optional
-  >//TODO
+  >A unique identifier for the window-specific popup.
 
-- flags: `infinity.ui.popupFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
+  >Specifies optional flags for the popup.
 
 
 Return type: `boolean`
@@ -2006,7 +2011,7 @@ if ( infinity.ui.beginPopupContextWindow() ) {}
 
 ## beginPopupModal() {: #infinity.ui.beginPopupModal_function .doc-function}
 
-//TODO
+Initiates a new modal popup with the specified name. Returns a boolean indicating whether the modal popup was successfully created.
 
 Signature:
 ```
@@ -2016,13 +2021,13 @@ beginPopupModal( name: string, open?: boolean, flags?: infinity.ui.windowFlags )
 Parameters:
 
 - name: `string`
-  >//TODO
+  >The name of the modal popup.
 
 - open: `boolean`, optional
-  >//TODO
+  >Specifies whether the modal popup should be open upon creation.
 
 - flags: [`infinity.ui.windowFlags`](#infinity.ui.windowFlags_enum), optional
-  >//TODO
+  >Specifies optional flags for the modal popup.
 
 
 Return type: `boolean`
@@ -4818,7 +4823,7 @@ Parameters:
 - id: `string`
   >//TODO
 
-- flags: `infinity.ui.popupFlags`, optional
+- flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
   >//TODO
 
 
@@ -5299,7 +5304,7 @@ Parameters:
 - id: `string`
   >//TODO
 
-- flags: `infinity.ui.popupFlags`, optional
+- flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
   >//TODO
 
 

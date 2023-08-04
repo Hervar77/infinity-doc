@@ -1590,7 +1590,7 @@ infinity.ui.alignTextToFramePadding();
 
 ## arrowButton() {: #infinity.ui.arrowButton_function .doc-function}
 
-Creates an arrow button on the UI with the specified id and direction.
+Creates an arrow button on the UI with the specified id and direction. Returns a boolean indicating whether the button was clicked or not.
 
 Signature:
 ```
@@ -2043,7 +2043,7 @@ if ( infinity.ui.beginPopupModal(name) ) {}
 
 ## beginTabBar() {: #infinity.ui.beginTabBar_function .doc-function}
 
-//TODO
+Initiates a new tab bar with the given ID. Returns a boolean indicating whether the tab bar was successfully created.
 
 Signature:
 ```
@@ -2053,10 +2053,10 @@ beginTabBar( id: string, flags?: infinity.ui.tabBarFlags ): boolean
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The ID for the tab bar.
 
-- flags: `infinity.ui.tabBarFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.tabBarFlags`](#infinity.ui.tabBarFlags_enum), optional
+  >Specifies optional flags for the tab bar.
 
 
 Return type: `boolean`
@@ -2072,7 +2072,7 @@ if ( infinity.ui.beginTabBar(id) ) {}
 
 ## beginTabItem() {: #infinity.ui.beginTabItem_function .doc-function}
 
-//TODO
+Initiates a new tab item with the given label. Returns a boolean indicating whether the tab item was successfully created.
 
 Signature:
 ```
@@ -2082,13 +2082,13 @@ beginTabItem( label: string, open?: boolean, flags?: infinity.ui.tabItemFlags ):
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label for the tab item.
 
 - open: `boolean`, optional
-  >//TODO
+  >Specifies whether the tab item is open.
 
-- flags: `infinity.ui.tabItemFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.tabItemFlags`](#infinity.ui.tabItemFlags_enum), optional
+  >Specifies optional flags for the tab item.
 
 
 Return type: `boolean`
@@ -2104,7 +2104,7 @@ if ( infinity.ui.beginTabItem(label) ) {}
 
 ## beginTable() {: #infinity.ui.beginTable_function .doc-function}
 
-//TODO
+Begins a new table with the specified ID and number of columns. Returns a boolean indicating whether the table was successfully created.
 
 Signature:
 ```
@@ -2114,19 +2114,19 @@ beginTable( id: string, column: number, flags?: infinity.ui.tableFlags, outerSiz
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The ID for the table.
 
 - column: `number`
-  >//TODO
+  >The number of columns in the table.
 
-- flags: `infinity.ui.tableFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.tableFlags`](#infinity.ui.tableFlags_enum), optional
+  >Specifies optional flags for the table.
 
 - outerSize: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >Specifies the outer size of the table.
 
 - innerWidth: `number`, optional
-  >//TODO
+  >Specifies the inner width of the table.
 
 
 Return type: `boolean`
@@ -2142,7 +2142,7 @@ if ( infinity.ui.beginTable(id, column) ) {}
 
 ## beginTooltip() {: #infinity.ui.beginTooltip_function .doc-function}
 
-//TODO
+Commences the creation of a new tooltip. A tooltip is a contextual element that displays information about other interface elements when the user hovers over them. The tooltip can include text or other UI components. After calling this function, you can add components to the tooltip. To finish and display the tooltip, use the corresponding [`endTooltip`](#infinity.ui.endTooltip_function) function.
 
 Signature:
 ```
@@ -2160,7 +2160,7 @@ infinity.ui.beginTooltip();
 
 ## bullet() {: #infinity.ui.bullet_function .doc-function}
 
-//TODO
+Draws a small circular bullet point in the current layout context.
 
 Signature:
 ```
@@ -2178,7 +2178,7 @@ infinity.ui.bullet();
 
 ## bulletText() {: #infinity.ui.bulletText_function .doc-function}
 
-//TODO
+Renders a bullet point marker followed by the provided text.
 
 Signature:
 ```
@@ -2188,7 +2188,7 @@ bulletText( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >Text to be displayed next to the bullet point.
 
 
 Example:
@@ -2202,7 +2202,7 @@ infinity.ui.bulletText(text);
 
 ## button() {: #infinity.ui.button_function .doc-function}
 
-//TODO
+Creates a button with a label and optional size. Returns true when the button is clicked.
 
 Signature:
 ```
@@ -2212,10 +2212,10 @@ button( label: string, size?: infinity.ui.vec2 ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >Label displayed on the button.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >Vector specifying the width and height of the button in pixels.
 
 
 Return type: `boolean`
@@ -2231,7 +2231,7 @@ if ( infinity.ui.button(label) ) {}
 
 ## calcItemWidth() {: #infinity.ui.calcItemWidth_function .doc-function}
 
-//TODO
+Calculates the width of an item in the current context. Returns the width of the item in the current context. Used typically when determining the appropriate size for the next item or widget in the layout.
 
 Signature:
 ```
@@ -2251,7 +2251,7 @@ let n = infinity.ui.calcItemWidth();
 
 ## calcTextSize() {: #infinity.ui.calcTextSize_function .doc-function}
 
-//TODO
+Calculates the size of a given text string. Returns an infinity.ui.vec2 object, where the x value is the width of the text and the y value is the height. The size takes into account potential text wrapping at the specified wrapWidth.
 
 Signature:
 ```
@@ -2261,10 +2261,10 @@ calcTextSize( text: string, wrapWidth?: number ): infinity.ui.vec2
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text string for which the size should be calculated.
 
 - wrapWidth: `number`, optional
-  >//TODO
+  >The width at which the text string should wrap.
 
 
 Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
@@ -2280,7 +2280,8 @@ let x = infinity.ui.calcTextSize(text);
 
 ## checkbox() {: #infinity.ui.checkbox_function .doc-function}
 
-//TODO
+Creates a checkbox with the specified label. Returns a boolean indicating whether the state of the checkbox has changed after the function call.
+
 
 Signature:
 ```
@@ -2290,10 +2291,10 @@ checkbox( label: string, checked: boolean ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label to be displayed next to the checkbox.
 
 - checked: `boolean`
-  >//TODO
+  >The current state of the checkbox.
 
 
 Return type: `boolean`
@@ -7289,7 +7290,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- flags: `infinity.ui.tabItemFlags`, optional
+- flags: [`infinity.ui.tabItemFlags`](#infinity.ui.tabItemFlags_enum), optional
   >//TODO
 
 

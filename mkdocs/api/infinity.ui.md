@@ -2310,7 +2310,7 @@ if ( infinity.ui.checkbox(label, checked) ) {}
 
 ## closeCurrentPopup() {: #infinity.ui.closeCurrentPopup_function .doc-function}
 
-//TODO
+Closes the currently active popup.
 
 Signature:
 ```
@@ -2328,7 +2328,7 @@ infinity.ui.closeCurrentPopup();
 
 ## collapsingHeader() {: #infinity.ui.collapsingHeader_function .doc-function}
 
-//TODO
+Creates a collapsible header section in the user interface. Returns the current state of the header.
 
 Signature:
 ```
@@ -2338,13 +2338,13 @@ collapsingHeader( label: string, visible: boolean, flags?: infinity.ui.treeNodeF
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The displayed name of the collapsible header.
 
 - visible: `boolean`
-  >//TODO
+  >A flag determining if the header starts in an expanded or collapsed state.
 
-- flags: `infinity.ui.treeNodeFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
+  >Flags that further customize the behavior or appearance of the collapsible header.
 
 
 Return type: `infinity.ui.collapsingHeaderStates`
@@ -2360,7 +2360,7 @@ let x = infinity.ui.collapsingHeader(label, visible);
 
 ## collapsingHeader() {: #infinity.ui.collapsingHeader_function .doc-function}
 
-//TODO
+Creates a collapsible header section in the user interface. Returns the current state of the header.
 
 Signature:
 ```
@@ -2370,10 +2370,10 @@ collapsingHeader( label: string, flags?: infinity.ui.treeNodeFlags ): infinity.u
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The displayed name of the collapsible header.
 
-- flags: `infinity.ui.treeNodeFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
+  >Flags that further customize the behavior or appearance of the collapsible header.
 
 
 Return type: `infinity.ui.collapsingHeaderStates`
@@ -2389,7 +2389,7 @@ let x = infinity.ui.collapsingHeader(label);
 
 ## colorButton() {: #infinity.ui.colorButton_function .doc-function}
 
-//TODO
+Displays a color button in the user interface. Returns true if the button is pressed, otherwise false.
 
 Signature:
 ```
@@ -2399,16 +2399,16 @@ colorButton( id: string, color: infinity.ui.color, flags?: infinity.ui.colorEdit
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The identifier for the color button.
 
-- color: `infinity.ui.color`
-  >//TODO
+- color: [`infinity.ui.color`](#infinity.ui.color_class)
+  >The initial color value displayed by the button.
 
-- flags: `infinity.ui.colorEditFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum), optional
+  >Flags that dictate how the color editing behaves or appears.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >Specifies the size of the color button.
 
 
 Return type: `boolean`
@@ -2433,7 +2433,7 @@ colorConvertFloat4ToU32( color: infinity.ui.color ): number
 
 Parameters:
 
-- color: `infinity.ui.color`
+- color: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
 
@@ -2463,7 +2463,7 @@ Parameters:
   >//TODO
 
 
-Return type: `infinity.ui.color`
+Return type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 Example:
 
@@ -2488,14 +2488,14 @@ Parameters:
 - label: `string`
   >//TODO
 
-- color: `infinity.ui.color`
+- color: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
-- flags: `infinity.ui.colorEditFlags`, optional
+- flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum), optional
   >//TODO
 
 
-Return type: `infinity.ui.color`
+Return type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 Example:
 
@@ -2520,14 +2520,14 @@ Parameters:
 - label: `string`
   >//TODO
 
-- color: `infinity.ui.color`
+- color: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
-- flags: `infinity.ui.colorEditFlags`, optional
+- flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum), optional
   >//TODO
 
 
-Return type: `infinity.ui.color`
+Return type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 Example:
 
@@ -3067,7 +3067,7 @@ getColor( col: infinity.ui.color ): number
 
 Parameters:
 
-- col: `infinity.ui.color`
+- col: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
 
@@ -3645,7 +3645,7 @@ Parameters:
   >//TODO
 
 
-Return type: `infinity.ui.color`
+Return type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 Example:
 
@@ -3905,10 +3905,10 @@ Parameters:
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
   >//TODO
 
-- tintCol: `infinity.ui.color`, optional
+- tintCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
   >//TODO
 
-- borderCol: `infinity.ui.color`, optional
+- borderCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
   >//TODO
 
 
@@ -3947,10 +3947,10 @@ Parameters:
 - padding: `number`, optional
   >//TODO
 
-- bgCol: `infinity.ui.color`, optional
+- bgCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
   >//TODO
 
-- tintCol: `infinity.ui.color`, optional
+- tintCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
   >//TODO
 
 
@@ -5952,7 +5952,7 @@ Parameters:
 - idx: `infinity.ui.colorTypes`
   >//TODO
 
-- col: `infinity.ui.color`
+- col: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
 
@@ -6317,7 +6317,7 @@ setColorEditOptions( flags: infinity.ui.colorEditFlags ): void
 
 Parameters:
 
-- flags: `infinity.ui.colorEditFlags`
+- flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum)
   >//TODO
 
 
@@ -7684,7 +7684,7 @@ textColored( color: infinity.ui.color, text: string ): void
 
 Parameters:
 
-- color: `infinity.ui.color`
+- color: [`infinity.ui.color`](#infinity.ui.color_class)
   >//TODO
 
 - text: `string`
@@ -7820,7 +7820,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- flags: `infinity.ui.treeNodeFlags`, optional
+- flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
   >//TODO
 
 
@@ -7849,7 +7849,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- flags: `infinity.ui.treeNodeFlags`, optional
+- flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
   >//TODO
 
 
@@ -7938,7 +7938,7 @@ infinity.ui.unindent();
 
 ## backgroundColor {: #infinity.ui.backgroundColor_property .doc-property}
 
-Type: `infinity.ui.color`
+Type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 //TODO
 

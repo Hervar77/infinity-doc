@@ -2424,7 +2424,7 @@ if ( infinity.ui.colorButton(id, color) ) {}
 
 ## colorConvertFloat4ToU32() {: #infinity.ui.colorConvertFloat4ToU32_function .doc-function}
 
-//TODO
+Converts a color from the [`infinity.ui.color`](#infinity.ui.color_class) format to a 32-bit unsigned integer format. Returns the color value as a 32-bit unsigned integer.
 
 Signature:
 ```
@@ -2434,7 +2434,7 @@ colorConvertFloat4ToU32( color: infinity.ui.color ): number
 Parameters:
 
 - color: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+  >The color value that needs to be converted.
 
 
 Return type: `number`
@@ -2450,7 +2450,7 @@ let n = infinity.ui.colorConvertFloat4ToU32(color);
 
 ## colorConvertU32ToFloat4() {: #infinity.ui.colorConvertU32ToFloat4_function .doc-function}
 
-//TODO
+Converts a color from a 32-bit unsigned integer format to the infinity.ui.color format. Returns the color value in the infinity.ui.color format.
 
 Signature:
 ```
@@ -2460,7 +2460,7 @@ colorConvertU32ToFloat4( color: number ): infinity.ui.color
 Parameters:
 
 - color: `number`
-  >//TODO
+  >The 32-bit unsigned integer representing the color that needs to be converted.
 
 
 Return type: [`infinity.ui.color`](#infinity.ui.color_class)
@@ -2476,7 +2476,7 @@ let x = infinity.ui.colorConvertU32ToFloat4(color);
 
 ## colorEdit() {: #infinity.ui.colorEdit_function .doc-function}
 
-//TODO
+Creates a color edit UI widget that allows modification of an [`infinity.ui.color`](#infinity.ui.color_class) value. Returns the modified color value in the [`infinity.ui.color`](#infinity.ui.color_class) format.
 
 Signature:
 ```
@@ -2486,13 +2486,13 @@ colorEdit( label: string, color: infinity.ui.color, flags?: infinity.ui.colorEdi
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label displayed next to the color edit widget.
 
 - color: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+  >The initial or default color value presented in the widget.
 
 - flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum), optional
-  >//TODO
+  >Flags to customize the behavior and appearance of the color edit widget.
 
 
 Return type: [`infinity.ui.color`](#infinity.ui.color_class)
@@ -2508,7 +2508,7 @@ let x = infinity.ui.colorEdit(label, color);
 
 ## colorPicker() {: #infinity.ui.colorPicker_function .doc-function}
 
-//TODO
+Creates a color picker UI widget that allows selection and modification of an [`infinity.ui.color`](#infinity.ui.color_class) value. Returns the chosen color in the [`infinity.ui.color`](#infinity.ui.color_class) format.
 
 Signature:
 ```
@@ -2518,13 +2518,13 @@ colorPicker( label: string, color: infinity.ui.color, flags?: infinity.ui.colorE
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label displayed above the color picker widget.
 
 - color: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+  >The initial or default color value presented in the picker.
 
 - flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum), optional
-  >//TODO
+  >Flags to adjust the behavior and appearance of the color picker widget.
 
 
 Return type: [`infinity.ui.color`](#infinity.ui.color_class)
@@ -2540,7 +2540,7 @@ let x = infinity.ui.colorPicker(label, color);
 
 ## combo() {: #infinity.ui.combo_function .doc-function}
 
-//TODO
+Creates a combo box UI widget that allows users to select from a drop-down list of items. Returns the index of the currently selected item.
 
 Signature:
 ```
@@ -2550,16 +2550,16 @@ combo( label: string, currentItem: number, items: infinity.ui.stringArray, heigh
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label displayed next to the combo box.
 
 - currentItem: `number`
-  >//TODO
+  >The index of the currently selected item from the items array.
 
-- items: `infinity.ui.stringArray`
-  >//TODO
+- items: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface)
+  >An array of strings that represent the items in the drop-down list.
 
 - heightInItems: `number`, optional
-  >//TODO
+  >The number of items to display in the combo's drop-down list before needing to scroll.
 
 
 Return type: `number`
@@ -2575,7 +2575,7 @@ let n = infinity.ui.combo(label, currentItem, items);
 
 ## dragFloat() {: #infinity.ui.dragFloat_function .doc-function}
 
-//TODO
+Creates a draggable float slider UI widget. Returns the modified value after user interaction.
 
 Signature:
 ```
@@ -2585,25 +2585,25 @@ dragFloat( label: string, v: number, speed?: number, vmin?: number, vmax?: numbe
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label displayed next to the float slider.
 
 - v: `number`
-  >//TODO
+  >The current value of the float.
 
 - speed: `number`, optional
-  >//TODO
+  >The increment/decrement speed when dragging.
 
 - vmin: `number`, optional
-  >//TODO
+  >The minimum allowable value for the float.
 
 - vmax: `number`, optional
-  >//TODO
+  >The maximum allowable value for the float.
 
 - format: `string`, optional
-  >//TODO
+  >The format string used to display the float value. For example, "%.2f" will display the float with two decimal places.
 
-- flags: `infinity.ui.sliderFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
+  >Flags that customize the behavior of the slider.
 
 
 Return type: `number`
@@ -2619,7 +2619,7 @@ let n = infinity.ui.dragFloat(label, v);
 
 ## dragInt() {: #infinity.ui.dragInt_function .doc-function}
 
-//TODO
+Creates a draggable integer slider UI widget. Returns the modified value after user interaction.
 
 Signature:
 ```
@@ -2629,25 +2629,25 @@ dragInt( label: string, v: number, speed?: number, vmin?: number, vmax?: number,
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label displayed next to the integer slider.
 
 - v: `number`
-  >//TODO
+  >The current value of the integer.
 
 - speed: `number`, optional
-  >//TODO
+  >The increment/decrement speed when dragging.
 
 - vmin: `number`, optional
-  >//TODO
+  >The minimum allowable value for the integer.
 
 - vmax: `number`, optional
-  >//TODO
+  >The maximum allowable value for the integer.
 
 - format: `string`, optional
-  >//TODO
+  >The format string used to display the integer value. For instance, "%d" would display the integer in decimal form.
 
-- flags: `infinity.ui.sliderFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
+  >Flags that customize the behavior of the slider.
 
 
 Return type: `number`
@@ -5004,7 +5004,7 @@ Parameters:
 - currentItem: `number`
   >//TODO
 
-- items: `infinity.ui.stringArray`
+- items: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface)
   >//TODO
 
 - heightInItems: `number`, optional
@@ -5270,7 +5270,7 @@ Parameters:
 - fileName: `string`, optional
   >//TODO
 
-- filter: `infinity.ui.stringArray`, optional
+- filter: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface), optional
   >//TODO
 
 - filterDescription: `string`, optional
@@ -6182,7 +6182,7 @@ Parameters:
 - fileName: `string`, optional
   >//TODO
 
-- filter: `infinity.ui.stringArray`, optional
+- filter: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface), optional
   >//TODO
 
 - filterDescription: `string`, optional
@@ -7176,7 +7176,7 @@ Parameters:
 - format: `string`, optional
   >//TODO
 
-- flags: `infinity.ui.sliderFlags`, optional
+- flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
   >//TODO
 
 
@@ -7217,7 +7217,7 @@ Parameters:
 - format: `string`, optional
   >//TODO
 
-- flags: `infinity.ui.sliderFlags`, optional
+- flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
   >//TODO
 
 

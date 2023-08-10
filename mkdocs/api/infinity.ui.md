@@ -2663,7 +2663,7 @@ let n = infinity.ui.dragInt(label, v);
 
 ## dummy() {: #infinity.ui.dummy_function .doc-function}
 
-//TODO
+Creates a blank space in the UI with specified dimensions.
 
 Signature:
 ```
@@ -2673,7 +2673,7 @@ dummy( size: infinity.ui.vec2 ): void
 Parameters:
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >Specifies the width and height of the blank space.
 
 
 Example:
@@ -2687,7 +2687,7 @@ infinity.ui.dummy(size);
 
 ## end() {: #infinity.ui.end_function .doc-function}
 
-//TODO
+Closes the previously started window or container. Should be called after creating a window or a container (like [`begin`](#infinity.ui.begin_function), [`beginChild`](#infinity.ui.beginChild_function), etc.) to indicate its end.
 
 Signature:
 ```
@@ -2705,7 +2705,7 @@ infinity.ui.end();
 
 ## endChild() {: #infinity.ui.endChild_function .doc-function}
 
-//TODO
+Closes the previously started child window or container. Should be called after creating a child window or a container using [`beginChild`](#infinity.ui.beginChild_function).
 
 Signature:
 ```
@@ -2723,7 +2723,7 @@ infinity.ui.endChild();
 
 ## endChildFrame() {: #infinity.ui.endChildFrame_function .doc-function}
 
-//TODO
+Concludes the child frame initiated with [`beginChildFrame`](#infinity.ui.beginChildFrame_function). Following the start of a child frame using [`beginChildFrame`](#infinity.ui.beginChildFrame_function), use this function to properly terminate it.
 
 Signature:
 ```
@@ -2741,7 +2741,7 @@ infinity.ui.endChildFrame();
 
 ## endCombo() {: #infinity.ui.endCombo_function .doc-function}
 
-//TODO
+Concludes the combo box started with [`beginCombo`](#infinity.ui.beginCombo_function). Following the start of a combo box using [`beginCombo`](#infinity.ui.beginCombo_function), use this function to properly close it.
 
 Signature:
 ```
@@ -2759,7 +2759,7 @@ infinity.ui.endCombo();
 
 ## endDisabled() {: #infinity.ui.endDisabled_function .doc-function}
 
-//TODO
+Concludes the disabled UI state started with [`beginDisabled`](#infinity.ui.beginDisabled_function). Following the initiation of a disabled UI state using [`beginDisabled`](#infinity.ui.beginDisabled_function) use this function to terminate the disabled state.
 
 Signature:
 ```
@@ -2777,7 +2777,7 @@ infinity.ui.endDisabled();
 
 ## endGroup() {: #infinity.ui.endGroup_function .doc-function}
 
-//TODO
+Concludes the UI grouping started with [`beginGroup`](#infinity.ui.beginGroup_function). After starting a UI grouping with [`beginGroup`](#infinity.ui.beginGroup_function), use this function to finalize the group.
 
 Signature:
 ```
@@ -2795,7 +2795,7 @@ infinity.ui.endGroup();
 
 ## endListBox() {: #infinity.ui.endListBox_function .doc-function}
 
-//TODO
+Terminates the list box UI component started with [`beginListBox`](#infinity.ui.beginListBox_function). After initiating a list box with [`beginListBox`](#infinity.ui.beginListBox_function), use this function to close the list box component.
 
 Signature:
 ```

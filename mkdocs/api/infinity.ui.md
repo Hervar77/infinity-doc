@@ -2741,7 +2741,7 @@ infinity.ui.endChildFrame();
 
 ## endCombo() {: #infinity.ui.endCombo_function .doc-function}
 
-Concludes the combo box started with [`beginCombo`](#infinity.ui.beginCombo_function). Following the start of a combo box using [`beginCombo`](#infinity.ui.beginCombo_function), use this function to properly close it.
+Concludes the combo box started with [`beginCombo`](#infinity.ui.beginCombo_function).
 
 Signature:
 ```
@@ -2759,7 +2759,7 @@ infinity.ui.endCombo();
 
 ## endDisabled() {: #infinity.ui.endDisabled_function .doc-function}
 
-Concludes the disabled UI state started with [`beginDisabled`](#infinity.ui.beginDisabled_function). Following the initiation of a disabled UI state using [`beginDisabled`](#infinity.ui.beginDisabled_function) use this function to terminate the disabled state.
+Concludes the disabled UI state started with [`beginDisabled`](#infinity.ui.beginDisabled_function).
 
 Signature:
 ```
@@ -2777,7 +2777,7 @@ infinity.ui.endDisabled();
 
 ## endGroup() {: #infinity.ui.endGroup_function .doc-function}
 
-Concludes the UI grouping started with [`beginGroup`](#infinity.ui.beginGroup_function). After starting a UI grouping with [`beginGroup`](#infinity.ui.beginGroup_function), use this function to finalize the group.
+Concludes the UI grouping started with [`beginGroup`](#infinity.ui.beginGroup_function).
 
 Signature:
 ```
@@ -2795,7 +2795,7 @@ infinity.ui.endGroup();
 
 ## endListBox() {: #infinity.ui.endListBox_function .doc-function}
 
-Terminates the list box UI component started with [`beginListBox`](#infinity.ui.beginListBox_function). After initiating a list box with [`beginListBox`](#infinity.ui.beginListBox_function), use this function to close the list box component.
+Terminates the list box UI component started with [`beginListBox`](#infinity.ui.beginListBox_function).
 
 Signature:
 ```
@@ -2813,7 +2813,7 @@ infinity.ui.endListBox();
 
 ## endMainMenuBar() {: #infinity.ui.endMainMenuBar_function .doc-function}
 
-//TODO
+Terminates the main menu bar UI component started with [`beginMainMenuBar`](#infinity.ui.beginMainMenuBar_function).
 
 Signature:
 ```
@@ -2831,7 +2831,7 @@ infinity.ui.endMainMenuBar();
 
 ## endMenu() {: #infinity.ui.endMenu_function .doc-function}
 
-//TODO
+Terminates a menu UI component started with [`beginMenu`](#infinity.ui.beginMenu_function).
 
 Signature:
 ```
@@ -2849,7 +2849,7 @@ infinity.ui.endMenu();
 
 ## endMenuBar() {: #infinity.ui.endMenuBar_function .doc-function}
 
-//TODO
+Terminates a menu bar UI component started with [`beginMenuBar`](#infinity.ui.beginMenuBar_function).
 
 Signature:
 ```
@@ -2867,7 +2867,7 @@ infinity.ui.endMenuBar();
 
 ## endPopup() {: #infinity.ui.endPopup_function .doc-function}
 
-//TODO
+Terminates a popup UI component started with any of the [`beginPopup`](#infinity.ui.beginPopup_function) functions.
 
 Signature:
 ```
@@ -2885,7 +2885,7 @@ infinity.ui.endPopup();
 
 ## endTabBar() {: #infinity.ui.endTabBar_function .doc-function}
 
-//TODO
+Closes an ongoing Tab Bar UI element initiated with [`beginTabBar`](#infinity.ui.beginTabBar_function).
 
 Signature:
 ```
@@ -2903,7 +2903,7 @@ infinity.ui.endTabBar();
 
 ## endTabItem() {: #infinity.ui.endTabItem_function .doc-function}
 
-//TODO
+Concludes an active Tab Item UI element initiated with [`beginTabItem`](#infinity.ui.beginTabItem_function).
 
 Signature:
 ```
@@ -2921,7 +2921,7 @@ infinity.ui.endTabItem();
 
 ## endTable() {: #infinity.ui.endTable_function .doc-function}
 
-//TODO
+Concludes an active Table UI element initiated with [`beginTable`](#infinity.ui.beginTable_function).
 
 Signature:
 ```
@@ -2939,7 +2939,7 @@ infinity.ui.endTable();
 
 ## endTooltip() {: #infinity.ui.endTooltip_function .doc-function}
 
-//TODO
+Concludes an active Tooltip UI element initiated with [`beginTooltip`](#infinity.ui.beginTooltip_function).
 
 Signature:
 ```
@@ -2957,7 +2957,7 @@ infinity.ui.endTooltip();
 
 ## freeTexture() {: #infinity.ui.freeTexture_function .doc-function}
 
-//TODO
+Releases a previously loaded texture from memory.
 
 Signature:
 ```
@@ -2967,7 +2967,7 @@ freeTexture( texture: number ): boolean
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >Specifies the unique identifier for the texture to be released.
 
 
 Return type: `boolean`
@@ -2983,7 +2983,7 @@ if ( infinity.ui.freeTexture(texture) ) {}
 
 ## getClipboardText() {: #infinity.ui.getClipboardText_function .doc-function}
 
-//TODO
+Retrieves the current text content from the system clipboard.
 
 Signature:
 ```

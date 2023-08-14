@@ -3003,7 +3003,7 @@ let s = infinity.ui.getClipboardText();
 
 ## getColor() {: #infinity.ui.getColor_function .doc-function}
 
-//TODO
+Fetches a color from the current style by index and multiplies its alpha by the provided factor.
 
 Signature:
 ```
@@ -3012,11 +3012,11 @@ getColor( idx: infinity.ui.colorTypes, alphaMul: number ): number
 
 Parameters:
 
-- idx: `infinity.ui.colorTypes`
-  >//TODO
+- idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
+  >A predefined color type that you want to use.
 
 - alphaMul: `number`
-  >//TODO
+  >Factor by which the alpha value of the color is multiplied.
 
 
 Return type: `number`
@@ -3032,7 +3032,7 @@ let n = infinity.ui.getColor(idx, alphaMul);
 
 ## getColor() {: #infinity.ui.getColor_function .doc-function}
 
-//TODO
+Fetches a color based on its numeric representation.
 
 Signature:
 ```
@@ -3042,7 +3042,7 @@ getColor( col: number ): number
 Parameters:
 
 - col: `number`
-  >//TODO
+  >Numeric representation of the color you want to fetch.
 
 
 Return type: `number`
@@ -3058,7 +3058,7 @@ let n = infinity.ui.getColor(col);
 
 ## getColor() {: #infinity.ui.getColor_function .doc-function}
 
-//TODO
+Fetches a color based on its RGBA representation.
 
 Signature:
 ```
@@ -3068,7 +3068,7 @@ getColor( col: infinity.ui.color ): number
 Parameters:
 
 - col: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+  >The color you want to fetch, expressed in RGBA format.
 
 
 Return type: `number`
@@ -3084,7 +3084,7 @@ let n = infinity.ui.getColor(col);
 
 ## getContentRegionAvail() {: #infinity.ui.getContentRegionAvail_function .doc-function}
 
-//TODO
+Retrieves the size of the available content region within the current window or widget as an infinity.ui.vec2 object.
 
 Signature:
 ```
@@ -3104,7 +3104,7 @@ let x = infinity.ui.getContentRegionAvail();
 
 ## getContentRegionMax() {: #infinity.ui.getContentRegionMax_function .doc-function}
 
-//TODO
+Retrieves the maximum size of the content region within the current window or widget as an infinity.ui.vec2 object.
 
 Signature:
 ```
@@ -3124,7 +3124,7 @@ let x = infinity.ui.getContentRegionMax();
 
 ## getCursorPos() {: #infinity.ui.getCursorPos_function .doc-function}
 
-//TODO
+Determines the current cursor position within the active window or widget and returns an infinity.ui.vec2 object representing the coordinates.
 
 Signature:
 ```
@@ -3144,7 +3144,7 @@ let x = infinity.ui.getCursorPos();
 
 ## getCursorPosX() {: #infinity.ui.getCursorPosX_function .doc-function}
 
-//TODO
+Determines the current cursor's X-coordinate within the active window or widget. Returns a number representing this X-coordinate.
 
 Signature:
 ```
@@ -3164,7 +3164,7 @@ let n = infinity.ui.getCursorPosX();
 
 ## getCursorPosY() {: #infinity.ui.getCursorPosY_function .doc-function}
 
-//TODO
+Determines the current cursor's Y-coordinate within the active window or widget. Returns a number representing this Y-coordinate.
 
 Signature:
 ```
@@ -3184,7 +3184,7 @@ let n = infinity.ui.getCursorPosY();
 
 ## getCursorScreenPos() {: #infinity.ui.getCursorScreenPos_function .doc-function}
 
-//TODO
+Determines the current cursor's Y-coordinate within the active window. Returns a number representing this Y-coordinate.
 
 Signature:
 ```
@@ -3641,7 +3641,7 @@ getStyleColor( idx: infinity.ui.colorTypes ): infinity.ui.color
 
 Parameters:
 
-- idx: `infinity.ui.colorTypes`
+- idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
   >//TODO
 
 
@@ -3667,7 +3667,7 @@ getStyleColorName( index: infinity.ui.colorTypes ): string
 
 Parameters:
 
-- index: `infinity.ui.colorTypes`
+- index: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
   >//TODO
 
 
@@ -5922,7 +5922,7 @@ pushStyleColor( idx: infinity.ui.colorTypes, col: number ): void
 
 Parameters:
 
-- idx: `infinity.ui.colorTypes`
+- idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
   >//TODO
 
 - col: `number`
@@ -5949,7 +5949,7 @@ pushStyleColor( idx: infinity.ui.colorTypes, col: infinity.ui.color ): void
 
 Parameters:
 
-- idx: `infinity.ui.colorTypes`
+- idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
   >//TODO
 
 - col: [`infinity.ui.color`](#infinity.ui.color_class)

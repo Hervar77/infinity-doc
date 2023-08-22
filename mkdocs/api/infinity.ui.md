@@ -3184,7 +3184,7 @@ let n = infinity.ui.getCursorPosY();
 
 ## getCursorScreenPos() {: #infinity.ui.getCursorScreenPos_function .doc-function}
 
-Determines the current cursor's Y-coordinate within the active window. Returns a number representing this Y-coordinate.
+Determines the current cursor's Y-coordinate within the active window. Returns an [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing this position.
 
 Signature:
 ```
@@ -3204,7 +3204,7 @@ let x = infinity.ui.getCursorScreenPos();
 
 ## getCursorStartPos() {: #infinity.ui.getCursorStartPos_function .doc-function}
 
-//TODO
+Retrieves the starting position of the cursor within the current window or widget. Returns an [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing this position.
 
 Signature:
 ```
@@ -3224,7 +3224,7 @@ let x = infinity.ui.getCursorStartPos();
 
 ## getFont() {: #infinity.ui.getFont_function .doc-function}
 
-//TODO
+Retrieves the current font being used by the interface. Returns a numerical ID representing the font.
 
 Signature:
 ```
@@ -3244,7 +3244,7 @@ let n = infinity.ui.getFont();
 
 ## getFontSize() {: #infinity.ui.getFontSize_function .doc-function}
 
-//TODO
+Retrieves the size of the current font being used by the interface. Returns a numerical value representing the font size in points.
 
 Signature:
 ```
@@ -3264,7 +3264,7 @@ let n = infinity.ui.getFontSize();
 
 ## getFontTexUvWhitePixel() {: #infinity.ui.getFontTexUvWhitePixel_function .doc-function}
 
-//TODO
+Obtains the UV coordinates of a white pixel. Returns an  [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing the UV coordinates.
 
 Signature:
 ```
@@ -3284,7 +3284,7 @@ let x = infinity.ui.getFontTexUvWhitePixel();
 
 ## getFrameCount() {: #infinity.ui.getFrameCount_function .doc-function}
 
-//TODO
+Returns the current frame count since the start of the application.
 
 Signature:
 ```
@@ -3304,7 +3304,7 @@ let n = infinity.ui.getFrameCount();
 
 ## getFrameHeight() {: #infinity.ui.getFrameHeight_function .doc-function}
 
-//TODO
+Retrieves the height of a standard frame, commonly used in many widgets within the user interface. Returns a number indicating the height in pixels.
 
 Signature:
 ```
@@ -3324,7 +3324,7 @@ let n = infinity.ui.getFrameHeight();
 
 ## getFrameHeightWithSpacing() {: #infinity.ui.getFrameHeightWithSpacing_function .doc-function}
 
-//TODO
+Retrieves the height of a standard frame, including the default spacing applied after it. Returns a number indicating the combined height in pixels.
 
 Signature:
 ```
@@ -3344,7 +3344,7 @@ let n = infinity.ui.getFrameHeightWithSpacing();
 
 ## getId() {: #infinity.ui.getId_function .doc-function}
 
-//TODO
+Generates a unique identifier for a UI element based on the provided string. Returns a number representing the generated ID.
 
 Signature:
 ```
@@ -3354,7 +3354,7 @@ getId( id: string ): number
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The name or label from which the unique ID will be generated.
 
 
 Return type: `number`
@@ -3370,7 +3370,7 @@ let n = infinity.ui.getId(id);
 
 ## getId() {: #infinity.ui.getId_function .doc-function}
 
-//TODO
+Generates a unique identifier for a UI element based on a range denoted by two provided strings. Returns a number representing the generated ID.
 
 Signature:
 ```
@@ -3380,10 +3380,10 @@ getId( idBegin: string, idEnd: string ): number
 Parameters:
 
 - idBegin: `string`
-  >//TODO
+  >The starting name or label of the range from which the unique ID will begin.
 
 - idEnd: `string`
-  >//TODO
+  >The ending name or label of the range up to which the unique ID will be generated.
 
 
 Return type: `number`
@@ -3399,7 +3399,7 @@ let n = infinity.ui.getId(idBegin, idEnd);
 
 ## getItemRectMax() {: #infinity.ui.getItemRectMax_function .doc-function}
 
-//TODO
+Retrieves the maximum coordinate (bottom-right corner) of the last item that was drawn. Returns an  [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing the position of the bottom-right corner.
 
 Signature:
 ```
@@ -3419,8 +3419,7 @@ let x = infinity.ui.getItemRectMax();
 
 ## getItemRectMin() {: #infinity.ui.getItemRectMin_function .doc-function}
 
-//TODO
-
+Retrieves the minimum coordinate (top-left corner) of the last item that was drawn. Returns an  [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing the position of the top-left corner.
 Signature:
 ```
 getItemRectMin(): infinity.ui.vec2
@@ -3439,7 +3438,7 @@ let x = infinity.ui.getItemRectMin();
 
 ## getItemRectSize() {: #infinity.ui.getItemRectSize_function .doc-function}
 
-//TODO
+Retrieves the size of the last item that was drawn. Returns an  [`infinity.ui.vec2`](#infinity.ui.vec2_class) object representing the dimensions of the item.
 
 Signature:
 ```
@@ -3459,7 +3458,7 @@ let x = infinity.ui.getItemRectSize();
 
 ## getKeyName() {: #infinity.ui.getKeyName_function .doc-function}
 
-//TODO
+Retrieves the human-readable name of the given key enumeration. Returns a string representing the key's name.
 
 Signature:
 ```
@@ -3468,8 +3467,8 @@ getKeyName( key: infinity.ui.keys ): string
 
 Parameters:
 
-- key: `infinity.ui.keys`
-  >//TODO
+- key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
+  >The keyboard key enumeration value for which the name is to be retrieved.
 
 
 Return type: `string`
@@ -3485,7 +3484,7 @@ let s = infinity.ui.getKeyName(key);
 
 ## getKeyPressedAmount() {: #infinity.ui.getKeyPressedAmount_function .doc-function}
 
-//TODO
+Determines how many times a specific key has been pressed in succession within a defined time interval. Returns the count of key presses.
 
 Signature:
 ```
@@ -3494,14 +3493,14 @@ getKeyPressedAmount( key: infinity.ui.keys, delay: number, rate: number ): numbe
 
 Parameters:
 
-- key: `infinity.ui.keys`
-  >//TODO
+- key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
+  >The keyboard key enumeration value for which the pressed count is to be determined.
 
 - delay: `number`
-  >//TODO
+  >The initial time delay (in seconds) before the key press repetition starts.
 
 - rate: `number`
-  >//TODO
+  >The frequency (presses per second) at which the key repetition occurs after the initial delay.
 
 
 Return type: `number`
@@ -3517,7 +3516,7 @@ let n = infinity.ui.getKeyPressedAmount(key, delay, rate);
 
 ## getMouseClickedCount() {: #infinity.ui.getMouseClickedCount_function .doc-function}
 
-//TODO
+Retrieves the count of consecutive clicks for a specified mouse button within a short time frame. Returns the number of clicks registered.
 
 Signature:
 ```
@@ -3526,8 +3525,8 @@ getMouseClickedCount( button: infinity.ui.mouseButtons ): number
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
-  >//TODO
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
+  >The mouse button enumeration value for which the clicked count is to be determined.
 
 
 Return type: `number`
@@ -3572,7 +3571,7 @@ getMouseDragDelta( button?: infinity.ui.mouseButtons, lockThreshold?: number ): 
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`, optional
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
   >//TODO
 
 - lockThreshold: `number`, optional
@@ -4374,7 +4373,7 @@ isItemClicked( button?: infinity.ui.mouseButtons ): boolean
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`, optional
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
   >//TODO
 
 
@@ -4546,7 +4545,7 @@ isKeyDown( key: infinity.ui.keys ): boolean
 
 Parameters:
 
-- key: `infinity.ui.keys`
+- key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
   >//TODO
 
 
@@ -4572,7 +4571,7 @@ isKeyPressed( key: infinity.ui.keys, repeat?: boolean ): boolean
 
 Parameters:
 
-- key: `infinity.ui.keys`
+- key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
   >//TODO
 
 - repeat: `boolean`, optional
@@ -4601,7 +4600,7 @@ isKeyReleased( key: infinity.ui.keys ): boolean
 
 Parameters:
 
-- key: `infinity.ui.keys`
+- key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
   >//TODO
 
 
@@ -4627,7 +4626,7 @@ isMouseClicked( button: infinity.ui.mouseButtons, repeat?: boolean ): boolean
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
   >//TODO
 
 - repeat: `boolean`, optional
@@ -4656,7 +4655,7 @@ isMouseDoubleClicked( button: infinity.ui.mouseButtons ): boolean
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
   >//TODO
 
 
@@ -4682,7 +4681,7 @@ isMouseDown( button: infinity.ui.mouseButtons ): boolean
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
   >//TODO
 
 
@@ -4708,7 +4707,7 @@ isMouseDragging( button: infinity.ui.mouseButtons, lockThreshold?: number ): boo
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
   >//TODO
 
 - lockThreshold: `number`, optional
@@ -4795,7 +4794,7 @@ isMouseReleased( button: infinity.ui.mouseButtons ): boolean
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
   >//TODO
 
 
@@ -6125,7 +6124,7 @@ resetMouseDragDelta( button?: infinity.ui.mouseButtons ): void
 
 Parameters:
 
-- button: `infinity.ui.mouseButtons`, optional
+- button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
   >//TODO
 
 

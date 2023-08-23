@@ -3542,14 +3542,14 @@ let n = infinity.ui.getMouseClickedCount(button);
 
 ## getMouseCursor() {: #infinity.ui.getMouseCursor_function .doc-function}
 
-//TODO
+Retrieves the current mouse cursor type. Returns the cursor type as one of the enumeration values from infinity.ui.mouseCursors
 
 Signature:
 ```
 getMouseCursor(): infinity.ui.mouseCursors
 ```
 
-Return type: `infinity.ui.mouseCursors`
+Return type: [`infinity.ui.mouseCursors`](#infinity.ui.mouseCursors_enum)
 
 Example:
 
@@ -3562,7 +3562,7 @@ let x = infinity.ui.getMouseCursor();
 
 ## getMouseDragDelta() {: #infinity.ui.getMouseDragDelta_function .doc-function}
 
-//TODO
+Retrieves the delta distance the mouse has been dragged since the last call, given an optional specific button. The result is an infinity.ui.vec2 object representing the drag delta, where the x and y components indicate the horizontal and vertical distances, respectively.
 
 Signature:
 ```
@@ -3572,10 +3572,10 @@ getMouseDragDelta( button?: infinity.ui.mouseButtons, lockThreshold?: number ): 
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
-  >//TODO
+  >The specific mouse button to check. If not provided, it defaults to the left mouse button. This allows developers to determine the drag delta for any specific mouse button, be it left, right, or middle.
 
 - lockThreshold: `number`, optional
-  >//TODO
+  >A threshold below which the mouse movement will be disregarded. It can be used to filter out minor jitters in mouse input.
 
 
 Return type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
@@ -3591,7 +3591,7 @@ let x = infinity.ui.getMouseDragDelta();
 
 ## getMousePos() {: #infinity.ui.getMousePos_function .doc-function}
 
-//TODO
+Retrieves the current position of the mouse cursor. The result is an infinity.ui.vec2 object representing the mouse's x and y coordinates on the screen.
 
 Signature:
 ```
@@ -3611,7 +3611,7 @@ let x = infinity.ui.getMousePos();
 
 ## getMousePosOnOpeningCurrentPopup() {: #infinity.ui.getMousePosOnOpeningCurrentPopup_function .doc-function}
 
-//TODO
+Retrieves the position of the mouse cursor when the current popup was opened. The returned value is an infinity.ui.vec2 object indicating the mouse's x and y coordinates at that moment.
 
 Signature:
 ```
@@ -3631,7 +3631,7 @@ let x = infinity.ui.getMousePosOnOpeningCurrentPopup();
 
 ## getStyleColor() {: #infinity.ui.getStyleColor_function .doc-function}
 
-//TODO
+Retrieves the color value associated with a given style color type. The returned value is an infinity.ui.color object representing the RGBA color.
 
 Signature:
 ```
@@ -3641,7 +3641,7 @@ getStyleColor( idx: infinity.ui.colorTypes ): infinity.ui.color
 Parameters:
 
 - idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
-  >//TODO
+  >The style color type for which the value is being queried. This is an enumeration of various GUI elements and states (e.g., text, windowBg, buttonHovered) that have predefined color values in the UI's current theme.
 
 
 Return type: [`infinity.ui.color`](#infinity.ui.color_class)
@@ -3657,7 +3657,7 @@ let x = infinity.ui.getStyleColor(idx);
 
 ## getStyleColorName() {: #infinity.ui.getStyleColorName_function .doc-function}
 
-//TODO
+Retrieves the name of a specified style color type as a string.
 
 Signature:
 ```
@@ -3667,7 +3667,7 @@ getStyleColorName( index: infinity.ui.colorTypes ): string
 Parameters:
 
 - index: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
-  >//TODO
+  >The style color type for which the name is being queried. This represents an enumeration of various GUI elements and states (e.g., text, windowBg, buttonHovered).
 
 
 Return type: `string`
@@ -3683,7 +3683,7 @@ let s = infinity.ui.getStyleColorName(index);
 
 ## getTextLineHeight() {: #infinity.ui.getTextLineHeight_function .doc-function}
 
-//TODO
+Retrieves the height, in pixels, of a line of text for the current font.
 
 Signature:
 ```
@@ -3703,7 +3703,7 @@ let n = infinity.ui.getTextLineHeight();
 
 ## getTextLineHeightWithSpacing() {: #infinity.ui.getTextLineHeightWithSpacing_function .doc-function}
 
-//TODO
+Retrieves and returns the height, in pixels, of a single line of text using the currently active font, along with any additional spacing.
 
 Signature:
 ```
@@ -3723,7 +3723,7 @@ let n = infinity.ui.getTextLineHeightWithSpacing();
 
 ## getTime() {: #infinity.ui.getTime_function .doc-function}
 
-//TODO
+Fetches and returns the time elapsed since the start of the application, in seconds.
 
 Signature:
 ```
@@ -3743,7 +3743,7 @@ let n = infinity.ui.getTime();
 
 ## getTreeNodeToLabelSpacing() {: #infinity.ui.getTreeNodeToLabelSpacing_function .doc-function}
 
-//TODO
+Retrieves the horizontal spacing (in pixels) between a tree node and its label, allowing for precise placement of elements relative to tree node labels in user interface design.
 
 Signature:
 ```
@@ -3763,7 +3763,7 @@ let n = infinity.ui.getTreeNodeToLabelSpacing();
 
 ## getWindowContentRegionMax() {: #infinity.ui.getWindowContentRegionMax_function .doc-function}
 
-//TODO
+Retrieves the maximum coordinates of the content region of the current window, returning an infinity.ui.vec2 object where the x and y components represent the maximum width and height, respectively.
 
 Signature:
 ```
@@ -3783,7 +3783,7 @@ let x = infinity.ui.getWindowContentRegionMax();
 
 ## getWindowContentRegionMin() {: #infinity.ui.getWindowContentRegionMin_function .doc-function}
 
-//TODO
+Retrieves the minimum coordinates of the content region of the current window, returning an infinity.ui.vec2 object where the x and y components represent the minimum width and height, respectively.
 
 Signature:
 ```
@@ -3803,7 +3803,7 @@ let x = infinity.ui.getWindowContentRegionMin();
 
 ## getWindowHeight() {: #infinity.ui.getWindowHeight_function .doc-function}
 
-//TODO
+Retrieves the height of the current window.
 
 Signature:
 ```
@@ -3823,7 +3823,7 @@ let n = infinity.ui.getWindowHeight();
 
 ## getWindowPos() {: #infinity.ui.getWindowPos_function .doc-function}
 
-//TODO
+Retrieves the position of the top-left corner of the current window, returning an object that represents its coordinates in pixels.
 
 Signature:
 ```
@@ -3843,7 +3843,7 @@ let x = infinity.ui.getWindowPos();
 
 ## getWindowSize() {: #infinity.ui.getWindowSize_function .doc-function}
 
-//TODO
+Retrieves the size of the current window, returning an object containing its width and height in pixels.
 
 Signature:
 ```
@@ -3863,7 +3863,7 @@ let x = infinity.ui.getWindowSize();
 
 ## getWindowWidth() {: #infinity.ui.getWindowWidth_function .doc-function}
 
-//TODO
+Retrieves the width of the current window in pixels.
 
 Signature:
 ```
@@ -3883,7 +3883,7 @@ let n = infinity.ui.getWindowWidth();
 
 ## image() {: #infinity.ui.image_function .doc-function}
 
-//TODO
+Displays an image in the current UI context using the provided texture handle and size.
 
 Signature:
 ```
@@ -3893,22 +3893,22 @@ image( texture: number, size: infinity.ui.vec2, uv1?: infinity.ui.vec2, uv2?: in
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >A handle to the texture that you wish to display.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >An object specifying the width and height of the image to be displayed in pixels.
 
 - uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >An object that denotes the top-left UV coordinate for texture mapping.
 
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >An object that denotes the bottom-right UV coordinate for texture mapping.
 
 - tintCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
-  >//TODO
+  >An object representing the color to tint or modulate the image with.
 
 - borderCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
-  >//TODO
+  >An object representing the color of the border.
 
 
 Example:
@@ -3922,7 +3922,7 @@ infinity.ui.image(texture, size);
 
 ## imageButton() {: #infinity.ui.imageButton_function .doc-function}
 
-//TODO
+Renders an interactive image button in the current UI context using the provided texture handle and size. This button is clickable and returns a boolean value indicating if the button was pressed.
 
 Signature:
 ```
@@ -3932,25 +3932,25 @@ imageButton( texture: number, size: infinity.ui.vec2, uv1?: infinity.ui.vec2, uv
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >A handle to the texture that you wish to display on the button.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >An object specifying the width and height of the button to be displayed in pixels.
 
 - uv1: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >An object that denotes the top-left UV coordinate for texture mapping.
 
 - uv2: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >An object that denotes the bottom-right UV coordinate for texture mapping.
 
 - padding: `number`, optional
-  >//TODO
+  >The amount of padding (in pixels) to be added around the image inside the button.
 
 - bgCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
-  >//TODO
+  >An object representing the background color of the button.
 
 - tintCol: [`infinity.ui.color`](#infinity.ui.color_class), optional
-  >//TODO
+  >An object representing the color to tint or modulate the image with.
 
 
 Return type: `boolean`
@@ -3966,7 +3966,7 @@ if ( infinity.ui.imageButton(texture, size) ) {}
 
 ## indent() {: #infinity.ui.indent_function .doc-function}
 
-//TODO
+Shifts the current UI layout position to the right by a specified width, effectively creating an indentation.
 
 Signature:
 ```
@@ -3976,7 +3976,7 @@ indent( width?: number ): void
 Parameters:
 
 - width: `number`, optional
-  >//TODO
+  >The amount of space (in pixels) to indent the content.
 
 
 Example:
@@ -3990,7 +3990,7 @@ infinity.ui.indent();
 
 ## init() {: #infinity.ui.init_function .doc-function}
 
-//TODO
+Initializes a new UI window or element with the specified properties and position on the screen. The initialization can be controlled further using optional flags.
 
 Signature:
 ```
@@ -4000,22 +4000,22 @@ init( caption: string, x: number, y: number, width: number, height: number, flag
 Parameters:
 
 - caption: `string`
-  >//TODO
+  >The title or label that will be displayed at the top of the window or element.
 
 - x: `number`
-  >//TODO
+  >The horizontal position (in pixels) on the screen where the window's or element's left edge will be placed.
 
 - y: `number`
-  >//TODO
+  >The vertical position (in pixels) on the screen where the window's or element's top edge will be placed.
 
 - width: `number`
-  >//TODO
+  >The width (in pixels) of the window or element.
 
 - height: `number`
-  >//TODO
+  >The height (in pixels) of the window or element.
 
-- flags: `infinity.ui.initFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.initFlags`](#infinity.ui.initFlags_enum), optional
+  >Flags that control various initialization behaviors and properties for the window or element.
 
 
 Return type: `boolean`
@@ -4031,7 +4031,7 @@ if ( infinity.ui.init(caption, x, y, width, height) ) {}
 
 ## inputFloat() {: #infinity.ui.inputFloat_function .doc-function}
 
-//TODO
+Displays an input box for floating-point values, allowing users to increment or enter a numerical value. The appearance and behavior of the input box can be further customized with optional parameters. Returns a boolean value indicating whether the initialization was successful.
 
 Signature:
 ```
@@ -4041,22 +4041,22 @@ inputFloat( label: string, v: number, step?: number, stepFast?: number, format?:
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label associated with the input box.
 
 - v: `number`
-  >//TODO
+  >The initial value displayed in the input box.
 
 - step: `number`, optional
-  >//TODO
+  >The amount by which the value will increase or decrease when using the default stepping buttons.
 
 - stepFast: `number`, optional
-  >//TODO
+  >The amount by which the value will quickly increase or decrease, typically when a modifier key is held down.
 
 - format: `string`, optional
-  >//TODO
+  >A string that dictates how the number will be formatted within the input box (e.g., "%.2f" for two decimal places).
 
-- flags: `infinity.ui.inputTextFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.inputTextFlags`](#infinity.ui.inputTextFlags_enum), optional
+  >Flags that modify the behavior or appearance of the input box. If not specified, default behaviors are applied.
 
 
 Return type: `number`
@@ -4072,7 +4072,7 @@ let n = infinity.ui.inputFloat(label, v);
 
 ## inputInt() {: #infinity.ui.inputInt_function .doc-function}
 
-//TODO
+Displays an input box for floating-point values, allowing users to increment or enter a numerical value. The appearance and behavior of the input box can be further customized with optional parameters. Returns the modified value entered by the user or the initial value if no changes were made. Returns the updated value input by the user, or the original value if no changes occurred.
 
 Signature:
 ```
@@ -4082,19 +4082,19 @@ inputInt( label: string, v: number, step?: number, stepFast?: number, flags?: in
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label that accompanies the input box.
 
 - v: `number`
-  >//TODO
+  >The initial whole number presented in the input box.
 
 - step: `number`, optional
-  >//TODO
+  >The amount the value will change when using the default increment and decrement buttons.
 
 - stepFast: `number`, optional
-  >//TODO
+  >The larger increment or decrement amount typically activated when a modifier key is held down.
 
-- flags: `infinity.ui.inputTextFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.inputTextFlags`](#infinity.ui.inputTextFlags_enum), optional
+  >Flags to alter the behavior or visual presentation of the input box.
 
 
 Return type: `number`
@@ -4110,7 +4110,7 @@ let n = infinity.ui.inputInt(label, v);
 
 ## inputText() {: #infinity.ui.inputText_function .doc-function}
 
-//TODO
+Displays an input box for text values, allowing users to type or edit a string. The behavior and appearance of the input box can be adjusted using the optional parameters. Returns the updated string input by the user, or the original string if no changes occurred.
 
 Signature:
 ```
@@ -4120,13 +4120,13 @@ inputText( label: string, text: string, flags?: infinity.ui.inputTextFlags ): st
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label that accompanies the input box.
 
 - text: `string`
-  >//TODO
+  >The initial string presented in the input box.
 
-- flags: `infinity.ui.inputTextFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.inputTextFlags`](#infinity.ui.inputTextFlags_enum), optional
+  >Flags that modify the behavior or visual presentation of the input box.
 
 
 Return type: `string`
@@ -4142,7 +4142,7 @@ let s = infinity.ui.inputText(label, text);
 
 ## inputTextMultiline() {: #infinity.ui.inputTextMultiline_function .doc-function}
 
-//TODO
+Displays a multi-line input box for text values, offering an expanded area for users to type or edit a string across multiple lines. The behavior and appearance of this input box can be further customized using the optional parameters. Returns the revised multi-line string input by the user, or the original string if there were no changes.
 
 Signature:
 ```
@@ -4152,16 +4152,16 @@ inputTextMultiline( label: string, text: string, size?: infinity.ui.vec2, flags?
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label displayed alongside the multi-line input box.
 
 - text: `string`
-  >//TODO
+  >The initial string presented within the multi-line input space.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >Specifies the dimensions of the input box as an object with x (width) and y (height) components.
 
-- flags: `infinity.ui.inputTextFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.inputTextFlags`](#infinity.ui.inputTextFlags_enum), optional
+  >Flags influencing the behavior or visual style of the input box.
 
 
 Return type: `string`
@@ -4177,7 +4177,7 @@ let s = infinity.ui.inputTextMultiline(label, text);
 
 ## inputTextWithHint() {: #infinity.ui.inputTextWithHint_function .doc-function}
 
-//TODO
+Displays an input box for text values, featuring a hint that provides guidance or context to the user about the expected input. The hint disappears when the user starts typing and the actual value of the input box becomes the main focus. Additional characteristics of the input box can be modified using the optional flags.
 
 Signature:
 ```
@@ -4187,16 +4187,16 @@ inputTextWithHint( label: string, hint: string, text: string, flags?: infinity.u
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label displayed alongside the input box.
 
 - hint: `string`
-  >//TODO
+  >The subtle text displayed within the input box to guide the user on the expected input.
 
 - text: `string`
-  >//TODO
+  >The initial string shown within the input space.
 
-- flags: `infinity.ui.inputTextFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.inputTextFlags`](#infinity.ui.inputTextFlags_enum), optional
+  >Flags that adjust the behavior or visual representation of the input box.
 
 
 Return type: `string`
@@ -6520,7 +6520,7 @@ setMouseCursor( cursor: infinity.ui.mouseCursors ): void
 
 Parameters:
 
-- cursor: `infinity.ui.mouseCursors`
+- cursor: [`infinity.ui.mouseCursors`](#infinity.ui.mouseCursors_enum)
   >//TODO
 
 

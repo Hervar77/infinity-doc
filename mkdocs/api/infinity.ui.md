@@ -4212,7 +4212,7 @@ let s = infinity.ui.inputTextWithHint(label, hint, text);
 
 ## invisibleButton() {: #infinity.ui.invisibleButton_function .doc-function}
 
-//TODO
+Creates an invisible button, occupying space as defined by the size parameter but without any visual representation, making it useful for custom behavior or layouts. It's often used for custom hit detection areas or to override standard UI behaviors. The button's state can be identified through the return value.
 
 Signature:
 ```
@@ -4222,13 +4222,13 @@ invisibleButton( id: string, size: infinity.ui.vec2, flags?: infinity.ui.buttonF
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The unique identifier for this button, ensuring interactions with it are distinct from other UI elements.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >An object representing the width and height of the button in pixels.
 
-- flags: `infinity.ui.buttonFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.buttonFlags`](#infinity.ui.buttonFlags_enum), optional
+  >Flags that adjust the behavior or visual representation of the button.
 
 
 Return type: `boolean`
@@ -4244,7 +4244,7 @@ if ( infinity.ui.invisibleButton(id, size) ) {}
 
 ## isAnyItemActive() {: #infinity.ui.isAnyItemActive_function .doc-function}
 
-//TODO
+Determines and returns `true` if any user interface (UI) item is currently active or in focus. This is useful to check if there's ongoing interaction with any part of the UI.
 
 Signature:
 ```
@@ -4264,7 +4264,7 @@ if ( infinity.ui.isAnyItemActive() ) {}
 
 ## isAnyItemFocused() {: #infinity.ui.isAnyItemFocused_function .doc-function}
 
-//TODO
+Determines and returns `true` if any user interface (UI) item currently has input focus. This can be used to ascertain if any part of the UI is awaiting or actively processing user input.
 
 Signature:
 ```
@@ -4284,7 +4284,7 @@ if ( infinity.ui.isAnyItemFocused() ) {}
 
 ## isAnyItemHovered() {: #infinity.ui.isAnyItemHovered_function .doc-function}
 
-//TODO
+Determines whether the mouse cursor is currently hovering over any user interface (UI) item.
 
 Signature:
 ```
@@ -4304,7 +4304,7 @@ if ( infinity.ui.isAnyItemHovered() ) {}
 
 ## isAnyMouseDown() {: #infinity.ui.isAnyMouseDown_function .doc-function}
 
-//TODO
+Checks and returns `true` if any mouse button is currently being pressed.
 
 Signature:
 ```
@@ -4324,7 +4324,7 @@ if ( infinity.ui.isAnyMouseDown() ) {}
 
 ## isItemActivated() {: #infinity.ui.isItemActivated_function .doc-function}
 
-//TODO
+Determines  and returns `true` if the last item was activated, typically by a mouse click or a key equivalent.
 
 Signature:
 ```
@@ -4344,7 +4344,7 @@ if ( infinity.ui.isItemActivated() ) {}
 
 ## isItemActive() {: #infinity.ui.isItemActive_function .doc-function}
 
-//TODO
+Checks if the last item is currently active.
 
 Signature:
 ```
@@ -4364,7 +4364,7 @@ if ( infinity.ui.isItemActive() ) {}
 
 ## isItemClicked() {: #infinity.ui.isItemClicked_function .doc-function}
 
-//TODO
+Determines if the last item was clicked with the specified mouse button.
 
 Signature:
 ```
@@ -4374,7 +4374,7 @@ isItemClicked( button?: infinity.ui.mouseButtons ): boolean
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
-  >//TODO
+  >Specifies the mouse button to check.
 
 
 Return type: `boolean`
@@ -4390,7 +4390,7 @@ if ( infinity.ui.isItemClicked() ) {}
 
 ## isItemDeactivated() {: #infinity.ui.isItemDeactivated_function .doc-function}
 
-//TODO
+Determines if the last active item has just been deactivated.
 
 Signature:
 ```
@@ -4410,7 +4410,7 @@ if ( infinity.ui.isItemDeactivated() ) {}
 
 ## isItemDeactivatedAfterEdit() {: #infinity.ui.isItemDeactivatedAfterEdit_function .doc-function}
 
-//TODO
+Determines if the currently processed item was deactivated after a value edit.
 
 Signature:
 ```
@@ -4430,7 +4430,7 @@ if ( infinity.ui.isItemDeactivatedAfterEdit() ) {}
 
 ## isItemEdited() {: #infinity.ui.isItemEdited_function .doc-function}
 
-//TODO
+Checks if the currently processed item's value has been modified.
 
 Signature:
 ```
@@ -4450,7 +4450,7 @@ if ( infinity.ui.isItemEdited() ) {}
 
 ## isItemFocused() {: #infinity.ui.isItemFocused_function .doc-function}
 
-//TODO
+Checks whether the currently processed item has input focus.
 
 Signature:
 ```
@@ -4470,7 +4470,7 @@ if ( infinity.ui.isItemFocused() ) {}
 
 ## isItemHovered() {: #infinity.ui.isItemHovered_function .doc-function}
 
-//TODO
+Determines whether the currently processed item is being hovered over, taking optional hoveredFlags into account.
 
 Signature:
 ```
@@ -4479,8 +4479,8 @@ isItemHovered( flags?: infinity.ui.hoveredFlags ): boolean
 
 Parameters:
 
-- flags: `infinity.ui.hoveredFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.hoveredFlags`](#infinity.ui.hoveredFlags_enum), optional
+  >Specific conditions to consider when checking for hovering, using the infinity.ui.hoveredFlags enumeration.
 
 
 Return type: `boolean`
@@ -4496,7 +4496,7 @@ if ( infinity.ui.isItemHovered() ) {}
 
 ## isItemToggledOpen() {: #infinity.ui.isItemToggledOpen_function .doc-function}
 
-//TODO
+Checks if the currently processed item, typically a tree node, has been toggled open or expanded.
 
 Signature:
 ```
@@ -4516,7 +4516,7 @@ if ( infinity.ui.isItemToggledOpen() ) {}
 
 ## isItemVisible() {: #infinity.ui.isItemVisible_function .doc-function}
 
-//TODO
+Determines whether the currently processed item is visible on the screen.
 
 Signature:
 ```
@@ -4536,7 +4536,7 @@ if ( infinity.ui.isItemVisible() ) {}
 
 ## isKeyDown() {: #infinity.ui.isKeyDown_function .doc-function}
 
-//TODO
+Checks if the specified key is currently being pressed down.
 
 Signature:
 ```
@@ -4546,7 +4546,7 @@ isKeyDown( key: infinity.ui.keys ): boolean
 Parameters:
 
 - key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
-  >//TODO
+  >The key to check for its press state.
 
 
 Return type: `boolean`
@@ -4562,7 +4562,7 @@ if ( infinity.ui.isKeyDown(key) ) {}
 
 ## isKeyPressed() {: #infinity.ui.isKeyPressed_function .doc-function}
 
-//TODO
+Determines whether the specified key was pressed during the current frame, optionally considering key repetition.
 
 Signature:
 ```
@@ -4572,10 +4572,10 @@ isKeyPressed( key: infinity.ui.keys, repeat?: boolean ): boolean
 Parameters:
 
 - key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
-  >//TODO
+  >The key to check for its press state.
 
 - repeat: `boolean`, optional
-  >//TODO
+  >Whether to consider the key repetition.
 
 
 Return type: `boolean`
@@ -4591,7 +4591,7 @@ if ( infinity.ui.isKeyPressed(key) ) {}
 
 ## isKeyReleased() {: #infinity.ui.isKeyReleased_function .doc-function}
 
-//TODO
+Determines if the specified key was released during the current frame.
 
 Signature:
 ```
@@ -4601,7 +4601,7 @@ isKeyReleased( key: infinity.ui.keys ): boolean
 Parameters:
 
 - key: [`infinity.ui.keys`](#infinity.ui.keys_enum)
-  >//TODO
+  >The key to check for its release state.
 
 
 Return type: `boolean`
@@ -4617,7 +4617,7 @@ if ( infinity.ui.isKeyReleased(key) ) {}
 
 ## isMouseClicked() {: #infinity.ui.isMouseClicked_function .doc-function}
 
-//TODO
+Checks whether the specified mouse button was clicked during the current frame.
 
 Signature:
 ```
@@ -4627,10 +4627,10 @@ isMouseClicked( button: infinity.ui.mouseButtons, repeat?: boolean ): boolean
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
-  >//TODO
+  >The mouse button to verify for its click state.
 
 - repeat: `boolean`, optional
-  >//TODO
+  >Whether to consider the key repetition.
 
 
 Return type: `boolean`
@@ -4646,7 +4646,7 @@ if ( infinity.ui.isMouseClicked(button) ) {}
 
 ## isMouseDoubleClicked() {: #infinity.ui.isMouseDoubleClicked_function .doc-function}
 
-//TODO
+Determines if the specified mouse button was double-clicked during the current frame.
 
 Signature:
 ```
@@ -4656,7 +4656,7 @@ isMouseDoubleClicked( button: infinity.ui.mouseButtons ): boolean
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
-  >//TODO
+  >The mouse button to verify for its double-click state.
 
 
 Return type: `boolean`
@@ -4672,7 +4672,7 @@ if ( infinity.ui.isMouseDoubleClicked(button) ) {}
 
 ## isMouseDown() {: #infinity.ui.isMouseDown_function .doc-function}
 
-//TODO
+Checks if the specified mouse button is currently being pressed.
 
 Signature:
 ```
@@ -4682,7 +4682,7 @@ isMouseDown( button: infinity.ui.mouseButtons ): boolean
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
-  >//TODO
+  >The mouse button to check for its pressed state.
 
 
 Return type: `boolean`
@@ -4698,7 +4698,7 @@ if ( infinity.ui.isMouseDown(button) ) {}
 
 ## isMouseDragging() {: #infinity.ui.isMouseDragging_function .doc-function}
 
-//TODO
+Determines whether the specified mouse button is currently being dragged beyond an optional threshold.
 
 Signature:
 ```
@@ -4708,10 +4708,10 @@ isMouseDragging( button: infinity.ui.mouseButtons, lockThreshold?: number ): boo
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
-  >//TODO
+  >The mouse button to check for its dragging state.
 
 - lockThreshold: `number`, optional
-  >//TODO
+  >The distance in pixels the mouse must move while being pressed to start considering it a drag action.
 
 
 Return type: `boolean`
@@ -4727,7 +4727,7 @@ if ( infinity.ui.isMouseDragging(button) ) {}
 
 ## isMouseHoveringRect() {: #infinity.ui.isMouseHoveringRect_function .doc-function}
 
-//TODO
+Determines if the mouse cursor is currently hovering within a specified rectangular area.
 
 Signature:
 ```
@@ -4737,13 +4737,13 @@ isMouseHoveringRect( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2, c
 Parameters:
 
 - topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The top-left corner coordinates of the rectangle.
 
 - bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The bottom-right corner coordinates of the rectangle.
 
 - clip: `boolean`, optional
-  >//TODO
+  >If set to true, considers only the visible portion of the rectangle (affected by current clipping regions).
 
 
 Return type: `boolean`
@@ -4759,7 +4759,7 @@ if ( infinity.ui.isMouseHoveringRect(topLeft, bottomRight) ) {}
 
 ## isMousePosValid() {: #infinity.ui.isMousePosValid_function .doc-function}
 
-//TODO
+Determines if a given mouse position, or the current mouse position if none is specified, is valid within the user interface context.
 
 Signature:
 ```
@@ -4769,7 +4769,7 @@ isMousePosValid( position?: infinity.ui.vec2 ): boolean
 Parameters:
 
 - position: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The mouse position to check. If omitted, the function evaluates the current mouse position.
 
 
 Return type: `boolean`
@@ -4785,7 +4785,7 @@ if ( infinity.ui.isMousePosValid() ) {}
 
 ## isMouseReleased() {: #infinity.ui.isMouseReleased_function .doc-function}
 
-//TODO
+Checks if a specific mouse button has been released.
 
 Signature:
 ```
@@ -4795,7 +4795,7 @@ isMouseReleased( button: infinity.ui.mouseButtons ): boolean
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum)
-  >//TODO
+  > The mouse button to check.
 
 
 Return type: `boolean`
@@ -4811,7 +4811,7 @@ if ( infinity.ui.isMouseReleased(button) ) {}
 
 ## isPopupOpen() {: #infinity.ui.isPopupOpen_function .doc-function}
 
-//TODO
+Determines whether a specific popup identified by its ID is currently open.
 
 Signature:
 ```
@@ -4821,10 +4821,10 @@ isPopupOpen( id: string, flags?: infinity.ui.popupFlags ): boolean
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The identifier of the popup to check.
 
 - flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
-  >//TODO
+  >Flags to specify particular conditions or checks for the popup state.
 
 
 Return type: `boolean`
@@ -4840,7 +4840,7 @@ if ( infinity.ui.isPopupOpen(id) ) {}
 
 ## isRectVisible() {: #infinity.ui.isRectVisible_function .doc-function}
 
-//TODO
+Determines if a specified rectangular region is currently visible within the UI viewport.
 
 Signature:
 ```
@@ -4850,10 +4850,10 @@ isRectVisible( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2 ): boole
 Parameters:
 
 - topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The top-left coordinate of the rectangle.
 
 - bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The bottom-right coordinate of the rectangle.
 
 
 Return type: `boolean`
@@ -4869,7 +4869,7 @@ if ( infinity.ui.isRectVisible(topLeft, bottomRight) ) {}
 
 ## isWindowAppearing() {: #infinity.ui.isWindowAppearing_function .doc-function}
 
-//TODO
+Checks if the current window is appearing after being hidden or freshly created.
 
 Signature:
 ```
@@ -4889,7 +4889,7 @@ if ( infinity.ui.isWindowAppearing() ) {}
 
 ## isWindowCollapsed() {: #infinity.ui.isWindowCollapsed_function .doc-function}
 
-//TODO
+Determines if the current window is in a collapsed state.
 
 Signature:
 ```
@@ -4909,7 +4909,7 @@ if ( infinity.ui.isWindowCollapsed() ) {}
 
 ## isWindowFocused() {: #infinity.ui.isWindowFocused_function .doc-function}
 
-//TODO
+Checks if the current window is focused, considering optional flags to specify the type of focus to check for.
 
 Signature:
 ```
@@ -4918,8 +4918,8 @@ isWindowFocused( flags?: infinity.ui.focusedFlags ): boolean
 
 Parameters:
 
-- flags: `infinity.ui.focusedFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.focusedFlags`](#infinity.ui.focusedFlags_enum), optional
+  >A set of flags from [`infinity.ui.focusedFlags`](#infinity.ui.focusedFlags_enum) that determine the specific type of window focus to check.
 
 
 Return type: `boolean`
@@ -4935,7 +4935,7 @@ if ( infinity.ui.isWindowFocused() ) {}
 
 ## isWindowHovered() {: #infinity.ui.isWindowHovered_function .doc-function}
 
-//TODO
+Determines if the current window is hovered over, with the ability to specify optional flags to further refine the hover conditions.
 
 Signature:
 ```
@@ -4944,8 +4944,8 @@ isWindowHovered( flags?: infinity.ui.hoveredFlags ): boolean
 
 Parameters:
 
-- flags: `infinity.ui.hoveredFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.hoveredFlags`](#infinity.ui.hoveredFlags_enum), optional
+  >A set of flags from [`infinity.ui.hoveredFlags`](#infinity.ui.hoveredFlags_enum) that refines the hover conditions to check for.
 
 
 Return type: `boolean`

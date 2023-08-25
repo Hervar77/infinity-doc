@@ -4961,7 +4961,7 @@ if ( infinity.ui.isWindowHovered() ) {}
 
 ## labelText() {: #infinity.ui.labelText_function .doc-function}
 
-//TODO
+Displays text (usually a value) next to a given label within the UI.
 
 Signature:
 ```
@@ -4971,10 +4971,10 @@ labelText( label: string, text: string ): void
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The identifying text displayed before the main content.
 
 - text: `string`
-  >//TODO
+  >The main content text to display next to the label.
 
 
 Example:
@@ -4988,7 +4988,7 @@ infinity.ui.labelText(label, text);
 
 ## listBox() {: #infinity.ui.listBox_function .doc-function}
 
-//TODO
+Presents a list of selectable items in a box format, allowing users to pick one from the list.
 
 Signature:
 ```
@@ -4998,16 +4998,16 @@ listBox( label: string, currentItem: number, items: infinity.ui.stringArray, hei
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The name or title associated with the list box.
 
 - currentItem: `number`
-  >//TODO
+  >The index of the currently selected item in the list.
 
 - items: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface)
-  >//TODO
+  >An array of strings representing the list items available for selection.
 
 - heightInItems: `number`, optional
-  >//TODO
+  >The maximum number of items to be displayed at once within the list box. If more items are present, scrolling will be enabled.
 
 
 Return type: `number`
@@ -5023,7 +5023,7 @@ let n = infinity.ui.listBox(label, currentItem, items);
 
 ## loadTextureFromFile() {: #infinity.ui.loadTextureFromFile_function .doc-function}
 
-//TODO
+Loads a texture from a specified file, making it available for rendering in the UI.
 
 Signature:
 ```
@@ -5033,7 +5033,7 @@ loadTextureFromFile( fileName: string ): number
 Parameters:
 
 - fileName: `string`
-  >//TODO
+  >The name or path of the file from which the texture will be loaded.
 
 
 Return type: `number`
@@ -5049,7 +5049,7 @@ let n = infinity.ui.loadTextureFromFile(fileName);
 
 ## loadTextureFromImage() {: #infinity.ui.loadTextureFromImage_function .doc-function}
 
-//TODO
+Loads a texture directly from an `infinity.image` object, making it available for rendering within the UI.
 
 Signature:
 ```
@@ -5059,7 +5059,7 @@ loadTextureFromImage( image: infinity.image ): number
 Parameters:
 
 - image: `infinity.image`
-  >//TODO
+  >The `infinity.image` object containing the image data to be used as a texture.
 
 
 Return type: `number`
@@ -5075,7 +5075,7 @@ let n = infinity.ui.loadTextureFromImage(image);
 
 ## menuItem() {: #infinity.ui.menuItem_function .doc-function}
 
-//TODO
+Creates an interactive menu item within a drop-down or context menu.
 
 Signature:
 ```
@@ -5085,16 +5085,16 @@ menuItem( label: string, shortCut?: string, selected?: boolean, enabled?: boolea
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text to be displayed as the name of the menu item.
 
 - shortCut: `string`, optional
-  >//TODO
+  >Represents the keyboard shortcut associated with this menu item, e.g., "Ctrl+S".
 
 - selected: `boolean`, optional
-  >//TODO
+  >Indicates if the menu item is currently selected or checked.
 
 - enabled: `boolean`, optional
-  >//TODO
+  >Determines whether the menu item is enabled.
 
 
 Return type: `boolean`
@@ -5110,7 +5110,7 @@ if ( infinity.ui.menuItem(label) ) {}
 
 ## mergeFontFromFile() {: #infinity.ui.mergeFontFromFile_function .doc-function}
 
-//TODO
+Merges a font from the specified file into the current font atlas. Returns an ID for the merged font.
 
 Signature:
 ```
@@ -5120,19 +5120,19 @@ mergeFontFromFile( fileName: string, size: number, monoSpace?: boolean, opacity?
 Parameters:
 
 - fileName: `string`
-  >//TODO
+  >Specifies the path and name of the font file to merge.
 
 - size: `number`
-  >//TODO
+  >Defines the size of the font in pixels.
 
 - monoSpace: `boolean`, optional
-  >//TODO
+  >Indicates whether the font should be treated as monospace.
 
 - opacity: `number`, optional
-  >//TODO
+  >Sets the opacity of the font.
 
-- range: `infinity.ui.numberArray`, optional
-  >//TODO
+- range: [`infinity.ui.numberArray`](#infinity.ui.numberArray_interface), optional
+  >An array representing the starting and ending Unicode code points, defining a specific range of characters to import from the font file.
 
 
 Return type: `number`
@@ -5148,7 +5148,7 @@ let n = infinity.ui.mergeFontFromFile(fileName, size);
 
 ## messageBox() {: #infinity.ui.messageBox_function .doc-function}
 
-//TODO
+Displays a modal message box with the specified title, message, and optional settings, returning an integer representing the button pressed by the user in response to the dialog.
 
 Signature:
 ```
@@ -5158,19 +5158,19 @@ messageBox( title: string, message: string, dialogType?: infinity.ui.dialogTypes
 Parameters:
 
 - title: `string`
-  >//TODO
+  >Specifies the title of the message box.
 
 - message: `string`
-  >//TODO
+  >Contains the main message or content to display within the box.
 
-- dialogType: `infinity.ui.dialogTypes`, optional
-  >//TODO
+- dialogType: [`infinity.ui.dialogTypes`](#infinity.ui.dialogTypes_enum), optional
+  >Indicates the type of dialog, which can be error, warning, information, etc., as defined in the [`infinity.ui.dialogTypes`](#infinity.ui.dialogTypes_enum) enumeration.
 
-- iconType: `infinity.ui.iconTypes`, optional
-  >//TODO
+- iconType: [`infinity.ui.iconTypes`](#infinity.ui.iconTypes_enum), optional
+  >Specifies the type of icon to display, such as error or information icons, based on the [`infinity.ui.iconTypes`](#infinity.ui.iconTypes_enum) enumeration.
 
 - defaultButton: `number`, optional
-  >//TODO
+  >Designates which button (by its numeric order) should be highlighted by default when the dialog opens.
 
 
 Return type: `number`
@@ -5186,7 +5186,7 @@ let n = infinity.ui.messageBox(title, message);
 
 ## newFrame() {: #infinity.ui.newFrame_function .doc-function}
 
-//TODO
+Initializes a new frame for the user interface, preparing it for rendering and interaction. Call this at the beginning of your frame loop before any other UI interactions.
 
 Signature:
 ```
@@ -5204,7 +5204,7 @@ infinity.ui.newFrame();
 
 ## newLine() {: #infinity.ui.newLine_function .doc-function}
 
-//TODO
+Inserts a new line in the user interface layout, moving the drawing cursor to the beginning of the next line. This is useful for creating separations between UI elements or ensuring vertical spacing.
 
 Signature:
 ```
@@ -5222,7 +5222,7 @@ infinity.ui.newLine();
 
 ## notifyPopup() {: #infinity.ui.notifyPopup_function .doc-function}
 
-//TODO
+Displays a notification popup with the given title and message. The optional iconType parameter determines the icon displayed in the popup. Returns a unique identifier for the created popup.
 
 Signature:
 ```
@@ -5232,13 +5232,13 @@ notifyPopup( title: string, message: string, iconType?: infinity.ui.iconTypes ):
 Parameters:
 
 - title: `string`
-  >//TODO
+  >The title of the notification popup.
 
 - message: `string`
-  >//TODO
+  >The main message to be displayed in the popup.
 
-- iconType: `infinity.ui.iconTypes`, optional
-  >//TODO
+- iconType: [`infinity.ui.iconTypes`](#infinity.ui.iconTypes_enum), optional
+  >Specifies the type of icon to be shown with the message. If not provided, a default icon is used.
 
 
 Return type: `number`
@@ -5254,7 +5254,7 @@ let n = infinity.ui.notifyPopup(title, message);
 
 ## openFileDialog() {: #infinity.ui.openFileDialog_function .doc-function}
 
-//TODO
+Opens a file dialog with the provided title, allowing the user to select a file or files. Returns the selected file path or paths as a concatenated string.
 
 Signature:
 ```
@@ -5264,19 +5264,19 @@ openFileDialog( title: string, fileName?: string, filter?: infinity.ui.stringArr
 Parameters:
 
 - title: `string`
-  >//TODO
+  >The title of the file dialog.
 
 - fileName: `string`, optional
-  >//TODO
+  >Prefills the file name field in the dialog.
 
 - filter: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface), optional
-  >//TODO
+  >An array of file extensions to filter by, e.g., [".jpg", ".png"].
 
 - filterDescription: `string`, optional
-  >//TODO
+  >A description for the provided file extensions filter, e.g., "Image files".
 
 - allowMultipleSelected: `boolean`, optional
-  >//TODO
+  >If set to true, allows multiple file selection.
 
 
 Return type: `string`
@@ -5292,7 +5292,7 @@ let s = infinity.ui.openFileDialog(title);
 
 ## openPopup() {: #infinity.ui.openPopup_function .doc-function}
 
-//TODO
+Opens a popup with the specified identifier, optionally applying certain behaviors defined by the flags.
 
 Signature:
 ```
@@ -5302,10 +5302,10 @@ openPopup( id: string, flags?: infinity.ui.popupFlags ): void
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The unique identifier for the popup.
 
 - flags: [`infinity.ui.popupFlags`](#infinity.ui.popupFlags_enum), optional
-  >//TODO
+  >Modifies popup behavior based on the provided flags.
 
 
 Example:
@@ -5319,7 +5319,7 @@ infinity.ui.openPopup(id);
 
 ## plotHistogram() {: #infinity.ui.plotHistogram_function .doc-function}
 
-//TODO
+Displays a histogram plot using the provided array of values, with optional parameters for visual adjustments and annotations.
 
 Signature:
 ```
@@ -5329,25 +5329,25 @@ plotHistogram( label: string, values: infinity.ui.numberArray, offset?: number, 
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The name or label to give to the histogram.
 
-- values: `infinity.ui.numberArray`
-  >//TODO
+- values: [`infinity.ui.numberArray`](#infinity.ui.numberArray_interface)
+  >An array of numerical values that will be plotted.
 
 - offset: `number`, optional
-  >//TODO
+  >The starting index in the values array to plot from.
 
 - overlayText: `string`, optional
-  >//TODO
+  >Text that can be overlaid onto the histogram, typically for additional context or annotations.
 
 - scaleMin: `number`, optional
-  >//TODO
+  >The minimum value for the vertical scaling of the plot.
 
 - scaleMax: `number`, optional
-  >//TODO
+  >The maximum value for the vertical scaling of the plot.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The dimensions of the histogram display area.
 
 
 Example:
@@ -5361,7 +5361,7 @@ infinity.ui.plotHistogram(label, values);
 
 ## plotLines() {: #infinity.ui.plotLines_function .doc-function}
 
-//TODO
+Displays a line plot using the provided array of values, with optional parameters for visual adjustments and annotations.
 
 Signature:
 ```
@@ -5371,25 +5371,25 @@ plotLines( label: string, values: infinity.ui.numberArray, offset?: number, over
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The name or label to give to the line plot.
 
-- values: `infinity.ui.numberArray`
-  >//TODO
+- values: [`infinity.ui.numberArray`](#infinity.ui.numberArray_interface)
+  >An array of numerical values that will be plotted.
 
 - offset: `number`, optional
-  >//TODO
+  >The starting index in the values array to plot from.
 
 - overlayText: `string`, optional
-  >//TODO
+  >Text that can be overlaid onto the line plot, typically for additional context or annotations.
 
 - scaleMin: `number`, optional
-  >//TODO
+  >The minimum value for the vertical scaling of the plot.
 
 - scaleMax: `number`, optional
-  >//TODO
+  >The maximum value for the vertical scaling of the plot.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The dimensions of the line plot display area.
 
 
 Example:
@@ -5403,7 +5403,7 @@ infinity.ui.plotLines(label, values);
 
 ## popAllowKeyboardFocus() {: #infinity.ui.popAllowKeyboardFocus_function .doc-function}
 
-//TODO
+Reverts the effect of the preceding [`pushAllowKeyboardFocus`](#infinity.ui.pushAllowKeyboardFocus_function) function, resetting the allowance for keyboard focus behavior to its prior state.
 
 Signature:
 ```
@@ -5421,7 +5421,7 @@ infinity.ui.popAllowKeyboardFocus();
 
 ## popButtonRepeat() {: #infinity.ui.popButtonRepeat_function .doc-function}
 
-//TODO
+Restores the button repeat behavior to the state before the most recent call to [`pushButtonRepeat`](#infinity.ui.pushButtonRepeat_function).
 
 Signature:
 ```
@@ -5439,7 +5439,7 @@ infinity.ui.popButtonRepeat();
 
 ## popClipRect() {: #infinity.ui.popClipRect_function .doc-function}
 
-//TODO
+Restores the clipping rectangle to its state before the most recent call to [`pushClipRect`](#infinity.ui.pushClipRect_function).
 
 Signature:
 ```
@@ -5457,7 +5457,7 @@ infinity.ui.popClipRect();
 
 ## popClipRectRender() {: #infinity.ui.popClipRectRender_function .doc-function}
 
-//TODO
+Restores the rendering clip rectangle to the state before the most recent call to [`pushClipRectRender`](#infinity.ui.pushClipRectRender_function).
 
 Signature:
 ```
@@ -5475,7 +5475,7 @@ infinity.ui.popClipRectRender();
 
 ## popFont() {: #infinity.ui.popFont_function .doc-function}
 
-//TODO
+Restores the font setting to the state before the most recent call to [`pushFont`](#infinity.ui.pushFont_function).
 
 Signature:
 ```

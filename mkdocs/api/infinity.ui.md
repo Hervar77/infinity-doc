@@ -5493,7 +5493,7 @@ infinity.ui.popFont();
 
 ## popId() {: #infinity.ui.popId_function .doc-function}
 
-//TODO
+Removes the last pushed identifier from the stack, reverting to the previous ID for subsequent UI operations, thereby restoring the previous UI identifier context. Often used in conjunction with [`pushId()`](#infinity.ui.pushId_function).
 
 Signature:
 ```
@@ -5511,7 +5511,7 @@ infinity.ui.popId();
 
 ## popItemWidth() {: #infinity.ui.popItemWidth_function .doc-function}
 
-//TODO
+Restores the item width to the value before the last [`pushItemWidth()`](#infinity.ui.pushItemWidth_function) call, affecting layout and alignment of subsequent UI elements.
 
 Signature:
 ```
@@ -5529,7 +5529,7 @@ infinity.ui.popItemWidth();
 
 ## popStyleColor() {: #infinity.ui.popStyleColor_function .doc-function}
 
-//TODO
+Restores the color(s) to the value(s) before the last [`pushStyleColor()`](#infinity.ui.pushStyleColor_function) call(s), affecting the appearance of subsequent UI elements. If a count parameter is specified, it pops that many style colors off the stack.
 
 Signature:
 ```
@@ -5539,7 +5539,7 @@ popStyleColor( count?: number ): void
 Parameters:
 
 - count: `number`, optional
-  >//TODO
+  >Specifies the number of style color changes to undo, allowing for batch restoration of previously pushed colors.
 
 
 Example:
@@ -5553,7 +5553,7 @@ infinity.ui.popStyleColor();
 
 ## popStyleVar() {: #infinity.ui.popStyleVar_function .doc-function}
 
-//TODO
+Restores style variable(s) to their previous values before the last [`pushStyleVar()`](#infinity.ui.pushStyleVar_function) call(s), affecting the layout and appearance of subsequent UI elements. If a count parameter is specified, it pops that many style variables off the stack.
 
 Signature:
 ```
@@ -5563,7 +5563,7 @@ popStyleVar( count?: number ): void
 Parameters:
 
 - count: `number`, optional
-  >//TODO
+  >Specifies the number of style variable changes to undo, allowing for batch restoration of previously pushed variables.
 
 
 Example:
@@ -5577,7 +5577,7 @@ infinity.ui.popStyleVar();
 
 ## popTextWrapPos() {: #infinity.ui.popTextWrapPos_function .doc-function}
 
-//TODO
+Reverts the text wrapping position to its previous state, before the most recent [`pushTextWrapPos()`](#infinity.ui.pushTextWrapPos_function) call, affecting how text content will be wrapped in subsequent UI elements.
 
 Signature:
 ```
@@ -5595,7 +5595,7 @@ infinity.ui.popTextWrapPos();
 
 ## popTextureId() {: #infinity.ui.popTextureId_function .doc-function}
 
-//TODO
+Restores the previously active texture ID, reverting the effect of the last [`pushTextureId()`](#infinity.ui._function) call, and affecting the texture used in subsequent UI rendering.
 
 Signature:
 ```
@@ -5613,7 +5613,7 @@ infinity.ui.popTextureId();
 
 ## processEvents() {: #infinity.ui.processEvents_function .doc-function}
 
-//TODO
+Handles any pending user input events in the event queue, returning a boolean to indicate if any events were processed.
 
 Signature:
 ```
@@ -5633,7 +5633,7 @@ if ( infinity.ui.processEvents() ) {}
 
 ## progressBar() {: #infinity.ui.progressBar_function .doc-function}
 
-//TODO
+Renders a progress bar with the given fraction completed, optional dimensions, and an optional overlay text.
 
 Signature:
 ```
@@ -5643,13 +5643,13 @@ progressBar( fraction: number, size?: infinity.ui.vec2, overlay?: string ): void
 Parameters:
 
 - fraction: `number`
-  >//TODO
+  >Specifies the current progress as a fraction between 0.0 and 1.0.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >Defines the dimensions of the progress bar as a vector of width and height.
 
 - overlay: `string`, optional
-  >//TODO
+  >Provides additional text to be displayed on the progress bar, such as the percentage complete.
 
 
 Example:
@@ -5663,7 +5663,7 @@ infinity.ui.progressBar(fraction);
 
 ## pushAllowKeyboardFocus() {: #infinity.ui.pushAllowKeyboardFocus_function .doc-function}
 
-//TODO
+Sets whether the UI elements within the current scope should accept keyboard focus or not.
 
 Signature:
 ```
@@ -5673,7 +5673,7 @@ pushAllowKeyboardFocus( allowKeyboardFocus: boolean ): void
 Parameters:
 
 - allowKeyboardFocus: `boolean`
-  >//TODO
+  >Determines whether UI elements can gain keyboard focus. If set to `false`, elements will not be able to receive keyboard input.
 
 
 Example:
@@ -5687,7 +5687,7 @@ infinity.ui.pushAllowKeyboardFocus(allowKeyboardFocus);
 
 ## pushButtonRepeat() {: #infinity.ui.pushButtonRepeat_function .doc-function}
 
-//TODO
+Sets whether buttons within the current scope will register repeated clicks when held down.
 
 Signature:
 ```
@@ -5697,7 +5697,7 @@ pushButtonRepeat( repeat: boolean ): void
 Parameters:
 
 - repeat: `boolean`
-  >//TODO
+  >Determines if a button will fire repeatedly while being held down. If set to `true`, button clicks are registered continuously; otherwise, only the initial click is registered.
 
 
 Example:
@@ -5711,7 +5711,7 @@ infinity.ui.pushButtonRepeat(repeat);
 
 ## pushClipRect() {: #infinity.ui.pushClipRect_function .doc-function}
 
-//TODO
+Defines a clipping rectangle for rendering within the current scope, based on specified top-left and bottom-right coordinates.
 
 Signature:
 ```
@@ -5721,13 +5721,13 @@ pushClipRect( topLeft: infinity.ui.vec2, bottomRight: infinity.ui.vec2, intersec
 Parameters:
 
 - topLeft: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >Specifies the top-left corner of the clipping rectangle.
 
 - bottomRight: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >Determines the bottom-right corner of the clipping rectangle.
 
 - intersectWithCurrentClipRect: `boolean`
-  >//TODO
+  >If set to `true`, the new clip rectangle will intersect with the currently active clip rectangle, effectively reducing the drawable area to the overlap of the two rectangles.
 
 
 Example:
@@ -5741,7 +5741,7 @@ infinity.ui.pushClipRect(topLeft, bottomRight, intersectWithCurrentClipRect);
 
 ## pushClipRectFullScreen() {: #infinity.ui.pushClipRectFullScreen_function .doc-function}
 
-//TODO
+Sets the clipping rectangle to cover the entire screen for rendering within the current scope.
 
 Signature:
 ```
@@ -5759,7 +5759,7 @@ infinity.ui.pushClipRectFullScreen();
 
 ## pushClipRectRender() {: #infinity.ui.pushClipRectRender_function .doc-function}
 
-//TODO
+Sets a specific clipping rectangle for the rendering area, affecting all rendered items within the current scope, based on the coordinates and intersection options provided.
 
 Signature:
 ```
@@ -5769,13 +5769,13 @@ pushClipRectRender( p1: infinity.ui.vec2, p2: infinity.ui.vec2, intersectWithCur
 Parameters:
 
 - p1: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >Specifies the top-left corner coordinates of the clipping rectangle.
 
 - p2: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >Specifies the bottom-right corner coordinates of the clipping rectangle.
 
 - intersectWithCurrentClipRect: `boolean`
-  >//TODO
+  >Determines whether the new clipping rectangle should intersect with the currently active one.
 
 
 Example:
@@ -5789,7 +5789,7 @@ infinity.ui.pushClipRectRender(p1, p2, intersectWithCurrentClipRect);
 
 ## pushFont() {: #infinity.ui.pushFont_function .doc-function}
 
-//TODO
+Sets the current font for rendering text, based on a font identifier, affecting all subsequent text rendering within the current scope.
 
 Signature:
 ```
@@ -5799,7 +5799,7 @@ pushFont( font: number ): void
 Parameters:
 
 - font: `number`
-  >//TODO
+  >Specifies the unique identifier of the font to be used for text rendering.
 
 
 Example:
@@ -5813,7 +5813,7 @@ infinity.ui.pushFont(font);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-//TODO
+Pushes a unique identifier onto the ID stac for subsequent UI operations.
 
 Signature:
 ```
@@ -5823,7 +5823,7 @@ pushId( id: number ): void
 Parameters:
 
 - id: `number`
-  >//TODO
+  >Specifies the unique identifier to be pushed onto the stack.
 
 
 Example:
@@ -5837,7 +5837,7 @@ infinity.ui.pushId(id);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-//TODO
+Pushes a unique string-based identifier range onto the ID stack for subsequent UI operations.
 
 Signature:
 ```
@@ -5847,10 +5847,10 @@ pushId( idBegin: string, idEnd: string ): void
 Parameters:
 
 - idBegin: `string`
-  >//TODO
+  >Specifies the starting point of the string-based identifier range.
 
 - idEnd: `string`
-  >//TODO
+  >Specifies the ending point of the string-based identifier range.
 
 
 Example:
@@ -5864,7 +5864,7 @@ infinity.ui.pushId(idBegin, idEnd);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-//TODO
+Pushes a unique string-based identifier onto the ID stack for subsequent UI operations.
 
 Signature:
 ```
@@ -5874,7 +5874,7 @@ pushId( id: string ): void
 Parameters:
 
 - id: `string`
-  >//TODO
+  >Specifies the string-based identifier to be pushed onto the stack.
 
 
 Example:
@@ -5888,7 +5888,7 @@ infinity.ui.pushId(id);
 
 ## pushItemWidth() {: #infinity.ui.pushItemWidth_function .doc-function}
 
-//TODO
+Sets the width of subsequent UI items within the current layout scope.
 
 Signature:
 ```
@@ -5898,7 +5898,7 @@ pushItemWidth( width: number ): void
 Parameters:
 
 - width: `number`
-  >//TODO
+  >Specifies the width in pixels for the UI items that follow.
 
 
 Example:

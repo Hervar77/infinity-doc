@@ -5595,7 +5595,7 @@ infinity.ui.popTextWrapPos();
 
 ## popTextureId() {: #infinity.ui.popTextureId_function .doc-function}
 
-Restores the previously active texture ID, reverting the effect of the last [`pushTextureId()`](#infinity.ui._function) call, and affecting the texture used in subsequent UI rendering.
+Restores the previously active texture ID, reverting the effect of the last [`pushTextureId()`](#infinity.ui.pushTextureId_function) call, and affecting the texture used in subsequent UI rendering.
 
 Signature:
 ```
@@ -5711,7 +5711,7 @@ infinity.ui.pushButtonRepeat(repeat);
 
 ## pushClipRect() {: #infinity.ui.pushClipRect_function .doc-function}
 
-Defines a clipping rectangle for rendering within the current scope, based on specified top-left and bottom-right coordinates.
+Defines a clipping rectangle for rendering within the current scope, based on specified top-left and bottom-right coordinates.  Often used in conjunction with [`popClipRect()`](#infinity.ui.popClipRect_function).
 
 Signature:
 ```
@@ -5759,7 +5759,7 @@ infinity.ui.pushClipRectFullScreen();
 
 ## pushClipRectRender() {: #infinity.ui.pushClipRectRender_function .doc-function}
 
-Sets a specific clipping rectangle for the rendering area, affecting all rendered items within the current scope, based on the coordinates and intersection options provided.
+Sets a specific clipping rectangle for the rendering area, affecting all rendered items within the current scope, based on the coordinates and intersection options provided.  Often used in conjunction with [`popClipRectRender()`](#infinity.ui.popClipRectRender_function).
 
 Signature:
 ```
@@ -5789,7 +5789,7 @@ infinity.ui.pushClipRectRender(p1, p2, intersectWithCurrentClipRect);
 
 ## pushFont() {: #infinity.ui.pushFont_function .doc-function}
 
-Sets the current font for rendering text, based on a font identifier, affecting all subsequent text rendering within the current scope.
+Sets the current font for rendering text, based on a font identifier, affecting all subsequent text rendering within the current scope. Often used in conjunction with [`popFont()`](#infinity.ui.popFont_function).
 
 Signature:
 ```
@@ -5813,7 +5813,7 @@ infinity.ui.pushFont(font);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-Pushes a unique identifier onto the ID stac for subsequent UI operations.
+Pushes a unique identifier onto the ID stac for subsequent UI operations. Often used in conjunction with [`popId()`](#infinity.ui.popId_function).
 
 Signature:
 ```
@@ -5837,7 +5837,7 @@ infinity.ui.pushId(id);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-Pushes a unique string-based identifier range onto the ID stack for subsequent UI operations.
+Pushes a unique string-based identifier range onto the ID stack for subsequent UI operations. Often used in conjunction with [`popId()`](#infinity.ui.popId_function).
 
 Signature:
 ```
@@ -5864,7 +5864,7 @@ infinity.ui.pushId(idBegin, idEnd);
 
 ## pushId() {: #infinity.ui.pushId_function .doc-function}
 
-Pushes a unique string-based identifier onto the ID stack for subsequent UI operations.
+Pushes a unique string-based identifier onto the ID stack for subsequent UI operations. Often used in conjunction with [`popId()`](#infinity.ui.popId_function).
 
 Signature:
 ```
@@ -5888,7 +5888,7 @@ infinity.ui.pushId(id);
 
 ## pushItemWidth() {: #infinity.ui.pushItemWidth_function .doc-function}
 
-Sets the width of subsequent UI items within the current layout scope.
+Sets the width of subsequent UI items within the current layout scope. Often used in conjunction with [`popItemWidth()`](#infinity.ui.popItemWidth_function).
 
 Signature:
 ```
@@ -5912,7 +5912,7 @@ infinity.ui.pushItemWidth(width);
 
 ## pushStyleColor() {: #infinity.ui.pushStyleColor_function .doc-function}
 
-//TODO
+Modifies the color for a particular UI element type within the current styling scope, pushing the specified color onto the stack. Often used in conjunction with [`popStyleColor()`](#infinity.ui.popStyleColor_function).
 
 Signature:
 ```
@@ -5922,37 +5922,10 @@ pushStyleColor( idx: infinity.ui.colorTypes, col: number ): void
 Parameters:
 
 - idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
-  >//TODO
+  >Specifies which UI element type's color will be changed, based on the [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum) enumeration.
 
-- col: `number`
-  >//TODO
-
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-infinity.ui.pushStyleColor(idx, col);
-```
-
----
-
-## pushStyleColor() {: #infinity.ui.pushStyleColor_function .doc-function}
-
-//TODO
-
-Signature:
-```
-pushStyleColor( idx: infinity.ui.colorTypes, col: infinity.ui.color ): void
-```
-
-Parameters:
-
-- idx: [`infinity.ui.colorTypes`](#infinity.ui.colorTypes_enum)
-  >//TODO
-
-- col: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+- col: `number` | [`infinity.ui.color`](#infinity.ui.color_class)
+  >Sets the new color value for the specified UI element type, either as a number or based on the [`infinity.ui.color`](#infinity.ui.color_class) structure
 
 
 Example:
@@ -5966,7 +5939,7 @@ infinity.ui.pushStyleColor(idx, col);
 
 ## pushStyleVar() {: #infinity.ui.pushStyleVar_function .doc-function}
 
-//TODO
+Modifies the style variable for a particular UI element type within the current styling scope, pushing the specified numerical value onto the stack. Often used in conjunction with [`popStyleVar()`](#infinity.ui.popStyleVar_function).
 
 Signature:
 ```
@@ -5975,38 +5948,11 @@ pushStyleVar( idx: infinity.ui.styleVars, val: number ): void
 
 Parameters:
 
-- idx: `infinity.ui.styleVars`
-  >//TODO
+- idx: [`infinity.ui.styleVars`](#infinity.ui.styleVars_enum)
+  >Identifies the UI element type that the style change will apply to, as defined in the [`infinity.ui.styleVars`](#infinity.ui.styleVars_enum) enumeration.
 
-- val: `number`
-  >//TODO
-
-
-Example:
-
-```typescript
-infinity.loadModule('infinity.ui');
-infinity.ui.pushStyleVar(idx, val);
-```
-
----
-
-## pushStyleVar() {: #infinity.ui.pushStyleVar_function .doc-function}
-
-//TODO
-
-Signature:
-```
-pushStyleVar( idx: infinity.ui.styleVars, val: infinity.ui.vec2 ): void
-```
-
-Parameters:
-
-- idx: `infinity.ui.styleVars`
-  >//TODO
-
-- val: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+- val: `number` | [`infinity.ui.vec2`](#infinity.ui.vec2_class)
+  >Specifies the value to be pushed onto the stack, either numerical or as a [`infinity.ui.vec2`](#infinity.ui.vec2_class) vector object
 
 
 Example:
@@ -6020,7 +5966,7 @@ infinity.ui.pushStyleVar(idx, val);
 
 ## pushTextWrapPos() {: #infinity.ui.pushTextWrapPos_function .doc-function}
 
-//TODO
+Sets the wrap position for text within UI components and pushes it onto the stack, ensuring that text wraps at the specified pixel width, until popped with [`popTextWrapPos()`](#infinity.ui.popTextWrapPos_function). If no value is provided, the wrap position is reset to its default behavior.
 
 Signature:
 ```
@@ -6030,7 +5976,8 @@ pushTextWrapPos( wrapPos?: number ): void
 Parameters:
 
 - wrapPos: `number`, optional
-  >//TODO
+  >The pixel width at which the text should wrap. Omitting this parameter will reset text wrapping to default.
+
 
 
 Example:
@@ -6044,7 +5991,7 @@ infinity.ui.pushTextWrapPos();
 
 ## pushTextureId() {: #infinity.ui.pushTextureId_function .doc-function}
 
-//TODO
+Sets a specific texture ID as the active texture and pushes it onto the stack, allowing subsequent UI components to use this texture until popped with [`popTextureId()`](#infinity.ui.popTextureId_function).
 
 Signature:
 ```
@@ -6054,7 +6001,7 @@ pushTextureId( texture: number ): void
 Parameters:
 
 - texture: `number`
-  >//TODO
+  >The unique identifier of the texture to set as active.
 
 
 Example:
@@ -6068,7 +6015,7 @@ infinity.ui.pushTextureId(texture);
 
 ## radioButton() {: #infinity.ui.radioButton_function .doc-function}
 
-//TODO
+Creates a new radio button UI element with a specified label and active state. Returns a boolean value indicating whether the radio button was clicked by the user.
 
 Signature:
 ```
@@ -6078,10 +6025,10 @@ radioButton( label: string, active: boolean ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears next to the radio button, serving as its label.
 
 - active: `boolean`
-  >//TODO
+  >Indicates the initial active (checked) state of the radio button.
 
 
 Return type: `boolean`
@@ -6097,7 +6044,7 @@ if ( infinity.ui.radioButton(label, active) ) {}
 
 ## render() {: #infinity.ui.render_function .doc-function}
 
-//TODO
+Renders all the UI elements that have been initiated but not yet displayed. This function is typically called once per frame, at the end of your application's UI logic, to ensure that all UI components are drawn onto the screen.
 
 Signature:
 ```
@@ -6115,7 +6062,7 @@ infinity.ui.render();
 
 ## resetMouseDragDelta() {: #infinity.ui.resetMouseDragDelta_function .doc-function}
 
-//TODO
+Resets the drag delta of the specified mouse button to zero, effectively nullifying any existing drag motion.
 
 Signature:
 ```
@@ -6125,7 +6072,7 @@ resetMouseDragDelta( button?: infinity.ui.mouseButtons ): void
 Parameters:
 
 - button: [`infinity.ui.mouseButtons`](#infinity.ui.mouseButtons_enum), optional
-  >//TODO
+  >The mouse button for which the drag delta will be reset.
 
 
 Example:
@@ -6139,7 +6086,7 @@ infinity.ui.resetMouseDragDelta();
 
 ## sameLine() {: #infinity.ui.sameLine_function .doc-function}
 
-//TODO
+Positions the next UI element on the same line as the preceding one, with an optional horizontal offset and spacing.
 
 Signature:
 ```
@@ -6149,10 +6096,10 @@ sameLine( offset?: number, spacing?: number ): void
 Parameters:
 
 - offset: `number`, optional
-  >//TODO
+  >The horizontal offset in pixels from the starting point of the current line.
 
 - spacing: `number`, optional
-  >//TODO
+  >The spacing in pixels between the previous element and the next. If not specified, the default spacing is used.
 
 
 Example:
@@ -6166,7 +6113,7 @@ infinity.ui.sameLine();
 
 ## saveFileDialog() {: #infinity.ui.saveFileDialog_function .doc-function}
 
-//TODO
+Displays a file save dialog with a specified title, default file name, file type filter, and filter description. The dialog allows the user to choose a location and name for saving a file. Returns the selected file path as a string.
 
 Signature:
 ```
@@ -6176,16 +6123,15 @@ saveFileDialog( title: string, fileName?: string, filter?: infinity.ui.stringArr
 Parameters:
 
 - title: `string`
-  >//TODO
+  >The title displayed at the top of the save file dialog.
 
 - fileName: `string`, optional
-  >//TODO
-
+  >The default file name suggested in the dialog. If not specified, no default name is provided.
 - filter: [`infinity.ui.stringArray`](#infinity.ui.stringArray_interface), optional
-  >//TODO
+  >An array of strings specifying the file types that can be selected. Each string should represent a file extension.
 
 - filterDescription: `string`, optional
-  >//TODO
+  >A textual description that appears next to the file type filter dropdown.
 
 
 Return type: `string`
@@ -6201,7 +6147,7 @@ let s = infinity.ui.saveFileDialog(title);
 
 ## selectFolderDialog() {: #infinity.ui.selectFolderDialog_function .doc-function}
 
-//TODO
+Presents a folder selection dialog to the user with a specified title and an optional default path. The dialog enables users to navigate the file system and select a folder. The function returns the selected folder's path as a string.
 
 Signature:
 ```
@@ -6211,10 +6157,10 @@ selectFolderDialog( title: string, path?: string ): string
 Parameters:
 
 - title: `string`
-  >//TODO
+  >The title displayed at the top of the folder selection dialog.
 
 - path: `string`, optional
-  >//TODO
+  >The default folder path displayed when the dialog opens. If not specified, the dialog starts at the root or last visited directory.
 
 
 Return type: `string`
@@ -6230,7 +6176,7 @@ let s = infinity.ui.selectFolderDialog(title);
 
 ## selectable() {: #infinity.ui.selectable_function .doc-function}
 
-//TODO
+Creates a clickable selection item within the UI, which can be toggled on or off. The function returns a boolean value indicating whether the selection state has changed. The selectable item can have optional flags and dimensions.
 
 Signature:
 ```
@@ -6240,16 +6186,16 @@ selectable( label: string, selected?: boolean, flags?: infinity.ui.selectableFla
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text displayed next to the selectable item.
 
 - selected: `boolean`, optional
-  >//TODO
+  >The initial state of the selectable item. If true, the item starts in a selected state.
 
-- flags: `infinity.ui.selectableFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.selectableFlags`](#infinity.ui.selectableFlags_enum), optional
+  >Optional flags to customize the behavior and appearance of the selectable item.
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The 2D dimensions of the selectable item.
 
 
 Return type: `boolean`
@@ -6265,7 +6211,7 @@ if ( infinity.ui.selectable(label) ) {}
 
 ## separator() {: #infinity.ui.separator_function .doc-function}
 
-//TODO
+Inserts a horizontal line to visually separate content within the UI. This is often used to distinguish sections, groups, or logical blocks of related UI elements.
 
 Signature:
 ```
@@ -6283,7 +6229,7 @@ infinity.ui.separator();
 
 ## setClipboardText() {: #infinity.ui.setClipboardText_function .doc-function}
 
-//TODO
+Sets the system clipboard to the specified text. This function is useful for copying text to the clipboard so it can be pasted elsewhere.
 
 Signature:
 ```
@@ -6293,7 +6239,7 @@ setClipboardText( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text to be set on the clipboard.
 
 
 Example:
@@ -6307,7 +6253,7 @@ infinity.ui.setClipboardText(text);
 
 ## setColorEditOptions() {: #infinity.ui.setColorEditOptions_function .doc-function}
 
-//TODO
+Configures the behavior of color edit controls. The flags passed as a parameter determine various aspects of the control.
 
 Signature:
 ```
@@ -6317,7 +6263,7 @@ setColorEditOptions( flags: infinity.ui.colorEditFlags ): void
 Parameters:
 
 - flags: [`infinity.ui.colorEditFlags`](#infinity.ui.colorEditFlags_enum)
-  >//TODO
+  >Flags that specify the behavior of the color edit control.
 
 
 Example:
@@ -6331,7 +6277,7 @@ infinity.ui.setColorEditOptions(flags);
 
 ## setCursorPos() {: #infinity.ui.setCursorPos_function .doc-function}
 
-//TODO
+Sets the cursor's position within the current window to the specified 2D coordinates.
 
 Signature:
 ```
@@ -6341,7 +6287,7 @@ setCursorPos( position: infinity.ui.vec2 ): void
 Parameters:
 
 - position: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >A vector object containing the coordinates specifying the new cursor position, relative to the top-left corner of the window.
 
 
 Example:
@@ -6355,7 +6301,7 @@ infinity.ui.setCursorPos(position);
 
 ## setCursorPosX() {: #infinity.ui.setCursorPosX_function .doc-function}
 
-//TODO
+Sets the cursor's horizontal position within the current window to the specified x-coordinate.
 
 Signature:
 ```
@@ -6365,7 +6311,7 @@ setCursorPosX( x: number ): void
 Parameters:
 
 - x: `number`
-  >//TODO
+  >The x-coordinate specifying the new horizontal position of the cursor, relative to the left edge of the window.
 
 
 Example:
@@ -6379,7 +6325,7 @@ infinity.ui.setCursorPosX(x);
 
 ## setCursorPosY() {: #infinity.ui.setCursorPosY_function .doc-function}
 
-//TODO
+Sets the cursor's vertical position within the current window to the specified y-coordinate.
 
 Signature:
 ```
@@ -6389,7 +6335,7 @@ setCursorPosY( y: number ): void
 Parameters:
 
 - y: `number`
-  >//TODO
+  >The y-coordinate specifying the new vertical position of the cursor, relative to the top edge of the window.
 
 
 Example:
@@ -6403,7 +6349,7 @@ infinity.ui.setCursorPosY(y);
 
 ## setCursorScreenPos() {: #infinity.ui.setCursorScreenPos_function .doc-function}
 
-//TODO
+Sets the cursor's position on the screen to the specified 2D coordinates. Unlike setCursorPos, this function adjusts the cursor's absolute screen position, affecting its location across the entire UI.
 
 Signature:
 ```
@@ -6413,7 +6359,7 @@ setCursorScreenPos( position: infinity.ui.vec2 ): void
 Parameters:
 
 - position: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object specifying the new screen coordinates for the cursor, relative to the top-left corner of the screen.
 
 
 Example:
@@ -6427,7 +6373,7 @@ infinity.ui.setCursorScreenPos(position);
 
 ## setDefaultFont() {: #infinity.ui.setDefaultFont_function .doc-function}
 
-//TODO
+Updates the default font used in the UI to the specified font resource.
 
 Signature:
 ```
@@ -6437,7 +6383,7 @@ setDefaultFont( font: number ): void
 Parameters:
 
 - font: `number`
-  >//TODO
+  >The identifier for the font resource to be set as the new default.
 
 
 Example:
@@ -6451,7 +6397,7 @@ infinity.ui.setDefaultFont(font);
 
 ## setItemAllowOverlap() {: #infinity.ui.setItemAllowOverlap_function .doc-function}
 
-//TODO
+Enables the overlapping of subsequent UI items.
 
 Signature:
 ```
@@ -6469,7 +6415,7 @@ infinity.ui.setItemAllowOverlap();
 
 ## setItemDefaultFocus() {: #infinity.ui.setItemDefaultFocus_function .doc-function}
 
-//TODO
+Sets the focus on the most recently created UI item, making it the default focus target.
 
 Signature:
 ```
@@ -6487,7 +6433,7 @@ infinity.ui.setItemDefaultFocus();
 
 ## setKeyboardFocusHere() {: #infinity.ui.setKeyboardFocusHere_function .doc-function}
 
-//TODO
+Sets the keyboard focus to the next UI element. Positive offset can be used to access sub components of a multiple component widget or -1 to access the previous widget.
 
 Signature:
 ```
@@ -6497,7 +6443,7 @@ setKeyboardFocusHere( offset?: number ): void
 Parameters:
 
 - offset: `number`, optional
-  >//TODO
+  >The offset of the UI element from the current one to which the focus should be set.
 
 
 Example:
@@ -6511,7 +6457,7 @@ infinity.ui.setKeyboardFocusHere();
 
 ## setMouseCursor() {: #infinity.ui.setMouseCursor_function .doc-function}
 
-//TODO
+Changes the appearance of the mouse cursor to the specified type.
 
 Signature:
 ```
@@ -6521,7 +6467,7 @@ setMouseCursor( cursor: infinity.ui.mouseCursors ): void
 Parameters:
 
 - cursor: [`infinity.ui.mouseCursors`](#infinity.ui.mouseCursors_enum)
-  >//TODO
+  >The type of cursor to display.
 
 
 Example:
@@ -6535,7 +6481,7 @@ infinity.ui.setMouseCursor(cursor);
 
 ## setNextFrameWantCaptureKeyboard() {: #infinity.ui.setNextFrameWantCaptureKeyboard_function .doc-function}
 
-//TODO
+Sets whether the UI should capture keyboard input in the next frame.
 
 Signature:
 ```
@@ -6545,7 +6491,7 @@ setNextFrameWantCaptureKeyboard( capture: boolean ): void
 Parameters:
 
 - capture: `boolean`
-  >//TODO
+  >Indicates whether the UI should capture keyboard input during the next frame.
 
 
 Example:
@@ -6559,7 +6505,7 @@ infinity.ui.setNextFrameWantCaptureKeyboard(capture);
 
 ## setNextFrameWantCaptureMouse() {: #infinity.ui.setNextFrameWantCaptureMouse_function .doc-function}
 
-//TODO
+Specifies whether the UI should capture mouse input in the next frame.
 
 Signature:
 ```
@@ -6569,7 +6515,7 @@ setNextFrameWantCaptureMouse( capture: boolean ): void
 Parameters:
 
 - capture: `boolean`
-  >//TODO
+  >Indicates whether the UI should capture mouse input during the next frame.
 
 
 Example:
@@ -6583,7 +6529,7 @@ infinity.ui.setNextFrameWantCaptureMouse(capture);
 
 ## setNextItemOpen() {: #infinity.ui.setNextItemOpen_function .doc-function}
 
-//TODO
+Sets the initial open state of the next collapsible UI item like a tree node or a collapsible header.
 
 Signature:
 ```
@@ -6593,10 +6539,10 @@ setNextItemOpen( open: boolean, condition?: infinity.ui.conditions ): void
 Parameters:
 
 - open: `boolean`
-  >//TODO
+  >Indicates whether the next collapsible UI item should start in an open (`true`) or closed (`false`) state.
 
-- condition: `infinity.ui.conditions`, optional
-  >//TODO
+- condition: [`infinity.ui.conditions`](#infinity.ui.conditions_enum), optional
+  >Specifies the condition under which the open state should be applied.
 
 
 Example:
@@ -6610,7 +6556,7 @@ infinity.ui.setNextItemOpen(open);
 
 ## setNextItemWidth() {: #infinity.ui.setNextItemWidth_function .doc-function}
 
-//TODO
+Sets the width for the next UI item, such as a button or a text input.
 
 Signature:
 ```
@@ -6620,7 +6566,7 @@ setNextItemWidth( width: number ): void
 Parameters:
 
 - width: `number`
-  >//TODO
+  >Specifies the width that the next UI item should have, in pixels.
 
 
 Example:
@@ -6634,7 +6580,7 @@ infinity.ui.setNextItemWidth(width);
 
 ## setNextWindowBgAlpha() {: #infinity.ui.setNextWindowBgAlpha_function .doc-function}
 
-//TODO
+Sets the alpha (transparency) value for the background of the next window to be created.
 
 Signature:
 ```
@@ -6644,7 +6590,7 @@ setNextWindowBgAlpha( alpha: number ): void
 Parameters:
 
 - alpha: `number`
-  >//TODO
+  >The alpha value for the next window's background.
 
 
 Example:
@@ -6658,7 +6604,7 @@ infinity.ui.setNextWindowBgAlpha(alpha);
 
 ## setNextWindowCollapsed() {: #infinity.ui.setNextWindowCollapsed_function .doc-function}
 
-//TODO
+Sets the initial collapsed state of the next window to be created.
 
 Signature:
 ```
@@ -6668,10 +6614,10 @@ setNextWindowCollapsed( collapsed: boolean, condition?: infinity.ui.conditions )
 Parameters:
 
 - collapsed: `boolean`
-  >//TODO
+  >Specifies whether the next window should be collapsed (`true`) or expanded (`false`).
 
-- condition: `infinity.ui.conditions`, optional
-  >//TODO
+- condition: [`infinity.ui.conditions`](#infinity.ui.conditions_enum), optional
+  >The condition under which the setting will be applied.
 
 
 Example:
@@ -6685,7 +6631,7 @@ infinity.ui.setNextWindowCollapsed(collapsed);
 
 ## setNextWindowContentSize() {: #infinity.ui.setNextWindowContentSize_function .doc-function}
 
-//TODO
+Sets the content size for the next window to be created.
 
 Signature:
 ```
@@ -6695,7 +6641,7 @@ setNextWindowContentSize( size: infinity.ui.vec2 ): void
 Parameters:
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >A vector object specifying the width and height for the content area of the next window.
 
 
 Example:
@@ -6709,7 +6655,7 @@ infinity.ui.setNextWindowContentSize(size);
 
 ## setNextWindowFocus() {: #infinity.ui.setNextWindowFocus_function .doc-function}
 
-//TODO
+Sets the next window to be focused when it is created.
 
 Signature:
 ```
@@ -6727,7 +6673,7 @@ infinity.ui.setNextWindowFocus();
 
 ## setNextWindowPos() {: #infinity.ui.setNextWindowPos_function .doc-function}
 
-//TODO
+Sets the position of the next window that is created.
 
 Signature:
 ```
@@ -6737,13 +6683,13 @@ setNextWindowPos( pos: infinity.ui.vec2, condition?: infinity.ui.conditions, piv
 Parameters:
 
 - pos: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object representing the desired position for the next window.
 
-- condition: `infinity.ui.conditions`, optional
-  >//TODO
+- condition: [`infinity.ui.conditions`](#infinity.ui.conditions_enum), optional
+  >Specifies under what conditions the position should be set.
 
 - pivot: [`infinity.ui.vec2`](#infinity.ui.vec2_class), optional
-  >//TODO
+  >The vector object representing the pivot point for window positioning.
 
 
 Example:
@@ -6757,7 +6703,7 @@ infinity.ui.setNextWindowPos(pos);
 
 ## setNextWindowScroll() {: #infinity.ui.setNextWindowScroll_function .doc-function}
 
-//TODO
+Defines the scroll offset for the next window that will be created.
 
 Signature:
 ```
@@ -6767,7 +6713,7 @@ setNextWindowScroll( scroll: infinity.ui.vec2 ): void
 Parameters:
 
 - scroll: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object representing the desired scroll offset for the next window.
 
 
 Example:
@@ -6781,7 +6727,7 @@ infinity.ui.setNextWindowScroll(scroll);
 
 ## setNextWindowSize() {: #infinity.ui.setNextWindowSize_function .doc-function}
 
-//TODO
+Specifies the size for the next window that will be created.
 
 Signature:
 ```
@@ -6791,10 +6737,10 @@ setNextWindowSize( size: infinity.ui.vec2, condition?: infinity.ui.conditions ):
 Parameters:
 
 - size: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object representing the desired dimensions for the next window.
 
-- condition: `infinity.ui.conditions`, optional
-  >//TODO
+- condition: [`infinity.ui.conditions`](#infinity.ui.conditions_enum), optional
+  >Specifies under what conditions the size setting should be applied.
 
 
 Example:
@@ -6808,7 +6754,7 @@ infinity.ui.setNextWindowSize(size);
 
 ## setNextWindowSizeConstraints() {: #infinity.ui.setNextWindowSizeConstraints_function .doc-function}
 
-//TODO
+Predefines the minimum and maximum dimensions for the next window that will be created.
 
 Signature:
 ```
@@ -6818,10 +6764,10 @@ setNextWindowSizeConstraints( size_min: infinity.ui.vec2, size_max: infinity.ui.
 Parameters:
 
 - size_min: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object representing the minimum allowable dimensions for the next window.
 
 - size_max: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
-  >//TODO
+  >The vector object representing the maximum allowable dimensions for the next window.
 
 
 Example:
@@ -6835,7 +6781,7 @@ infinity.ui.setNextWindowSizeConstraints(size_min, size_max);
 
 ## setScrollFromPosX() {: #infinity.ui.setScrollFromPosX_function .doc-function}
 
-//TODO
+Sets the horizontal scroll position in the current window based on the specified local X coordinate and an optional centering ratio.
 
 Signature:
 ```
@@ -6845,10 +6791,10 @@ setScrollFromPosX( localX: number, centerXRatio?: number ): void
 Parameters:
 
 - localX: `number`
-  >//TODO
+  >The local X coordinate within the window whose horizontal position will set the scroll position.
 
 - centerXRatio: `number`, optional
-  >//TODO
+  >A value between 0.0 and 1.0 indicating how the local X coordinate should be centered within the visible area. A value of 0.0 aligns the item to the left, a value of 1.0 aligns it to the right, and a value of 0.5 centers it.
 
 
 Example:
@@ -6862,7 +6808,7 @@ infinity.ui.setScrollFromPosX(localX);
 
 ## setScrollFromPosY() {: #infinity.ui.setScrollFromPosY_function .doc-function}
 
-//TODO
+Adjusts the vertical scroll position in the current window based on a local Y coordinate, with an optional centering ratio.
 
 Signature:
 ```
@@ -6872,10 +6818,10 @@ setScrollFromPosY( localY: number, centerYRatio?: number ): void
 Parameters:
 
 - localY: `number`
-  >//TODO
+  >The local Y coordinate to set the scroll position from.
 
 - centerYRatio: `number`, optional
-  >//TODO
+  >A ratio to define how the centering is performed. It ranges from 0.0 to 1.0, with 0.0 aligning the top and 1.0 aligning the bottom. Defaults to 0.5, which centers the element in the view.
 
 
 Example:
@@ -6889,7 +6835,7 @@ infinity.ui.setScrollFromPosY(localY);
 
 ## setScrollHereX() {: #infinity.ui.setScrollHereX_function .doc-function}
 
-//TODO
+Adjusts the horizontal scroll position in the current window based on the current item, with an optional centering ratio.
 
 Signature:
 ```
@@ -6899,7 +6845,7 @@ setScrollHereX( centerXRatio?: number ): void
 Parameters:
 
 - centerXRatio: `number`, optional
-  >//TODO
+  >A ratio to define how the centering is performed horizontally. It ranges from 0.0 to 1.0, with 0.0 aligning to the left and 1.0 aligning to the right. Defaults to 0.5, which centers the element in the view.
 
 
 Example:
@@ -6913,7 +6859,7 @@ infinity.ui.setScrollHereX();
 
 ## setScrollHereY() {: #infinity.ui.setScrollHereY_function .doc-function}
 
-//TODO
+Adjusts the vertical scroll position in the current window based on the current item, with an optional centering ratio.
 
 Signature:
 ```
@@ -6923,7 +6869,7 @@ setScrollHereY( centerYRatio?: number ): void
 Parameters:
 
 - centerYRatio: `number`, optional
-  >//TODO
+  >A ratio to define how the centering is performed vertically. It ranges from 0.0 to 1.0, with 0.0 aligning to the top and 1.0 aligning to the bottom. Defaults to 0.5, which centers the element in the view.
 
 
 Example:

@@ -6883,7 +6883,7 @@ infinity.ui.setScrollHereY();
 
 ## setTabItemClosed() {: #infinity.ui.setTabItemClosed_function .doc-function}
 
-//TODO
+Closes a tab item within a tab bar, identified by its label.
 
 Signature:
 ```
@@ -6893,7 +6893,7 @@ setTabItemClosed( label: string ): void
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The label text of the tab item to be closed.
 
 
 Example:
@@ -6907,7 +6907,7 @@ infinity.ui.setTabItemClosed(label);
 
 ## setTooltip() {: #infinity.ui.setTooltip_function .doc-function}
 
-//TODO
+Displays a tooltip with the specified text, usually appearing when hovering over a UI element.
 
 Signature:
 ```
@@ -6917,7 +6917,7 @@ setTooltip( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text to be displayed in the tooltip.
 
 
 Example:
@@ -6931,7 +6931,7 @@ infinity.ui.setTooltip(text);
 
 ## showDebugLogWindow() {: #infinity.ui.showDebugLogWindow_function .doc-function}
 
-//TODO
+Opens a debug log window in the UI, allowing users to view and diagnose internal logs. Returns a boolean indicating whether the debug log window was successfully shown.
 
 Signature:
 ```
@@ -6951,7 +6951,7 @@ if ( infinity.ui.showDebugLogWindow() ) {}
 
 ## showDemoWindow() {: #infinity.ui.showDemoWindow_function .doc-function}
 
-//TODO
+Displays a demo window in the UI, showcasing the features and capabilities of the Infinity UI framework. Returns a boolean indicating whether the demo window was successfully displayed.
 
 Signature:
 ```
@@ -6971,7 +6971,7 @@ if ( infinity.ui.showDemoWindow() ) {}
 
 ## showFontSelector() {: #infinity.ui.showFontSelector_function .doc-function}
 
-//TODO
+Opens a font selector dialog with the specified label, allowing users to choose from a range of fonts.
 
 Signature:
 ```
@@ -6981,7 +6981,7 @@ showFontSelector( label: string ): void
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the font selector dialog label.
 
 
 Example:
@@ -6995,7 +6995,7 @@ infinity.ui.showFontSelector(label);
 
 ## showMetricsWindow() {: #infinity.ui.showMetricsWindow_function .doc-function}
 
-//TODO
+Displays a metrics window that provides detailed information about the current state and performance of the UI. Returns a boolean indicating whether the metrics window was successfully displayed.
 
 Signature:
 ```
@@ -7015,7 +7015,7 @@ if ( infinity.ui.showMetricsWindow() ) {}
 
 ## showStackToolWindow() {: #infinity.ui.showStackToolWindow_function .doc-function}
 
-//TODO
+Opens a stack tool window that provides insights into the layout stack and various other technical aspects of the UI components. Returns a boolean indicating whether the stack tool window was successfully displayed.
 
 Signature:
 ```
@@ -7035,7 +7035,7 @@ if ( infinity.ui.showStackToolWindow() ) {}
 
 ## showStyleEditor() {: #infinity.ui.showStyleEditor_function .doc-function}
 
-//TODO
+Invokes the style editor interface, a comprehensive tool for live editing and customization of the UI styles and elements.
 
 Signature:
 ```
@@ -7053,7 +7053,7 @@ infinity.ui.showStyleEditor();
 
 ## showStyleSelector() {: #infinity.ui.showStyleSelector_function .doc-function}
 
-//TODO
+Displays a style selector dialog that lets the user pick from available UI styles. Returns a boolean indicating whether a style has been selected.
 
 Signature:
 ```
@@ -7063,7 +7063,7 @@ showStyleSelector( label: string ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the style selector dialog label.
 
 
 Return type: `boolean`
@@ -7079,7 +7079,7 @@ if ( infinity.ui.showStyleSelector(label) ) {}
 
 ## shutdown() {: #infinity.ui.shutdown_function .doc-function}
 
-//TODO
+Terminates all UI-related processes and deallocates any resources used by the Infinity UI module.
 
 Signature:
 ```
@@ -7097,7 +7097,7 @@ infinity.ui.shutdown();
 
 ## sliderFloat() {: #infinity.ui.sliderFloat_function .doc-function}
 
-//TODO
+Creates a floating-point slider UI element with a specified label, value, and value range. The function returns the updated value of the slider after user interaction.
 
 Signature:
 ```
@@ -7107,22 +7107,22 @@ sliderFloat( label: string, v: number, vmin: number, vmax: number, format?: stri
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the label for the slider.
 
 - v: `number`
-  >//TODO
+  >The current value of the slider.
 
 - vmin: `number`
-  >//TODO
+  >The minimum allowable value for the slider.
 
 - vmax: `number`
-  >//TODO
+  >The maximum allowable value for the slider.
 
 - format: `string`, optional
-  >//TODO
+  >A format string that determines how the slider value is displayed.
 
 - flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
-  >//TODO
+  >Specifies optional flags that control the slider's behavior.
 
 
 Return type: `number`
@@ -7138,7 +7138,7 @@ let n = infinity.ui.sliderFloat(label, v, vmin, vmax);
 
 ## sliderInt() {: #infinity.ui.sliderInt_function .doc-function}
 
-//TODO
+Creates an integer slider UI element with a specified label, value, and value range. Returns the updated value of the slider after user interaction.
 
 Signature:
 ```
@@ -7148,22 +7148,22 @@ sliderInt( label: string, v: number, vmin: number, vmax: number, format?: string
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears as the label for the slider.
 
 - v: `number`
-  >//TODO
+  >The current value of the slider.
 
 - vmin: `number`
-  >//TODO
+  >The minimum allowable value for the slider.
 
 - vmax: `number`
-  >//TODO
+  >The maximum allowable value for the slider.
 
 - format: `string`, optional
-  >//TODO
+  >A format string that determines how the slider value is displayed.
 
 - flags: [`infinity.ui.sliderFlags`](#infinity.ui.sliderFlags_enum), optional
-  >//TODO
+  >Specifies optional flags that control the slider's behavior.
 
 
 Return type: `number`
@@ -7179,7 +7179,7 @@ let n = infinity.ui.sliderInt(label, v, vmin, vmax);
 
 ## smallButton() {: #infinity.ui.smallButton_function .doc-function}
 
-//TODO
+Creates a compact button in the UI with a specified label. Returns a boolean value indicating whether the button was clicked by the user.
 
 Signature:
 ```
@@ -7189,7 +7189,7 @@ smallButton( label: string ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears on the button.
 
 
 Return type: `boolean`
@@ -7205,7 +7205,7 @@ if ( infinity.ui.smallButton(label) ) {}
 
 ## spacing() {: #infinity.ui.spacing_function .doc-function}
 
-//TODO
+Adds a vertical spacing element in the UI layout to help with visual separation of components or groups.
 
 Signature:
 ```
@@ -7223,7 +7223,7 @@ infinity.ui.spacing();
 
 ## tabItemButton() {: #infinity.ui.tabItemButton_function .doc-function}
 
-//TODO
+Creates a clickable tab item button within a tab bar, with the specified label and optional flags. Returns a boolean value that indicates whether the button was clicked.
 
 Signature:
 ```
@@ -7233,10 +7233,10 @@ tabItemButton( label: string, flags?: infinity.ui.tabItemFlags ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text that appears on the tab item button.
 
 - flags: [`infinity.ui.tabItemFlags`](#infinity.ui.tabItemFlags_enum), optional
-  >//TODO
+  >Flags to configure the tab item button's behavior and appearance.
 
 
 Return type: `boolean`
@@ -7252,7 +7252,7 @@ if ( infinity.ui.tabItemButton(label) ) {}
 
 ## tableGetColumnCount() {: #infinity.ui.tableGetColumnCount_function .doc-function}
 
-//TODO
+Retrieves the number of columns in the currently active table. Returns an integer representing the column count.
 
 Signature:
 ```
@@ -7272,7 +7272,7 @@ let n = infinity.ui.tableGetColumnCount();
 
 ## tableGetColumnFlags() {: #infinity.ui.tableGetColumnFlags_function .doc-function}
 
-//TODO
+Retrieves the flags associated with a specific table column or the currently active column if none is specified. Returns a set of flags of type [`infinity.ui.tableColumnFlags`](#infinity.ui.tableColumnFlags_enum).
 
 Signature:
 ```
@@ -7282,10 +7282,10 @@ tableGetColumnFlags( column?: number ): infinity.ui.tableColumnFlags
 Parameters:
 
 - column: `number`, optional
-  >//TODO
+  >The index of the column for which to get the flags.
 
 
-Return type: `infinity.ui.tableColumnFlags`
+Return type: [`infinity.ui.tableColumnFlags`](#infinity.ui.tableColumnFlags_enum)
 
 Example:
 
@@ -7298,7 +7298,7 @@ let x = infinity.ui.tableGetColumnFlags();
 
 ## tableGetColumnIndex() {: #infinity.ui.tableGetColumnIndex_function .doc-function}
 
-//TODO
+Retrieves the index of the currently active table column. Returns an integer representing the index.
 
 Signature:
 ```
@@ -7318,7 +7318,7 @@ let n = infinity.ui.tableGetColumnIndex();
 
 ## tableGetColumnName() {: #infinity.ui.tableGetColumnName_function .doc-function}
 
-//TODO
+Returns the name of the currently active column based on its index.
 
 Signature:
 ```
@@ -7328,7 +7328,7 @@ tableGetColumnName( column?: number ): string
 Parameters:
 
 - column: `number`, optional
-  >//TODO
+  >The index of the column whose name you want to retrieve.
 
 
 Return type: `string`
@@ -7344,7 +7344,7 @@ let s = infinity.ui.tableGetColumnName();
 
 ## tableGetRowIndex() {: #infinity.ui.tableGetRowIndex_function .doc-function}
 
-//TODO
+Returns the index of the currently active row in a table.
 
 Signature:
 ```
@@ -7364,7 +7364,7 @@ let n = infinity.ui.tableGetRowIndex();
 
 ## tableHeader() {: #infinity.ui.tableHeader_function .doc-function}
 
-//TODO
+Sets the header label for a table column, providing a visual label that describes the content or purpose of the column.
 
 Signature:
 ```
@@ -7374,7 +7374,7 @@ tableHeader( label: string ): void
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The text label for the table column header.
 
 
 Example:
@@ -7388,7 +7388,7 @@ infinity.ui.tableHeader(label);
 
 ## tableHeadersRow() {: #infinity.ui.tableHeadersRow_function .doc-function}
 
-//TODO
+Generates a row dedicated to displaying the headers for all the columns in the table.
 
 Signature:
 ```
@@ -7406,7 +7406,7 @@ infinity.ui.tableHeadersRow();
 
 ## tableNextColumn() {: #infinity.ui.tableNextColumn_function .doc-function}
 
-//TODO
+Advances the cursor to the next table column within the current table row. Returns `true` if the cursor successfully moved to the next column, returns `false` otherwise, usually indicating the end of the row.
 
 Signature:
 ```
@@ -7426,7 +7426,7 @@ if ( infinity.ui.tableNextColumn() ) {}
 
 ## tableNextRow() {: #infinity.ui.tableNextRow_function .doc-function}
 
-//TODO
+Advances the cursor to the next table row while constructing a table.
 
 Signature:
 ```
@@ -7435,11 +7435,11 @@ tableNextRow( flags?: infinity.ui.tableRowFlags, minRowHeight?: number ): void
 
 Parameters:
 
-- flags: `infinity.ui.tableRowFlags`, optional
-  >//TODO
+- flags: [`infinity.ui.tableRowFlags`](#infinity.ui.tableRowFlags_enum), optional
+  >Flags to customize row behavior.
 
 - minRowHeight: `number`, optional
-  >//TODO
+  >The minimum height for the row in pixels.
 
 
 Example:
@@ -7548,7 +7548,7 @@ Parameters:
 - label: `string`
   >//TODO
 
-- flags: `infinity.ui.tableColumnFlags`, optional
+- flags: [`infinity.ui.tableColumnFlags`](#infinity.ui.tableColumnFlags_enum), optional
   >//TODO
 
 - initWidthOrWeight: `number`, optional

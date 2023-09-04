@@ -7453,7 +7453,7 @@ infinity.ui.tableNextRow();
 
 ## tableSetBgColor() {: #infinity.ui.tableSetBgColor_function .doc-function}
 
-//TODO
+Sets the background color for a specific part of a table, such as a cell, row, or the entire table.
 
 Signature:
 ```
@@ -7462,14 +7462,14 @@ tableSetBgColor( target: infinity.ui.tableBgTargets, color: number, column?: num
 
 Parameters:
 
-- target: `infinity.ui.tableBgTargets`
-  >//TODO
+- target: [`infinity.ui.tableBgTargets`](#infinity.ui.tableBgTargets_enum)
+  >Specifies the table part to change the background color of.
 
 - color: `number`
-  >//TODO
+  >The color to set as the background.
 
 - column: `number`, optional
-  >//TODO
+  >The column index for which the background color is to be set.
 
 
 Example:
@@ -7483,7 +7483,7 @@ infinity.ui.tableSetBgColor(target, color);
 
 ## tableSetColumnEnabled() {: #infinity.ui.tableSetColumnEnabled_function .doc-function}
 
-//TODO
+Enables or disables a specific table column dynamically. This function provides you with the flexibility to show or hide columns based on conditions or user interactions.
 
 Signature:
 ```
@@ -7493,10 +7493,10 @@ tableSetColumnEnabled( column: number, enabled: boolean ): void
 Parameters:
 
 - column: `number`
-  >//TODO
+  >The index of the column that you want to enable or disable.
 
 - enabled: `boolean`
-  >//TODO
+  >Indicates whether the column should be enabled.
 
 
 Example:
@@ -7510,7 +7510,7 @@ infinity.ui.tableSetColumnEnabled(column, enabled);
 
 ## tableSetColumnIndex() {: #infinity.ui.tableSetColumnIndex_function .doc-function}
 
-//TODO
+Sets the focus to a specified table column by index, allowing you to perform operations on that column specifically. Returns a boolean value indicating whether the operation was successful.
 
 Signature:
 ```
@@ -7520,7 +7520,7 @@ tableSetColumnIndex( column: number ): boolean
 Parameters:
 
 - column: `number`
-  >//TODO
+  >The index of the column to which you want to set the focus.
 
 
 Return type: `boolean`
@@ -7536,7 +7536,7 @@ if ( infinity.ui.tableSetColumnIndex(column) ) {}
 
 ## tableSetupColumn() {: #infinity.ui.tableSetupColumn_function .doc-function}
 
-//TODO
+Configures a new column within an existing table layout by specifying various attributes such as label, flags, initial width or weight, and a unique user identifier.
 
 Signature:
 ```
@@ -7546,16 +7546,16 @@ tableSetupColumn( label: string, flags?: infinity.ui.tableColumnFlags, initWidth
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The name of the column to be displayed in the header row.
 
 - flags: [`infinity.ui.tableColumnFlags`](#infinity.ui.tableColumnFlags_enum), optional
-  >//TODO
+  >Optional flags that control the behavior and layout of the column.
 
 - initWidthOrWeight: `number`, optional
-  >//TODO
+  >Optional initial width or weight of the column. This can be used to specify how much space a column should initially take up relative to the other columns.
 
 - userId: `number`, optional
-  >//TODO
+  >Optional unique identifier for the column that can be used for look-up later.
 
 
 Example:
@@ -7569,7 +7569,7 @@ infinity.ui.tableSetupColumn(label);
 
 ## tableSetupScrollFreeze() {: #infinity.ui.tableSetupScrollFreeze_function .doc-function}
 
-//TODO
+Configures the scroll behavior of the table to freeze a certain number of columns and rows while scrolling. he specified columns will be fixed on the left side, and the rows will be fixed at the top of the table.
 
 Signature:
 ```
@@ -7579,10 +7579,10 @@ tableSetupScrollFreeze( cols: number, rows: number ): void
 Parameters:
 
 - cols: `number`
-  >//TODO
+  >The number of columns to freeze on the left side of the table while scrolling horizontally.
 
 - rows: `number`
-  >//TODO
+  >The number of rows to freeze at the top of the table while scrolling vertically.
 
 
 Example:
@@ -7596,7 +7596,7 @@ infinity.ui.tableSetupScrollFreeze(cols, rows);
 
 ## text() {: #infinity.ui.text_function .doc-function}
 
-//TODO
+Renders a simple text string in the user interface, serving as the most basic form of output for text-based data or information.
 
 Signature:
 ```
@@ -7606,7 +7606,7 @@ text( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text string to be displayed.
 
 
 Example:
@@ -7620,7 +7620,7 @@ infinity.ui.text(text);
 
 ## textColored() {: #infinity.ui.textColored_function .doc-function}
 
-//TODO
+Displays a text string in the user interface with a specific color.
 
 Signature:
 ```
@@ -7630,10 +7630,10 @@ textColored( color: infinity.ui.color, text: string ): void
 Parameters:
 
 - color: [`infinity.ui.color`](#infinity.ui.color_class)
-  >//TODO
+  >An object representing the color values for the text.
 
 - text: `string`
-  >//TODO
+  >The text string to be displayed with the specified color.
 
 
 Example:
@@ -7647,7 +7647,7 @@ infinity.ui.textColored(color, text);
 
 ## textDisabled() {: #infinity.ui.textDisabled_function .doc-function}
 
-//TODO
+Renders a text string in a disabled or "grayed-out" style.
 
 Signature:
 ```
@@ -7657,7 +7657,7 @@ textDisabled( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text string to be displayed in a disabled style.
 
 
 Example:
@@ -7671,7 +7671,7 @@ infinity.ui.textDisabled(text);
 
 ## textWrapped() {: #infinity.ui.textWrapped_function .doc-function}
 
-//TODO
+Renders a text string with automatic line wrapping based on the current container's width.
 
 Signature:
 ```
@@ -7681,7 +7681,7 @@ textWrapped( text: string ): void
 Parameters:
 
 - text: `string`
-  >//TODO
+  >The text string to be displayed with automatic line wrapping.
 
 
 Example:
@@ -7695,7 +7695,7 @@ infinity.ui.textWrapped(text);
 
 ## treeNode() {: #infinity.ui.treeNode_function .doc-function}
 
-//TODO
+Creates a collapsible tree node within the user interface, allowing the user to expand or collapse nested items.
 
 Signature:
 ```
@@ -7705,10 +7705,10 @@ treeNode( id: string, label: string ): boolean
 Parameters:
 
 - id: `string`
-  >//TODO
+  >A unique identifier for the tree node.
 
 - label: `string`
-  >//TODO
+  >The display label of the tree node, visible to the user.
 
 
 Return type: `boolean`
@@ -7724,7 +7724,7 @@ if ( infinity.ui.treeNode(id, label) ) {}
 
 ## treeNode() {: #infinity.ui.treeNode_function .doc-function}
 
-//TODO
+Generates a collapsible tree node in the user interface with the provided label.
 
 Signature:
 ```
@@ -7734,7 +7734,7 @@ treeNode( label: string ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >Both the unique identifier and the display label for the tree node.
 
 
 Return type: `boolean`
@@ -7750,7 +7750,7 @@ if ( infinity.ui.treeNode(label) ) {}
 
 ## treeNodeEx() {: #infinity.ui.treeNodeEx_function .doc-function}
 
-//TODO
+Generates a expandable tree node in the user interface with additional customization options such as specifying the node's unique identifier and various flags for behavior and appearance.
 
 Signature:
 ```
@@ -7760,13 +7760,13 @@ treeNodeEx( id: string, label: string, flags?: infinity.ui.treeNodeFlags ): bool
 Parameters:
 
 - id: `string`
-  >//TODO
+  >The unique identifier for the tree node.
 
 - label: `string`
-  >//TODO
+  >The display label for the tree node.
 
 - flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
-  >//TODO
+  >Optional flags to customize the behavior and appearance of the tree node.
 
 
 Return type: `boolean`
@@ -7782,7 +7782,7 @@ if ( infinity.ui.treeNodeEx(id, label) ) {}
 
 ## treeNodeEx() {: #infinity.ui.treeNodeEx_function .doc-function}
 
-//TODO
+Creates an expandable tree node in the user interface with customizable behavior and appearance options.
 
 Signature:
 ```
@@ -7792,10 +7792,10 @@ treeNodeEx( label: string, flags?: infinity.ui.treeNodeFlags ): boolean
 Parameters:
 
 - label: `string`
-  >//TODO
+  >The display label for the tree node, which also serves as the automatically generated unique identifier.
 
 - flags: [`infinity.ui.treeNodeFlags`](#infinity.ui.treeNodeFlags_enum), optional
-  >//TODO
+  >Optional flags to specify the tree node's behavior and appearance.
 
 
 Return type: `boolean`
@@ -7811,7 +7811,7 @@ if ( infinity.ui.treeNodeEx(label) ) {}
 
 ## treePop() {: #infinity.ui.treePop_function .doc-function}
 
-//TODO
+Closes a previously opened tree node, effectively ending its scope within the user interface.
 
 Signature:
 ```
@@ -7829,7 +7829,7 @@ infinity.ui.treePop();
 
 ## treePush() {: #infinity.ui.treePush_function .doc-function}
 
-//TODO
+This function works similarly to treeNode but doesn't render a label or an expand/collapse button by default. Instead, it directly sets the scope for nested elements. The function should be paired with a call to [`treePop`](#infinity.ui.treePop_function) to correctly end the scope.
 
 Signature:
 ```
@@ -7839,7 +7839,7 @@ treePush( id: string ): void
 Parameters:
 
 - id: `string`
-  >//TODO
+  >A unique identifier for the tree node scope.
 
 
 Example:
@@ -7853,7 +7853,7 @@ infinity.ui.treePush(id);
 
 ## unindent() {: #infinity.ui.unindent_function .doc-function}
 
-//TODO
+Reduces the left-side indent of the subsequent UI elements within the same scope, effectively moving them closer to the left edge of the containing layout.
 
 Signature:
 ```
@@ -7863,7 +7863,7 @@ unindent( width?: number ): void
 Parameters:
 
 - width: `number`, optional
-  >//TODO
+  >Specifies the amount of indentation to remove.
 
 
 Example:

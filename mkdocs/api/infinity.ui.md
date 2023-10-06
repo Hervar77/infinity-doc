@@ -1382,7 +1382,7 @@ Parameters:
   >The radius of rounding for the corners of the rectangle.
 
 - flags: [`infinity.ui.drawFlags`](#infinity.ui.drawFlags_enum), optional
-  >/Flags to customize the rectangle drawing behavior.
+  >Flags to customize the rectangle drawing behavior.
 
 
 Example:
@@ -7885,7 +7885,7 @@ infinity.ui.unindent();
 
 Type: [`infinity.ui.color`](#infinity.ui.color_class)
 
-//TODO
+Specifies the background color of the UI window or component.
 
 ---
 
@@ -7893,7 +7893,7 @@ Type: [`infinity.ui.color`](#infinity.ui.color_class)
 
 Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
-//TODO
+Contains the position of the frame in a 2D vector format. The values are based on the top-left corner of the frame.
 
 ---
 
@@ -7901,7 +7901,7 @@ Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
-//TODO
+Specifies the dimensions (width and height) of the frame or window in a 2D vector format.
 
 ---
 
@@ -7909,7 +7909,7 @@ Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Type: `string`
 
-//TODO
+The filename where the UI's settings will be saved. This is typically in INI file format.
 
 ---
 
@@ -7917,7 +7917,7 @@ Type: `string`
 
 Type: `number`
 
-//TODO
+Indicates the horizontal scroll position within a scrollable component.
 
 ---
 
@@ -7925,7 +7925,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+Indicates the vertical scroll position within a scrollable component.
 
 ---
 
@@ -7933,7 +7933,7 @@ Type: `number`
 
 Type: `infinity.ui.styles`
 
-//TODO
+Contains the UI styles being used.
 
 ---
 
@@ -7941,7 +7941,7 @@ Type: `infinity.ui.styles`
 
 Type: `string`
 
-//TODO
+Specifies the title displayed in the title bar of a window.
 
 ---
 
@@ -7949,7 +7949,7 @@ Type: `string`
 
 Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
-//TODO
+Holds the dimensions of the display screen in which the UI resides, in a 2D vector format.
 
 ---
 
@@ -7957,7 +7957,7 @@ Type: [`infinity.ui.vec2`](#infinity.ui.vec2_class)
 
 Type: `number`
 
-//TODO
+Specifies the maximum horizontal scroll position that a scrollable component can reach.
 
 ---
 
@@ -7965,7 +7965,7 @@ Type: `number`
 
 Type: `number`
 
-//TODO
+Specifies the maximum vertical scroll position that a scrollable component can reach.
 
 ---
 
@@ -7973,7 +7973,7 @@ Type: `number`
 
 Type: `string`
 
-//TODO
+Holds the version information of the infinity.ui module.
 
 
 
@@ -7988,16 +7988,16 @@ Type: `string`
 Values:
 
 - none: `0`
-  >//TODO
+  >Indicates that no special button behavior is enabled.
 
 - mouseButtonLeft: `1`
-  >//TODO
+  >Indicates that the left mouse button triggers the button action.
 
 - mouseButtonRight: `2`
-  >//TODO
+  >Indicates that the right mouse button triggers the button action.
 
 - mouseButtonMiddle: `4`
-  >//TODO
+  >Indicates that the middle mouse button triggers the button action.
 
 Example:
 
@@ -8015,13 +8015,13 @@ let buttonFlags = infinity.ui.buttonFlags.none;
 Values:
 
 - closed: `0`
-  >//TODO
+  >Indicates that the header is collapsed and the content beneath it is hidden.
 
 - open: `1`
-  >//TODO
+  >Indicates that the header is expanded and the content beneath it is displayed.
 
 - closeButtonClicked: `2`
-  >//TODO
+  >Indicates that the close button on the header has been clicked.
 
 Example:
 
@@ -8039,76 +8039,76 @@ let collapsingHeaderStates = infinity.ui.collapsingHeaderStates.closed;
 Values:
 
 - none: `0`
-  >//TODO
+  >No flags set, default behavior.
 
 - noAlpha: `2`
-  >//TODO
+  >Disables the alpha channel for editing.
 
 - noPicker: `4`
-  >//TODO
+  >Disables the color picker.
 
 - noOptions: `8`
-  >//TODO
+  >Disables additional options menu.
 
 - noSmallPreview: `16`
-  >//TODO
+  >Disables the small color preview next to the color edit.
 
 - noInputs: `32`
-  >//TODO
+  >Disables the input boxes for color values.
 
 - noTooltip: `64`
-  >//TODO
+  >Disables tooltip when hovering over the color edit.
 
 - noLabel: `128`
-  >//TODO
+  >Disables the label displayed next to the color edit.
 
 - noSidePreview: `256`
-  >//TODO
+  >Disables the side preview of the color.
 
 - noDragDrop: `512`
-  >//TODO
+  >Disables drag and drop functionality for the color edit.
 
 - noBorder: `1024`
-  >//TODO
+  >Disables the border around the color edit.
 
 - alphaBar: `65536`
-  >//TODO
+  >Enables an alpha bar for alpha channel editing.
 
 - alphaPreview: `131072`
-  >//TODO
+  >Enables an alpha preview on the side preview or the small preview.
 
 - alphaPreviewHalf: `262144`
-  >//TODO
+  >Enables an alpha preview that is half of the total area.
 
 - hdr: `524288`
-  >//TODO
+  >Enables high-dynamic range for the color edit.
 
 - displayRGB: `1048576`
-  >//TODO
+  >Enables RGB format for display.
 
 - displayHSV: `2097152`
-  >//TODO
+  >Enables HSV format for display.
 
 - displayHex: `4194304`
-  >//TODO
+  >Enables HEX format for display.
 
 - uint8: `8388608`
-  >//TODO
+  >Enables 8-bit unsigned integer format for the color edit.
 
 - float: `16777216`
-  >//TODO
+  >Enables float format for the color edit.
 
 - pickerHueBar: `33554432`
-  >//TODO
+  >Enables a hue bar picker.
 
 - pickerHueWheel: `67108864`
-  >//TODO
+  >Enables a hue wheel picker.
 
 - inputRGB: `134217728`
-  >//TODO
+  >Enables RGB input for the color edit.
 
 - inputHSV: `268435456`
-  >//TODO
+  >Enables HSV input for the color edit.
 
 Example:
 
@@ -8126,172 +8126,172 @@ let colorEditFlags = infinity.ui.colorEditFlags.none;
 Values:
 
 - text: `0`
-  >//TODO
+  >Color for regular text.
 
 - textDisabled: `1`
-  >//TODO
+  >Color for disabled text.
 
 - windowBg: `2`
-  >//TODO
+  >Background color for windows.
 
 - childBg: `3`
-  >//TODO
+  >Background color for child windows.
 
 - popupBg: `4`
-  >//TODO
+  >Background color for popups.
 
 - border: `5`
-  >//TODO
+  >Color for borders.
 
 - borderShadow: `6`
-  >//TODO
+  >Color for border shadows.
 
 - frameBg: `7`
-  >//TODO
+  >Background color for frames.
 
 - frameBgHovered: `8`
-  >//TODO
+  >Background color for hovered frames.
 
 - frameBgActive: `9`
-  >//TODO
+  >Background color for active frames.
 
 - titleBg: `10`
-  >//TODO
+  >Background color for window titles.
 
 - titleBgActive: `11`
-  >//TODO
+  >Background color for active window titles.
 
 - titleBgCollapsed: `12`
-  >//TODO
+  >Background color for collapsed window titles.
 
 - menuBarBg: `13`
-  >//TODO
+  >Background color for menu bars.
 
 - scrollbarBg: `14`
-  >//TODO
+  >Background color for scrollbars.
 
 - scrollbarGrab: `15`
-  >//TODO
+  >Color for scrollbar grabber.
 
 - scrollbarGrabHovered: `16`
-  >//TODO
+  >Color for the scrollbar grabber when hovered.
 
 - scrollbarGrabActive: `17`
-  >//TODO
+  >Color for the scrollbar grabber when active or clicked.
 
 - checkMark: `18`
-  >//TODO
+  >Color for check marks in checkboxes or other toggleable items.
 
 - sliderGrab: `19`
-  >//TODO
+  >Color for the slider grabber.
 
 - sliderGrabActive: `20`
-  >//TODO
+  >Color for the slider grabber when active or clicked.
 
 - button: `21`
-  >//TODO
+  >Background color for buttons.
 
 - buttonHovered: `22`
-  >//TODO
+  >Background color for buttons when hovered.
 
 - buttonActive: `23`
-  >//TODO
+  >Background color for buttons when active or clicked.
 
 - header: `24`
-  >//TODO
+  >Background color for headers.
 
 - headerHovered: `25`
-  >//TODO
+  >Background color for headers when hovered.
 
 - headerActive: `26`
-  >//TODO
+  >Background color for headers when active or clicked.
 
 - separator: `27`
-  >//TODO
+  >Color for separators.
 
 - separatorHovered: `28`
-  >//TODO
+  >Color for separators when hovered.
 
 - separatorActive: `29`
-  >//TODO
+  >Color for separators when active or clicked.
 
 - resizeGrip: `30`
-  >//TODO
+  >Color for resize grips.
 
 - resizeGripHovered: `31`
-  >//TODO
+  >Color for resize grips when hovered.
 
 - resizeGripActive: `32`
-  >//TODO
+  >Color for resize grips when active or clicked.
 
 - tab: `33`
-  >//TODO
+  >Background color for tabs.
 
 - tabHovered: `34`
-  >//TODO
+  >Background color for tabs when hovered.
 
 - tabActive: `35`
-  >//TODO
+  >Background color for active tabs.
 
 - tabUnfocused: `36`
-  >//TODO
+  >Background color for unfocused tabs.
 
 - tabUnfocusedActive: `37`
-  >//TODO
+  >Background color for unfocused active tabs.
 
 - dockingPreview: `38`
-  >//TODO
+  >Color for docking previews.
 
 - dockingEmptyBg: `39`
-  >//TODO
+  >Background color for empty docking spaces.
 
 - plotLines: `40`
-  >//TODO
+  >Color for plot lines in plots.
 
 - plotLinesHovered: `41`
-  >//TODO
+  >Color for plot lines in plots when hovered.
 
 - plotHistogram: `42`
-  >//TODO
+  >Color for histograms in plots.
 
 - plotHistogramHovered: `43`
-  >//TODO
+  >Color for histograms in plots when hovered.
 
 - tableHeaderBg: `44`
-  >//TODO
+  >Background color for table headers.
 
 - tableBorderStrong: `45`
-  >//TODO
+  >Color for strong table borders.
 
 - tableBorderLight: `46`
-  >//TODO
+  >Color for light table borders.
 
 - tableRowBg: `47`
-  >//TODO
+  >Background color for table rows.
 
 - tableRowBgAlt: `48`
-  >//TODO
+  >Alternate background color for table rows.
 
 - textSelectedBg: `49`
-  >//TODO
+  >Background color for selected text.
 
 - dragDropTarget: `50`
-  >//TODO
+  >Color for drag and drop targets.
 
 - navHighlight: `51`
-  >//TODO
+  >Highlight color for navigation items.
 
 - navWindowingHighlight: `52`
-  >//TODO
+  >Highlight color for windowed navigation items.
 
 - navWindowingDimBg: `53`
-  >//TODO
+  >Dim background color for windowed navigation items.
 
 - modalWindowDimBg: `54`
-  >//TODO
+  >Dim background color for modal windows.
 
 - count: `55`
-  >//TODO
+  >Count of color types.
 
 Example:
 
@@ -8309,28 +8309,28 @@ let colorTypes = infinity.ui.colorTypes.text;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default behavior of the combo box.
 
 - popupAlignLeft: `1`
-  >//TODO
+  >Align the combo box popup to the left.
 
 - heightSmall: `2`
-  >//TODO
+  >Display the combo box with a small height.
 
 - heightRegular: `4`
-  >//TODO
+  >Display the combo box with regular height.
 
 - heightLarge: `8`
-  >//TODO
+  >Display the combo box with a larger height.
 
 - heightLargest: `16`
-  >//TODO
+  >Display the combo box with the largest possible height.
 
 - noArrowButton: `32`
-  >//TODO
+  >Hide the arrow button typically shown on combo boxes.
 
 - noPreview: `64`
-  >//TODO
+  >Do not show a preview of the selected item.
 
 Example:
 
@@ -8348,19 +8348,19 @@ let comboFlags = infinity.ui.comboFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific condition.
 
 - always: `1`
-  >//TODO
+  >Condition is always true.
 
 - once: `2`
-  >//TODO
+  >Condition is true only once.
 
 - firstUseEver: `4`
-  >//TODO
+  >Condition is true the first time it's used.
 
 - appearing: `8`
-  >//TODO
+  >Condition is true when appearing.
 
 Example:
 
@@ -8378,16 +8378,16 @@ let conditions = infinity.ui.conditions.none;
 Values:
 
 - ok: `1`
-  >//TODO
+  >Dialog with an "OK" button.
 
 - okCancel: `2`
-  >//TODO
+  >Dialog with "OK" and "Cancel" buttons.
 
 - yesNo: `3`
-  >//TODO
+  >Dialog with "Yes" and "No" buttons.
 
 - yesNoCancel: `4`
-  >//TODO
+  >Dialog with "Yes", "No", and "Cancel" buttons.
 
 Example:
 
@@ -8405,22 +8405,22 @@ let dialogTypes = infinity.ui.dialogTypes.ok;
 Values:
 
 - none: `-1`
-  >//TODO
+  >No specific direction.
 
 - left: `0`
-  >//TODO
+  >Direction pointing left.
 
 - right: `1`
-  >//TODO
+  >Direction pointing right.
 
 - up: `2`
-  >//TODO
+  >Direction pointing up.
 
 - down: `3`
-  >//TODO
+  >Direction pointing down.
 
 - count: `4`
-  >//TODO
+  >Total count of directions.
 
 Example:
 
@@ -8438,40 +8438,40 @@ let directions = infinity.ui.directions.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default drawing behavior.
 
 - closed: `1`
-  >//TODO
+  >Indicates a closed shape.
 
 - roundCornersTopLeft: `16`
-  >//TODO
+  >Round the top-left corner of a shape.
 
 - roundCornersTopRight: `32`
-  >//TODO
+  >Round the top-right corner of a shape.
 
 - roundCornersBottomLeft: `64`
-  >//TODO
+  >Round the bottom-left corner of a shape.
 
 - roundCornersBottomRight: `128`
-  >//TODO
+  >Round the bottom-right corner of a shape.
 
 - roundCornersNone: `256`
-  >//TODO
+  >Do not round any corners.
 
 - roundCornersTop: `48`
-  >//TODO
+  >Round both top corners.
 
 - roundCornersBottom: `192`
-  >//TODO
+  >Round both bottom corners.
 
 - roundCornersLeft: `80`
-  >//TODO
+  >Round both left corners.
 
 - roundCornersRight: `160`
-  >//TODO
+  >Round both right corners.
 
 - roundCornersAll: `240`
-  >//TODO
+  >Round all corners of a shape.
 
 Example:
 
@@ -8489,25 +8489,25 @@ let drawFlags = infinity.ui.drawFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No focus.
 
 - childWindows: `1`
-  >//TODO
+  >Focus is on child windows.
 
 - rootWindow: `2`
-  >//TODO
+  >Focus is on the root window.
 
 - anyWindow: `4`
-  >//TODO
+  >Focus is on any window.
 
 - noPopupHierarchy: `8`
-  >//TODO
+  >Focus is outside of popup hierarchy.
 
 - dockHierarchy: `16`
-  >//TODO
+  >Focus is within a docking hierarchy.
 
 - rootAndChildWindows: `3`
-  >//TODO
+  >Focus is on root or child windows.
 
 Example:
 
@@ -8525,43 +8525,43 @@ let focusedFlags = infinity.ui.focusedFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default state, no specific hover flag applied.
 
 - childWindows: `1`
-  >//TODO
+  >Indicates hovering over child windows.
 
 - rootWindow: `2`
-  >//TODO
+  >Indicates hovering over the root window.
 
 - anyWindow: `4`
-  >//TODO
+  >Hovering over any window.
 
 - noPopupHierarchy: `8`
-  >//TODO
+  >Hover state is not affected by popup hierarchy.
 
 - dockHierarchy: `16`
-  >//TODO
+  >Indicates hovering within a docking hierarchy.
 
 - allowWhenBlockedByPopup: `32`
-  >//TODO
+  >Allows hover status even when blocked by a popup.
 
 - allowWhenBlockedByActiveItem: `128`
-  >//TODO
+  >Allows hover status even when blocked by an active item.
 
 - allowWhenOverlapped: `256`
-  >//TODO
+  >Hover state is maintained even when the item is overlapped by another.
 
 - allowWhenDisabled: `512`
-  >//TODO
+  >Allows hover status even for disabled items.
 
 - noNavOverride: `1024`
-  >//TODO
+  >Navigation doesn't override hover status.
 
 - rectOnly: `416`
-  >//TODO
+  >Only rectangle areas are considered for hover checks.
 
 - rootAndChildWindows: `3`
-  >//TODO
+  >Hovering over root or child windows.
 
 Example:
 
@@ -8579,16 +8579,16 @@ let hoveredFlags = infinity.ui.hoveredFlags.none;
 Values:
 
 - info: `1`
-  >//TODO
+  >Indicates an informational message or notification.
 
 - warning: `2`
-  >//TODO
+  >Indicates a warning message or notification.
 
 - error: `3`
-  >//TODO
+  >Indicates an error message or notification.
 
 - question: `4`
-  >//TODO
+  >Indicates a question or prompt.
 
 Example:
 
@@ -8606,37 +8606,37 @@ let iconTypes = infinity.ui.iconTypes.info;
 Values:
 
 - fullscreen: `1`
-  >//TODO
+  >Opens in fullscreen mode.
 
 - borderless: `16`
-  >//TODO
+  >Opens without window borders.
 
 - resizeable: `32`
-  >//TODO
+  >Window is resizable by the user.
 
 - minimized: `64`
-  >//TODO
+  >Starts in minimized state.
 
 - maximized: `128`
-  >//TODO
+  >Starts in maximized state.
 
 - fullscreenDesktop: `4097`
-  >//TODO
+  >Uses the desktop resolution for fullscreen.
 
 - allowHighDpi: `8192`
-  >//TODO
+  >Supports high DPI displays.
 
 - alwaysOnTop: `32768`
-  >//TODO
+  >Window remains always on top of others.
 
 - skipTaskBar: `65536`
-  >//TODO
+  >Doesn't appear in the taskbar.
 
 - utility: `131072`
-  >//TODO
+  >Opens as a utility window.
 
 - toolTip: `262144`
-  >//TODO
+  >Opens as a tooltip window.
 
 Example:
 
@@ -8654,67 +8654,67 @@ let initFlags = infinity.ui.initFlags.fullscreen;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default behavior for text input.
 
 - charsDecimal: `1`
-  >//TODO
+  >Allows decimal characters.
 
 - charsHexadecimal: `2`
-  >//TODO
+  >Allows hexadecimal characters.
 
 - charsUppercase: `4`
-  >//TODO
+  >Forces characters to be uppercase.
 
 - charsNoBlank: `8`
-  >//TODO
+  >Doesn't allow blank spaces.
 
 - autoSelectAll: `16`
-  >//TODO
+  >Automatically selects all text upon focus.
 
 - enterReturnsTrue: `32`
-  >//TODO
+  >Pressing Enter returns a true value.
 
 - callbackCompletion: `64`
-  >//TODO
+  >Calls a callback upon completion.
 
 - callbackHistory: `128`
-  >//TODO
+  >Calls a callback to access history.
 
 - callbackAlways: `256`
-  >//TODO
+  >Calls a callback for every input event.
 
 - callbackCharFilter: `512`
-  >//TODO
+  >Uses a callback for character filtering.
 
 - allowTabInput: `1024`
-  >//TODO
+  >Allows TAB as valid input.
 
 - ctrlEnterForNewLine: `2048`
-  >//TODO
+  >CTRL + Enter creates a new line.
 
 - noHorizontalScroll: `4096`
-  >//TODO
+  >Disables horizontal scrolling.
 
 - alwaysOverwrite: `8192`
-  >//TODO
+  >Overwrites existing text.
 
 - readOnly: `16384`
-  >//TODO
+  >Makes the text read-only.
 
 - password: `32768`
-  >//TODO
+  >Masks the text for password entry.
 
 - noUndoRedo: `65536`
-  >//TODO
+  >Disables undo/redo functionality.
 
 - charsScientific: `131072`
-  >//TODO
+  >Allows characters used in scientific notation.
 
 - callbackResize: `262144`
-  >//TODO
+  >Calls a callback when resizing.
 
 - callbackEdit: `524288`
-  >//TODO
+  >Calls a callback during editing.
 
 Example:
 

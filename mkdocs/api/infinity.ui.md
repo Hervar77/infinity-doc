@@ -1,5 +1,7 @@
 # infinity.ui
 
+Provides functionality for building graphical user interfaces using the integrated Dear ImGui UI library.
+
 Module: `infinity.ui`
 
 <div class="doc-toc" markdown="1">
@@ -8732,337 +8734,337 @@ let inputTextFlags = infinity.ui.inputTextFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Represents the absence of any key press.
 
 - tab: `512`
-  >//TODO
+  >Represents the 'Tab' key, commonly used for navigating between fields or items.
 
 - leftArrow: `513`
-  >//TODO
+  >Represents the left arrow key, typically used for cursor movement or item selection.
 
 - rightArrow: `514`
-  >//TODO
+  >Represents the right arrow key.
 
 - upArrow: `515`
-  >//TODO
+  >Represents the up arrow key.
 
 - downArrow: `516`
-  >//TODO
+  >Represents the down arrow key.
 
 - pageUp: `517`
-  >//TODO
+  >The 'Page Up' key, often used for scrolling or moving up in lists.
 
 - pageDown: `518`
-  >//TODO
+  >The 'Page Down' key, often used for scrolling or moving down in lists.
 
 - home: `519`
-  >//TODO
+  >Represents the 'Home' key, which often moves the cursor to the beginning or top of content.
 
 - end: `520`
-  >//TODO
+  >Represents the 'End' key, which often moves the cursor to the end or bottom of content.
 
 - insert: `521`
-  >//TODO
+  >The 'Insert' key, used to toggle between insert and overwrite mode in some applications.
 
 - delete: `522`
-  >//TODO
+  >Represents the 'Delete' key, which is used to delete characters or items.
 
 - backspace: `523`
-  >//TODO
+  >The 'Backspace' key, commonly used to delete the character before the cursor.
 
 - space: `524`
-  >//TODO
+  >Represents the spacebar.
 
 - enter: `525`
-  >//TODO
+  >The 'Enter' or 'Return' key, often used to submit forms or execute commands.
 
 - escape: `526`
-  >//TODO
+  >The 'Escape' key, often used to cancel operations or close windows.
 
 - leftCtrl: `527`
-  >//TODO
+  >Represents the left 'Control' key.
 
 - leftShift: `528`
-  >//TODO
+  >Represents the left 'Shift' key.
 
 - leftAlt: `529`
-  >//TODO
+  >Represents the left 'Alt' key.
 
 - leftSuper: `530`
-  >//TODO
+  >Represents the left 'Super' or 'Windows' key.
 
 - rightCtrl: `531`
-  >//TODO
+  >Represents the right 'Control' key.
 
 - rightShift: `532`
-  >//TODO
+  >Represents the right 'Shift' key.
 
 - rightAlt: `533`
-  >//TODO
+  >Represents the right 'Alt' key.
 
 - rightSuper: `534`
-  >//TODO
+  >Represents the right 'Super' or 'Windows' key.
 
 - menu: `535`
-  >//TODO
+  >The 'Menu' key, typically located between the right 'Alt' and 'Control' keys.
 
 - key0: `536`
-  >//TODO
+  >Represents the '0' number key.
 
 - key1: `537`
-  >//TODO
+  >Represents the '1' number key.
 
 - key2: `538`
-  >//TODO
+  >Represents the '2' number key.
 
 - key3: `539`
-  >//TODO
+  >Represents the '3' number key.
 
 - key4: `540`
-  >//TODO
+  >Represents the '4' number key.
 
 - key5: `541`
-  >//TODO
+  >Represents the '5' number key.
 
 - key6: `542`
-  >//TODO
+  >Represents the '6' number key.
 
 - key7: `543`
-  >//TODO
+  >Represents the '7' number key.
 
 - key8: `544`
-  >//TODO
+  >Represents the '8' number key.
 
 - key9: `545`
-  >//TODO
+  >Represents the '9' number key.
 
 - keyA: `546`
-  >//TODO
+  >Represents the alphabetical key "A".
 
 - keyB: `547`
-  >//TODO
+  >Represents the alphabetical key "B".
 
 - keyC: `548`
-  >//TODO
+  >Represents the alphabetical key "C".
 
 - keyD: `549`
-  >//TODO
+  >Represents the alphabetical key "D".
 
 - keyE: `550`
-  >//TODO
+  >Represents the alphabetical key "E".
 
 - keyF: `551`
-  >//TODO
+  >Represents the alphabetical key "F".
 
 - keyG: `552`
-  >//TODO
+  >Represents the alphabetical key "G".
 
 - keyH: `553`
-  >//TODO
+  >Represents the alphabetical key "H".
 
 - keyI: `554`
-  >//TODO
+  >Represents the alphabetical key "I".
 
 - keyJ: `555`
-  >//TODO
+  >Represents the alphabetical key "J".
 
 - keyK: `556`
-  >//TODO
+  >Represents the alphabetical key "K".
 
 - keyL: `557`
-  >//TODO
+  >Represents the alphabetical key "L".
 
 - keyM: `558`
-  >//TODO
+  >Represents the alphabetical key "M".
 
 - keyN: `559`
-  >//TODO
+  >Represents the alphabetical key "N".
 
 - keyO: `560`
-  >//TODO
+  >Represents the alphabetical key "O".
 
 - keyP: `561`
-  >//TODO
+  >Represents the alphabetical key "P".
 
 - keyQ: `562`
-  >//TODO
+  >Represents the alphabetical key "Q".
 
 - keyR: `563`
-  >//TODO
+  >Represents the alphabetical key "R".
 
 - keyS: `564`
-  >//TODO
+  >Represents the alphabetical key "S".
 
 - keyT: `565`
-  >//TODO
+  >Represents the alphabetical key "T".
 
 - keyU: `566`
-  >//TODO
+  >Represents the alphabetical key "U".
 
 - keyV: `567`
-  >//TODO
+  >Represents the alphabetical key "V".
 
 - keyW: `568`
-  >//TODO
+  >Represents the alphabetical key "W".
 
 - keyX: `569`
-  >//TODO
+  >Represents the alphabetical key "X".
 
 - keyY: `570`
-  >//TODO
+  >Represents the alphabetical key "Y".
 
 - keyZ: `571`
-  >//TODO
+  >Represents the alphabetical key "Z".
 
 - keyF1: `572`
-  >//TODO
+  >Represents the "F1" function key.
 
 - keyF2: `573`
-  >//TODO
+  >Represents the "F2" function key.
 
 - keyF3: `574`
-  >//TODO
+  >Represents the "F3" function key.
 
 - keyF4: `575`
-  >//TODO
+  >Represents the "F4" function key.
 
 - keyF5: `576`
-  >//TODO
+  >Represents the "F5" function key.
 
 - keyF6: `577`
-  >//TODO
+  >Represents the "F6" function key.
 
 - keyF7: `578`
-  >//TODO
+  >Represents the "F7" function key.
 
 - keyF8: `579`
-  >//TODO
+  >Represents the "F8" function key.
 
 - keyF9: `580`
-  >//TODO
+  >Represents the "F9" function key.
 
 - keyF10: `581`
-  >//TODO
+  >Represents the "F10" function key.
 
 - keyF11: `582`
-  >//TODO
+  >Represents the "F11" function key.
 
 - keyF12: `583`
-  >//TODO
+  >Represents the "F12" function key.
 
 - apostrophe: `584`
-  >//TODO
+  >Represents the apostrophe (`'`) key.
 
 - comma: `585`
-  >//TODO
+  >Represents the comma (`,`) key.
 
 - minus: `586`
-  >//TODO
+  >Represents the minus (`-`) key.
 
 - period: `587`
-  >//TODO
+  >Represents the period (`.`) key.
 
 - slash: `588`
-  >//TODO
+  >Represents the forward slash (`/`) key.
 
 - semicolon: `589`
-  >//TODO
+  >Represents the semicolon (`;`) key.
 
 - equal: `590`
-  >//TODO
+  >Represents the equal (`=`) key.
 
 - leftBracket: `591`
-  >//TODO
+  >Represents the left bracket (`[`) key.
 
 - backslash: `592`
-  >//TODO
+  >Represents the backslash (`\` key.
 
 - rightBracket: `593`
-  >//TODO
+  >Represents the right bracket (`]`) key.
 
 - graveAccent: `594`
-  >//TODO
+  >Represents the grave accent or backtick (`) key.
 
 - capsLock: `595`
-  >//TODO
+  >Represents the 'Caps Lock' key.
 
 - scrollLock: `596`
-  >//TODO
+  >The 'Scroll Lock' key.
 
 - numLock: `597`
-  >//TODO
+  >The 'Num Lock' key.
 
 - printScreen: `598`
-  >//TODO
+  >The 'Print Screen' or 'PrtScn' key.
 
 - pause: `599`
-  >//TODO
+  >The 'Pause' or 'Break' key.
 
 - keypad0: `600`
-  >//TODO
+  >Represents the '0' number pad key.
 
 - keypad1: `601`
-  >//TODO
+  >Represents the '1' number pad key.
 
 - keypad2: `602`
-  >//TODO
+  >Represents the '2' number pad key.
 
 - keypad3: `603`
-  >//TODO
+  >Represents the '3' number pad key.
 
 - keypad4: `604`
-  >//TODO
+  >Represents the '4' number pad key.
 
 - keypad5: `605`
-  >//TODO
+  >Represents the '5' number pad key.
 
 - keypad6: `606`
-  >//TODO
+  >Represents the '6' number pad key.
 
 - keypad7: `607`
-  >//TODO
+  >Represents the '7' number pad key.
 
 - keypad8: `608`
-  >//TODO
+  >Represents the '8' number pad key.
 
 - keypad9: `609`
-  >//TODO
+  >Represents the '9' number pad key.
 
 - keypadDecimal: `610`
-  >//TODO
+  >Represents the decimal point (`.`) key on the number pad.
 
 - keypadDivide: `611`
-  >//TODO
+  >Represents the division (`/`) key on the number pad.
 
 - keypadMultiply: `612`
-  >//TODO
+  >Represents the multiplication (`*`) key on the number pad.
 
 - keypadSubtract: `613`
-  >//TODO
+  >Represents the subtraction (`-`) key on the number pad.
 
 - keypadAdd: `614`
-  >//TODO
+  >Represents the addition (`+`) key on the number pad.
 
 - keypadEnter: `615`
-  >//TODO
+  >The 'Enter' key specifically on the number pad.
 
 - keypadEqual: `616`
-  >//TODO
+  >Represents the equal (`=`) key on the number pad.
 
 - modCtrl: `641`
-  >//TODO
+  >Modifier for the 'Control' key.
 
 - modShift: `642`
-  >//TODO
+  >Modifier for the 'Shift' key.
 
 - modAlt: `643`
-  >//TODO
+  >Modifier for the 'Alt' key.
 
 - modSuper: `644`
-  >//TODO
+  >Modifier for the 'Super' or 'Windows' key.
 
 - count: `646`
-  >//TODO
+  >Represents the total count of key enumerations.
 
 Example:
 
@@ -9080,16 +9082,16 @@ let keys = infinity.ui.keys.none;
 Values:
 
 - left: `0`
-  >//TODO
+  >Represents the left mouse button, often used for primary interactions.
 
 - right: `1`
-  >//TODO
+  >Represents the right mouse button, often associated with context menus or secondary interactions.
 
 - middle: `2`
-  >//TODO
+  >Represents the middle mouse button, commonly used for panning or scrolling.
 
 - count: `5`
-  >//TODO
+  >Indicates the total number of mouse button types supported by the system.
 
 Example:
 
@@ -9107,37 +9109,37 @@ let mouseButtons = infinity.ui.mouseButtons.left;
 Values:
 
 - none: `-1`
-  >//TODO
+  >No specific cursor is assigned, which may lead to a default cursor being used.
 
 - arrow: `0`
-  >//TODO
+  >A standard arrow cursor, typically used for general interactions.
 
 - textInput: `1`
-  >//TODO
+  >Represents a text input cursor, typically an I-beam, to signify areas where textual input can occur.
 
 - resizeAll: `2`
-  >//TODO
+  >A cursor indicating that resizing can occur in any direction.
 
 - resizeNS: `3`
-  >//TODO
+  >A cursor indicating vertical resizing, either up or down.
 
 - resizeEW: `4`
-  >//TODO
+  >A cursor indicating horizontal resizing, either left or right.
 
 - resizeNESW: `5`
-  >//TODO
+  >Indicates diagonal resizing from the top-right to bottom-left or vice versa.
 
 - resizeNWSE: `6`
-  >//TODO
+  >Indicates diagonal resizing from the top-left to bottom-right or vice versa.
 
 - hand: `7`
-  >//TODO
+  >A hand cursor, often used for dragging or indicating clickable links.
 
 - notAllowed: `8`
-  >//TODO
+  >Indicates that a particular action is not permitted.
 
 - count: `9`
-  >//TODO
+  >Represents the total number of distinct cursor styles supported.
 
 Example:
 
@@ -9155,31 +9157,31 @@ let mouseCursors = infinity.ui.mouseCursors.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific flags are set.
 
 - mouseButtonLeft: `0`
-  >//TODO
+  >Indicates that the left mouse button activates the popup.
 
 - mouseButtonRight: `1`
-  >//TODO
+  >Specifies the right mouse button for popup activation.
 
 - mouseButtonMiddle: `2`
-  >//TODO
+  >The middle mouse button triggers the popup.
 
 - noOpenOverExistingPopup: `32`
-  >//TODO
+  >Ensures the popup doesn't open over an existing popup.
 
 - noOpenOverItems: `64`
-  >//TODO
+  >The popup won't open over other UI items, preventing obstruction.
 
 - anyPopupId: `128`
-  >//TODO
+  >Doesn't restrict the popup activation to specific identifiers.
 
 - anyPopupLevel: `256`
-  >//TODO
+  >Doesn't limit the popup activation to a particular UI depth or layer.
 
 - anyPopup: `384`
-  >//TODO
+  >A combination of both anyPopupId and anyPopupLevel.
 
 Example:
 
@@ -9197,22 +9199,22 @@ let popupFlags = infinity.ui.popupFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific behavior modifiers for the selectable item.
 
 - dontClosePopups: `1`
-  >//TODO
+  >Choosing the selectable item won't close any open popups.
 
 - spanAllColumns: `2`
-  >//TODO
+  >The selectable item will span across all columns in multi-column layouts.
 
 - allowDoubleClick: `4`
-  >//TODO
+  >Double-clicking the item is allowed and may trigger specific interactions.
 
 - disabled: `8`
-  >//TODO
+  >The selectable item is currently disabled and can't be interacted with.
 
 - allowItemOverlap: `16`
-  >//TODO
+  >Allows other items to overlap with the selectable item, which might be useful in certain layered UI scenarios.
 
 Example:
 
@@ -9230,19 +9232,19 @@ let selectableFlags = infinity.ui.selectableFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific attributes are applied to the slider.
 
 - alwaysClamp: `16`
-  >//TODO
+  >Ensures the slider's value always remains within the specified minimum and maximum range.
 
 - logarithmic: `32`
-  >//TODO
+  >The slider uses a logarithmic scale, which can be useful for values that change exponentially.
 
 - noRoundToFormat: `64`
-  >//TODO
+  >The slider's value won't be rounded according to its format, providing more exact values.
 
 - noInput: `128`
-  >//TODO
+  >Disables input for the slider, turning it into a display-only component.
 
 Example:
 
@@ -9260,82 +9262,82 @@ let sliderFlags = infinity.ui.sliderFlags.none;
 Values:
 
 - alpha: `0`
-  >//TODO
+  >Refers to the opacity of the UI element.
 
 - disabledAlpha: `1`
-  >//TODO
+  >The opacity level for UI elements that are disabled or inactive.
 
 - windowPadding: `2`
-  >//TODO
+  >The padding space inside the window, separating the content from the window's borders.
 
 - windowRounding: `3`
-  >//TODO
+  >Defines the curvature radius of window corners.
 
 - windowBorderSize: `4`
-  >//TODO
+  >Thickness of the window's border.
 
 - windowMinSize: `5`
-  >//TODO
+  >Specifies the minimum dimensions that a window can be resized to.
 
 - windowTitleAlign: `6`
-  >//TODO
+  >Alignment of the window's title. Can be left, center, or right.
 
 - childRounding: `7`
-  >//TODO
+  >Radius of curvature for child window corners.
 
 - childBorderSize: `8`
-  >//TODO
+  >Thickness of the border around child windows.
 
 - popupRounding: `9`
-  >//TODO
+  >Radius of curvature for popup window corners.
 
 - popupBorderSize: `10`
-  >//TODO
+  >Thickness of the border around popup windows.
 
 - framePadding: `11`
-  >//TODO
+  >Padding inside a frame, separating content from the frame's borders.
 
 - frameRounding: `12`
-  >//TODO
+  >Defines the curvature radius of frame corners.
 
 - frameBorderSize: `13`
-  >//TODO
+  >Thickness of the frame's border.
 
 - itemSpacing: `14`
-  >//TODO
+  >Spacing between consecutive items in a list or layout.
 
 - itemInnerSpacing: `15`
-  >//TODO
+  >Internal spacing between an item's content and its boundary.
 
 - indentSpacing: `16`
-  >//TODO
+  >Space used for indentation, typically for hierarchical structures or nested items.
 
 - cellPadding: `17`
-  >//TODO
+  >Padding inside table cells.
 
 - scrollbarSize: `18`
-  >//TODO
+  >Width or height of the scrollbar, depending on its orientation.
 
 - scrollbarRounding: `19`
-  >//TODO
+  >Defines the curvature radius of scrollbar corners.
 
 - grabMinSize: `20`
-  >//TODO
+  >Minimum dimension of the grabbable area, typically used in sliders.
 
 - grabRounding: `21`
-  >//TODO
+  >Defines the curvature radius of the grabbable area's corners.
 
 - tabRounding: `22`
-  >//TODO
+  >Radius of curvature for tab corners in a tab bar.
 
 - buttonTextAlign: `23`
-  >//TODO
+  >Alignment of the text within a button. Can be left, center, or right.
 
 - selectableTextAlign: `24`
-  >//TODO
+  >Alignment of the text within selectable items.
 
 - count: `25`
-  >//TODO
+  >Represents the total number of style variables available.
 
 Example:
 
@@ -9353,13 +9355,13 @@ let styleVars = infinity.ui.styleVars.alpha;
 Values:
 
 - dark: `1`
-  >//TODO
+  >A style theme with dark colors, typically composed of deep grays and blacks. Ideal for low-light environments or to reduce eye strain.
 
 - light: `2`
-  >//TODO
+  >A brighter theme with light backgrounds, usually white or light grays. Suitable for well-lit environments.
 
 - classic: `3`
-  >//TODO
+  >A traditional or old-school theme, often reminiscent of classic GUI designs.
 
 Example:
 
@@ -9377,31 +9379,31 @@ let styles = infinity.ui.styles.dark;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific behavior; default state of a tab bar.
 
 - reorderable: `1`
-  >//TODO
+  >Tabs within the tab bar can be reordered by dragging.
 
 - autoSelectNewTabs: `2`
-  >//TODO
+  >Newly added tabs will automatically be made active or brought to the front.
 
 - tabListPopupButton: `4`
-  >//TODO
+  >Displays a button that shows a pop-up list of all tabs, useful for navigating when many tabs are open.
 
 - noCloseWithMiddleMouseButton: `8`
-  >//TODO
+  >Prevents tabs from closing when clicked with the middle mouse button.
 
 - noTabListScrollingButtons: `16`
-  >//TODO
+  >Disables the scrolling buttons that appear when there are too many tabs to fit the available space.
 
 - noTooltip: `32`
-  >//TODO
+  >Disables tooltips for tabs.
 
 - fittingPolicyResizeDown: `64`
-  >//TODO
+  >If tabs don’t fit, they will be resized to fit within the available space.
 
 - fittingPolicyScroll: `128`
-  >//TODO
+  >If tabs don’t fit, scrolling buttons will appear to navigate through them.
 
 Example:
 
@@ -9419,31 +9421,31 @@ let tabBarFlags = infinity.ui.tabBarFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default state for a tab with no specific behavior.
 
 - unsavedDocument: `1`
-  >//TODO
+  >Indicates that the document or content in this tab has unsaved changes, usually visualized by an asterisk or other marker.
 
 - setSelected: `2`
-  >//TODO
+  >Programmatically sets this tab as the active or selected one.
 
 - noCloseWithMiddleMouseButton: `4`
-  >//TODO
+  >Prevents this specific tab from closing when clicked with the middle mouse button.
 
 - noPushId: `8`
-  >//TODO
+  >Disables the internal stacking ID, usually used when creating tabs in a loop or dynamic context.
 
 - noTooltip: `16`
-  >//TODO
+  >Disables tooltips for this specific tab.
 
 - noReorder: `32`
-  >//TODO
+  >This tab cannot be reordered by dragging, even if the tabBar has the reorderable flag.
 
 - leading: `64`
-  >//TODO
+  >Positions the tab at the front of the tab bar, before other tabs.
 
 - trailing: `128`
-  >//TODO
+  >Positions the tab at the end of the tab bar, after other tabs.
 
 Example:
 
@@ -9461,16 +9463,16 @@ let tabItemFlags = infinity.ui.tabItemFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >No specific background target, default state for a table cell.
 
 - rowBg0: `1`
-  >//TODO
+  >Targets the background of even-numbered rows.
 
 - rowBg1: `2`
-  >//TODO
+  >Targets the background of odd-numbered rows.
 
 - cellBg: `3`
-  >//TODO
+  >Targets the background of individual cells, regardless of row parity.
 
 Example:
 
@@ -9488,73 +9490,73 @@ let tableBgTargets = infinity.ui.tableBgTargets.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default state for a table column with no specific behavior.
 
 - disabled: `1`
-  >//TODO
+  >The column is disabled and won't respond to user interaction.
 
 - defaultHide: `2`
-  >//TODO
+  >The column is hidden by default but can be shown by the user.
 
 - defaultSort: `4`
-  >//TODO
+  >The column is used for sorting by default when the table is displayed.
 
 - widthStretch: `8`
-  >//TODO
+  >Column width will stretch to take up available space.
 
 - widthFixed: `16`
-  >//TODO
+  >Column width is fixed and won't change regardless of the table or content size.
 
 - noResize: `32`
-  >//TODO
+  >Disables the ability to resize the column.
 
 - noReorder: `64`
-  >//TODO
+  >Disables the ability to reorder the column.
 
 - noHide: `128`
-  >//TODO
+  >Disables the ability to hide the column.
 
 - noClip: `256`
-  >//TODO
+  >Content that exceeds the column width will not be clipped.
 
 - noSort: `512`
-  >//TODO
+  >Disables the ability to sort using this column.
 
 - noSortAscending: `1024`
-  >//TODO
+  >Disables ascending sorting for this column.
 
 - noSortDescending: `2048`
-  >//TODO
+  >Disables descending sorting for this column.
 
 - noHeaderLabel: `4096`
-  >//TODO
+  >Hides the column header label.
 
 - noHeaderWidth: `8192`
-  >//TODO
+  >Disables header width, making it invisible.
 
 - preferSortAscending: `16384`
-  >//TODO
+  >When sorting is enabled, it will prefer ascending order by default.
 
 - preferSortDescending: `32768`
-  >//TODO
+  >When sorting is enabled, it will prefer descending order by default.
 
 - indentEnable: `65536`
-  >//TODO
+  >Enables indentation for this column.
 
 - indentDisable: `131072`
-  >//TODO
+  >Disables indentation for this column.
 
 - isEnabled: `16777216`
-  >//TODO
+  >Indicates if the column is currently enabled.
 
 - isVisible: `33554432`
-  >//TODO
+  >Indicates if the column is currently visible.
 
 - isSorted: `67108864`
-  >//TODO
+  >Indicates if the column is currently being used for sorting.
 
 - isHovered: `134217728`
-  >//TODO
+  >Indicates if the column is currently hovered by the cursor.
 
 Example:
 
@@ -9572,109 +9574,109 @@ let tableColumnFlags = infinity.ui.tableColumnFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Default behavior for a table without specific modifications.
 
 - resizable: `1`
-  >//TODO
+  >Allows the columns in the table to be resized.
 
 - reorderable: `2`
-  >//TODO
+  >Allows the columns in the table to be reordered.
 
 - hideable: `4`
-  >//TODO
+  >Allows specific columns in the table to be hidden or shown.
 
 - sortable: `8`
-  >//TODO
+  >Enables sorting functionality for the table.
 
 - noSavedSettings: `16`
-  >//TODO
+  >Disables saving table settings like column order and visibility.
 
 - contextMenuInBody: `32`
-  >//TODO
+  >Enables a context menu when right-clicking in the table body.
 
 - rowBg: `64`
-  >//TODO
+  >Applies alternating row background colors for better readability.
 
 - bordersInnerH: `128`
-  >//TODO
+  >Draws horizontal borders between rows.
 
 - bordersOuterH: `256`
-  >//TODO
+  >Draws a horizontal border at the top and bottom of the table.
 
 - bordersInnerV: `512`
-  >//TODO
+  >Draws vertical borders between columns.
 
 - bordersOuterV: `1024`
-  >//TODO
+  >Draws a vertical border on the left and right sides of the table.
 
 - bordersH: `384`
-  >//TODO
+  >Combination of bordersInnerH and bordersOuterH.
 
 - bordersV: `1536`
-  >//TODO
+  >Combination of bordersInnerV and bordersOuterV.
 
 - bordersInner: `640`
-  >//TODO
+  >Draws borders between rows and columns but not on the outer edges.
 
 - bordersOuter: `1280`
-  >//TODO
+  >Draws borders only on the outer edges of the table.
 
 - borders: `1920`
-  >//TODO
+  >Draws all inner and outer borders.
 
 - noBordersInBody: `2048`
-  >//TODO
+  >Disables drawing of borders within the table body.
 
 - noBordersInBodyUntilResize: `4096`
-  >//TODO
+  >Borders in the body will only appear after resizing.
 
 - sizingFixedFit: `8192`
-  >//TODO
+  >Adjusts column sizes to fit content, but maintains consistent total table width.
 
 - sizingFixedSame: `16384`
-  >//TODO
+  >All columns have the same fixed width.
 
 - sizingStretchProp: `24576`
-  >//TODO
+  >Columns stretch to fill available space, but maintain proportionality based on content.
 
 - sizingStretchSame: `32768`
-  >//TODO
+  >All columns stretch equally to fill available space.
 
 - noHostExtendX: `65536`
-  >//TODO
+  >Prevents the table from expanding horizontally beyond its container.
 
 - noHostExtendY: `131072`
-  >//TODO
+  >Prevents the table from expanding vertically beyond its container.
 
 - noKeepColumnsVisible: `262144`
-  >//TODO
+  >Allows columns to be hidden even if it makes the table less informative.
 
 - preciseWidths: `524288`
-  >//TODO
+  >Column widths are determined with higher precision.
 
 - noClip: `1048576`
-  >//TODO
+  >Content exceeding the table or column bounds will not be clipped.
 
 - padOuterX: `2097152`
-  >//TODO
+  >Adds horizontal padding to the outer edges of the table.
 
 - noPadOuterX: `4194304`
-  >//TODO
+  >Removes horizontal padding from the outer edges of the table.
 
 - noPadInnerX: `8388608`
-  >//TODO
+  >Removes horizontal padding between columns.
 
 - scrollX: `16777216`
-  >//TODO
+  >Enables horizontal scrolling for the table.
 
 - scrollY: `33554432`
-  >//TODO
+  >Enables vertical scrolling for the table.
 
 - sortMulti: `67108864`
-  >//TODO
+  >Allows multiple columns to be used for sorting.
 
 - sortTristate: `134217728`
-  >//TODO
+  >Sorting can have three states: ascending, descending, and default (no sort).
 
 Example:
 
@@ -9692,11 +9694,10 @@ let tableFlags = infinity.ui.tableFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Represents the default behavior for table rows, without any special properties or modifications.
 
 - headers: `1`
-  >//TODO
-
+  >Indicates that the row is a header row. Header rows typically display column titles or labels.
 Example:
 
 ```typescript
@@ -9713,52 +9714,52 @@ let tableRowFlags = infinity.ui.tableRowFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Represents the default behavior for tree nodes, with no special properties or modifications.
 
 - selected: `1`
-  >//TODO
+  >Marks the tree node as currently selected or highlighted.
 
 - framed: `2`
-  >//TODO
+  >Provides a visual frame around the tree node.
 
 - allowItemOverlap: `4`
-  >//TODO
+  >Allows items within the tree node to overlap.
 
 - noTreePushOnOpen: `8`
-  >//TODO
+  >Prevents the tree from expanding or pushing out other tree nodes when this node is opened.
 
 - noAutoOpenOnLog: `16`
-  >//TODO
+  >Prevents the tree node from automatically opening when logged or interacted with.
 
 - defaultOpen: `32`
-  >//TODO
+  >The tree node will be open by default when first displayed.
 
 - openOnDoubleClick: `64`
-  >//TODO
+  >Requires a double-click action to open the tree node.
 
 - openOnArrow: `128`
-  >//TODO
+  >Allows opening of the tree node using an arrow (typically right arrow for opening, left arrow for closing).
 
 - leaf: `256`
-  >//TODO
+  >Indicates that the tree node is a leaf (i.e., it has no child nodes).
 
 - bullet: `512`
-  >//TODO
+  >Uses a bullet point for the tree node instead of the typical arrow or other indicators.
 
 - framePadding: `1024`
-  >//TODO
+  >Adjusts padding within the frame of the tree node.
 
 - spanAvailWidth: `2048`
-  >//TODO
+  >Allows the tree node to span the available width, filling the space.
 
 - spanFullWidth: `4096`
-  >//TODO
+  >Forces the tree node to span the full width of the container or display.
 
 - navLeftJumpsBackHere: `8192`
-  >//TODO
+  >Sets the behavior such that navigating left (typically in a tree structure) jumps back to this particular node.
 
 - collapsingHeader: `26`
-  >//TODO
+  >Indicates that the tree node acts as a collapsing header.
 
 Example:
 
@@ -9776,100 +9777,100 @@ let treeNodeFlags = infinity.ui.treeNodeFlags.none;
 Values:
 
 - none: `0`
-  >//TODO
+  >Represents the default behavior for windows, without any special properties or modifications.
 
 - noTitleBar: `1`
-  >//TODO
+  >Removes the title bar from the window.
 
 - noResize: `2`
-  >//TODO
+  >Disables the ability to resize the window.
 
 - noMove: `4`
-  >//TODO
+  >Prevents the window from being moved.
 
 - noScrollbar: `8`
-  >//TODO
+  >Hides scrollbars in the window.
 
 - noScrollWithMouse: `16`
-  >//TODO
+  >Disables scrolling within the window using the mouse.
 
 - noCollapse: `32`
-  >//TODO
+  >Prevents the window from being collapsed into a minimized state.
 
 - alwaysAutoResize: `64`
-  >//TODO
+  >The window will automatically resize based on the content it contains. This ensures that there are no unnecessary empty spaces or content cut-offs.
 
 - noBackground: `128`
-  >//TODO
+  >Removes the window's background, making it transparent.
 
 - noSavedSettings: `256`
-  >//TODO
+  >Any window settings, positions, sizes, etc., won't be saved between sessions.
 
 - noMouseInputs: `512`
-  >//TODO
+  >The window won't respond to any mouse input events.
 
 - menuBar: `1024`
-  >//TODO
+  >Adds a menu bar at the top of the window.
 
 - horizontalScrollbar: `2048`
-  >//TODO
+  >Adds a horizontal scrollbar to the window.
 
 - noFocusOnAppearing: `4096`
-  >//TODO
+  >The window won't automatically gain focus when it appears.
 
 - noBringToFrontOnFocus: `8192`
-  >//TODO
+  >When the window gains focus, it won't be brought to the front of other windows.
 
 - alwaysVerticalScrollbar: `16384`
-  >//TODO
+  >Ensures a vertical scrollbar is always present, regardless of the content height.
 
 - alwaysHorizontalScrollbar: `32768`
-  >//TODO
+  >Ensures a horizontal scrollbar is always present, regardless of the content width.
 
 - alwaysUseWindowPadding: `65536`
-  >//TODO
+  >The window will always apply padding, ensuring content doesn't touch the window's edges.
 
 - noNavInputs: `262144`
-  >//TODO
+  >Disables navigation inputs for the window.
 
 - noNavFocus: `524288`
-  >//TODO
+  >The window can't be focused using navigation methods.
 
 - unsavedDocument: `1048576`
-  >//TODO
+  >Indicates that the window contains an unsaved document.
 
 - noDocking: `2097152`
-  >//TODO
+  >Prevents the window from being docked with others.
 
 - noNav: `786432`
-  >//TODO
+  >Disables all navigation functionality for the window.
 
 - noDecoration: `43`
-  >//TODO
+  >Removes all standard window decorations.
 
 - noInputs: `786944`
-  >//TODO
+  >The window won't accept any form of input.
 
 - navFlattened: `8388608`
-  >//TODO
+  >Navigation within the window will be flattened.
 
 - childWindow: `16777216`
-  >//TODO
+  >Marks the window as a child window, meaning it's a secondary or subordinate window.
 
 - toolTip: `33554432`
-  >//TODO
+  >The window acts as a tooltip.
 
 - popup: `67108864`
-  >//TODO
+  >The window functions as a popup, appearing above other windows.
 
 - modal: `134217728`
-  >//TODO
+  >The window is modal, meaning it requires user interaction before anything else can be done in the underlying application.
 
 - childMenu: `268435456`
-  >//TODO
+  >The window acts as a child menu, typically popping out from a main menu.
 
 - dockNodeHost: `536870912`
-  >//TODO
+  >Marks the window as a host for docking nodes, allowing other windows to dock within it.
 
 Example:
 
@@ -9887,10 +9888,10 @@ let windowFlags = infinity.ui.windowFlags.none;
 Values:
 
 - undefined: `536805376`
-  >//TODO
+  >The position of the window is not explicitly set, allowing the framework or system default behaviors to decide where the window appears.
 
 - centered: `805240832`
-  >//TODO
+  >The window will be positioned at the center of its parent container or screen.
 
 Example:
 
@@ -9908,13 +9909,13 @@ let windowPositions = infinity.ui.windowPositions.undefined;
 Values:
 
 - open: `0`
-  >//TODO
+  >The window is currently in an open state.
 
 - closed: `1`
-  >//TODO
+  >The window is closed and not visible to the user.
 
 - collapsed: `2`
-  >//TODO
+  >The window is minimized or collapsed.
 
 Example:
 

@@ -20,13 +20,17 @@ Module: `infinity.http`
 
 <div class="doc-toc-heading">Interfaces:</div>
 
+- [arrayResponseEvent](#infinity.http.arrayResponseEvent_interface)
 - [cookiesArray](#infinity.http.cookiesArray_interface)
 - [filesArray](#infinity.http.filesArray_interface)
 - [formDataArray](#infinity.http.formDataArray_interface)
 - [methodArray](#infinity.http.methodArray_interface)
+- [noResponseEvent](#infinity.http.noResponseEvent_interface)
+- [objectResponseEvent](#infinity.http.objectResponseEvent_interface)
 - [paramArray](#infinity.http.paramArray_interface)
 - [rangeArray](#infinity.http.rangeArray_interface)
 - [stringArray](#infinity.http.stringArray_interface)
+- [stringResponseEvent](#infinity.http.stringResponseEvent_interface)
 - [valuesArray](#infinity.http.valuesArray_interface)
 
 </div>
@@ -107,7 +111,7 @@ Example:
 infinity.loadModule('infinity.http');
 
 let myClient = new infinity.http.client();
-let html = myClient.get('https://localhost');
+let html = myClient.get('http://localhost');
 console.debug(html);
 //<!doctype html>
 //<html lang="de_DE"...
@@ -312,11 +316,11 @@ This option will turn on ssl certificate validation, which will result in a conn
 
 ### constructor() {: #infinity.http.client.constructor_function .doc-function}
 
-Lets you create an INFINITY.JS HTTP client object instance. Doesn't accept parameters.
+Lets you create an INFINITY.JS HTTP client object instance. The optional async parameter determines whether the client operates in asynchronous or synchronous mode.
 
 Signature:
 ```typescript
-constructor()
+constructor( async?: boolean )
 ```
 
 Example:
@@ -365,8 +369,42 @@ Return type: `string`
 Example:
 
 ```typescript
-let html = myClient.get('https://greyhound-software.com');
+let html = myClient.get('http://localhost');
 console.debug(html);
+```
+
+---
+
+### get() {: #infinity.http.client.get_function .doc-function}
+
+Sends a GET HTTP request for the given URL, including the previously set HTTP-headers, and uses the provided callback to handle the response.
+
+Signature:
+```typescript
+get( url: string, event: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request for.
+
+- event: infinity.http.stringResponseEvent
+  >A callback function that will be invoked when the GET request completes. This function will be called with two parameters: a string representing the response body (if successful) and an error string which will be non-empty if there was an error.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.get('http://localhost', (responseBody, error) => {
+    if (error) {
+        console.error("An error occurred:", error);
+        return;
+    }
+    console.debug(responseBody);
+});
 ```
 
 ---
@@ -385,7 +423,7 @@ Return type: [`infinity.http.stringArray`](#infinity.http.stringArray_interface)
 Example:
 
 ```typescript
-let html = myClient.get('https://greyhound-software.com');
+let html = myClient.get('http://localhost');
 let requestHeaders = myClient.getAllRequestHeaders();
 console.debug(requestHeaders);
 ```
@@ -406,7 +444,7 @@ Return type: [`infinity.http.stringArray`](#infinity.http.stringArray_interface)
 Example:
 
 ```typescript
-let html = myClient.get('https://greyhound-software.com');
+let html = myClient.get('http://localhost');
 let responseHeaders = myClient.getAllResponseHeaders();
 console.debug(responseHeaders);
 ```
@@ -434,7 +472,44 @@ Parameters:
 Example:
 
 ```typescript
-myClient.getFile('https://greyhound-software.com', 'index.html');
+myClient.getFile('http://localhost', 'index.html');
+```
+
+---
+
+### getFile() {: #infinity.http.client.getFile_function .doc-function}
+
+Retrieves contents from the given URL and writes them to the file at the specified location, and optionally uses the provided callback to notify when the downloading and saving process has completed or if an error has occurred.
+
+Signature:
+```typescript
+getFile( url: string, fileName: string, event: infinity.http.noResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL from which the contents have to be saved.
+
+- fileName: `string`
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the retrieved contents.
+
+- event (optional): infinity.http.noResponseEvent
+  >A callback function that will be invoked once the download and save process is complete or if an error occurs. If specified, this function will be called with an error string which will be non-empty if there was an error during the process. If no error occurs, the function is invoked without any arguments.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.getFile('http://localhost/some-resource', 'downloaded-file.html', (error?) => {
+    if (error) {
+        console.error("An error occurred:", error);
+        return;
+    }
+    console.debug("File download and save completed successfully.");
+});
 ```
 
 ---
@@ -517,6 +592,43 @@ myClient.getStream(url, stream);
 
 ---
 
+### getStream() {: #infinity.http.client.getStream_function .doc-function}
+
+Writes received data from the specified URL to a given stream after sending a GET-request, and optionally uses the provided callback to notify when the streaming process has completed or if an error has occurred.
+
+Signature:
+```typescript
+getStream( url: string, stream: infinity.stream, event?: infinity.http.noResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The url to save from.
+
+- stream: [`infinity.stream`](infinity.stream.md)
+  >The stream object to write to. See [infinity.stream](infinity.stream.md).
+
+- event (optional): infinity.http.noResponseEvent
+  >A callback function that will be invoked once the streaming process is complete or if an error occurs. If specified, this function will be called with an error string which will be non-empty if there was an error during the streaming process. If no error occurs, the function is invoked without any arguments.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.getStream('https://localhost/data', myStream, (error?) => {
+    if (error) {
+        console.error("An error occurred:", error);
+        return;
+    }
+    console.debug("Data streaming completed successfully.");
+});
+```
+
+---
+
 ### head() {: #infinity.http.client.head_function .doc-function}
 
 
@@ -538,8 +650,41 @@ Return type: [`infinity.http.stringArray`](#infinity.http.stringArray_interface)
 Example:
 
 ```typescript
-let headers = myClient.head('https://localhost');
+let headers = myClient.head('http://localhost');
 console.debug(headers);
+```
+
+---
+
+### head() {: #infinity.http.client.head_function .doc-function}
+
+Sends a HEAD-request to the given URL and uses the provided callback to handle the response.
+
+Signature:
+```typescript
+head( url: string, event: infinity.http.arrayResponseEvent ): void
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+- event: [`infinity.http.arrayResponseEvent`](#infinity.http.arrayResponseEvent_interface)
+  >A callback function that will be invoked when the HEAD request completes. This function will be called with two parameters: an array of strings representing the response (if successful) and an error string which will be non-empty if there was an error.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.head('http://localhost', (headers, error) => {
+    if (error) {
+        console.error("An error occurred:" + error);
+        return;
+    }
+    console.debug(headers);
+});
 ```
 
 ---
@@ -630,8 +775,50 @@ Return type: `string`
 Example:
 
 ```typescript
-let response = myClient.post('http://localhost/', "postRequestDataString");
+let response = myClient.post('http://localhost/', "key=value&anotherkey=anothervalue");
 console.debug(response);
+```
+
+---
+
+### post() {: #infinity.http.client.post_function .doc-function}
+
+Sends a POST request to the given URL with the specified parameters and uses the provided callback to handle the server's response or any errors.
+
+Signature:
+```typescript
+post( url: string, value: string, encoding?: infinity.encoding, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- value: `string`
+  >The POST request parameters.
+
+- encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
+  >The encoding for the request.
+
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that will be invoked once the server responds or if an error occurs. If specified, this function will be called with two arguments: the server's response string and an error string. If no error occurs, the error string will be empty.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.post('http://localhost/', "key=value&anotherkey=anothervalue", undefined, (response, error) => {
+    if (error) {
+        console.error("An error occurred:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+
 ```
 
 ---
@@ -659,8 +846,45 @@ Return type: `string`
 Example:
 
 ```typescript
-let response = myClient.postFile('http://localhost/', "test.txt");
+let response = myClient.postFile('http://localhost/upload', "test.txt");
 console.debug(response);
+```
+
+---
+
+### postFile() {: #infinity.http.client.postFile_function .doc-function}
+
+Sends a POST request for uploading the specified file to the given URL and utilizes the provided callback to manage the server's response or potential errors.
+
+Signature:
+```typescript
+postFile( url: string, fileName: string, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- fileName: `string`
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
+
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that will be invoked after the server responds or if an error arises. This function will be executed with two parameters: the server's response string and an error string. If no error takes place, the error string will be empty.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.postFile('http://localhost/upload', "test.txt", (response, error) => {
+    if (error) {
+        console.error("An error occurred during the file upload:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
 ```
 
 ---
@@ -696,6 +920,54 @@ console.debug(response);
 
 ---
 
+### postMultipartFormData() {: #infinity.http.client.postMultipartFormData_function .doc-function}
+
+Sends a multipart/form-data POST request to the specified URL and employs the provided callback to handle the server's response or potential errors.
+
+Signature:
+```typescript
+postMultipartFormData( url: string, data: infinity.http.formDataArray, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- data: [`infinity.http.formDataArray`](#infinity.http.formDataArray_interface)
+  >An array containing the data to be uploaded.
+
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that gets invoked once the server gives a response or in case an error pops up. This function receives two arguments: the server's response string and an error string. If no error is encountered, the error string will remain empty.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+let formData = [
+    {
+        fieldName: 'fieldName1',
+        fileName: 'test.txt',
+        fieldValue: 'fieldValue1',
+        charset: 'ISO-8859-1',
+        contentType: 'text/html'
+    }
+];
+
+myClient.postMultipartFormData('http://localhost/upload', formData, (response, error) => {
+    if (error) {
+        console.error("An error arose during form data submission:", error);
+        return;
+    }
+    console.debug("Server's response:", response);
+});
+```
+
+---
+
 ### postStream() {: #infinity.http.client.postStream_function .doc-function}
 
 Sends a POST request for uploading the specified stream to the given URL.
@@ -719,6 +991,41 @@ Example:
 
 ```typescript
 myClient.postStream(url, stream);
+```
+
+---
+
+### postStream() {: #infinity.http.client.postStream_function .doc-function}
+
+Sends a POST request for uploading the specified stream to the given URL and uses the provided callback to handle the server's response or any errors.
+
+Signature:
+```typescript
+postStream( url: string, stream: infinity.stream, event: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The url to save from.
+- stream: [`infinity.stream`](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that will be invoked once the server responds or if an error occurs. If specified, this function will be called with two arguments: the server's response string and an error string. If no error occurs, the error string will be empty.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.postStream('http://localhost/upload', stream, (response, error) => {
+    if (error) {
+        console.error("An error occurred while uploading:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
 ```
 
 
@@ -841,6 +1148,46 @@ Example:
 ```typescript
 let response = myClient.put('http://localhost/', "putRequestDataString");
 console.debug(response);
+```
+
+---
+
+### put() {: #infinity.http.client.put_function .doc-function}
+
+Sends a PUT request to the specified URL and uses the provided callback to manage the server's response or potential errors.
+
+Signature:
+```typescript
+put( url: string, value: string, encoding?: infinity.encoding, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- value: `string`
+  >The PUT request parameters.
+
+- encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
+  >The encoding for the request.
+
+
+Return type: `string`
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.put('http://localhost/resource', "putRequestDataString", undefined, (response, error) => {
+    if (error) {
+        console.error("Error occurred during PUT request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
 ```
 
 ---
@@ -2351,6 +2698,24 @@ let protocol = infinity.http.server.protocol.tls1_2;
 ---
 
 <div class="doc-heading">Interfaces</div>
+
+---
+
+## arrayResponseEvent {: #infinity.http.arrayResponseEvent_interface .doc-interface}
+
+Signature:
+
+```typescript
+(response: Array<string>, error: string): void
+```
+
+A callback function type used to handle the response from asynchronous HTTP requests. The callback receives the response as an array of strings and an error message if an error occurs during the request.
+
+### Properties:
+- #### response
+  >Type: `Array<string>`. An array containing the response data, such as headers or other string-based data.
+- #### error
+  >Type: `string`. An error message that will be non-empty if there was an error during the HTTP request. If the request was successful, this value will be an empty string.
 
 ---
 

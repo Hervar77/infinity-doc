@@ -1621,7 +1621,7 @@ if ( infinity.ui.arrowButton(id, direction) ) {}
 
 ## begin() {: #infinity.ui.begin_function .doc-function}
 
-Begins a new window with the specified name and optional show close button flag and window flags. The window state, represented by `infinity.ui.windowStates`, is returned after the function call.
+Begins a new window with the specified name and optional show close button flag and window flags. The window state, represented by [`infinity.ui.windowStates`](#infinity.ui.windowStates_enum), is returned after the function call.
 
 Signature:
 ```
@@ -1640,7 +1640,7 @@ Parameters:
   >Optional flags that control the behavior of the new window.
 
 
-Return type: `infinity.ui.windowStates`
+Return type: [`infinity.ui.windowStates`](#infinity.ui.windowStates_enum)
 
 Example:
 

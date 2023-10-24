@@ -724,6 +724,51 @@ console.debug(JSON.stringify(result));
 
 ---
 
+### jsonRpc() {: #infinity.http.client.jsonRpc_function .doc-function}
+
+Sends a JSON-RPC call to the specified URL and uses an event callback to handle the response.
+
+Signature:
+```typescript
+jsonRpc( url: string, method: string, params?: infinity.http.paramArray, version?: infinity.http.client.version, event?: infinity.http.objectResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- method: `string`
+  >The remote procedure to be executed on the other endpoint.
+
+- params: [`infinity.http.paramArray`](#infinity.http.paramArray_interface), optional
+  >The parameters to be passed to the remote procedure.
+
+- version: [`infinity.http.client.version`](#infinity.http.client.version_enum), optional
+  >Specifies the version of JSON-RPC to use.
+
+- event: infinity.http.objectResponseEvent, optional
+  >A callback function that gets triggered upon receiving a response from the server or when an error ensues. This function takes in two parameters: the server's response as an object and an error object. Should the JSON-RPC call be successful, the error object will be null.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.jsonRpc('https://team.greyhound-software.com/json', 'RpcInfoServer.GetServerInfo', [], infinity.http.client.version.jsonRpc1_1, (response, error) => {
+    if (error) {
+        console.error("Error during the JSON-RPC request:", error.message);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+
+```
+
+---
+
 ### options() {: #infinity.http.client.options_function .doc-function}
 
 Sends a OPTIONS request to the given URL.
@@ -745,6 +790,38 @@ Example:
 
 ```typescript
 myClient.options('http://localhost/');
+```
+
+---
+
+### options() {: #infinity.http.client.options_function .doc-function}
+
+Sends an OPTIONS request to the specified URL. When provided, the optional callback function can be used to process the server's response or manage potential errors.
+
+Signature:
+```typescript
+options( url: string, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.options('http://localhost/api/', (response, error) => {
+    if (error) {
+        console.error("Error occurred during the OPTIONS request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+
 ```
 
 ---
@@ -1028,8 +1105,6 @@ myClient.postStream('http://localhost/upload', stream, (response, error) => {
 });
 ```
 
-
-
 ---
 
 ### patch() {: #infinity.http.client.patch_function .doc-function}
@@ -1064,6 +1139,47 @@ console.debug(response);
 
 ---
 
+### patch() {: #infinity.http.client.patch_function .doc-function}
+
+Sends a PATCH request to the specified URL with the given parameters. When provided, the optional callback function can be utilized to process the server's response or to handle potential errors.
+
+Signature:
+```typescript
+patch( url: string, value: string, encoding?: infinity.encoding, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- value: `string`
+  >The PATCH request parameters.
+
+- encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
+  >The encoding for the request.
+
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that is invoked when a response is received from the server or when an error emerges. This function takes two parameters: the server's response as a string and an error string. In scenarios where the operation is successful, the error string will be empty.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.patch('http://localhost/api/', "patchDataToUpdateResource", infinity.encoding.UTF8, (response, error) => {
+    if (error) {
+        console.error("Error encountered during the PATCH request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+```
+
+---
+
 ### patchFile() {: #infinity.http.client.patchFile_function .doc-function}
 
 Sends a PATCH request for uploading the specified file to the given URL.
@@ -1093,6 +1209,44 @@ console.debug(response);
 
 ---
 
+### patchFile() {: #infinity.http.client.patchFile_function .doc-function}
+
+Sends a PATCH request for uploading a specified file to the provided URL. When the optional callback function is supplied, it can be employed to process the server's response or to address any potential errors during the upload process.
+
+Signature:
+```typescript
+patchFile( url: string, fileName: string, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- fileName: `string`
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that is triggered upon receiving a response from the server or when an error occurs. This function is designed to take two parameters: the server's response in the form of a string, and an error string. When the upload is successful, the error string will remain empty.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.patchFile('http://localhost/api/upload/', "test.txt", (response, error) => {
+    if (error) {
+        console.error("Error during the file PATCH request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+
+```
+
+---
+
 ### patchStream() {: #infinity.http.client.patchStream_function .doc-function}
 
 Sends a PATCH request for uploading the specified stream to the given URL.
@@ -1116,6 +1270,43 @@ Example:
 
 ```typescript
 myClient.patchStream(url, stream);
+```
+
+---
+
+### patchStream() {: #infinity.http.client.patchStream_function .doc-function}
+
+Sends a PATCH request for uploading a specified stream to the provided URL. The optional event callback can be utilized to handle the server's response or to manage any potential issues during the stream upload process.
+
+Signature:
+```typescript
+patchStream( url: string, stream: infinity.stream, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The url to save from.
+- stream: [`infinity.stream`](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function activated upon obtaining a response from the server or when an error arises. This function accepts two arguments: the server's response as a string, and an error string. If the upload operation is successful, the error string will be empty.
+
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.patchStream('http://localhost/api/upload/stream/', someStream, (response, error) => {
+    if (error) {
+        console.error("Error during the stream PATCH request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+
 ```
 
 ---
@@ -1221,6 +1412,42 @@ console.debug(response);
 
 ---
 
+### putFile() {: #infinity.http.client.putFile_function .doc-function}
+
+Sends a PUT request to the specified URL to upload the file from the given path. If provided, the optional callback function can be used to handle the server's response or any potential errors.
+
+Signature:
+```typescript
+putFile( url: string, fileName: string, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- fileName: `string`
+  >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function receives two parameters: the server's response string and an error string. If the operation succeeds, the error string will be empty.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.putFile('http://localhost/upload', 'test.txt', (response, error) => {
+    if (error) {
+        console.error("Error occurred during the PUT file request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+```
+
+---
+
 ### putStream() {: #infinity.http.client.putStream_function .doc-function}
 
 Sends a PUT request for uploading the specified stream to the given URL.
@@ -1248,6 +1475,41 @@ myClient.putStream(url, stream);
 
 ---
 
+### putStream() {: #infinity.http.client.putStream_function .doc-function}
+
+Sends a PUT request to the specified URL to upload the provided stream. The specified callback function handles the server's response or potential errors.
+
+Signature:
+```typescript
+putStream( url: string, stream: infinity.stream, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The url to save from.
+- stream: [`infinity.stream`](infinity.stream.md)
+  >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function receives two parameters: the server's response string and an error string. If the operation succeeds, the error string will be empty.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.putStream('http://localhost/upload', stream, (response, error) => {
+    if (error) {
+        console.error("Error occurred during the PUT stream request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
+```
+
+---
+
 ### remove() {: #infinity.http.client.remove_function .doc-function}
 
 Sends a DELETE request to the given URL.
@@ -1268,7 +1530,41 @@ Return type: `string`
 Example:
 
 ```typescript
-myClient.remove('http://localhost/');
+myClient.remove('http://localhost/resource/123');
+```
+
+---
+
+### remove() {: #infinity.http.client.remove_function .doc-function}
+
+Sends a DELETE request to the specified URL. When provided, the optional callback function can be utilized to process the server's response or handle potential errors.
+
+Signature:
+```typescript
+remove( url: string, event?: infinity.http.stringResponseEvent ): void;
+```
+
+Parameters:
+
+- url: `string`
+  >The URL to send the request to.
+
+- event: infinity.http.stringResponseEvent, optional
+  >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function accepts two parameters: the server's response string and an error string. In the event of a successful operation, the error string will be empty.
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.http');
+let myClient = new infinity.http.client(true);
+
+myClient.remove('http://localhost/resource/123', (response, error) => {
+    if (error) {
+        console.error("Error occurred during the DELETE request:", error);
+        return;
+    }
+    console.debug("Server responded with:", response);
+});
 ```
 
 ---

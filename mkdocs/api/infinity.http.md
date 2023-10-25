@@ -389,7 +389,7 @@ Parameters:
 - url: `string`
   >The URL to send the request for.
 
-- event: infinity.http.stringResponseEvent
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface)
   >A callback function that will be invoked when the GET request completes. This function will be called with two parameters: a string representing the response body (if successful) and an error string which will be non-empty if there was an error.
 
 Example:
@@ -494,7 +494,7 @@ Parameters:
 - fileName: `string`
   >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file which should contain the retrieved contents.
 
-- event (optional): infinity.http.noResponseEvent
+- event (optional): [`infinity.http.noResponseEvent`](#infinity.http.noResponseEvent_interface)
   >A callback function that will be invoked once the download and save process is complete or if an error occurs. If specified, this function will be called with an error string which will be non-empty if there was an error during the process. If no error occurs, the function is invoked without any arguments.
 
 Example:
@@ -609,7 +609,7 @@ Parameters:
 - stream: [`infinity.stream`](infinity.stream.md)
   >The stream object to write to. See [infinity.stream](infinity.stream.md).
 
-- event (optional): infinity.http.noResponseEvent
+- event (optional): [`infinity.http.noResponseEvent`](#infinity.http.noResponseEvent_interface)
   >A callback function that will be invoked once the streaming process is complete or if an error occurs. If specified, this function will be called with an error string which will be non-empty if there was an error during the streaming process. If no error occurs, the function is invoked without any arguments.
 
 Example:
@@ -747,7 +747,7 @@ Parameters:
 - version: [`infinity.http.client.version`](#infinity.http.client.version_enum), optional
   >Specifies the version of JSON-RPC to use.
 
-- event: infinity.http.objectResponseEvent, optional
+- event: [`infinity.http.objectResponseEvent`](#infinity.http.objectResponseEvent_interface), optional
   >A callback function that gets triggered upon receiving a response from the server or when an error ensues. This function takes in two parameters: the server's response as an object and an error object. Should the JSON-RPC call be successful, the error object will be null.
 
 
@@ -807,6 +807,8 @@ Parameters:
 
 - url: `string`
   >The URL to send the request to.
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
+  >A callback function that is triggered upon receiving a response from the server or when an error arises. This function takes two arguments: the server's response string and an error string. In cases of successful operations, the error string will remain empty.
 
 Example:
 
@@ -878,7 +880,7 @@ Parameters:
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
   >The encoding for the request.
 
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that will be invoked once the server responds or if an error occurs. If specified, this function will be called with two arguments: the server's response string and an error string. If no error occurs, the error string will be empty.
 
 
@@ -946,7 +948,7 @@ Parameters:
 - fileName: `string`
   >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
 
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that will be invoked after the server responds or if an error arises. This function will be executed with two parameters: the server's response string and an error string. If no error takes place, the error string will be empty.
 
 Example:
@@ -1014,7 +1016,7 @@ Parameters:
 - data: [`infinity.http.formDataArray`](#infinity.http.formDataArray_interface)
   >An array containing the data to be uploaded.
 
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that gets invoked once the server gives a response or in case an error pops up. This function receives two arguments: the server's response string and an error string. If no error is encountered, the error string will remain empty.
 
 
@@ -1087,7 +1089,7 @@ Parameters:
   >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
   >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that will be invoked once the server responds or if an error occurs. If specified, this function will be called with two arguments: the server's response string and an error string. If no error occurs, the error string will be empty.
 
 Example:
@@ -1159,7 +1161,7 @@ Parameters:
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
   >The encoding for the request.
 
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that is invoked when a response is received from the server or when an error emerges. This function takes two parameters: the server's response as a string and an error string. In scenarios where the operation is successful, the error string will be empty.
 
 
@@ -1225,7 +1227,7 @@ Parameters:
 
 - fileName: `string`
   >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that is triggered upon receiving a response from the server or when an error occurs. This function is designed to take two parameters: the server's response in the form of a string, and an error string. When the upload is successful, the error string will remain empty.
 
 
@@ -1289,7 +1291,7 @@ Parameters:
   >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
   >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function activated upon obtaining a response from the server or when an error arises. This function accepts two arguments: the server's response as a string, and an error string. If the upload operation is successful, the error string will be empty.
 
 
@@ -1363,6 +1365,9 @@ Parameters:
 - encoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum), optional
   >The encoding for the request.
 
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
+  >A callback function activated upon obtaining a response from the server or when an error arises. This function accepts two arguments: the server's response as a string, and an error string. If the upload operation is successful, the error string will be empty.
+
 
 Return type: `string`
 
@@ -1428,7 +1433,7 @@ Parameters:
 
 - fileName: `string`
   >Filename, relative path (location relative to the folder with the used INFINITY.JS executable file) or absolute path to the file to be uploaded.
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function receives two parameters: the server's response string and an error string. If the operation succeeds, the error string will be empty.
 
 Example:
@@ -1490,7 +1495,7 @@ Parameters:
   >The url to save from.
 - stream: [`infinity.stream`](infinity.stream.md)
   >The stream to be uploaded. See [infinity.stream](infinity.stream.md).
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function receives two parameters: the server's response string and an error string. If the operation succeeds, the error string will be empty.
 
 Example:
@@ -1549,7 +1554,7 @@ Parameters:
 - url: `string`
   >The URL to send the request to.
 
-- event: infinity.http.stringResponseEvent, optional
+- event: [`infinity.http.stringResponseEvent`](#infinity.http.stringResponseEvent_interface), optional
   >A callback function that is invoked upon receiving a response from the server or when an error is encountered. This function accepts two parameters: the server's response string and an error string. In the event of a successful operation, the error string will be empty.
 
 Example:
@@ -3126,11 +3131,63 @@ An array containing objects with data inside its properties.
 
 ---
 
+## noResponseEvent {: #infinity.http.noResponseEvent_interface .doc-interface}
+
+Signature:
+
+```typescript
+( error: string ):
+```
+
+A callback function type designed for asynchronous HTTP requests that don't expect a response. The callback receives only an error message in case an error occurs during the request.
+
+### Properties:
+- #### error
+  >Type: `string`. An error message that will be non-empty if there was an error during the HTTP request. If the request was successful, this value will be an empty string.
+
+---
+
 ## stringArray {: #infinity.http.stringArray_interface .doc-interface}
 
 Extends: `Array<string>`
 
 An array of strings.
+
+---
+
+## stringResponseEvent {: #infinity.http.stringResponseEvent_interface .doc-interface}
+
+Signature:
+
+```typescript
+( response: string, error: string ): void
+```
+
+A callback function type tailored for asynchronous HTTP requests that expect a string as a response. The callback receives the response as a string and an error message if an error arises during the request.
+
+### Properties:
+- #### response
+  >Type: `string`. A string containing the response data from the server.
+- #### error
+  >Type: `string`. An error message that will be non-empty if there was an error during the HTTP request. If the request was successful, this value will be an empty string.
+
+---
+
+## objectResponseEvent {: #infinity.http.objectResponseEvent_interface .doc-interface}
+
+Signature:
+
+```typescript
+( response: object, error: string ): void
+```
+
+A callback function type crafted for asynchronous HTTP requests that expect an object as a response. The callback gets the response as an object and an error message if an error transpires during the request.
+
+### Properties:
+- #### response
+  >Type: `object`. The object encapsulating the response data, such as JSON data or any structured data returned from the server.
+- #### error
+  >Type: `string`. An error message that will be non-empty if there was an error during the HTTP request. If the request was successful, this value will be an empty string.
 
 ---
 

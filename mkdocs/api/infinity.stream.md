@@ -44,7 +44,7 @@ try {
 } finally {
   fileStream.free();
   fileStream = null;
-  
+
   memStream.free();
   memStream = null;
 }
@@ -78,10 +78,12 @@ The class for operating with streams in INFINITY.JS.
 - [read()](#infinity.stream.read_function)
 - [readBoolean()](#infinity.stream.readBoolean_function)
 - [readNumber()](#infinity.stream.readNumber_function)
+- [readRawString()](#infinity.stream.readRawString_function)
 - [readString()](#infinity.stream.readString_function)
 - [write()](#infinity.stream.write_function)
 - [writeBoolean()](#infinity.stream.writeBoolean_function)
 - [writeNumber()](#infinity.stream.writeNumber_function)
+- [writeRawString()](#infinity.stream.writeRawString_function)
 - [writeString()](#infinity.stream.writeString_function)
 
 </div>
@@ -286,19 +288,13 @@ Reads and returns a number from the current stream, if it was previously written
 
 Signature:
 ```typescript
-readString( encoding?: infinity.encoding, fromBeginning?: boolean, count?: number ): string
+readString( encoding?: infinity.encoding ): string
 ```
 
 Parameters:
 
 - encoding: `infinity.encoding`, optional
   >The encoding of the string.
-
-- fromBeginning: `boolean`, optional
-  >Whether to start reading from the beginning of the stream.
-
-- count: `number`, optional
-  >The number of bytes to read.
 
 
 Return type: `string`
@@ -307,6 +303,32 @@ Example:
 
 ```typescript
 let string = myStream.readString();
+```
+
+---
+
+### readRawString() {: #infinity.stream.readRawString_function .doc-function}
+
+Reads a specified amount of data from a stream and returns it as a raw string.
+
+Signature:
+```typescript
+readRawString( encoding?: infinity.encoding, count?: number ): string
+```
+
+Parameters:
+
+- encoding: `infinity.encoding`, optional
+  >Specifies the character encoding to be used for interpreting the bytes read from the stream.
+- count: number, optional
+  >The number of bytes to read from the stream
+
+Return type: `string`
+
+Example:
+
+```typescript
+let string = myStream.readRawString(infinity.encoding.UTF8, 100);
 ```
 
 ---
@@ -376,6 +398,35 @@ Example:
 
 ```typescript
 myStream.writeNumber(321);
+```
+
+---
+
+### writeRawString() {: #infinity.stream.writeRawString_function .doc-function}
+
+Writes the provided a string to the current stream. Reading will then be possible with [readRawString()](#infinity.stream.readRawString_function).
+
+Signature:
+```typescript
+writeRawString( value: string, encoding?: infinity.encoding, writeBom?: boolean ): void
+```
+
+Parameters:
+
+- value: `string`
+  >The string to be written to the stream.
+
+- encoding: [`infinity.encoding`](infinity.encoding.md), optional
+  >Specifies the character encoding to be used when writing the string to the stream.
+
+- writeBom: `boolean`, optional
+  >Determines whether to write a Byte Order Mark (BOM) at the beginning of the stream.
+
+
+Example:
+
+```typescript
+myStream.writeRawString('Hello, world!', infinity.encoding.UTF8, true);
 ```
 
 ---

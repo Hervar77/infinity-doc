@@ -22,6 +22,7 @@ Module: `infinity.database`
 
 <div class="doc-toc-heading">Enums:</div>
 
+- [columnType](#infinity.database.columnType_enum)
 - [indexType](#infinity.database.indexType_enum)
 - [isolationLevel](#infinity.database.isolationLevel_enum)
 - [orderDirection](#infinity.database.orderDirection_enum)
@@ -882,7 +883,7 @@ Creates an index column inside the given table and specifies the data type to be
 
 Signature:
 ```typescript
-index( table: string, key: string, type: infinity.database.indexType, unique?: boolean ): void
+index( table: string, key: string, indexType: infinity.database.indexType, columnType?: infinity.database.columnType, unique?: boolean ): void
 ```
 
 Parameters:
@@ -893,11 +894,14 @@ Parameters:
 - key: `string`
   >The column to act as an index.
 
-- type: [`infinity.database.indexType`](#infinity.database.indexType_enum)
-  >The index type to be used according to [infinity.database.indexType](#infinity.database.indexType_enum).
+- key: [`infinity.database.indexType`](#infinity.database.indexType_interface)
+  >Specifies the type of data that the index will hold.
+
+- key: [`infinity.database.columnType`](#infinity.database.columnType_interface), optional
+  >Defines whether the column is virtual or persistent.
 
 - unique: `boolean`, optional
-  >Specifies whether the index has to be unique.
+  >Indicates whether the index should enforce uniqueness.
 
 
 Example:
@@ -1013,7 +1017,7 @@ remove( table: string, query: infinity.database.queryArray ): number
 Parameters:
 
 - table: `string`
-  >The name of the table to be altered.
+  >The name of the table from which the row will be removed.
 
 - query: [`infinity.database.queryArray`](#infinity.database.queryArray_interface)
   >An array containing the query parameters.
@@ -1025,6 +1029,34 @@ Example:
 
 ```typescript
 let rowsAffected = myDB.remove('testTable', [['id', '=',  2]]);
+```
+
+---
+
+### remove() {: #infinity.database.remove_function .doc-function}
+
+Removes a row from the specified table based on the provided row ID. Returns the number of rows affected by the operation.
+
+Signature:
+```typescript
+remove( table: string, id: number ): number
+```
+
+Parameters:
+
+- table: `string`
+  >The name of the table from which the row will be removed.
+
+- id: `number`
+  >The unique identifier (usually the primary key) of the row to be removed.
+
+
+Return type: `number`
+
+Example:
+
+```typescript
+myDB.remove('testTable', 2);
 ```
 
 ---
@@ -1234,6 +1266,37 @@ myDB.update('testTable', { id: 2, username: "aUserName", email: "yetanother@emai
 
 ### update() {: #infinity.database.update_function .doc-function}
 
+Updates values in an existing row identified by the provided row id, inside the specified database table. The data has to passed inside an object. Returns the number of rows affected by the query.
+
+Signature:
+```typescript
+update( table: string, id: number, update: object ): number
+```
+
+Parameters:
+
+- table: `string`
+  >The name of the table to be updated.
+
+- id: `number`
+  >The unique identifier of the row to be updated.
+
+- update: `object`
+  >An object representing the new values for the specified row.
+
+
+Return type: `number`
+
+Example:
+
+```typescript
+myDB.update('testTable', 2, { username: "newUserName", email: "new@email.com" });
+```
+
+---
+
+### update() {: #infinity.database.update_function .doc-function}
+
 Updates values in an existing row identified by the provided query parameters, inside the specified database table. The data has to passed inside an object. Returns the number of rows affected by the query.
 
 Signature:
@@ -1330,6 +1393,26 @@ Extends: `Array<string>`
 
 ---
 
+## infinity.database.columnType {: #infinity.database.columnType_enum .doc-enum}
+
+Used to specify the type of a column within a database context.
+
+Values:
+
+- virtual: `0`
+
+- persistent: `1`
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.database');
+let columnType = infinity.database.columnType.virtual;
+```
+
+
+---
+
 ## infinity.database.indexType {: #infinity.database.indexType_enum .doc-enum}
 
 Used for setting the data type for the index column.
@@ -1354,7 +1437,6 @@ Example:
 infinity.loadModule('infinity.database');
 let indexType = infinity.database.indexType.boolean;
 ```
-
 
 
 ---

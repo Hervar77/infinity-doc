@@ -67,6 +67,7 @@ Allows for your instance of INFINITY.JS to act as an http-client. Lets you send 
 - [password](#infinity.http.client.password_property)
 - [proxyPort](#infinity.http.client.proxyPort_property)
 - [proxyServer](#infinity.http.client.proxyServer_property)
+- [responseCharset](#infinity.http.client.responseCharset_property)
 - [responseCode](#infinity.http.client.responseCode_property)
 - [responseText](#infinity.http.client.responseText_property)
 - [timeout](#infinity.http.client.timeout_property)
@@ -251,6 +252,14 @@ Sets the port number for the connection with a proxy.
 Type: `string`
 
 Sets the IP or URL address for the connection with a proxy.
+
+---
+
+### responseCharset {: #infinity.http.client.responseCharset_property .doc-property}
+
+Type: `string`
+
+Specifies the character encoding of the response received from an HTTP request.
 
 ---
 

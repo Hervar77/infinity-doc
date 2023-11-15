@@ -42,7 +42,7 @@ Attempts to parse the given string according to the XML-format and returns the r
 
 Signature:
 ```
-parse( value: string, normalize?: boolean ): any
+parse( value: string, normalize?: boolean, strict?: boolean ): any
 ```
 
 Parameters:
@@ -52,6 +52,9 @@ Parameters:
 
 - normalize: `boolean`, optional
   >Whether to apply normalization.
+
+- strict: `boolean`, optional
+  >Whether to operate in strict mode.
 
 
 Return type: `any`

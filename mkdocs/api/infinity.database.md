@@ -894,10 +894,10 @@ Parameters:
 - key: `string`
   >The column to act as an index.
 
-- key: [`infinity.database.indexType`](#infinity.database.indexType_interface)
+- indexType: [`infinity.database.indexType`](#infinity.database.indexType_interface)
   >Specifies the type of data that the index will hold.
 
-- key: [`infinity.database.columnType`](#infinity.database.columnType_interface), optional
+- columnType: [`infinity.database.columnType`](#infinity.database.columnType_interface), optional
   >Defines whether the column is virtual or persistent.
 
 - unique: `boolean`, optional

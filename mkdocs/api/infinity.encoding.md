@@ -8,6 +8,7 @@ Module: none (built-in)
 
 <div class="doc-toc-heading">Functions:</div>
 
+- [convert](#infinity.encoding.convert_function)
 - [toString](#infinity.encoding.toString_function)
 
 <div class="doc-toc-heading">Enums:</div>
@@ -19,6 +20,40 @@ Module: none (built-in)
 ---
 
 <div class="doc-heading">Functions</div>
+
+---
+
+## convert() {: #infinity.encoding.convert_function .doc-function}
+
+Converts a string from one encoding to another.
+
+Signature:
+```
+convert( value: string, fromEncoding: infinity.encoding, toEncoding: infinity.encoding ): string
+```
+
+Parameters:
+
+- value: `string`
+  >The string to be converted.
+
+- fromEncoding: [`infinity.encoding`](infinity.encoding.md#infinity.encoding_enum)
+  >The encoding of the input string.
+
+- toEncoding: `string`
+  >he target encoding to which the string will be converted.
+
+
+Return type: `string`
+
+Example:
+
+```typescript
+let originalString = "Hello, world!";
+let convertedString = infinity.encoding.convert(originalString, infinity.encoding.UTF8, infinity.encoding.ansi);
+console.log(convertedString);
+```
+
 
 ---
 

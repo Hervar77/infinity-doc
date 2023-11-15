@@ -280,7 +280,7 @@ Writes the given data to the specified file.
 
 Signature:
 ```
-write( fileName: string, value: any, encoding?: infinity.encoding, append?: boolean ): void
+write( fileName: string, value: any, encoding?: infinity.encoding, append?: boolean, writeBom?: boolean ): void
 ```
 
 Parameters:
@@ -296,6 +296,10 @@ Parameters:
 
 - append: `boolean`, optional
   >Whether to append the string to the end of the file.
+
+- writeBom: `boolean`, optional
+  >Whether to write a Byte Order Mark (BOM) at the beginning of the file.
+
 
 
 Example:
@@ -313,7 +317,7 @@ Writes the given string to the specified file.
 
 Signature:
 ```
-writeString( fileName: string, value: string, encoding?: infinity.encoding, append?: boolean ): void
+writeString( fileName: string, value: string, encoding?: infinity.encoding, append?: boolean, writeBom?: boolean ): void
 ```
 
 Parameters:
@@ -329,6 +333,9 @@ Parameters:
 
 - append: `boolean`, optional
   >Whether to append the string to the end of the file.
+
+- writeBom: `boolean`, optional
+  >Whether to write a Byte Order Mark (BOM) at the beginning of the file.
 
 
 Example:

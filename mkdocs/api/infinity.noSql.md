@@ -497,6 +497,35 @@ let rowsAffected = infinity.noSql.remove('testCollection', [['id', '=',  2]]);
 
 ---
 
+## remove() {: #infinity.noSql.remove_function .doc-function}
+
+Removes a row from a specified collection based on a given row ID.
+
+Signature:
+```
+remove( collection: string, id: number ): number
+```
+
+Parameters:
+
+- collection: `string`
+  >The name of the collection to be altered.
+- id: `number`
+  >The unique identifier of the row to be removed.
+
+
+Return type: `number`
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.noSql');
+let rowsAffected = infinity.noSql.remove('testCollection', 2);
+console.log(rowsAffected + ' row(s) removed.');
+```
+
+---
+
 ## unlock() {: #infinity.noSql.unlock_function .doc-function}
 
 Releases the access lock set previoously through [lock()](#infinity.noSql.lock_function).
@@ -556,6 +585,40 @@ infinity.noSql.update('test', [['username', '=', 'TheUserName1']], {"email": "so
 
 ## update() {: #infinity.noSql.update_function .doc-function}
 
+Updates a value in an existing row in the specified collection based on a given row id.
+
+Signature:
+```
+update( collection: string, id: number, update: object ): number
+```
+
+Parameters:
+
+- collection: `string`
+  >The name of the collection to be updated.
+
+- id: `number`
+  >The unique identifier of the row to be updated.
+
+- update: `object`
+  >An object containing the data to be written.
+
+
+Return type: `number`
+
+Example:
+
+```typescript
+infinity.loadModule('infinity.noSql');
+let updateData = { username: "newUserName", email: "new@email.com", modified: Math.floor(Date.now() * 0.001) };
+let rowsAffected = infinity.noSql.update('testCollection', 2, updateData);
+console.log(rowsAffected + ' row(s) updated.');
+```
+
+---
+
+## update() {: #infinity.noSql.update_function .doc-function}
+
 Updates a value in an existing row in the specified collection. The data for the update has to be passed inside an object. The row is being identified by the given row id inside the provided data object. Returns the number of rows affected by the query.
 
 Signature:
@@ -580,7 +643,6 @@ Example:
 infinity.loadModule('infinity.noSql');
 let rowsAffected = infinity.noSql.update('testCollection', { id: 2, username: "aUserName", email: "yetanother@email.com", modified: Math.floor(Date.now() * 0.001) });
 ```
-
 
 
 ---

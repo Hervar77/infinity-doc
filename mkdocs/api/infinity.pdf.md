@@ -466,7 +466,7 @@ Adds a row of text to the current page at the specified coordinates of the curre
 
 Signature:
 ```typescript
-addText( text: string, x: number, y: number ): void
+addText( text: string, x: number, y: number, angle?: number ): void
 ```
 
 Parameters:
@@ -479,6 +479,9 @@ Parameters:
 
 - y: `number`
   >The vertical coordinate in pixels.
+
+- angle: `number`
+  >The angle in degrees.
 
 
 Example:

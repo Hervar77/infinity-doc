@@ -42,9 +42,9 @@ let myTemplate = new infinity.template(infinity.current.root + '../templates/');
 
 myTemplate.loadFromFile('index.html');
 
-myTemplate.variables['content'] = 'Loaded variable content';
-myTemplate.variables['muchdata'] = ['Data1', 'Data2', 'Data3'];
-myTemplate.variables['muchinfo'] = [{title:'Title1', key:'Info1'}, {title:'Title2', key:'Info2'}, {title:'Title3', key:'Info3'}];
+myTemplate.vars['content'] = 'Loaded variable content';
+myTemplate.vars['muchdata'] = ['Data1', 'Data2', 'Data3'];
+myTemplate.vars['muchinfo'] = [{title:'Title1', key:'Info1'}, {title:'Title2', key:'Info2'}, {title:'Title3', key:'Info3'}];
 
 infinity.http.response.contentText = myTemplate.render();
 ```
@@ -57,12 +57,12 @@ index.html:
 <title>INFINITY.JS Template</title>
 </head>
 <body>
-<if:write if:set-content="variables['content']">Default content</if:write>
+<if:write if:set-content="vars['content']">Default content</if:write>
 
 
-<if:if if:condition="variables['muchdata'] && Array.isArray(variables['muchdata'])">
+<if:if if:condition="vars['muchdata'] && Array.isArray(vars['muchdata'])">
   <ul>
-    <if:loop if:items="variables['muchdata']" if:element="item" if:info="info">
+    <if:loop if:items="vars['muchdata']" if:element="item" if:info="info">
       <li>
         <if:write if:set-content="item">Default Data</if:write>
       </li>
@@ -70,9 +70,9 @@ index.html:
   </ul>
 </if:if>
 
-<if:if if:condition="variables['muchinfo'] && Array.isArray(variables['muchinfo'])">
+<if:if if:condition="vars['muchinfo'] && Array.isArray(vars['muchinfo'])">
   <table border="1" cellspacing="0">
-    <if:loop if:items="variables['muchinfo']" if:element="item" if:info="info">
+    <if:loop if:items="vars['muchinfo']" if:element="item" if:info="info">
       <tr>
         <td>
           <if:write if:set-content="item['title']">Default Title</if:write>
@@ -116,7 +116,7 @@ The class for operating with HTML templates in INFINITY.JS.
 - [caching](#infinity.template.caching_property)
 - [debug](#infinity.template.debug_property)
 - [expire](#infinity.template.expire_property)
-- [variables](#infinity.template.variables_property)
+- [vars](#infinity.template.vars_property)
 - [documentRoot](#infinity.template.documentRoot_property)
 
 **Methods:**
@@ -170,7 +170,15 @@ Gets or sets the cache expiration time in seconds.
 
 ---
 
-### variables {: #infinity.template.variables_property .doc-property}
+### html {: #infinity.template.html_property .doc-property}
+
+Type: `object`
+
+Holds the compiled HTML output of a template.
+
+---
+
+### vars {: #infinity.template.vars_property .doc-property}
 
 Type: `object`
 

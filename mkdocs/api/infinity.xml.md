@@ -42,7 +42,7 @@ Attempts to parse the given string according to the XML-format and returns the r
 
 Signature:
 ```
-parse( value: string, normalize?: boolean, strict?: boolean ): any
+parse( value: string, normalize?: boolean, strict?: boolean, convertNumbers?: boolean ): any
 ```
 
 Parameters:
@@ -55,6 +55,9 @@ Parameters:
 
 - strict: `boolean`, optional
   >Whether to operate in strict mode.
+
+- convertNumbers: `boolean`, optional
+  >Whether to convert numerical values within the XML to number types, or otherwise, to treat them as strings.
 
 
 Return type: `any`

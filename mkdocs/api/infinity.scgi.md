@@ -149,25 +149,69 @@ let myScgi = new infinity.scgi.server(false, false, false, 9000);
 
 ---
 
-### registerHandler() {: #infinity.scgi.server.registerHandler_function .doc-function}
+### registerHandler() {: #infinity.scgi.server.registerHandler_function3 .doc-function}
 
-Registers a handler for client requests, invoking local resources.
+Registers a handler for processing client requests on the SCGI server, with optional rate limiting.
 
 Signature:
 ```typescript
-registerHandler( handler: infinity.scgi.server.handler, path: string, alias: string ): void
+registerHandler( handler: infinity.scgi.server.handler, path: string, limit?: number, period?: number, delay?: number ): void
 ```
 
 Parameters:
 
 - handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
-  >The type of handler to register.
+  >The type of handler to register for handling client requests.
 
 - path: `string`
-  >The request path for the client.
+  >The URL path on which this handler will be activated.
+
+- limit: `number`, optional
+  >The maximum number of requests a client can make on this path within the specified time period.
+
+- period: `number`, optional
+  >The time frame in seconds for the rate limit.
+
+- delay: `number`, optional
+  >The time frame in seconds for the rate limit.
+
+
+Example:
+
+```typescript
+myScgi.registerHandler(infinity.scgi.server.handler.rest, '/api', 100, 3600, 300);
+```
+
+---
+
+### registerHandler() {: #infinity.scgi.server.registerHandler_function .doc-function}
+
+Registers a handler for processing client requests on the SCGI server, linking them to local resources and optionally setting rate limits.
+
+Signature:
+```typescript
+registerHandler( handler: infinity.scgi.server.handler, path: string, alias: string, limit?: number, period?: number, delay?: number ): void
+```
+
+Parameters:
+
+- handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
+  >The type of handler to be registered.
+
+- path: `string`
+  >The URL path on which the handler will be activated.
 
 - alias: `string`
-  >The path to a local folder or file with contents or defined routines to be served corresponding to the client request.
+  >A local path or alias pointing to the resources (such as a folder or file) that the handler will use to serve content or execute routines in response to client requests.
+
+- limit: `number`, optional
+  >The maximum number of requests a client can make on this path within the specified time period.
+
+- period: `number`, optional
+  >The time frame in seconds for the rate limit.
+
+- delay: `number`, optional
+  >The time frame in seconds for the rate limit.
 
 
 Example:
@@ -201,7 +245,6 @@ Parameters:
 - expire: `number`, optional
   >Cache expiration time in seconds. After the specified period the file will have to be examined for changes at the next call.
 
-
 - maxCacheSize: `number`, optional
   >The cache threshold in bytes. Files with sizes exceeding the specified number will not be cached.
 
@@ -210,7 +253,6 @@ Parameters:
 
 - limit: `number`, optional
   >The maximum number of requests that can be made in the defined period. Used for rate limiting.
-
 
 - period: `number`, optional
   >The rate limit time period in seconds.
@@ -223,32 +265,6 @@ Example:
 
 ```typescript
 myScgi.registerHandler(infinity.scgi.server.handler.staticFile, '/', '../web/');
-```
-
----
-
-### registerHandler() {: #infinity.scgi.server.registerHandler_function3 .doc-function}
-
-Registers a handler for client requests.
-
-Signature:
-```typescript
-registerHandler( handler: infinity.scgi.server.handler, path: string ): void
-```
-
-Parameters:
-
-- handler: [`infinity.scgi.server.handler`](#infinity.scgi.server.handler_enum)
-  >The type of handler to register.
-
-- path: `string`
-  >The request path for the client.
-
-
-Example:
-
-```typescript
-myScgi.registerHandler(handler, path);
 ```
 
 ---
@@ -415,7 +431,6 @@ Values:
 - staticFile: `1`
   >A handler for serving static file content. Prefers showing the index.html file.
 
-
 - jsonRpc: `2`
   >A handler for requests according to the JSON-RPC protocol.
 
@@ -434,7 +449,7 @@ Values:
 - calDav: `7`
   >A handler for requests according to the CalDAV protocol.
 
-- calDav: `8`
+- status: `8`
   >A handler for status requests.
 
 Example:

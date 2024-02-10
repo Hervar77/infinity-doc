@@ -52,11 +52,11 @@ console.debug(id);
 console.debug(infinity.date.formatLocal('d-m-Y', infinity.date.now('Europe/Berlin')));
 //27-4-21
 
-let localTimeDate = infinity.date.formatLocal('dd-mm-yyyy hh:mm:ss', 1893456000000);
+let localTimeDate = infinity.date.formatLocal('dd-mm-yyyy hh:nn:ss', 1893456000000);
 console.debug(localTimeDate);
 //01-01-2030 00:00:00
 
-let universalTimeDate = infinity.date.formatUniversal('Europe/Madrid', 'dd-mm-yyyy hh:mm:ss', 1893456000000);
+let universalTimeDate = infinity.date.formatUniversal('Europe/Madrid', 'dd-mm-yyyy hh:nn:ss', 1893456000000);
 console.debug(universalTimeDate);
 //01-01-2030 01:00:00
 
@@ -152,7 +152,7 @@ Example:
 ```typescript
 infinity.loadModule('infinity.date');
 //local time zone: Europe/Berlin
-let localTimeDate = infinity.date.formatLocal('dd-mm-yyyy hh:mm:ss', 1893456000000);
+let localTimeDate = infinity.date.formatLocal('dd-mm-yyyy hh:nn:ss', 1893456000000);
 console.debug(localTimeDate);
 //01-01-2030 00:00:00
 ```
@@ -186,7 +186,7 @@ Example:
 
 ```typescript
 infinity.loadModule('infinity.date');
-let universalTimeDate = infinity.date.formatUniversal('Europe/Madrid', 'dd-mm-yyyy hh:mm:ss', 1893456000000);
+let universalTimeDate = infinity.date.formatUniversal('Europe/Madrid', 'dd-mm-yyyy hh:nn:ss', 1893456000000);
 console.debug(universalTimeDate);
 //01-01-2030 01:00:00
 ```

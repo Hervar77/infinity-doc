@@ -1,2 +1,2 @@
 @echo off
-mkdocs build
+python -m mkdocs build

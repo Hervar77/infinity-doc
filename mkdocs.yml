@@ -10,7 +10,7 @@ site_description: >-
   that supports multi-threading and native extensions.
 
 # Copyright
-copyright: Copyright &copy; 2018 - 2023 by Tobias Frie
+copyright: Copyright &copy; 2018 - 2024 by Tobias Frie
 
 # Configuration
 theme:

@@ -1,7 +1,7 @@
 # Project information
 use_directory_urls: false
 docs_dir: mkdocs
-site_dir: ../dist/doc
+site_dir: dist/doc
 site_name: INFINITY.JS V3 Documentation
 site_url: https://infinity-js.de/
 site_author: Tobias Frie

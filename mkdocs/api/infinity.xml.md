@@ -54,7 +54,7 @@ Parameters:
   >Whether to apply normalization.
 
 - strict: `boolean`, optional
-  >Whether to operate in strict mode.
+  >Whether to operate in strict mode. Strict mode `true` expects correct xml, while strict mode `false` can parse html (where tags like <meta> or <br> don't have a closing tag)
 
 - convertNumbers: `boolean`, optional
   >Whether to convert numerical values within the XML to number types, or otherwise, to treat them as strings.

@@ -2,6 +2,14 @@
 
 Welcome to the INFINITY.JS documentation. Here, we will provide you with an introduction of how to set up a development environment for your own INFINITY.JS project, give an overview of the key concepts of the runtime and provide a complete API reference with a description of the runtime's namepsaces, functions and constants.
 
+## Downloads
+
+You can find the INFINITY.JS releases on [GitHub](https://github.com/Hervar77/infinity-js/releases).
+
+## Bug reports
+
+Should you encounter bugs in the runtime, please report them in the [issue tracker](https://github.com/Hervar77/infinity-js/issues).
+
 ## Getting Started
 
 In the [Getting Started](getting-started/index.md) guide, we will describe how to set up the INFINITY.JS runtime, a basic project structure and an IDE with code completion and debugging support. We will also describe how to bundle your project with INFINITY.JS to create a complete release package of your project.

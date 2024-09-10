@@ -57,6 +57,7 @@ myMail.contents = [{
   items: []
 }];
 
+// myMail.attachments is not a real array. It can only be assigned, but not modified
 myMail.attachments = [{
   name: 'image.bmp',
   size: 1254,
@@ -224,6 +225,7 @@ let myMail = new infinity.mail();
 Type: [`infinity.mail.attachmentArray`](#infinity.mail.attachmentArray_interface)
 
 Gets or sets the attachments for the current email. The data must be passed and will be retreived inside an [`infinity.mail.stringArray`](#infinity.mail.stringArray_interface). See the example on top of this page for more information.
+Note that this property is not a real array and it cannot be modified, so `myMail.attachments.push()` will not work. You need to assign an array with attachment items to this property.
 
 ---
 
@@ -280,6 +282,7 @@ Gets or sets the MIME `Content-Type` header for the current email.
 Type: [`infinity.mail.contentArray`](#infinity.mail.contentArray_interface)
 
 Gets or sets the contents for the current email. The data must be passed and will be retreived inside an [`infinity.mail.stringArray`](#infinity.mail.stringArray_interface). See the example on top of this page for more information.
+Note that this property is not a real array and it cannot be modified, so `myMail.contents.push()` will not work. You need to assign an array with content items to this property.
 
 ---
 
@@ -661,7 +664,7 @@ myMail.saveToStream(stream);
 
 Extends: `Array<{name: string, size: number, contentType: string, contentTransferEncoding: infinity.mail.transferEncoding, contentId: string, contentDisposition: string, storedFilePath: string}>`
 
-An array containing objects with attachment data inside its properties.
+An array containing objects with attachment data inside its properties. Note: this array can not be modified. You need to assign an array with attachment items, but you cannot call `push()` on the `attachments` property of an `infinity.mail` object.
 
 ### Properties:
 - #### name 
@@ -683,6 +686,7 @@ An array containing objects with attachment data inside its properties.
 
 Extends: `Array<{contentType: string, contentTransferEncoding: infinity.mail.transferEncoding, charset: string, text: string, items: infinity.mail.contentArray}>`
 
+An array containing objects with content data inside its properties. Note: this array can not be modified. You need to assign an array with content items, but you cannot call `push()` on the `contents` property of an `infinity.mail` object.
 
 ### Properties:
 - #### contentType 

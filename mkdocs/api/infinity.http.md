@@ -3077,15 +3077,15 @@ An array containing objects with data inside its properties.
 
 ### Properties:
 - #### fieldName
-  >Type: `string`. The name of a form field.
-- #### fileName
-  >Type: `string`. The name of a file attachment transmitted with the form data.
+  >Type: `string`. The name of the form field.
 - #### fieldValue
-  >Type: `string`. The value of a form field.
+  >Type: `string` or `infinity.stream`. The value of the form field. If an `infinity.stream` is used, then the form field will be a file attachment with the content being read from the stream and the filename being taken from the `fileName` property.
+- #### fileName
+  >Type: `string`. The path to a file that will be transmitted in the form data. If an `infinity.stream` is used as `fieldValue` then the content will be read from the stream instead of the file. The `fileName` will then just be used as the filename for the form field.
 - #### charset
-  >Type: `string`. The character encoding of the transmission.
+  >Type: `string`. The character encoding of the form field.
 - #### contentType
-  >Type: `string`. The MIME-Type of the transmission.
+  >Type: `string`. The MIME-Type of the form field.
 
 ---
 
